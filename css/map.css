@@ -1,0 +1,94 @@
+/* ─── Leaflet overrides ───────────────────────────────────── */
+.leaflet-container {
+  font-family: var(--font) !important;
+  background: #e8e4e0;
+}
+.leaflet-control-zoom a {
+  color: var(--acai-dark) !important;
+  font-size: 16px !important;
+}
+.leaflet-control-zoom a:hover { background: var(--acai-pale) !important; }
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(255,255,255,.75) !important;
+}
+
+/* ─── Custom Tooltips ─────────────────────────────────────── */
+.leaflet-tooltip-acai {
+  background: var(--acai-dark) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 8px 12px !important;
+  box-shadow: var(--shadow-lg) !important;
+  font-size: 12px !important;
+  max-width: 220px;
+  pointer-events: none;
+}
+.leaflet-tooltip-acai::before { border-top-color: var(--acai-dark) !important; }
+.tooltip-name { font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+.tooltip-meta { opacity: .8; font-size: 11px; display: flex; gap: 8px; flex-wrap: wrap; }
+.tooltip-tipo { font-size: 10px; padding: 2px 7px; border-radius: var(--radius-pill); font-weight: 600; }
+.tooltip-tipo.esp { background: rgba(142,90,168,.3); }
+.tooltip-tipo.mix { background: rgba(63,107,79,.3); }
+.tooltip-tipo.out { background: rgba(144,144,144,.25); }
+
+/* ─── Map controls overlay ────────────────────────────────── */
+#map-controls {
+  position: absolute;
+  top: var(--space-md);
+  left: var(--space-md);
+  z-index: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#map-legend {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-sm);
+  font-size: 12px;
+  border: 1px solid var(--border);
+}
+.legend-title { font-weight: 700; font-size: 11px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .6px; margin-bottom: 8px; }
+.legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 12px; color: var(--text-primary); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.legend-count { margin-left: auto; color: var(--text-muted); font-size: 11px; }
+
+#map-stats-overlay {
+  position: absolute;
+  bottom: var(--space-md);
+  left: var(--space-md);
+  z-index: 500;
+  background: rgba(75,37,93,.88);
+  color: #fff;
+  border-radius: var(--radius-pill);
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* ─── Detail panel ────────────────────────────────────────── */
+#detail-panel {
+  transition: width var(--t-normal);
+}
+
+/* ─── Radius circle ───────────────────────────────────────── */
+.radius-circle { stroke-dasharray: 6,4; }
+
+/* ─── Mini map ────────────────────────────────────────────── */
+#mini-map .leaflet-control-zoom,
+#mini-map .leaflet-control-attribution { display: none !important; }
+
+/* ─── Marker pulse animation ─────────────────────────────── */
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: .8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+.marker-pulse {
+  border-radius: 50%;
+  animation: pulse-ring 1.4s ease-out infinite;
+}

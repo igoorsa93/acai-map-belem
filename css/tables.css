@@ -1,0 +1,45 @@
+/* ─── Data Table ───────────────────────────────── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.data-table thead th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--text-muted);
+  background: var(--bg-subtle);
+  border-bottom: 2px solid var(--border);
+  user-select: none;
+  transition: color var(--t-fast);
+  white-space: nowrap;
+}
+.data-table thead th:hover { color: var(--acai-mid); }
+.data-table tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--t-fast);
+}
+.data-table tbody tr:hover { background: var(--acai-pale); }
+.data-table tbody td {
+  padding: 11px 12px;
+  vertical-align: middle;
+}
+.data-table tbody tr:last-child { border-bottom: none; }
+
+.table-wrap {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.table-info {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}

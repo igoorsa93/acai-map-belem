@@ -1,0 +1,55 @@
+/* ─── Chart containers ──────────────────────────── */
+.chart-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  transition: box-shadow var(--t-normal);
+}
+.chart-card:hover { box-shadow: var(--shadow-md); }
+
+.chart-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+.chart-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--acai-dark);
+  letter-spacing: -0.1px;
+}
+.chart-subtitle {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+.chart-badge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--acai-pale);
+  color: var(--acai-mid);
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px solid rgba(203,58,166,.2);
+}
+.chart-canvas-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 180px;
+}
+.chart-canvas-wrap canvas { max-height: 300px; }
+
+.chart-click-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: right;
+  margin-top: 4px;
+}
