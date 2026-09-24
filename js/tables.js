@@ -1,142 +1,135 @@
 /**
- * tables.js - Sortable, paginated data table
+ * tables.js - Tabela paginada, ordenável, com busca local e seleção ligada ao mapa
  */
-import { getFiltered, dispatch } from './state.js';
-import { fmt, fmtRating, esc, tipoColor, tipoShort, truncate } from './utils.js';
+import { state, getFiltered, dispatch } from './state.js';
+import { fmt, fmtRating, esc, tipoKey, tipoShort, truncate, normalize, debounce, reducedMotion } from './utils.js';
 
-const PAGE_SIZE = 20;
+let pageSize = 15;
 let currentPage = 1;
-let sortKey = 'review_rating';
+let sortKey = 'ocorrencias_total';
 let sortAsc = false;
+let query = '';
+
+const COLS = [
+  { key: 'nome_estabelecimento', label: 'Estabelecimento' },
+  { key: 'bairro_pesquisa', label: 'Bairro' },
+  { key: 'tipo_estabelecimento', label: 'Tipo' },
+  { key: 'review_rating', label: 'Nota', num: true },
+  { key: 'review_count', label: 'Avaliações', num: true },
+  { key: 'ocorrencias_total', label: 'Recorrência', num: true },
+  { key: 'estabelecimentos_500m', label: 'Em 500 m', num: true },
+];
 
 export function render() {
-  const filtered = getFiltered();
-  const sorted = _sort(filtered, sortKey, sortAsc);
-  const total = sorted.length;
-  const pages = Math.ceil(total / PAGE_SIZE);
-  currentPage = Math.min(currentPage, Math.max(1, pages));
-  const slice = sorted.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const container = document.getElementById('table-container');
+  if (!container) return;
 
-  const html = `
-    <div class="table-info" style="font-size:13px;color:var(--text-secondary);margin-bottom:10px">
-      Mostrando <strong>${(currentPage-1)*PAGE_SIZE+1}–${Math.min(currentPage*PAGE_SIZE,total)}</strong> de <strong>${fmt(total)}</strong> estabelecimentos
-    </div>
-    <div class="table-wrap" style="overflow-x:auto">
-      <table class="data-table" role="grid">
-        <thead>
-          <tr>
-            ${_th('nome_estabelecimento','Nome')}
-            ${_th('bairro_pesquisa','Bairro')}
-            ${_th('tipo_estabelecimento','Tipo')}
-            ${_th('categoria_padronizada','Categoria')}
-            ${_th('review_rating','Nota')}
-            ${_th('review_count','Aval.')}
-            ${_th('ocorrencias_total','Recorrência')}
-            ${_th('estabelecimentos_500m','Pts 500m')}
-          </tr>
-        </thead>
-        <tbody>
-          ${slice.map(e => _row(e)).join('')}
-        </tbody>
-      </table>
-    </div>
-    ${_pagination(currentPage, pages)}
-  `;
-
-  ['table-container', 'table-container-alt'].forEach(id => {
-    const container = document.getElementById(id);
-    if (!container) return;
-    container.innerHTML = html;
-
-    container.querySelectorAll('th[data-key]').forEach(th => {
-      th.addEventListener('click', () => {
-        const key = th.dataset.key;
-        if (sortKey === key) sortAsc = !sortAsc;
-        else { sortKey = key; sortAsc = false; }
-        render();
-      });
+  if (!container.dataset.ready) {
+    container.dataset.ready = '1';
+    container.innerHTML = `
+      <div class="tb-toolbar">
+        <div class="tb-search">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.3"/><path d="M10.2 10.2l3.3 3.3" stroke-linecap="round"/></svg>
+          <input type="search" id="tb-search" placeholder="Buscar na tabela…" aria-label="Buscar na tabela">
+        </div>
+        <div class="tb-info" id="tb-info" aria-live="polite"></div>
+        <label class="tb-size">Linhas
+          <select id="tb-size" aria-label="Linhas por página">
+            ${[15, 30, 50].map(n => `<option value="${n}" ${n === pageSize ? 'selected' : ''}>${n}</option>`).join('')}
+          </select>
+        </label>
+      </div>
+      <div class="table-wrap"><table class="data-table"><thead></thead><tbody></tbody></table></div>
+      <nav class="tb-pages" aria-label="Paginação"></nav>`;
+    container.querySelector('#tb-search').addEventListener('input', debounce(ev => {
+      query = normalize(ev.target.value); currentPage = 1; render();
+    }, 150));
+    container.querySelector('#tb-size').addEventListener('change', ev => {
+      pageSize = +ev.target.value; currentPage = 1; render();
     });
+  }
 
-    container.querySelectorAll('tr[data-id]').forEach(tr => {
-      tr.addEventListener('click', () => {
-        dispatch('SELECT_ESTABLISHMENT', { placeId: tr.dataset.id });
-        document.getElementById('map-section')?.scrollIntoView({ behavior: 'smooth' });
-      });
-      tr.style.cursor = 'pointer';
-    });
+  let rows = getFiltered();
+  if (query) rows = rows.filter(e => normalize(`${e.nome_estabelecimento} ${e.bairro_pesquisa} ${e.categoria_padronizada}`).includes(query));
+  rows = _sort(rows);
+  const total = rows.length;
+  const pages = Math.max(1, Math.ceil(total / pageSize));
+  currentPage = Math.min(currentPage, pages);
+  const slice = rows.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 
-    container.querySelectorAll('[data-page]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        currentPage = parseInt(btn.dataset.page);
-        render();
-        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
+  container.querySelector('#tb-info').innerHTML = total
+    ? `<strong>${fmt((currentPage - 1) * pageSize + 1)}–${fmt(Math.min(currentPage * pageSize, total))}</strong> de <strong>${fmt(total)}</strong>`
+    : 'Nenhum resultado';
+
+  container.querySelector('thead').innerHTML = `<tr>${COLS.map(c => {
+    const on = sortKey === c.key;
+    return `<th scope="col" class="${c.num ? 'num' : ''}${on ? ' is-sorted' : ''}" aria-sort="${on ? (sortAsc ? 'ascending' : 'descending') : 'none'}">
+      <button type="button" data-key="${c.key}">${c.label}<span class="sort-ic">${on ? (sortAsc ? '↑' : '↓') : '↕'}</span></button></th>`;
+  }).join('')}</tr>`;
+
+  const sel = state.selectedPlaceId;
+  container.querySelector('tbody').innerHTML = slice.length ? slice.map(e => {
+    const k = tipoKey(e.tipo_estabelecimento);
+    return `
+      <tr data-id="${esc(e.place_id)}" class="${e.place_id === sel ? 'is-selected' : ''}" tabindex="0" aria-selected="${e.place_id === sel}">
+        <td><div class="tb-name">${esc(truncate(e.nome_estabelecimento, 44))}</div>
+            <div class="tb-sub">${esc(e.categoria_padronizada && e.categoria_padronizada !== 'Não informado' ? e.categoria_padronizada : 'Categoria não informada')}</div></td>
+        <td>${esc(e.bairro_pesquisa ?? '—')}</td>
+        <td><span class="tb-tipo t-${k}"><i class="lg-dot t-${k}"></i>${tipoShort(e.tipo_estabelecimento)}</span></td>
+        <td class="num">${e.review_rating > 0 ? `<strong>${fmtRating(e.review_rating)}</strong>` : '<span class="tb-na">—</span>'}</td>
+        <td class="num">${e.review_count ? fmt(e.review_count) : '<span class="tb-na">0</span>'}</td>
+        <td class="num">${fmt(e.ocorrencias_total ?? 0)}</td>
+        <td class="num">${fmt(e.estabelecimentos_500m ?? 0)}</td>
+      </tr>`;
+  }).join('') : `<tr><td colspan="${COLS.length}" class="tb-empty">Nenhum estabelecimento corresponde à busca.</td></tr>`;
+
+  container.querySelector('.tb-pages').innerHTML = _pagination(currentPage, pages);
+  _bind(container);
+}
+
+function _bind(container) {
+  container.querySelectorAll('thead [data-key]').forEach(btn => btn.addEventListener('click', () => {
+    const k = btn.dataset.key;
+    if (sortKey === k) sortAsc = !sortAsc; else { sortKey = k; sortAsc = k === 'nome_estabelecimento' || k === 'bairro_pesquisa'; }
+    render();
+  }));
+  container.querySelectorAll('tbody tr[data-id]').forEach(tr => {
+    const go = () => {
+      dispatch('SELECT_ESTABLISHMENT', { placeId: tr.dataset.id });
+      if (state.activeView === 'tabela') dispatch('SET_VIEW', { view: 'mapa' });
+      else document.getElementById('map-section')?.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
+    };
+    tr.addEventListener('click', go);
+    tr.addEventListener('keydown', ev => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); go(); } });
   });
+  container.querySelectorAll('.tb-pages [data-page]').forEach(btn => btn.addEventListener('click', () => {
+    currentPage = +btn.dataset.page;
+    render();
+    container.querySelector('.table-wrap').scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
+  }));
 }
 
-function _th(key, label) {
-  const active = sortKey === key;
-  const arrow = active ? (sortAsc ? ' ↑' : ' ↓') : '';
-  return `<th data-key="${key}" style="cursor:pointer;white-space:nowrap;${active?'color:var(--acai-mid);':''}">${label}${arrow}</th>`;
-}
-
-function _row(e) {
-  const color = tipoColor(e.tipo_estabelecimento);
-  return `
-    <tr data-id="${esc(e.place_id)}" class="table-row">
-      <td style="max-width:200px">
-        <div style="font-weight:600;font-size:13px">${esc(truncate(e.nome_estabelecimento, 35))}</div>
-        ${e.endereco ? `<div style="font-size:11px;color:var(--text-muted)">${esc(truncate(e.endereco, 40))}</div>` : ''}
-      </td>
-      <td style="white-space:nowrap">${esc(e.bairro_pesquisa ?? '—')}</td>
-      <td>
-        <span style="display:inline-block;padding:2px 8px;border-radius:999px;background:${color}22;color:${color};font-size:11px;font-weight:600;white-space:nowrap">
-          ${tipoShort(e.tipo_estabelecimento)}
-        </span>
-      </td>
-      <td style="font-size:12px;color:var(--text-secondary)">${esc(e.categoria_padronizada || '—')}</td>
-      <td style="font-weight:700;color:${_ratingColor(e.review_rating)}">${e.review_rating ? fmtRating(e.review_rating) : '—'}</td>
-      <td style="text-align:right">${fmt(e.review_count ?? 0)}</td>
-      <td style="text-align:center;font-weight:600;color:var(--acai-mid)">${fmt(e.ocorrencias_total ?? 0)}</td>
-      <td style="text-align:center">${fmt(e.estabelecimentos_500m ?? 0)}</td>
-    </tr>
-  `;
-}
-
-function _ratingColor(r) {
-  if (!r) return 'var(--text-muted)';
-  if (r >= 4.5) return '#2E7D32';
-  if (r >= 4.0) return '#4B286D';
-  if (r >= 3.5) return '#E6A817';
-  return '#C8102E';
-}
-
-function _sort(arr, key, asc) {
+function _sort(arr) {
   return [...arr].sort((a, b) => {
-    const av = a[key] ?? '';
-    const bv = b[key] ?? '';
-    const cmp = typeof av === 'number' ? av - bv : String(av).localeCompare(String(bv), 'pt-BR');
-    return asc ? cmp : -cmp;
+    let av = a[sortKey], bv = b[sortKey];
+    if (sortKey === 'review_rating') { av = av > 0 ? av : -1; bv = bv > 0 ? bv : -1; }
+    const cmp = typeof av === 'number' || typeof bv === 'number'
+      ? (av ?? -1) - (bv ?? -1)
+      : String(av ?? '').localeCompare(String(bv ?? ''), 'pt-BR');
+    return (sortAsc ? cmp : -cmp) || String(a.nome_estabelecimento).localeCompare(b.nome_estabelecimento, 'pt-BR');
   });
 }
 
 function _pagination(cur, total) {
   if (total <= 1) return '';
-  const pages = [];
   const range = (s, e) => Array.from({ length: e - s + 1 }, (_, i) => s + i);
-  let nums;
-  if (total <= 7) nums = range(1, total);
-  else if (cur <= 4) nums = [...range(1, 5), '…', total];
-  else if (cur >= total - 3) nums = [1, '…', ...range(total - 4, total)];
-  else nums = [1, '…', ...range(cur - 1, cur + 1), '…', total];
-
-  return `<div style="display:flex;justify-content:center;gap:6px;margin-top:16px;flex-wrap:wrap">
-    <button data-page="${Math.max(1,cur-1)}" class="filter-btn" ${cur===1?'disabled':''}>← Anterior</button>
-    ${nums.map(n => n === '…'
-      ? `<span style="display:flex;align-items:center;padding:0 4px;color:var(--text-muted)">…</span>`
-      : `<button data-page="${n}" class="filter-btn${n===cur?' active':''}${n===cur?' btn-primary':''}" style="${n===cur?'background:var(--acai-mid);color:#fff;border-color:var(--acai-mid)':''}">${n}</button>`
-    ).join('')}
-    <button data-page="${Math.min(total,cur+1)}" class="filter-btn" ${cur===total?'disabled':''}>Próxima →</button>
-  </div>`;
+  const nums = total <= 7 ? range(1, total)
+    : cur <= 4 ? [...range(1, 5), '…', total]
+    : cur >= total - 3 ? [1, '…', ...range(total - 4, total)]
+    : [1, '…', cur - 1, cur, cur + 1, '…', total];
+  return `
+    <button type="button" class="pg-btn" data-page="${cur - 1}" ${cur === 1 ? 'disabled' : ''} aria-label="Página anterior">‹</button>
+    ${nums.map(n => n === '…' ? '<span class="pg-gap">…</span>'
+      : `<button type="button" class="pg-btn${n === cur ? ' is-current' : ''}" data-page="${n}" ${n === cur ? 'aria-current="page"' : ''}>${n}</button>`).join('')}
+    <button type="button" class="pg-btn" data-page="${cur + 1}" ${cur === total ? 'disabled' : ''} aria-label="Próxima página">›</button>`;
 }

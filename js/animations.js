@@ -1,157 +1,83 @@
 /**
- * animations.js — Interactive canvas background + entrance animations
+ * animations.js - Textura de partículas no hero (baixa intensidade) + revelação por seção
  */
+import { reducedMotion } from './utils.js';
 
-let canvas, ctx, animId;
-let particles = [];
-let mouseX = -9999, mouseY = -9999;
-
-const PARTICLE_COUNT = 72;
-const MAX_DIST = 110;
-const REPEL_RADIUS = 130;
-const REPEL_STRENGTH = 0.55;
-const MAX_SPEED = 2.2;
-const FRICTION = 0.965;
-
-const COLORS = [
-  'rgba(203,58,166,', // pink
-  'rgba(75,37,93,',   // purple
-  'rgba(162,204,36,', // lime
-  'rgba(230,29,127,', // bright pink
-  'rgba(155,45,138,', // mid purple
-];
+const COUNT = 12;
+const LINK = 140;
+let canvas, ctx, raf = null, visible = true, parts = [];
+let mx = -9999, my = -9999, w = 0, h = 0, dpr = 1;
 
 export function startCanvas() {
-  canvas = document.getElementById('bg-canvas');
-  if (!canvas) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
+  canvas = document.getElementById('hero-canvas');
+  if (!canvas || reducedMotion()) return;
   ctx = canvas.getContext('2d');
   _resize();
-  _initParticles();
-  _loop();
+  parts = Array.from({ length: COUNT }, () => ({
+    x: Math.random() * w, y: Math.random() * h,
+    vx: (Math.random() - 0.5) * 0.18, vy: (Math.random() - 0.5) * 0.18,
+    r: Math.random() * 1.6 + 0.8,
+  }));
 
-  window.addEventListener('resize', _debounceResize);
-  document.addEventListener('mousemove', e => { mouseX = e.clientX; mouseY = e.clientY; });
-  document.addEventListener('touchmove', e => {
-    mouseX = e.touches[0].clientX;
-    mouseY = e.touches[0].clientY;
-  }, { passive: true });
-  document.addEventListener('mouseleave', () => { mouseX = -9999; mouseY = -9999; });
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) cancelAnimationFrame(animId);
-    else _loop();
-  });
+  const hero = document.getElementById('hero');
+  hero.addEventListener('pointermove', e => { const b = canvas.getBoundingClientRect(); mx = e.clientX - b.left; my = e.clientY - b.top; });
+  hero.addEventListener('pointerleave', () => { mx = my = -9999; });
+  window.addEventListener('resize', _resize);
+  new IntersectionObserver(([en]) => { visible = en.isIntersecting; _toggle(); }).observe(hero);
+  document.addEventListener('visibilitychange', _toggle);
+  _toggle();
 }
+
+function _toggle() {
+  const run = visible && !document.hidden && !document.getElementById('hero')?.hidden;
+  if (run && !raf) raf = requestAnimationFrame(_loop);
+  if (!run && raf) { cancelAnimationFrame(raf); raf = null; }
+}
+
+export function refreshCanvas() { _resize(); _toggle(); }
 
 function _resize() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-let _resizeTimer;
-function _debounceResize() {
-  clearTimeout(_resizeTimer);
-  _resizeTimer = setTimeout(() => { _resize(); _initParticles(); }, 200);
-}
-
-function _initParticles() {
-  particles = Array.from({ length: PARTICLE_COUNT }, (_, i) => ({
-    x: Math.random() * canvas.width,
-    y: Math.random() * canvas.height,
-    vx: (Math.random() - 0.5) * 0.4,
-    vy: (Math.random() - 0.5) * 0.4,
-    r: Math.random() * 2.5 + 0.8,
-    color: COLORS[i % COLORS.length],
-    alpha: Math.random() * 0.35 + 0.15,
-    pulse: Math.random() * Math.PI * 2,
-    pulseSpeed: 0.015 + Math.random() * 0.015,
-  }));
+  if (!canvas) return;
+  dpr = Math.min(window.devicePixelRatio || 1, 2);
+  w = canvas.offsetWidth; h = canvas.offsetHeight;
+  canvas.width = w * dpr; canvas.height = h * dpr;
+  ctx?.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 
 function _loop() {
-  animId = requestAnimationFrame(_loop);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (const p of particles) {
-    // Mouse repulsion
-    const dx = p.x - mouseX;
-    const dy = p.y - mouseY;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    if (dist < REPEL_RADIUS && dist > 0) {
-      const force = (REPEL_RADIUS - dist) / REPEL_RADIUS;
-      p.vx += (dx / dist) * force * REPEL_STRENGTH;
-      p.vy += (dy / dist) * force * REPEL_STRENGTH;
-    }
-
-    // Friction + speed cap
-    p.vx *= FRICTION;
-    p.vy *= FRICTION;
-    const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
-    if (speed > MAX_SPEED) { p.vx = (p.vx / speed) * MAX_SPEED; p.vy = (p.vy / speed) * MAX_SPEED; }
-
-    p.x += p.vx;
-    p.y += p.vy;
-
-    // Wrap edges smoothly
-    if (p.x < -20) p.x = canvas.width + 20;
-    if (p.x > canvas.width + 20) p.x = -20;
-    if (p.y < -20) p.y = canvas.height + 20;
-    if (p.y > canvas.height + 20) p.y = -20;
-
-    // Pulse alpha
-    p.pulse += p.pulseSpeed;
-    const a = p.alpha + Math.sin(p.pulse) * 0.08;
-
+  raf = requestAnimationFrame(_loop);
+  ctx.clearRect(0, 0, w, h);
+  for (const p of parts) {
+    const dx = p.x - mx, dy = p.y - my, d = Math.hypot(dx, dy);
+    if (d < 110 && d > 0) { p.vx += dx / d * 0.04; p.vy += dy / d * 0.04; }
+    p.vx *= 0.985; p.vy *= 0.985;
+    if (Math.hypot(p.vx, p.vy) < 0.08) { p.vx += (Math.random() - 0.5) * 0.02; p.vy += (Math.random() - 0.5) * 0.02; }
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < -10) p.x = w + 10; if (p.x > w + 10) p.x = -10;
+    if (p.y < -10) p.y = h + 10; if (p.y > h + 10) p.y = -10;
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-    ctx.fillStyle = p.color + a + ')';
+    ctx.fillStyle = 'rgba(255,255,255,0.28)';
     ctx.fill();
   }
-
-  // Connection lines
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < MAX_DIST) {
-        const opacity = (1 - dist / MAX_DIST) * 0.12;
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(203,58,166,${opacity})`;
-        ctx.lineWidth = 0.6;
-        ctx.stroke();
+  for (let i = 0; i < parts.length; i++) {
+    for (let j = i + 1; j < parts.length; j++) {
+      const a = parts[i], b = parts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < LINK) {
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y);
+        ctx.strokeStyle = `rgba(162,204,36,${(1 - d / LINK) * 0.14})`;
+        ctx.lineWidth = 0.7; ctx.stroke();
       }
     }
   }
 }
 
-/* ── Entrance animations (IntersectionObserver) ── */
-export function initEntranceAnimations() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-
-  // Stagger siblings
-  document.querySelectorAll('#kpi-grid .kpi-card').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 70}ms`;
-    observer.observe(el);
-  });
-
-  document.querySelectorAll('.chart-card').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 60}ms`;
-    observer.observe(el);
-  });
-
-  document.querySelectorAll('.hero-stat').forEach((el, i) => {
-    el.style.transitionDelay = `${i * 80}ms`;
-    el.classList.add('animate-in'); // hero is immediately visible
-  });
+/** Seções entram uma a uma conforme o scroll */
+export function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (reducedMotion() || !('IntersectionObserver' in window)) { els.forEach(el => el.classList.add('is-in')); return; }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+  }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => io.observe(el));
 }

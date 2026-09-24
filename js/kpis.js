@@ -1,175 +1,172 @@
 /**
- * kpis.js - KPI cards rendering with count-up animation
+ * kpis.js - KPI hierárquico: 1 principal + secundários; modo contextual na seleção
  */
-import { getGlobalStats, getByPlaceId } from './data.js';
-import { state, getFiltered } from './state.js';
-import { fmt, fmtRating, countUp, starsHtml } from './utils.js';
+import { getGlobalStats, getByPlaceId, countQueriesFor, getCollectionDate } from './data.js';
+import { state, dispatch, getFiltered, activeFilterCount } from './state.js';
+import { fmt, fmtDist, countUp, esc, tipoKey, TIPOS, icon, reducedMotion } from './utils.js';
 
-const ICONS = {
-  estabs:     '📍',
-  occs:       '🔍',
-  rating:     '⭐',
-  reviews:    '💬',
-  bairros:    '🗺️',
-  queries:    '📊',
-  dist:       '📏',
-  viz500:     '🏘️',
-  viz1k:      '🏙️',
-  recorr:     '🔁',
-};
+let _mode = null;
 
 export function render() {
   const grid = document.getElementById('kpi-grid');
   if (!grid) return;
-
-  const global = getGlobalStats();
-  const filtered = getFiltered();
   const sel = state.selectedPlaceId ? getByPlaceId(state.selectedPlaceId) : null;
+  const model = sel ? _selectedModel(sel) : _globalModel();
+  const mode = sel ? `sel:${sel.place_id}` : 'global';
 
-  if (sel) {
-    _renderSelected(grid, sel);
-  } else {
-    _renderGlobal(grid, global, filtered);
+  if (_mode === mode) { _update(grid, model); return; }
+
+  const first = _mode === null;
+  _mode = mode;
+  if (first || reducedMotion()) { _build(grid, model); return; }
+  grid.classList.add('is-swapping');
+  setTimeout(() => { _build(grid, model); grid.classList.remove('is-swapping'); }, 180);
+}
+
+/* ── Models ────────────────────────────────────── */
+function _globalModel() {
+  const g = getGlobalStats();
+  const f = getFiltered();
+  const isF = activeFilterCount() > 0;
+  const ids = new Set(f.map(e => e.place_id));
+  const rated = f.filter(e => e.review_rating > 0);
+  const avg = rated.length ? rated.reduce((s, e) => s + e.review_rating, 0) / rated.length : null;
+  const reviews = f.reduce((s, e) => s + (e.review_count ?? 0), 0);
+  const occ = f.reduce((s, e) => s + (e.ocorrencias_total ?? 0), 0);
+  const q = isF ? countQueriesFor(ids) : g.queries;
+  const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+  const date = getCollectionDate();
+
+  return {
+    primary: {
+      eyebrow: 'Estabelecimentos encontrados',
+      value: f.length,
+      delta: isF
+        ? `<span class="kpi-pill">${pct(f.length, g.total)}% do total</span> de ${fmt(g.total)} mapeados`
+        : `em ${fmt(g.bairros)} bairros${date ? ` · coleta de ${date}` : ''}`,
+      tipos: TIPOS.map(t => ({ t, c: f.filter(e => e.tipo_estabelecimento === t).length })),
+      total: f.length,
+    },
+    cards: [
+      { id: 'rating', ic: 'star', label: 'Avaliação média', value: avg, dec: 2,
+        desc: avg ? `entre ${fmt(rated.length)} com nota no Google` : 'nenhum com nota nos filtros',
+        delta: isF && avg ? _diff(avg - g.avgRating, 2, 'vs. média geral') : null },
+      { id: 'reviews', ic: 'chat', label: 'Avaliações', value: reviews,
+        desc: 'somadas no Google Maps',
+        delta: isF ? `${pct(reviews, g.totalRatings)}% do total` : null },
+      { id: 'bairros', ic: 'grid', label: 'Bairros', value: new Set(f.map(e => e.bairro_pesquisa)).size,
+        desc: 'com ao menos um ponto', delta: isF ? `de ${fmt(g.bairros)}` : null },
+      { id: 'queries', ic: 'search', label: 'Consultas', value: q,
+        desc: isF ? 'em que estes pontos apareceram' : 'bairro × termo no Google Maps', delta: isF ? `de ${fmt(g.queries)}` : null },
+      { id: 'occ', ic: 'repeat', label: 'Ocorrências', value: occ,
+        desc: 'aparições nos resultados de busca', delta: isF ? `${pct(occ, g.occurrencesTotal)}% do total` : null },
+      { id: 'rated', ic: 'check', label: 'Com avaliação', value: rated.length,
+        desc: `${pct(rated.length, f.length)}% têm nota no Google`, delta: null },
+    ],
+  };
+}
+
+function _selectedModel(e) {
+  const k = tipoKey(e.tipo_estabelecimento);
+  const hasR = e.review_rating > 0;
+  return {
+    primary: {
+      eyebrow: 'Estabelecimento selecionado',
+      name: e.nome_estabelecimento,
+      meta: `<i class="lg-dot t-${k}"></i>${esc(e.tipo_estabelecimento)} · ${esc(e.bairro_pesquisa ?? '')}`,
+    },
+    cards: [
+      { id: 's-rating', ic: 'star', label: 'Avaliação', value: hasR ? e.review_rating : null, dec: 1,
+        desc: hasR ? 'nota no Google Maps' : 'sem avaliações no Google' },
+      { id: 's-reviews', ic: 'chat', label: 'Avaliações', value: e.review_count ?? 0, desc: 'no Google Maps' },
+      { id: 's-recorr', ic: 'repeat', label: 'Recorrência', value: e.ocorrencias_total ?? 0, desc: 'ocorrências nas consultas' },
+      { id: 's-dist', ic: 'ruler', label: 'Distância', text: fmtDist(e.distancia_bairro_pesquisa_km), desc: 'do ponto de referência do bairro' },
+      { id: 's-500', ic: 'radius', label: 'Em 500 m', value: e.estabelecimentos_500m ?? 0, desc: 'estabelecimentos próximos' },
+      { id: 's-1k', ic: 'radius', label: 'Em 1 km', value: e.estabelecimentos_1km ?? 0, desc: 'estabelecimentos próximos' },
+    ],
+  };
+}
+
+function _diff(d, dec, suffix) {
+  const s = d > 0 ? '+' : d < 0 ? '−' : '±';
+  return `${s}${fmt(Math.abs(d), dec)} ${suffix}`;
+}
+
+/* ── DOM ───────────────────────────────────────── */
+function _build(grid, m) {
+  const p = m.primary;
+  grid.innerHTML = `
+    <article class="kpi-primary${p.name ? ' is-selected' : ''}">
+      <div class="kpi-eyebrow">${icon(p.name ? 'target' : 'pin', 14)} ${p.eyebrow}</div>
+      ${p.name ? `
+        <div class="kpi-sel-name">${esc(p.name)}</div>
+        <div class="kpi-sel-meta">${p.meta}</div>
+        <button class="kpi-sel-clear" type="button">${icon('close', 12)} Limpar seleção</button>
+      ` : `
+        <div class="kpi-hero-num" id="kpi-main-val">0</div>
+        <div class="kpi-delta" id="kpi-main-delta">${p.delta}</div>
+        <div class="kpi-typebar" id="kpi-typebar" role="group" aria-label="Distribuição por tipo">${_typebar(p)}</div>
+      `}
+    </article>
+    <div class="kpi-secondary">
+      ${m.cards.map(c => `
+        <article class="kpi-card" id="kpi-${c.id}">
+          <div class="kpi-card-top">
+            <span class="kpi-ic">${icon(c.ic, 15)}</span>
+            <span class="kpi-label">${c.label}</span>
+          </div>
+          <div class="kpi-value" id="kpi-${c.id}-val">${c.text ? esc(c.text) : (c.value == null ? '—' : '0')}</div>
+          <div class="kpi-desc" id="kpi-${c.id}-desc">${c.desc}</div>
+          <div class="kpi-card-delta" id="kpi-${c.id}-delta">${c.delta ?? ''}</div>
+        </article>`).join('')}
+    </div>`;
+
+  grid.querySelector('.kpi-sel-clear')?.addEventListener('click', () => dispatch('SELECT_ESTABLISHMENT', { placeId: null }));
+  _bindTypebar(grid);
+  _update(grid, m);
+}
+
+function _update(grid, m) {
+  const p = m.primary;
+  const main = document.getElementById('kpi-main-val');
+  if (main) countUp(main, p.value, 450, 0);
+  const d = document.getElementById('kpi-main-delta');
+  if (d && !p.name) d.innerHTML = p.delta;
+  const tb = document.getElementById('kpi-typebar');
+  if (tb && p.tipos) { tb.innerHTML = _typebar(p); _bindTypebar(grid); }
+
+  for (const c of m.cards) {
+    const v = document.getElementById(`kpi-${c.id}-val`);
+    if (!v) continue;
+    if (c.text) v.textContent = c.text;
+    else if (c.value == null) { v.textContent = '—'; v.dataset.current = ''; }
+    else countUp(v, c.value, 450, c.dec ?? 0);
+    const de = document.getElementById(`kpi-${c.id}-desc`);
+    if (de) de.textContent = c.desc;
+    const dl = document.getElementById(`kpi-${c.id}-delta`);
+    if (dl) dl.textContent = c.delta ?? '';
   }
 }
 
-function _renderGlobal(grid, g, filtered) {
-  const cards = [
-    {
-      id: 'kpi-estabs',
-      icon: ICONS.estabs,
-      label: 'Estabelecimentos',
-      value: filtered.length,
-      sub: filtered.length < g.total ? `de ${fmt(g.total)} total` : 'únicos mapeados',
-      accent: '#4B286D',
-    },
-    {
-      id: 'kpi-occs',
-      icon: ICONS.occs,
-      label: 'Ocorrências de Busca',
-      value: g.occurrencesTotal,
-      sub: 'nas consultas Google Maps',
-      accent: '#3F6B4F',
-    },
-    {
-      id: 'kpi-rating',
-      icon: ICONS.rating,
-      label: 'Avaliação Média',
-      value: parseFloat(_filteredAvgRating(filtered).toFixed(1)),
-      sub: `${starsHtml(Math.round(_filteredAvgRating(filtered)))}`,
-      accent: '#E6A817',
-      decimals: 1,
-    },
-    {
-      id: 'kpi-reviews',
-      icon: ICONS.reviews,
-      label: 'Total de Avaliações',
-      value: filtered.reduce((s, e) => s + (e.review_count ?? 0), 0),
-      sub: 'avaliações no Google Maps',
-      accent: '#003DA5',
-    },
-    {
-      id: 'kpi-bairros',
-      icon: ICONS.bairros,
-      label: 'Bairros',
-      value: new Set(filtered.map(e => e.bairro_pesquisa)).size,
-      sub: 'bairros pesquisados',
-      accent: '#C8102E',
-    },
-    {
-      id: 'kpi-queries',
-      icon: ICONS.queries,
-      label: 'Consultas',
-      value: g.queries,
-      sub: 'consultas realizadas',
-      accent: '#8E5AA8',
-    },
-  ];
-  _setCards(grid, cards);
-}
-
-function _renderSelected(grid, sel) {
-  const cards = [
-    {
-      id: 'kpi-sel-rating',
-      icon: ICONS.rating,
-      label: 'Avaliação',
-      value: parseFloat((sel.review_rating ?? 0).toFixed(1)),
-      sub: starsHtml(Math.round(sel.review_rating ?? 0)),
-      accent: '#E6A817',
-      decimals: 1,
-    },
-    {
-      id: 'kpi-sel-reviews',
-      icon: ICONS.reviews,
-      label: 'Avaliações',
-      value: sel.review_count ?? 0,
-      sub: 'avaliações no Google',
-      accent: '#003DA5',
-    },
-    {
-      id: 'kpi-sel-recorr',
-      icon: ICONS.recorr,
-      label: 'Recorrência',
-      value: sel.ocorrencias_total ?? 0,
-      sub: 'ocorrências nas buscas',
-      accent: '#4B286D',
-    },
-    {
-      id: 'kpi-sel-dist',
-      icon: ICONS.dist,
-      label: 'Dist. bairro referência',
-      value: sel.distancia_bairro_pesquisa_km ?? 0,
-      sub: 'km do bairro pesquisado',
-      accent: '#3F6B4F',
-      decimals: 2,
-    },
-    {
-      id: 'kpi-sel-viz500',
-      icon: ICONS.viz500,
-      label: 'Vizinhança 500m',
-      value: sel.estabelecimentos_500m ?? 0,
-      sub: 'estabelecimentos próximos',
-      accent: '#C8102E',
-    },
-    {
-      id: 'kpi-sel-viz1k',
-      icon: ICONS.viz1k,
-      label: 'Vizinhança 1km',
-      value: sel.estabelecimentos_1km ?? 0,
-      sub: 'estabelecimentos no raio',
-      accent: '#8E5AA8',
-    },
-  ];
-  _setCards(grid, cards);
-}
-
-function _setCards(grid, cards) {
-  // If IDs match, just update values; else rebuild
-  const firstCard = grid.querySelector('.kpi-card');
-  if (firstCard && firstCard.id === cards[0].id) {
-    cards.forEach(c => {
-      const valEl = document.getElementById(c.id + '-val');
-      if (valEl) countUp(valEl, c.value, 900, c.decimals ?? 0);
-    });
-    return;
-  }
-  grid.innerHTML = cards.map(c => `
-    <div class="kpi-card" id="${c.id}" style="--card-accent:${c.accent}">
-      <div class="kpi-icon">${c.icon}</div>
-      <div class="kpi-label">${c.label}</div>
-      <div class="kpi-value" id="${c.id}-val" data-target="${c.value}">${fmt(0, c.decimals ?? 0)}</div>
-      <div class="kpi-sub">${c.sub}</div>
+function _typebar(p) {
+  const tot = p.total || 1;
+  const active = state.filters.tipos;
+  return `
+    <div class="kpi-typebar-track">
+      ${p.tipos.map(({ t, c }) => c ? `<span class="t-${tipoKey(t)}" style="flex:${c}" title="${esc(t)}: ${fmt(c)}"></span>` : '').join('')}
     </div>
-  `).join('');
-  // Trigger count-up
-  cards.forEach(c => {
-    const el = document.getElementById(c.id + '-val');
-    if (el) countUp(el, c.value, 800, c.decimals ?? 0);
-  });
+    <div class="kpi-typelegend">
+      ${p.tipos.map(({ t, c }) => `
+        <button type="button" data-tipo="${esc(t)}" class="${active.includes(t) ? 'is-active' : ''}" aria-pressed="${active.includes(t)}">
+          <i class="lg-dot t-${tipoKey(t)}"></i><span>${esc(t)}</span><strong>${fmt(c)}</strong><em>${Math.round(c / tot * 100)}%</em>
+        </button>`).join('')}
+    </div>`;
 }
 
-function _filteredAvgRating(filtered) {
-  const valid = filtered.filter(e => e.review_rating > 0);
-  return valid.length ? valid.reduce((s, e) => s + e.review_rating, 0) / valid.length : 0;
+function _bindTypebar(grid) {
+  grid.querySelectorAll('.kpi-typelegend [data-tipo]').forEach(b => b.addEventListener('click', () => {
+    const t = b.dataset.tipo;
+    const cur = state.filters.tipos;
+    dispatch('SET_FILTER', { tipos: cur.length === 1 && cur[0] === t ? [] : [t] });
+  }));
 }

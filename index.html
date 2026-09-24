@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Açaí Map Belém — Dashboard de Estabelecimentos</title>
-  <meta name="description" content="Dashboard interativo mapeando estabelecimentos de açaí em Belém do Pará">
+  <title>Açaí Map — Onde o açaí aparece em Belém</title>
+  <meta name="description" content="Exploração geográfica dos estabelecimentos de açaí encontrados no Google Maps em 10 bairros de Belém do Pará.">
+  <meta name="theme-color" content="#4B255D">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" crossorigin>
 
-  <!-- App CSS -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -25,395 +24,318 @@
   <link rel="stylesheet" href="css/tables.css">
   <link rel="stylesheet" href="css/responsive.css">
 
-  <!-- Leaflet JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin></script>
-
-  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" crossorigin></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js" crossorigin></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin></script>
 
-  <!-- Dashboard Data -->
   <script src="data/dashboard_data.js"></script>
 </head>
 <body>
 
-<!-- Background canvas -->
-<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<a class="skip-link" href="#map-section">Pular para o mapa</a>
 
-<!-- ─── Header ──────────────────────────────────────────────── -->
+<!-- ─── Header ───────────────────────────────────────────── -->
 <header id="header" role="banner">
-  <div class="logo" aria-label="Açaí Map Belém">
-    <img src="assets/logo.svg" alt="Açaí Map Belém" height="34">
-  </div>
+  <a class="brand" href="#" data-view-link="overview" aria-label="Açaí Map — Belém / PA, início">
+    <img src="assets/favicon.svg" width="28" height="28" alt="">
+    <span class="brand-text"><span class="brand-name">AÇAÍ MAP</span><span class="brand-sub">BELÉM / PA</span></span>
+  </a>
 
   <nav id="main-nav" aria-label="Navegação principal">
-    <button class="nav-btn active" data-view="overview" aria-current="page">Visão Geral</button>
+    <button class="nav-btn active" data-view="overview" aria-current="page">Explorar</button>
     <button class="nav-btn" data-view="mapa">Mapa</button>
-    <button class="nav-btn" data-view="graficos">Gráficos</button>
+    <button class="nav-btn" data-view="graficos">Análises</button>
     <button class="nav-btn" data-view="tabela">Tabela</button>
     <button class="nav-btn" data-view="bairros">Bairros</button>
     <button class="nav-btn" data-view="sobre">Sobre</button>
   </nav>
 
   <div id="header-search" role="search">
-    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-      <circle cx="6.5" cy="6.5" r="5" stroke="rgba(255,255,255,.7)" stroke-width="1.5"/>
-      <path d="M10.5 10.5l3.5 3.5" stroke="rgba(255,255,255,.7)" stroke-width="1.5" stroke-linecap="round"/>
-    </svg>
-    <input type="search" id="header-search-input" placeholder="Buscar estabelecimento…" aria-label="Buscar estabelecimento">
+    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.3"/><path d="M10.2 10.2l3.3 3.3" stroke-linecap="round"/></svg>
+    <input type="search" id="header-search-input" placeholder="Buscar estabelecimento" autocomplete="off"
+           role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" aria-label="Buscar estabelecimento">
+    <kbd class="search-kbd" aria-hidden="true">/</kbd>
+    <ul id="search-results" role="listbox" aria-label="Sugestões" hidden></ul>
   </div>
 </header>
 
-<!-- ─── Main App ─────────────────────────────────────────────── -->
 <main id="app" role="main">
 
-  <!-- FILTER BAR (always visible) -->
-  <div id="filter-bar" role="search" aria-label="Filtros">
-    <span style="font-size:12px;font-weight:600;color:var(--text-secondary);white-space:nowrap">Filtrar:</span>
-    <div id="active-chips" role="list" aria-label="Filtros ativos"></div>
-  </div>
-
-  <!-- ── VIEW: OVERVIEW ───────────────────────────────────────── -->
-  <div class="view-section active" data-view="overview">
-
-    <!-- HERO -->
-    <section id="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">Açaí Map <em>Belém</em></h1>
-      <p class="subtitle">Mapeamento completo dos estabelecimentos de açaí em Belém do Pará — dados coletados do Google Maps</p>
-      <div class="hero-stats" role="list">
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-estabs">—</span>
-          <span class="lbl">Estabelecimentos</span>
-        </div>
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-bairros">—</span>
-          <span class="lbl">Bairros</span>
-        </div>
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-rating">—</span>
-          <span class="lbl">Nota Média</span>
-        </div>
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-reviews">—</span>
-          <span class="lbl">Avaliações</span>
-        </div>
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-occs">—</span>
-          <span class="lbl">Ocorrências</span>
-        </div>
-        <div class="hero-stat" role="listitem">
-          <span class="val" id="hero-stat-queries">—</span>
-          <span class="lbl">Consultas</span>
+  <!-- HERO ───────────────────────────────────────────────── -->
+  <section id="hero" class="persistent-section" data-views="overview" aria-labelledby="hero-title">
+    <canvas id="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <img class="hero-logo" src="assets/logo-light.svg" width="178" height="40" alt="Açaí Map — Belém / PA">
+        <h1 id="hero-title">Onde o açaí aparece em Belém.</h1>
+        <p class="hero-sub">Uma exploração geográfica dos estabelecimentos encontrados em <span id="hero-bairros-n">10</span> bairros da cidade.</p>
+        <dl class="hero-micro">
+          <div><dd id="hero-stat-estabs">—</dd><dt>estabelecimentos</dt></div>
+          <div><dd id="hero-stat-bairros">—</dd><dt>bairros</dt></div>
+          <div><dd id="hero-stat-queries">—</dd><dt>consultas</dt></div>
+        </dl>
+        <div class="hero-actions">
+          <button type="button" class="btn-hero" data-goto="map-section">
+            Explorar o mapa
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="hero-source">Fonte: Google Maps · coleta de <span id="hero-date">—</span></span>
         </div>
       </div>
-    </section>
 
-    <!-- KPI Grid -->
-    <section aria-labelledby="kpi-title">
-      <div id="kpi-grid" role="list" aria-label="Indicadores chave"></div>
-    </section>
-
-  </div>
-  <!-- end view:overview -->
-
-  <!-- ── VIEW: MAPA ────────────────────────────────────────────── -->
-  <div class="view-section" data-view="mapa">
-    <div class="mapa-view-header">
-      <div>
-        <h2>Mapa Interativo</h2>
-        <p>Clique em um marcador para ver detalhes · filtre pelo painel acima</p>
-      </div>
-      <div style="display:flex;align-items:center;gap:10px">
-        <div id="mapa-count-badge" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-pill);padding:5px 14px;font-size:13px;font-weight:700;color:#fff">— locais</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── VIEW: GRÁFICOS ───────────────────────────────────────── -->
-  <div class="view-section" data-view="graficos">
-    <div class="graficos-view-header">
-      <h2>Análise de Dados</h2>
-      <p>6 gráficos interativos — clique para filtrar os dados</p>
-      <div class="graficos-stats">
-        <div class="graficos-stat">
-          <div class="g-val" id="grf-estabs">442</div>
-          <div class="g-lbl">Estabelecimentos</div>
-        </div>
-        <div class="graficos-stat">
-          <div class="g-val" id="grf-bairros">10</div>
-          <div class="g-lbl">Bairros</div>
-        </div>
-        <div class="graficos-stat">
-          <div class="g-val" id="grf-reviews">32.768</div>
-          <div class="g-lbl">Avaliações</div>
-        </div>
-        <div class="graficos-stat">
-          <div class="g-val" id="grf-rating">4,6</div>
-          <div class="g-lbl">Nota Média</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── VIEW: TABELA ─────────────────────────────────────────── -->
-  <div class="view-section" data-view="tabela">
-    <div style="padding:var(--space-lg) var(--space-xl) 0">
-      <div class="section-header">
-        <h2 class="section-title">Tabela de Estabelecimentos</h2>
-        <span style="font-size:12px;color:var(--text-muted)">Ordenável · clique na linha para ver no mapa</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── VIEW: BAIRROS ─────────────────────────────────────────── -->
-  <div class="view-section" data-view="bairros">
-    <div style="padding:var(--space-lg) var(--space-xl)">
-      <div class="section-header"><h2 class="section-title">Bairros Pesquisados</h2></div>
-      <div id="bairros-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-md)"></div>
-    </div>
-  </div>
-
-  <!-- ── VIEW: SOBRE ───────────────────────────────────────────── -->
-  <div class="view-section" data-view="sobre">
-    <div style="max-width:720px;margin:0 auto;padding:var(--space-2xl) var(--space-lg)">
-      <h2 style="font-size:24px;font-weight:800;color:var(--acai-dark);margin-bottom:var(--space-md)">Sobre o Açaí Map Belém</h2>
-      <div style="display:flex;flex-direction:column;gap:var(--space-md);color:var(--text-primary);line-height:1.7">
-        <p>Este dashboard apresenta o mapeamento completo dos estabelecimentos relacionados a açaí em Belém do Pará, coletados a partir de consultas ao Google Maps.</p>
-        <p>Os dados incluem <strong id="sobre-total">442</strong> estabelecimentos únicos, classificados em três categorias de tipo, distribuídos por <strong id="sobre-bairros">10</strong> bairros da cidade.</p>
-        <div style="background:var(--acai-pale);border-radius:var(--radius-lg);padding:var(--space-md) var(--space-lg);border-left:4px solid var(--acai-mid)">
-          <div style="font-weight:700;color:var(--acai-dark);margin-bottom:8px">Metodologia</div>
-          <ul style="list-style:disc;padding-left:20px;font-size:14px;display:flex;flex-direction:column;gap:6px">
-            <li>Consultas realizadas por bairro + termo de busca no Google Maps</li>
-            <li>Classificação automática baseada em nome, categoria e termos encontrados</li>
-            <li>Dados enriquecidos com métricas de densidade geográfica</li>
-          </ul>
-        </div>
-        <div style="background:var(--white);border-radius:var(--radius-lg);padding:var(--space-md) var(--space-lg);border:1px solid var(--border)">
-          <div style="font-weight:700;margin-bottom:8px">Cores por tipo</div>
-          <div style="display:flex;flex-direction:column;gap:6px;font-size:13px">
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#CB3AA6;flex-shrink:0"></div>Especializado em açaí</div>
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#A2CC24;flex-shrink:0"></div>Açaí + outro segmento</div>
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#B08CBC;flex-shrink:0"></div>Outro estabelecimento</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════════ -->
-  <!-- PERSISTENT SECTIONS — shown across multiple views          -->
-  <!-- ═══════════════════════════════════════════════════════════ -->
-
-  <!-- Map + Detail Panel (overview + mapa) -->
-  <section id="map-section" class="persistent-section" data-views="overview mapa" aria-label="Mapa de estabelecimentos">
-    <div id="map-container">
-      <div id="map" aria-label="Mapa interativo de Belém"></div>
-      <div id="map-controls" aria-hidden="true"></div>
-      <div id="map-stats-overlay" aria-live="polite" aria-label="Quantidade visível no mapa"></div>
-    </div>
-    <aside id="detail-panel" aria-label="Detalhes do estabelecimento">
-      <div id="detail-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+      <figure class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 520 440" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <radialGradient id="hv-b" cx="34%" cy="28%" r="80%">
+              <stop offset="0" stop-color="#9C5DB2"/>
+              <stop offset=".55" stop-color="#55286A"/>
+              <stop offset="1" stop-color="#1F0D27"/>
+            </radialGradient>
+            <radialGradient id="hv-glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#A2CC24" stop-opacity=".22"/>
+              <stop offset="1" stop-color="#A2CC24" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="520" height="440" fill="#24102D" fill-opacity=".38"/>
+          <g fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1">
+            <ellipse cx="120" cy="110" rx="50" ry="30" transform="rotate(-16 120 110)"/>
+            <ellipse cx="124" cy="112" rx="88" ry="56" transform="rotate(-14 124 112)"/>
+            <ellipse cx="130" cy="116" rx="130" ry="84" transform="rotate(-12 130 116)"/>
+            <ellipse cx="136" cy="120" rx="176" ry="116" transform="rotate(-10 136 120)"/>
+            <ellipse cx="450" cy="390" rx="60" ry="36" transform="rotate(20 450 390)"/>
+            <ellipse cx="446" cy="386" rx="110" ry="68" transform="rotate(18 446 386)"/>
+            <ellipse cx="440" cy="382" rx="160" ry="100" transform="rotate(16 440 382)"/>
+          </g>
+          <g fill="#fff" fill-opacity=".12">
+            <circle cx="60" cy="340" r="1.4"/><circle cx="90" cy="340" r="1.4"/><circle cx="120" cy="340" r="1.4"/>
+            <circle cx="60" cy="370" r="1.4"/><circle cx="90" cy="370" r="1.4"/><circle cx="120" cy="370" r="1.4"/>
+            <circle cx="60" cy="400" r="1.4"/><circle cx="90" cy="400" r="1.4"/><circle cx="120" cy="400" r="1.4"/>
+            <circle cx="420" cy="60" r="1.4"/><circle cx="450" cy="60" r="1.4"/><circle cx="480" cy="60" r="1.4"/>
+            <circle cx="420" cy="90" r="1.4"/><circle cx="450" cy="90" r="1.4"/><circle cx="480" cy="90" r="1.4"/>
+          </g>
+          <path d="M-20 318 C 70 262, 120 360, 210 310 S 350 222, 430 276 S 520 330, 560 292" fill="none" stroke="#A2CC24" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+          <path d="M-20 330 C 70 274, 120 372, 210 322 S 350 234, 430 288 S 520 342, 560 304" fill="none" stroke="#A2CC24" stroke-opacity=".18" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="312" cy="196" r="130" fill="url(#hv-glow)"/>
+          <g stroke="#fff" stroke-opacity=".16" stroke-width="1.4" fill="none" stroke-linecap="round">
+            <path d="M318 44 C 316 90, 300 120, 292 160"/>
+            <path d="M318 44 C 326 96, 340 126, 336 156"/>
+            <path d="M318 44 C 318 110, 318 150, 314 200"/>
+            <path d="M306 100 C 280 130, 262 160, 258 176"/>
+            <path d="M330 104 C 356 126, 366 170, 364 196"/>
+          </g>
+          <g>
+            <circle cx="306" cy="128" r="17" fill="url(#hv-b)"/><circle cx="300" cy="122" r="4" fill="#fff" fill-opacity=".26"/>
+            <circle cx="346" cy="130" r="14" fill="url(#hv-b)"/><circle cx="341" cy="125" r="3.2" fill="#fff" fill-opacity=".24"/>
+            <circle cx="262" cy="176" r="16" fill="url(#hv-b)"/><circle cx="256" cy="170" r="3.6" fill="#fff" fill-opacity=".24"/>
+            <circle cx="292" cy="166" r="24" fill="url(#hv-b)"/><circle cx="283" cy="157" r="5.4" fill="#fff" fill-opacity=".26"/>
+            <circle cx="336" cy="162" r="22" fill="url(#hv-b)"/><circle cx="328" cy="154" r="5" fill="#fff" fill-opacity=".24"/>
+            <circle cx="372" cy="196" r="18" fill="url(#hv-b)"/><circle cx="366" cy="190" r="4" fill="#fff" fill-opacity=".22"/>
+            <circle cx="314" cy="206" r="26" fill="url(#hv-b)"/><circle cx="305" cy="196" r="6" fill="#fff" fill-opacity=".26"/>
+            <circle cx="270" cy="216" r="20" fill="url(#hv-b)"/><circle cx="263" cy="209" r="4.6" fill="#fff" fill-opacity=".22"/>
+            <circle cx="354" cy="238" r="21" fill="url(#hv-b)"/><circle cx="347" cy="231" r="4.8" fill="#fff" fill-opacity=".22"/>
+            <circle cx="304" cy="250" r="19" fill="url(#hv-b)"/><circle cx="298" cy="244" r="4.2" fill="#fff" fill-opacity=".22"/>
+            <circle cx="336" cy="276" r="15" fill="url(#hv-b)"/><circle cx="331" cy="271" r="3.4" fill="#fff" fill-opacity=".2"/>
+            <circle cx="386" cy="238" r="12" fill="url(#hv-b)"/>
+            <circle cx="244" cy="244" r="12" fill="url(#hv-b)"/>
+          </g>
+          <g>
+            <circle cx="132" cy="236" r="44" fill="none" stroke="#A2CC24" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="3 5"/>
+            <path d="M132 250s-10-9.4-10-17.2a10 10 0 1 1 20 0c0 7.8-10 17.2-10 17.2z" fill="#fff"/>
+            <circle cx="132" cy="232.8" r="3.6" fill="#4B255D"/>
+            <path d="M448 162s-7-6.6-7-12a7 7 0 1 1 14 0c0 5.4-7 12-7 12z" fill="#fff" fill-opacity=".85"/>
+            <circle cx="448" cy="150" r="2.5" fill="#4B255D"/>
+            <path d="M190 90s-6-5.6-6-10.2a6 6 0 1 1 12 0c0 4.6-6 10.2-6 10.2z" fill="#fff" fill-opacity=".7"/>
+            <circle cx="190" cy="79.8" r="2.1" fill="#4B255D"/>
+          </g>
         </svg>
-        <p style="font-size:14px;font-weight:600">Selecione um estabelecimento</p>
-        <p style="font-size:12px">Clique em um marcador no mapa para ver os detalhes</p>
-      </div>
-      <div id="detail-content"></div>
-    </aside>
+      </figure>
+    </div>
   </section>
 
-  <!-- Charts (overview + graficos) -->
-  <section id="charts-section" class="persistent-section" data-views="overview graficos" aria-labelledby="charts-title">
-    <div class="section-header">
-      <h2 class="section-title" id="charts-title">Análise de Dados</h2>
-      <span style="font-size:12px;color:var(--text-muted)">Clique nos gráficos para filtrar</span>
+  <!-- FILTER BAR ─────────────────────────────────────────── -->
+  <div id="filter-bar" class="persistent-section" data-views="overview mapa graficos tabela"></div>
+
+  <header class="page-head persistent-section" data-views="graficos">
+    <span class="eyebrow">Análises</span>
+    <h2>Como os pontos se distribuem</h2>
+    <p>Clique em barras, fatias e pontos para filtrar mapa, indicadores e tabela.</p>
+  </header>
+  <header class="page-head persistent-section" data-views="tabela">
+    <span class="eyebrow">Dados</span>
+    <h2>Lista de estabelecimentos</h2>
+    <p>Ordene pelas colunas e clique em uma linha para localizar no mapa.</p>
+  </header>
+
+  <!-- KPIs ───────────────────────────────────────────────── -->
+  <section id="kpi-section" class="persistent-section section reveal" data-views="overview" aria-labelledby="kpi-title">
+    <div class="section-head">
+      <span class="eyebrow">Panorama</span>
+      <h2 id="kpi-title">Os números da coleta</h2>
+    </div>
+    <div id="kpi-grid" aria-live="polite"></div>
+  </section>
+
+  <!-- MAPA ───────────────────────────────────────────────── -->
+  <section id="map-section" class="persistent-section section reveal" data-views="overview mapa" aria-labelledby="map-title">
+    <div class="section-head">
+      <span class="eyebrow">Distribuição geográfica</span>
+      <h2 id="map-title">Mapa dos estabelecimentos</h2>
+    </div>
+    <div class="map-shell">
+      <div id="map-container">
+        <div class="map-topbar">
+          <div class="map-context" aria-live="polite">
+            <strong id="map-count">0</strong>
+            <span id="map-count-label">estabelecimentos encontrados</span>
+            <span class="map-context-sub" id="map-context-sub"></span>
+          </div>
+          <div class="map-toolbar" role="toolbar" aria-label="Controles do mapa">
+            <button type="button" class="mt-btn" id="mt-belem" title="Recentrar em Belém">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="5"/><path d="M8 1v3M8 12v3M1 8h3M12 8h3" stroke-linecap="round"/></svg>
+              <span>Belém</span>
+            </button>
+            <button type="button" class="mt-btn" id="mt-all" title="Limpar filtros e seleção e enquadrar todos os pontos">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Ver todos</span>
+            </button>
+            <div class="mt-seg" role="radiogroup" aria-label="Modo de visualização">
+              <button type="button" role="radio" aria-checked="true" data-mode="points">Pontos</button>
+              <button type="button" role="radio" aria-checked="false" data-mode="heat">Concentração</button>
+            </div>
+          </div>
+        </div>
+        <div id="map" role="region" aria-label="Mapa interativo dos estabelecimentos de açaí em Belém"></div>
+        <div class="map-legend" id="map-legend">
+          <div class="ml-points">
+            <span><i class="lg-dot t-esp"></i>Especializado em açaí</span>
+            <span><i class="lg-dot t-mix"></i>Açaí + outro segmento</span>
+            <span><i class="lg-dot t-out"></i>Outro estabelecimento</span>
+          </div>
+          <div class="ml-heat"><span>Menor</span><i class="ml-ramp"></i><span>Maior concentração</span></div>
+        </div>
+      </div>
+      <aside id="detail-panel" aria-label="Contexto do mapa">
+        <div class="panel-grip" aria-hidden="true"></div>
+        <div id="panel-body" aria-live="polite"></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- VISÃO RÁPIDA ───────────────────────────────────────── -->
+  <section id="insights-section" class="persistent-section section reveal" data-views="overview" aria-labelledby="ins-title">
+    <div class="section-head">
+      <span class="eyebrow">Visão rápida</span>
+      <h2 id="ins-title">Destaques dos resultados</h2>
+      <p class="section-note">Calculados a partir dos filtros ativos.</p>
+    </div>
+    <div id="insights-grid"></div>
+  </section>
+
+  <!-- ANÁLISES ───────────────────────────────────────────── -->
+  <section id="charts-section" class="persistent-section section reveal" data-views="overview graficos" aria-labelledby="charts-title">
+    <div class="section-head">
+      <span class="eyebrow">Análises</span>
+      <h2 id="charts-title">Como os pontos se distribuem</h2>
+      <p class="section-note">Clique para filtrar mapa, indicadores e tabela.</p>
     </div>
     <div class="charts-grid">
-
-      <!-- Bairro bar (wide) -->
-      <div class="chart-card chart-wide" style="min-height:320px">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Estabelecimentos por Bairro</div>
-            <div class="chart-subtitle">Top 12 bairros · clique para filtrar</div>
-          </div>
-          <span class="chart-badge">Bairros</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:260px">
-          <canvas id="chart-bairro" aria-label="Gráfico de estabelecimentos por bairro"></canvas>
-        </div>
-      </div>
-
-      <!-- Tipo doughnut -->
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Distribuição por Tipo</div>
-            <div class="chart-subtitle">Clique para filtrar</div>
-          </div>
-          <span class="chart-badge">Tipo</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:220px">
-          <canvas id="chart-tipo" aria-label="Gráfico de distribuição por tipo"></canvas>
-        </div>
-      </div>
-
-      <!-- Rating distribution -->
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Distribuição de Notas</div>
-            <div class="chart-subtitle">Faixas de avaliação</div>
-          </div>
-          <span class="chart-badge">Notas</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:200px">
-          <canvas id="chart-rating-dist" aria-label="Histograma de distribuição de notas"></canvas>
-        </div>
-      </div>
-
-      <!-- Scatter reviews vs rating (wide) -->
-      <div class="chart-card chart-wide" style="min-height:280px">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Avaliações × Nota Média</div>
-            <div class="chart-subtitle">Dispersão por tipo de estabelecimento</div>
-          </div>
-          <span class="chart-badge">Dispersão</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:220px">
-          <canvas id="chart-scatter" aria-label="Gráfico de dispersão: avaliações vs nota"></canvas>
-        </div>
-      </div>
-
-      <!-- Recorrência -->
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Recorrência nas Buscas</div>
-            <div class="chart-subtitle">Nº de ocorrências por faixa</div>
-          </div>
-          <span class="chart-badge">Recorrência</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:200px">
-          <canvas id="chart-recorrencia" aria-label="Gráfico de recorrência nas buscas"></canvas>
-        </div>
-      </div>
-
-      <!-- Termos -->
-      <div class="chart-card">
-        <div class="chart-card-header">
-          <div>
-            <div class="chart-title">Ocorrências por Termo</div>
-            <div class="chart-subtitle">Top termos de busca</div>
-          </div>
-          <span class="chart-badge">Termos</span>
-        </div>
-        <div class="chart-canvas-wrap" style="min-height:200px">
-          <canvas id="chart-termos" aria-label="Gráfico de ocorrências por termo de busca"></canvas>
-        </div>
-      </div>
-
+      <article class="chart-card span-4">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Estabelecimentos por bairro</h3><p class="chart-subtitle">Bairro em que a consulta foi feita</p></div>
+          <span class="chart-num">01</span>
+        </header>
+        <div class="chart-canvas-wrap h-lg"><canvas id="chart-bairro" role="img" aria-label="Barras: estabelecimentos por bairro"></canvas></div>
+      </article>
+      <article class="chart-card span-2">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Distribuição por tipo</h3><p class="chart-subtitle">Classificação pelo nome e categoria</p></div>
+          <span class="chart-num">02</span>
+        </header>
+        <div class="chart-canvas-wrap h-lg"><canvas id="chart-tipo" role="img" aria-label="Rosca: distribuição por tipo"></canvas></div>
+      </article>
+      <article class="chart-card span-2">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Avaliações</h3><p class="chart-subtitle">Faixas de nota no Google Maps</p></div>
+          <span class="chart-num">03</span>
+        </header>
+        <div class="chart-canvas-wrap"><canvas id="chart-rating-dist" role="img" aria-label="Barras: faixas de nota"></canvas></div>
+      </article>
+      <article class="chart-card span-4">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Nota × volume de avaliações</h3><p class="chart-subtitle">Cada ponto é um estabelecimento com nota · clique para localizar</p></div>
+          <span class="chart-num">04</span>
+        </header>
+        <div class="chart-canvas-wrap"><canvas id="chart-scatter" role="img" aria-label="Dispersão: nota por número de avaliações"></canvas></div>
+      </article>
+      <article class="chart-card span-3">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Recorrência</h3><p class="chart-subtitle">Em quantas consultas cada ponto apareceu</p></div>
+          <span class="chart-num">05</span>
+        </header>
+        <div class="chart-canvas-wrap"><canvas id="chart-recorrencia" role="img" aria-label="Barras: recorrência nas consultas"></canvas></div>
+      </article>
+      <article class="chart-card span-3">
+        <header class="chart-card-header">
+          <div><h3 class="chart-title">Termos de busca</h3><p class="chart-subtitle">Ocorrências por termo pesquisado</p></div>
+          <span class="chart-num">06</span>
+        </header>
+        <div class="chart-canvas-wrap"><canvas id="chart-termos" role="img" aria-label="Barras: ocorrências por termo"></canvas></div>
+      </article>
     </div>
   </section>
 
-  <!-- Table (overview + tabela) -->
-  <section id="table-section" class="persistent-section" data-views="overview tabela" aria-labelledby="table-title">
-    <div class="section-header" style="display:none" id="table-section-header-overview">
-      <h2 class="section-title" id="table-title">Estabelecimentos</h2>
-      <span style="font-size:12px;color:var(--text-muted)">Clique na coluna para ordenar · clique na linha para ver no mapa</span>
+  <!-- TABELA ─────────────────────────────────────────────── -->
+  <section id="table-section" class="persistent-section section reveal" data-views="overview tabela" aria-labelledby="table-title">
+    <div class="section-head">
+      <span class="eyebrow">Dados</span>
+      <h2 id="table-title">Lista de estabelecimentos</h2>
     </div>
     <div id="table-container"></div>
   </section>
 
+  <!-- VIEW: BAIRROS ──────────────────────────────────────── -->
+  <div class="view-section" data-view="bairros">
+    <header class="page-head">
+      <span class="eyebrow">Bairros</span>
+      <h2>Os 10 bairros pesquisados</h2>
+      <p>Ordenados pelo número de estabelecimentos encontrados. Clique para ver o bairro no mapa.</p>
+    </header>
+    <div class="section"><div id="bairros-grid"></div></div>
+  </div>
+
+  <!-- VIEW: SOBRE ────────────────────────────────────────── -->
+  <div class="view-section" data-view="sobre">
+    <article class="about">
+      <img src="assets/logo.svg" width="214" height="48" alt="Açaí Map — Belém / PA" class="about-logo">
+      <h2>Sobre o projeto</h2>
+      <p>O Açaí Map reúne os estabelecimentos relacionados a açaí que apareceram em consultas ao Google Maps feitas em bairros de Belém do Pará. São <strong id="sobre-total">—</strong> estabelecimentos únicos, vindos de <strong id="sobre-queries">—</strong> consultas (bairro × termo) em <strong id="sobre-bairros">—</strong> bairros, somando <strong id="sobre-occ">—</strong> ocorrências nos resultados.</p>
+      <div class="about-box">
+        <h3>Como ler os dados</h3>
+        <ul>
+          <li><strong>Recorrência</strong> é o número de consultas em que o estabelecimento apareceu.</li>
+          <li><strong>Distância</strong> é medida até o ponto de referência do bairro pesquisado.</li>
+          <li><strong>Pontos em 500 m / 1 km / 2 km</strong> contam outros estabelecimentos da base dentro do raio.</li>
+          <li>Quando o Google não traz nota, avaliação ou endereço, o painel mostra o dado como ausente — nunca estimado.</li>
+        </ul>
+      </div>
+      <div class="about-box">
+        <h3>Tipos de estabelecimento</h3>
+        <ul class="about-legend">
+          <li><i class="lg-dot t-esp"></i>Especializado em açaí</li>
+          <li><i class="lg-dot t-mix"></i>Açaí + outro segmento</li>
+          <li><i class="lg-dot t-out"></i>Outro estabelecimento</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+
+  <footer class="site-footer">
+    <span>Açaí Map · Belém / PA</span>
+    <span>Dados: Google Maps · Mapa: © colaboradores do OpenStreetMap</span>
+  </footer>
 </main>
 
-<!-- App JS (ES modules) -->
 <script type="module" src="js/app.js"></script>
-
-<!-- Bairros view population + graficos stats -->
-<script type="module">
-import { establishments, neighborhoods } from './js/data.js';
-import { dispatch } from './js/state.js';
-import { fmt, fmtRating } from './js/utils.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Populate bairros view
-  const grid = document.getElementById('bairros-grid');
-  if (grid && neighborhoods.length) {
-    const stats = {};
-    for (const e of establishments) {
-      const b = e.bairro_pesquisa;
-      if (!b) continue;
-      if (!stats[b]) stats[b] = { count: 0, ratings: [], reviews: 0 };
-      stats[b].count++;
-      if (e.review_rating > 0) stats[b].ratings.push(e.review_rating);
-      stats[b].reviews += e.review_count ?? 0;
-    }
-    const sorted = Object.entries(stats).sort((a,b) => b[1].count - a[1].count);
-    grid.innerHTML = sorted.map(([bairro, s]) => {
-      const avg = s.ratings.length ? s.ratings.reduce((a,b)=>a+b,0)/s.ratings.length : 0;
-      return `
-        <div class="kpi-card" style="cursor:pointer" onclick="(function(){
-          document.querySelector('.nav-btn[data-view=overview]')?.click();
-          setTimeout(()=>{ const {dispatch:d}=window._appModules||{}; },100);
-        })()">
-          <div class="kpi-label">📍 ${bairro}</div>
-          <div class="kpi-value" style="font-size:28px">${fmt(s.count)}</div>
-          <div class="kpi-sub">estabelecimentos · ⭐ ${fmtRating(avg)} · ${fmt(s.reviews)} aval.</div>
-        </div>
-      `;
-    }).join('');
-    // Trigger animations for bairros cards
-    setTimeout(() => {
-      grid.querySelectorAll('.kpi-card').forEach((el, i) => {
-        el.style.transitionDelay = `${i * 55}ms`;
-        el.classList.add('animate-in');
-      });
-    }, 100);
-  }
-
-  // Graficos stats
-  const total = establishments.length;
-  const bairros = new Set(establishments.map(e=>e.bairro_pesquisa)).size;
-  const reviews = establishments.reduce((s,e)=>s+(e.review_count||0),0);
-  const ratedEstabs = establishments.filter(e=>e.review_rating>0);
-  const avgRating = ratedEstabs.length ? ratedEstabs.reduce((s,e)=>s+e.review_rating,0)/ratedEstabs.length : 0;
-  const el = id => document.getElementById(id);
-  if(el('grf-estabs')) el('grf-estabs').textContent = fmt(total);
-  if(el('grf-bairros')) el('grf-bairros').textContent = fmt(bairros);
-  if(el('grf-reviews')) el('grf-reviews').textContent = fmt(reviews);
-  if(el('grf-rating')) el('grf-rating').textContent = fmtRating(avgRating);
-
-  // Mapa count badge
-  const badge = el('mapa-count-badge');
-  if(badge) badge.textContent = `${fmt(total)} locais`;
-
-  // Update sobre counts
-  if(el('sobre-total')) el('sobre-total').textContent = fmt(total);
-  if(el('sobre-bairros')) el('sobre-bairros').textContent = fmt(bairros);
-
-  // Show table header only in overview (handled by CSS via body[data-view])
-  const tableHeader = el('table-section-header-overview');
-  if (tableHeader) tableHeader.style.display = 'flex';
-});
-
-// Re-trigger chart card animations when graficos view is selected
-document.querySelectorAll('.nav-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    if (btn.dataset.view === 'graficos') {
-      setTimeout(() => {
-        document.querySelectorAll('.chart-card').forEach((el, i) => {
-          el.classList.remove('animate-in');
-          void el.offsetWidth; // reflow
-          el.style.transitionDelay = `${i * 55}ms`;
-          el.classList.add('animate-in');
-        });
-      }, 50);
-    }
-  });
-});
-</script>
-
 </body>
 </html>

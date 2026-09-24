@@ -1,34 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210 44" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 214 48" fill="none" role="img" aria-label="Açaí Map — Belém / PA">
   <defs>
-    <linearGradient id="b1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#E61D7F"/>
-      <stop offset="100%" stop-color="#CB3AA6"/>
-    </linearGradient>
-    <linearGradient id="b2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7B1C5C"/>
-      <stop offset="100%" stop-color="#4B255D"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="1.5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <radialGradient id="lg-berry" cx="36%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#9152A6"/>
+      <stop offset=".55" stop-color="#5A2B6E"/>
+      <stop offset="1" stop-color="#2E1638"/>
+    </radialGradient>
   </defs>
-
-  <!-- Berry cluster -->
-  <circle cx="14" cy="28" r="9.5" fill="url(#b1)" filter="url(#glow)"/>
-  <circle cx="30" cy="24" r="9" fill="url(#b2)"/>
-  <circle cx="22" cy="13" r="8.5" fill="#9B2D8A"/>
-
-  <!-- Highlight specular dots -->
-  <circle cx="11" cy="25" r="2.8" fill="rgba(255,255,255,0.22)"/>
-  <circle cx="27" cy="21" r="2.4" fill="rgba(255,255,255,0.15)"/>
-  <circle cx="19" cy="10" r="2.2" fill="rgba(255,255,255,0.2)"/>
-
-  <!-- Stem + tiny leaf -->
-  <path d="M22 4 Q24 9 22 13" stroke="#A2CC24" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-  <path d="M22 7 Q29 4 27 10" stroke="#A2CC24" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.8"/>
-
-  <!-- Text: açaí map -->
-  <text x="48" y="23" font-family="Poppins, sans-serif" font-weight="800" font-size="16" fill="white" letter-spacing="-0.5">açaí map</text>
-  <text x="49" y="37" font-family="Poppins, sans-serif" font-weight="500" font-size="9" fill="rgba(255,255,255,0.55)" letter-spacing="3.5">BELÉM · PA</text>
+  <path d="M24 46s-15-14.2-15-26a15 15 0 1 1 30 0c0 11.8-15 26-15 26z" fill="url(#lg-berry)"/>
+  <path d="M12.6 22.4c4.3-4.7 7.5 2.9 11.6-1.6 4.1-4.5 7.3-2.5 11.3-.4" stroke="#A2CC24" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="18.6" cy="12.8" r="3" fill="#fff" fill-opacity=".3"/>
+  <text x="52" y="25" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="1.2" fill="#4B255D">AÇAÍ MAP</text>
+  <text x="53" y="40" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="9.5" letter-spacing="3" fill="#737078">BELÉM / PA</text>
 </svg>

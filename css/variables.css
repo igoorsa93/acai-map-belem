@@ -1,76 +1,99 @@
 :root {
-  /* Surfaces — levemente rosada, like acaiartesanal.com.br */
-  --bg:          #F9F4FA;
-  --bg-alt:      #F1E8F5;
-  --bg-card:     #FFFFFF;
-  --bg-subtle:   #FDF6FF;
-  --bg-hover:    #FAF0FC;
-  --white:       #FFFFFF;
+  /* ── Brand ─────────────────────────────────────── */
+  --acai-900:   #2E1638;
+  --acai-dark:  #4B255D;   /* principal */
+  --purple-2:   #654078;   /* roxo secundário */
+  --acai:       #7A3C8C;   /* açaí */
+  --acai-300:   #B79AC4;
+  --acai-100:   #EFE7F2;
+  --acai-50:    #F7F2F9;
 
-  /* Brand — extraído de acaiartesanal.com.br */
-  --acai-dark:   #4B255D;    /* roxo profundo rgb(75,37,93) */
-  --acai-mid:    #CB3AA6;    /* hot pink primário rgb(203,58,166) */
-  --acai-light:  #E61D7F;    /* pink vibrante rgb(230,29,127) */
-  --acai-pale:   #FCE8F7;    /* superfície pink claro */
+  --amazon:      #A2CC24;  /* verde Amazônia */
+  --amazon-dark: #5E7A0E;
+  --amazon-50:   #F2F8DE;
 
-  /* Verde limão — cor de contraste do site */
-  --amazon-dark: #7A9C1A;
-  --amazon-mid:  #A2CC24;
-  --amazon-light:#C4E040;
+  --para-red:   #C8102E;   /* uso pontual */
+  --para-blue:  #003DA5;   /* uso pontual */
 
-  /* Complementares */
-  --para-red:    #DC2626;
-  --para-blue:   #2563EB;
+  /* ── Neutros ───────────────────────────────────── */
+  --bg:         #F9F4FA;
+  --white:      #FFFFFF;
+  --bg-card:    #FFFFFF;
+  --bg-subtle:  #FBF8FC;
+  --bg-alt:     #F3EEF5;
+  --text:       #242126;
+  --gray:       #737078;
+  --gray-300:   #A9A5AD;
+  --gray-light: #E7E2E8;
 
-  /* Texto */
-  --text-primary:   #1A0E23;   /* quase-preto roxo */
-  --text-secondary: #6B4880;   /* roxo médio */
-  --text-muted:     #B08CBC;   /* roxo claro */
+  /* ── Tipos de estabelecimento ──────────────────── */
+  --tipo-esp: #7A3C8C;
+  --tipo-mix: #A2CC24;
+  --tipo-out: #A9A5AD;
 
-  /* Bordas */
-  --border:       #EAD8F0;
-  --border-dark:  #D4B0E2;
+  /* ── Aliases (mantêm módulos antigos funcionando) ─ */
+  --acai-mid:       var(--acai);
+  --acai-light:     var(--purple-2);
+  --acai-pale:      var(--acai-100);
+  --amazon-mid:     var(--amazon);
+  --text-primary:   var(--text);
+  --text-secondary: var(--gray);
+  --text-muted:     var(--gray-300);
+  --border:         var(--gray-light);
+  --border-dark:    #D6CFD9;
+  --bg-hover:       var(--acai-50);
 
-  /* Typography — mesmas fontes do site */
-  --font:      'Poppins', 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* ── Tipografia ────────────────────────────────── */
+  --font:         'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Poppins', 'Inter', system-ui, sans-serif;
 
-  /* Spacing */
+  /* ── Espaçamento ───────────────────────────────── */
   --space-xs:  4px;
   --space-sm:  8px;
   --space-md:  16px;
   --space-lg:  24px;
   --space-xl:  32px;
   --space-2xl: 56px;
+  --gutter:    clamp(16px, 3vw, 40px);
 
-  /* Radii — mais arredondado, como o site */
-  --radius-sm:  8px;
-  --radius-md:  12px;
-  --radius-lg:  16px;
-  --radius-xl:  22px;
-  --radius-pill:9999px;
+  /* ── Raios ─────────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   10px;
+  --radius-lg:   14px;
+  --radius-xl:   20px;
+  --radius-pill: 9999px;
 
-  /* Shadows com tint roxo-pink */
-  --shadow-xs: 0 1px 3px rgba(75,37,93,.07);
-  --shadow-sm: 0 2px 8px rgba(75,37,93,.10);
-  --shadow-md: 0 4px 20px rgba(75,37,93,.13);
-  --shadow-lg: 0 8px 36px rgba(75,37,93,.15);
-  --shadow-xl: 0 16px 60px rgba(75,37,93,.18);
+  /* ── Sombras (leves) ───────────────────────────── */
+  --shadow-xs: 0 1px 2px rgba(36,33,38,.05);
+  --shadow-sm: 0 1px 3px rgba(36,33,38,.06), 0 1px 2px rgba(36,33,38,.04);
+  --shadow-md: 0 4px 16px rgba(46,22,56,.08);
+  --shadow-lg: 0 12px 32px rgba(46,22,56,.12);
+  --shadow-xl: 0 24px 60px rgba(46,22,56,.18);
 
-  /* Transitions */
-  --t-fast:   110ms cubic-bezier(.16,1,.3,1);
-  --t-normal: 180ms cubic-bezier(.16,1,.3,1);
-  --t-slow:   320ms cubic-bezier(.16,1,.3,1);
+  /* ── Movimento ─────────────────────────────────── */
+  --ease:     cubic-bezier(.2,.8,.2,1);
+  --d-fast:   150ms;
+  --d-filter: 250ms;
+  --d-page:   300ms;
+  --d-panel:  300ms;
+  --d-map:    350ms;
+  --d-kpi:    450ms;
+  --t-fast:   var(--d-fast) var(--ease);
+  --t-normal: var(--d-filter) var(--ease);
+  --t-slow:   var(--d-map) var(--ease);
 
-  /* Layout */
-  --header-h: 54px;
-  --filter-h: 52px;
-  --sidebar-w:360px;
+  /* ── Layout ────────────────────────────────────── */
+  --header-h:  60px;
+  --sidebar-w: 380px;
 
-  /* Z-index */
+  /* ── Z-index ───────────────────────────────────── */
   --z-base:    1;
   --z-overlay: 100;
   --z-modal:   200;
   --z-header:  300;
   --z-toast:   400;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --d-fast: 0ms; --d-filter: 0ms; --d-page: 0ms; --d-panel: 0ms; --d-map: 0ms; --d-kpi: 0ms; }
 }
