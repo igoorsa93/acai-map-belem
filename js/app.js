@@ -25,6 +25,9 @@ function init() {
   // Populate hero stats from real data
   _populateHero();
 
+  // Entrance animations — after all cards are rendered
+  requestAnimationFrame(() => requestAnimationFrame(() => Animations.initEntranceAnimations()));
+
   // Subscribe to state changes
   State.subscribe((action) => {
     switch (action) {
@@ -44,8 +47,11 @@ function init() {
 
       case 'SET_VIEW':
         Interactions.updateNav(State.state.activeView);
-        if (State.state.activeView === 'mapa') {
-          requestAnimationFrame(() => MapModule.invalidate());
+        if (State.state.activeView === 'mapa' || State.state.activeView === 'overview') {
+          requestAnimationFrame(() => { requestAnimationFrame(() => MapModule.invalidate()); });
+        }
+        if (State.state.activeView === 'graficos') {
+          requestAnimationFrame(() => Charts.updateAll());
         }
         break;
 

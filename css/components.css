@@ -7,11 +7,17 @@
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--t-normal), transform var(--t-normal);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.42s ease, transform 0.42s ease, box-shadow var(--t-normal);
 }
-.kpi-card:hover {
+.kpi-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.kpi-card.animate-in:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 /* Pink left accent stripe */
 .kpi-card::before {

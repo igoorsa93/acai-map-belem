@@ -8,9 +8,18 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
-  transition: box-shadow var(--t-normal);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.44s ease, transform 0.44s ease, box-shadow var(--t-normal);
 }
-.chart-card:hover { box-shadow: var(--shadow-md); }
+.chart-card.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.chart-card.animate-in:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
 
 .chart-card-header {
   display: flex;

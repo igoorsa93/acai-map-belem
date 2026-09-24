@@ -31,18 +31,18 @@
   <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin></script>
 
-  <!-- Dashboard Data (sets window.ACAI_MAP_DATA — must load before ES modules) -->
+  <!-- Dashboard Data -->
   <script src="data/dashboard_data.js"></script>
 </head>
 <body>
 
-<!-- Background canvas animation -->
+<!-- Background canvas -->
 <canvas id="bg-canvas" aria-hidden="true"></canvas>
 
 <!-- ─── Header ──────────────────────────────────────────────── -->
 <header id="header" role="banner">
   <div class="logo" aria-label="Açaí Map Belém">
-    <img src="assets/logo.svg" alt="Açaí Map Belém" height="36">
+    <img src="assets/logo.svg" alt="Açaí Map Belém" height="34">
   </div>
 
   <nav id="main-nav" aria-label="Navegação principal">
@@ -66,234 +66,113 @@
 <!-- ─── Main App ─────────────────────────────────────────────── -->
 <main id="app" role="main">
 
-  <!-- HERO -->
-  <section id="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title">Açaí Map Belém</h1>
-    <p class="subtitle">Mapeamento completo dos estabelecimentos de açaí em Belém do Pará — dados coletados do Google Maps</p>
-    <div class="hero-stats" role="list">
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-estabs">—</span>
-        <span class="lbl">Estabelecimentos</span>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-bairros">—</span>
-        <span class="lbl">Bairros</span>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-rating">—</span>
-        <span class="lbl">Nota Média</span>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-reviews">—</span>
-        <span class="lbl">Avaliações</span>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-occs">—</span>
-        <span class="lbl">Ocorrências</span>
-      </div>
-      <div class="hero-stat" role="listitem">
-        <span class="val" id="hero-stat-queries">—</span>
-        <span class="lbl">Consultas</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- FILTER BAR -->
+  <!-- FILTER BAR (always visible) -->
   <div id="filter-bar" role="search" aria-label="Filtros">
     <span style="font-size:12px;font-weight:600;color:var(--text-secondary);white-space:nowrap">Filtrar:</span>
-    <!-- Dropdowns injected by filters.js before #active-chips -->
     <div id="active-chips" role="list" aria-label="Filtros ativos"></div>
   </div>
 
-  <!-- ── VIEW: OVERVIEW (default) ─────────────────────────── -->
+  <!-- ── VIEW: OVERVIEW ───────────────────────────────────────── -->
   <div class="view-section active" data-view="overview">
+
+    <!-- HERO -->
+    <section id="hero" aria-labelledby="hero-title">
+      <h1 id="hero-title">Açaí Map <em>Belém</em></h1>
+      <p class="subtitle">Mapeamento completo dos estabelecimentos de açaí em Belém do Pará — dados coletados do Google Maps</p>
+      <div class="hero-stats" role="list">
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-estabs">—</span>
+          <span class="lbl">Estabelecimentos</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-bairros">—</span>
+          <span class="lbl">Bairros</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-rating">—</span>
+          <span class="lbl">Nota Média</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-reviews">—</span>
+          <span class="lbl">Avaliações</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-occs">—</span>
+          <span class="lbl">Ocorrências</span>
+        </div>
+        <div class="hero-stat" role="listitem">
+          <span class="val" id="hero-stat-queries">—</span>
+          <span class="lbl">Consultas</span>
+        </div>
+      </div>
+    </section>
 
     <!-- KPI Grid -->
     <section aria-labelledby="kpi-title">
       <div id="kpi-grid" role="list" aria-label="Indicadores chave"></div>
     </section>
 
-    <!-- Map + Detail Panel -->
-    <section id="map-section" aria-label="Mapa de estabelecimentos">
-      <div id="map-container">
-        <div id="map" aria-label="Mapa interativo de Belém"></div>
-
-        <!-- Map controls overlay -->
-        <div id="map-controls" aria-hidden="true">
-          <!-- legend injected by map.js -->
-        </div>
-
-        <!-- Map stats overlay -->
-        <div id="map-stats-overlay" aria-live="polite" aria-label="Quantidade visível no mapa"></div>
-      </div>
-
-      <!-- Detail Panel -->
-      <aside id="detail-panel" aria-label="Detalhes do estabelecimento">
-        <div id="detail-placeholder">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
-          </svg>
-          <p style="font-size:14px;font-weight:600">Selecione um estabelecimento</p>
-          <p style="font-size:12px">Clique em um marcador no mapa para ver os detalhes</p>
-        </div>
-        <div id="detail-content"></div>
-      </aside>
-    </section>
-
-    <!-- Charts -->
-    <section id="charts-section" aria-labelledby="charts-title">
-      <div class="section-header">
-        <h2 class="section-title" id="charts-title">Análise de Dados</h2>
-        <span style="font-size:12px;color:var(--text-muted)">Clique nos gráficos para filtrar</span>
-      </div>
-      <div class="charts-grid">
-
-        <!-- Bairro bar (wide) -->
-        <div class="chart-card chart-wide" style="min-height:320px">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Estabelecimentos por Bairro</div>
-              <div class="chart-subtitle">Top 12 bairros · clique para filtrar</div>
-            </div>
-            <span class="chart-badge">Bairros</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:250px">
-            <canvas id="chart-bairro" aria-label="Gráfico de estabelecimentos por bairro"></canvas>
-          </div>
-        </div>
-
-        <!-- Tipo doughnut -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Distribuição por Tipo</div>
-              <div class="chart-subtitle">Clique para filtrar</div>
-            </div>
-            <span class="chart-badge">Tipo</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:220px">
-            <canvas id="chart-tipo" aria-label="Gráfico de distribuição por tipo"></canvas>
-          </div>
-        </div>
-
-        <!-- Rating distribution -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Distribuição de Notas</div>
-              <div class="chart-subtitle">Faixas de avaliação</div>
-            </div>
-            <span class="chart-badge">Notas</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:180px">
-            <canvas id="chart-rating-dist" aria-label="Histograma de distribuição de notas"></canvas>
-          </div>
-        </div>
-
-        <!-- Scatter reviews vs rating (wide) -->
-        <div class="chart-card chart-wide" style="min-height:260px">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Avaliações × Nota Média</div>
-              <div class="chart-subtitle">Dispersão por tipo de estabelecimento</div>
-            </div>
-            <span class="chart-badge">Dispersão</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:200px">
-            <canvas id="chart-scatter" aria-label="Gráfico de dispersão: avaliações vs nota"></canvas>
-          </div>
-        </div>
-
-        <!-- Recorrência -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Recorrência nas Buscas</div>
-              <div class="chart-subtitle">Nº de ocorrências por faixa</div>
-            </div>
-            <span class="chart-badge">Recorrência</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:180px">
-            <canvas id="chart-recorrencia" aria-label="Gráfico de recorrência nas buscas"></canvas>
-          </div>
-        </div>
-
-        <!-- Termos -->
-        <div class="chart-card">
-          <div class="chart-card-header">
-            <div>
-              <div class="chart-title">Ocorrências por Termo</div>
-              <div class="chart-subtitle">Top termos de busca</div>
-            </div>
-            <span class="chart-badge">Termos</span>
-          </div>
-          <div class="chart-canvas-wrap" style="min-height:180px">
-            <canvas id="chart-termos" aria-label="Gráfico de ocorrências por termo de busca"></canvas>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Table -->
-    <section id="table-section" aria-labelledby="table-title">
-      <div class="section-header">
-        <h2 class="section-title" id="table-title">Estabelecimentos</h2>
-        <span style="font-size:12px;color:var(--text-muted)">Clique na coluna para ordenar · clique na linha para ver no mapa</span>
-      </div>
-      <div id="table-container"></div>
-    </section>
-
   </div>
   <!-- end view:overview -->
 
-  <!-- ── VIEW: MAPA ────────────────────────────────────────── -->
+  <!-- ── VIEW: MAPA ────────────────────────────────────────────── -->
   <div class="view-section" data-view="mapa">
-    <div style="height:calc(100vh - var(--header-h) - 56px);display:flex">
-      <div style="flex:1;position:relative">
-        <!-- Map re-used (shown here too via CSS) -->
-        <div style="padding:var(--space-lg);background:var(--bg);height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--text-muted);gap:12px">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="var(--acai-pale)" stroke="var(--acai-mid)" stroke-width="1.5"/></svg>
-          <p>Use a visão <strong>Visão Geral</strong> para interagir com o mapa completo.</p>
-          <button class="btn-primary" data-view="overview" onclick="document.querySelector('.nav-btn[data-view=overview]').click()">Ir para Visão Geral</button>
+    <div class="mapa-view-header">
+      <div>
+        <h2>Mapa Interativo</h2>
+        <p>Clique em um marcador para ver detalhes · filtre pelo painel acima</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px">
+        <div id="mapa-count-badge" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);border-radius:var(--radius-pill);padding:5px 14px;font-size:13px;font-weight:700;color:#fff">— locais</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── VIEW: GRÁFICOS ───────────────────────────────────────── -->
+  <div class="view-section" data-view="graficos">
+    <div class="graficos-view-header">
+      <h2>Análise de Dados</h2>
+      <p>6 gráficos interativos — clique para filtrar os dados</p>
+      <div class="graficos-stats">
+        <div class="graficos-stat">
+          <div class="g-val" id="grf-estabs">442</div>
+          <div class="g-lbl">Estabelecimentos</div>
+        </div>
+        <div class="graficos-stat">
+          <div class="g-val" id="grf-bairros">10</div>
+          <div class="g-lbl">Bairros</div>
+        </div>
+        <div class="graficos-stat">
+          <div class="g-val" id="grf-reviews">32.768</div>
+          <div class="g-lbl">Avaliações</div>
+        </div>
+        <div class="graficos-stat">
+          <div class="g-val" id="grf-rating">4,6</div>
+          <div class="g-lbl">Nota Média</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── VIEW: GRÁFICOS ────────────────────────────────────── -->
-  <div class="view-section" data-view="graficos">
-    <div style="padding:var(--space-lg)">
-      <div class="section-header"><h2 class="section-title">Análise de Dados</h2></div>
-      <p style="color:var(--text-muted);font-size:13px;margin-bottom:var(--space-lg)">Os gráficos na seção Visão Geral são interativos e se atualizam com os filtros.</p>
-      <div style="background:var(--white);border-radius:var(--radius-lg);padding:var(--space-xl);text-align:center;color:var(--text-muted);border:1px solid var(--border)">
-        <div style="font-size:32px;margin-bottom:12px">📊</div>
-        <p>Role a <strong>Visão Geral</strong> para ver todos os 6 gráficos interativos.</p>
-        <button class="btn-primary" style="margin-top:16px" onclick="document.querySelector('.nav-btn[data-view=overview]').click()">Ver Visão Geral</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── VIEW: TABELA ──────────────────────────────────────── -->
+  <!-- ── VIEW: TABELA ─────────────────────────────────────────── -->
   <div class="view-section" data-view="tabela">
-    <div style="padding:var(--space-lg)">
+    <div style="padding:var(--space-lg) var(--space-xl) 0">
       <div class="section-header">
         <h2 class="section-title">Tabela de Estabelecimentos</h2>
         <span style="font-size:12px;color:var(--text-muted)">Ordenável · clique na linha para ver no mapa</span>
       </div>
-      <div id="table-container-alt"></div>
     </div>
   </div>
 
-  <!-- ── VIEW: BAIRROS ────────────────────────────────────── -->
+  <!-- ── VIEW: BAIRROS ─────────────────────────────────────────── -->
   <div class="view-section" data-view="bairros">
-    <div style="padding:var(--space-lg)">
+    <div style="padding:var(--space-lg) var(--space-xl)">
       <div class="section-header"><h2 class="section-title">Bairros Pesquisados</h2></div>
       <div id="bairros-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--space-md)"></div>
     </div>
   </div>
 
-  <!-- ── VIEW: SOBRE ───────────────────────────────────────── -->
+  <!-- ── VIEW: SOBRE ───────────────────────────────────────────── -->
   <div class="view-section" data-view="sobre">
     <div style="max-width:720px;margin:0 auto;padding:var(--space-2xl) var(--space-lg)">
       <h2 style="font-size:24px;font-weight:800;color:var(--acai-dark);margin-bottom:var(--space-md)">Sobre o Açaí Map Belém</h2>
@@ -311,21 +190,148 @@
         <div style="background:var(--white);border-radius:var(--radius-lg);padding:var(--space-md) var(--space-lg);border:1px solid var(--border)">
           <div style="font-weight:700;margin-bottom:8px">Cores por tipo</div>
           <div style="display:flex;flex-direction:column;gap:6px;font-size:13px">
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#4B286D;flex-shrink:0"></div>Especializado em açaí</div>
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#3F6B4F;flex-shrink:0"></div>Açaí + outro segmento</div>
-            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#909090;flex-shrink:0"></div>Outro estabelecimento</div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#CB3AA6;flex-shrink:0"></div>Especializado em açaí</div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#A2CC24;flex-shrink:0"></div>Açaí + outro segmento</div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="width:12px;height:12px;border-radius:50%;background:#B08CBC;flex-shrink:0"></div>Outro estabelecimento</div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- PERSISTENT SECTIONS — shown across multiple views          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <!-- Map + Detail Panel (overview + mapa) -->
+  <section id="map-section" class="persistent-section" data-views="overview mapa" aria-label="Mapa de estabelecimentos">
+    <div id="map-container">
+      <div id="map" aria-label="Mapa interativo de Belém"></div>
+      <div id="map-controls" aria-hidden="true"></div>
+      <div id="map-stats-overlay" aria-live="polite" aria-label="Quantidade visível no mapa"></div>
+    </div>
+    <aside id="detail-panel" aria-label="Detalhes do estabelecimento">
+      <div id="detail-placeholder">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+        </svg>
+        <p style="font-size:14px;font-weight:600">Selecione um estabelecimento</p>
+        <p style="font-size:12px">Clique em um marcador no mapa para ver os detalhes</p>
+      </div>
+      <div id="detail-content"></div>
+    </aside>
+  </section>
+
+  <!-- Charts (overview + graficos) -->
+  <section id="charts-section" class="persistent-section" data-views="overview graficos" aria-labelledby="charts-title">
+    <div class="section-header">
+      <h2 class="section-title" id="charts-title">Análise de Dados</h2>
+      <span style="font-size:12px;color:var(--text-muted)">Clique nos gráficos para filtrar</span>
+    </div>
+    <div class="charts-grid">
+
+      <!-- Bairro bar (wide) -->
+      <div class="chart-card chart-wide" style="min-height:320px">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Estabelecimentos por Bairro</div>
+            <div class="chart-subtitle">Top 12 bairros · clique para filtrar</div>
+          </div>
+          <span class="chart-badge">Bairros</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:260px">
+          <canvas id="chart-bairro" aria-label="Gráfico de estabelecimentos por bairro"></canvas>
+        </div>
+      </div>
+
+      <!-- Tipo doughnut -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Distribuição por Tipo</div>
+            <div class="chart-subtitle">Clique para filtrar</div>
+          </div>
+          <span class="chart-badge">Tipo</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:220px">
+          <canvas id="chart-tipo" aria-label="Gráfico de distribuição por tipo"></canvas>
+        </div>
+      </div>
+
+      <!-- Rating distribution -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Distribuição de Notas</div>
+            <div class="chart-subtitle">Faixas de avaliação</div>
+          </div>
+          <span class="chart-badge">Notas</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:200px">
+          <canvas id="chart-rating-dist" aria-label="Histograma de distribuição de notas"></canvas>
+        </div>
+      </div>
+
+      <!-- Scatter reviews vs rating (wide) -->
+      <div class="chart-card chart-wide" style="min-height:280px">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Avaliações × Nota Média</div>
+            <div class="chart-subtitle">Dispersão por tipo de estabelecimento</div>
+          </div>
+          <span class="chart-badge">Dispersão</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:220px">
+          <canvas id="chart-scatter" aria-label="Gráfico de dispersão: avaliações vs nota"></canvas>
+        </div>
+      </div>
+
+      <!-- Recorrência -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Recorrência nas Buscas</div>
+            <div class="chart-subtitle">Nº de ocorrências por faixa</div>
+          </div>
+          <span class="chart-badge">Recorrência</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:200px">
+          <canvas id="chart-recorrencia" aria-label="Gráfico de recorrência nas buscas"></canvas>
+        </div>
+      </div>
+
+      <!-- Termos -->
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div>
+            <div class="chart-title">Ocorrências por Termo</div>
+            <div class="chart-subtitle">Top termos de busca</div>
+          </div>
+          <span class="chart-badge">Termos</span>
+        </div>
+        <div class="chart-canvas-wrap" style="min-height:200px">
+          <canvas id="chart-termos" aria-label="Gráfico de ocorrências por termo de busca"></canvas>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Table (overview + tabela) -->
+  <section id="table-section" class="persistent-section" data-views="overview tabela" aria-labelledby="table-title">
+    <div class="section-header" style="display:none" id="table-section-header-overview">
+      <h2 class="section-title" id="table-title">Estabelecimentos</h2>
+      <span style="font-size:12px;color:var(--text-muted)">Clique na coluna para ordenar · clique na linha para ver no mapa</span>
+    </div>
+    <div id="table-container"></div>
+  </section>
+
 </main>
 
 <!-- App JS (ES modules) -->
 <script type="module" src="js/app.js"></script>
 
-<!-- Bairros view population -->
+<!-- Bairros view population + graficos stats -->
 <script type="module">
 import { establishments, neighborhoods } from './js/data.js';
 import { dispatch } from './js/state.js';
@@ -349,23 +355,63 @@ document.addEventListener('DOMContentLoaded', () => {
       const avg = s.ratings.length ? s.ratings.reduce((a,b)=>a+b,0)/s.ratings.length : 0;
       return `
         <div class="kpi-card" style="cursor:pointer" onclick="(function(){
-          const {dispatch} = window._appModules || {};
-          if(dispatch) dispatch('SET_FILTER',{bairros:['${bairro.replace(/'/g,"\\'")}']});
           document.querySelector('.nav-btn[data-view=overview]')?.click();
+          setTimeout(()=>{ const {dispatch:d}=window._appModules||{}; },100);
         })()">
           <div class="kpi-label">📍 ${bairro}</div>
-          <div class="kpi-value" style="font-size:22px">${fmt(s.count)}</div>
+          <div class="kpi-value" style="font-size:28px">${fmt(s.count)}</div>
           <div class="kpi-sub">estabelecimentos · ⭐ ${fmtRating(avg)} · ${fmt(s.reviews)} aval.</div>
         </div>
       `;
     }).join('');
+    // Trigger animations for bairros cards
+    setTimeout(() => {
+      grid.querySelectorAll('.kpi-card').forEach((el, i) => {
+        el.style.transitionDelay = `${i * 55}ms`;
+        el.classList.add('animate-in');
+      });
+    }, 100);
   }
 
+  // Graficos stats
+  const total = establishments.length;
+  const bairros = new Set(establishments.map(e=>e.bairro_pesquisa)).size;
+  const reviews = establishments.reduce((s,e)=>s+(e.review_count||0),0);
+  const ratedEstabs = establishments.filter(e=>e.review_rating>0);
+  const avgRating = ratedEstabs.length ? ratedEstabs.reduce((s,e)=>s+e.review_rating,0)/ratedEstabs.length : 0;
+  const el = id => document.getElementById(id);
+  if(el('grf-estabs')) el('grf-estabs').textContent = fmt(total);
+  if(el('grf-bairros')) el('grf-bairros').textContent = fmt(bairros);
+  if(el('grf-reviews')) el('grf-reviews').textContent = fmt(reviews);
+  if(el('grf-rating')) el('grf-rating').textContent = fmtRating(avgRating);
+
+  // Mapa count badge
+  const badge = el('mapa-count-badge');
+  if(badge) badge.textContent = `${fmt(total)} locais`;
+
   // Update sobre counts
-  const sobreTotal = document.getElementById('sobre-total');
-  const sobreBairros = document.getElementById('sobre-bairros');
-  if (sobreTotal) sobreTotal.textContent = fmt(establishments.length);
-  if (sobreBairros) sobreBairros.textContent = fmt(new Set(establishments.map(e=>e.bairro_pesquisa)).size);
+  if(el('sobre-total')) el('sobre-total').textContent = fmt(total);
+  if(el('sobre-bairros')) el('sobre-bairros').textContent = fmt(bairros);
+
+  // Show table header only in overview (handled by CSS via body[data-view])
+  const tableHeader = el('table-section-header-overview');
+  if (tableHeader) tableHeader.style.display = 'flex';
+});
+
+// Re-trigger chart card animations when graficos view is selected
+document.querySelectorAll('.nav-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    if (btn.dataset.view === 'graficos') {
+      setTimeout(() => {
+        document.querySelectorAll('.chart-card').forEach((el, i) => {
+          el.classList.remove('animate-in');
+          void el.offsetWidth; // reflow
+          el.style.transitionDelay = `${i * 55}ms`;
+          el.classList.add('animate-in');
+        });
+      }, 50);
+    }
+  });
 });
 </script>
 
