@@ -135,10 +135,10 @@ body { background: var(--bg); color: var(--text); font-size: 14px; line-height: 
   min-height: 380px;
 }
 .hero-copy { padding: clamp(36px, 5vw, 72px) var(--gutter); display: flex; flex-direction: column; justify-content: center; }
-.hero-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
-.hero-brand-name { font-family: var(--font-display); font-weight: 800; font-size: 15px; letter-spacing: 2px; }
-.hero-brand-sep { width: 1px; height: 16px; background: rgba(255,255,255,.25); }
-.hero-brand-sub { font-size: 11.5px; font-weight: 500; letter-spacing: .6px; color: rgba(255,255,255,.6); }
+.hero-eyebrow {
+  font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(255,255,255,.55); margin-bottom: 14px;
+}
 #hero h1 {
   font-family: var(--font-display); font-weight: 800;
   font-size: clamp(32px, 4.4vw, 56px); line-height: 1.04; letter-spacing: -1.6px;

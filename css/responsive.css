@@ -111,8 +111,7 @@
 @media (max-width: 430px) {
   .brand-sub { display: none; }
   #hero h1 { letter-spacing: -.8px; }
-  .hero-brand-sep, .hero-brand-sub { display: none; }
-  .hero-brand { margin-bottom: 22px; }
+  .hero-eyebrow { display: none; }
   .hero-micro > div { padding: 0 14px; }
   .hero-micro dd { font-size: 22px; }
   .kpi-hero-num { font-size: 48px; }
