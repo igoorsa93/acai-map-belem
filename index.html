@@ -1,383 +1,1250 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Açaí Map — Onde o açaí aparece em Belém</title>
-  <meta name="description" content="Exploração geográfica dos estabelecimentos de açaí encontrados no Google Maps em 10 bairros de Belém do Pará.">
-  <meta name="theme-color" content="#4B255D">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Açaí Map · Belém</title>
+<meta name="description" content="Plataforma de inteligência geográfica dos estabelecimentos de açaí em Belém do Pará.">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" crossorigin>
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/map.css">
-  <link rel="stylesheet" href="css/charts.css">
-  <link rel="stylesheet" href="css/tables.css">
-  <link rel="stylesheet" href="css/responsive.css">
+<!-- Chart.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.4/chart.umd.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" crossorigin></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" crossorigin></script>
-  <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js" crossorigin></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" crossorigin></script>
+<style>
+/* ── Tokens ──────────────────────────────────────────────── */
+:root {
+  --c-bg:        #FAF7FB;
+  --c-surface:   #FFFFFF;
+  --c-border:    rgba(90,30,116,.08);
+  --c-deep:      #2E1438;
+  --c-primary:   #5A1E74;
+  --c-sec:       #7A3C8C;
+  --c-green:     #A4D620;
+  --c-green-dk:  #7BAF10;
+  --c-text:      #1A0A22;
+  --c-muted:     #6B5C78;
+  --c-light:     #EDE8F2;
+  --shadow-sm:   0 2px 8px rgba(46,20,56,.06);
+  --shadow-md:   0 8px 30px rgba(46,20,56,.10);
+  --shadow-lg:   0 16px 48px rgba(46,20,56,.14);
+  --r-card:      20px;
+  --r-btn:       9999px;
+  --r-input:     14px;
+  --font-head:   'Plus Jakarta Sans', sans-serif;
+  --font-body:   'Inter', sans-serif;
+  --transition:  .25s cubic-bezier(.4,0,.2,1);
+}
 
-  <script src="data/dashboard_data.js"></script>
+/* ── Reset ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--c-bg); color: var(--c-text); min-height: 100vh; overflow-x: hidden; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+/* ── Header ──────────────────────────────────────────────── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(255,255,255,.92); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--c-border);
+  height: 64px; display: flex; align-items: center;
+  padding: 0 24px; gap: 32px;
+}
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--c-primary); display: flex; align-items: center; justify-content: center;
+}
+.logo-icon svg { width: 20px; height: 20px; fill: white; }
+.logo-text { line-height: 1; }
+.logo-name { font-family: var(--font-head); font-size: 15px; font-weight: 800; color: var(--c-deep); letter-spacing: -.3px; }
+.logo-sub  { font-size: 10px; font-weight: 500; color: var(--c-muted); letter-spacing: 1px; text-transform: uppercase; }
+
+.nav { display: flex; align-items: center; gap: 4px; flex: 1; }
+.nav-btn {
+  display: flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: var(--r-btn);
+  font-size: 14px; font-weight: 500; color: var(--c-muted);
+  transition: var(--transition); position: relative; white-space: nowrap;
+}
+.nav-btn:hover { color: var(--c-primary); background: rgba(90,30,116,.06); }
+.nav-btn.active { color: var(--c-primary); font-weight: 600; }
+.nav-btn.active::after {
+  content: ''; position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%);
+  width: 24px; height: 3px; background: var(--c-primary); border-radius: 2px 2px 0 0;
+}
+.nav-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--c-green); display: none; }
+.nav-btn.active .nav-dot { display: block; }
+
+.search-bar {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--c-bg); border: 1px solid var(--c-border);
+  border-radius: var(--r-btn); padding: 6px 14px;
+  font-size: 13px; color: var(--c-muted); min-width: 220px;
+}
+.search-bar svg { width: 15px; height: 15px; stroke: var(--c-muted); fill: none; flex-shrink: 0; }
+#header-search { border: none; background: none; outline: none; font-family: inherit; font-size: 13px; color: var(--c-text); flex: 1; width: 100%; }
+#header-search::placeholder { color: var(--c-muted); }
+.kbd { font-size: 11px; color: var(--c-muted); background: var(--c-light); padding: 2px 5px; border-radius: 4px; }
+
+/* ── Pages ───────────────────────────────────────────────── */
+.page { display: none; padding-top: 64px; min-height: 100vh; }
+.page.active { display: block; }
+
+/* ── Page: Explorar ──────────────────────────────────────── */
+#page-explorar {
+  display: none; padding-top: 64px; height: 100vh;
+  flex-direction: row; overflow: hidden;
+}
+#page-explorar.active { display: flex; }
+
+.explorar-left {
+  width: 38%; min-width: 320px; max-width: 480px;
+  display: flex; flex-direction: column;
+  border-right: 1px solid var(--c-border);
+  background: var(--c-surface); overflow: hidden;
+}
+.explorar-left-header { padding: 24px 24px 16px; border-bottom: 1px solid var(--c-border); }
+.explorar-left-header h2 { font-family: var(--font-head); font-size: 22px; font-weight: 800; color: var(--c-deep); margin-bottom: 4px; }
+.explorar-left-header p { font-size: 13px; color: var(--c-muted); }
+
+.filter-chips { display: flex; gap: 8px; padding: 14px 24px; flex-wrap: wrap; border-bottom: 1px solid var(--c-border); }
+.chip {
+  padding: 6px 14px; border-radius: var(--r-btn); font-size: 13px; font-weight: 500;
+  border: 1.5px solid var(--c-border); color: var(--c-muted);
+  transition: var(--transition); white-space: nowrap;
+}
+.chip:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.chip.active { background: var(--c-primary); border-color: var(--c-primary); color: white; }
+
+.list-meta {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 24px; font-size: 13px;
+}
+.list-count { font-weight: 600; color: var(--c-text); }
+.list-sort { color: var(--c-muted); display: flex; align-items: center; gap: 4px; }
+
+.est-list { flex: 1; overflow-y: auto; padding: 8px 16px 24px; }
+.est-list::-webkit-scrollbar { width: 4px; }
+.est-list::-webkit-scrollbar-thumb { background: var(--c-light); border-radius: 2px; }
+
+.est-card {
+  background: var(--c-surface); border: 1px solid var(--c-border);
+  border-radius: 16px; padding: 16px; margin-bottom: 10px;
+  cursor: pointer; transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+.est-card:hover { border-color: rgba(90,30,116,.2); box-shadow: var(--shadow-md); transform: translateY(-1px); }
+.est-card.selected { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(90,30,116,.1); }
+
+.est-card-top { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.est-avatar {
+  width: 52px; height: 52px; border-radius: 12px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-sec));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.est-info { flex: 1; min-width: 0; }
+.est-name { font-family: var(--font-head); font-size: 14px; font-weight: 700; color: var(--c-deep); margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.est-bairro { font-size: 12px; color: var(--c-muted); display: flex; align-items: center; gap: 4px; }
+.badge-open { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: var(--r-btn); background: rgba(164,214,32,.15); color: var(--c-green-dk); }
+.badge-tipo { font-size: 11px; font-weight: 500; padding: 3px 8px; border-radius: var(--r-btn); background: rgba(90,30,116,.08); color: var(--c-primary); }
+
+.est-rating { display: flex; align-items: center; gap: 4px; margin-bottom: 8px; font-size: 13px; }
+.star { color: #F59E0B; }
+.rating-val { font-weight: 700; color: var(--c-text); }
+.rating-count { color: var(--c-muted); }
+
+.est-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.tag { font-size: 11px; padding: 3px 8px; border-radius: 6px; background: var(--c-bg); color: var(--c-muted); border: 1px solid var(--c-border); }
+
+.est-actions { display: flex; gap: 8px; }
+.btn-detail { flex: 1; padding: 8px; border: 1.5px solid var(--c-border); border-radius: 10px; font-size: 13px; font-weight: 500; color: var(--c-text); transition: var(--transition); }
+.btn-detail:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.btn-route { flex: 1; padding: 8px; background: var(--c-primary); border-radius: 10px; font-size: 13px; font-weight: 600; color: white; display: flex; align-items: center; justify-content: center; gap: 6px; transition: var(--transition); }
+.btn-route:hover { background: var(--c-deep); }
+
+/* ── Explorar: mapa direito ──────────────────────────────── */
+.explorar-right { flex: 1; position: relative; overflow: hidden; }
+#map-explorar { width: 100%; height: 100%; }
+
+.map-overlay-top {
+  position: absolute; top: 16px; left: 16px; right: 16px; z-index: 400;
+  display: flex; align-items: center; gap: 8px;
+}
+.map-region-card {
+  background: rgba(46,20,56,.85); backdrop-filter: blur(12px);
+  border-radius: 14px; padding: 10px 16px; color: white;
+  display: flex; align-items: center; gap: 10px; flex: 1;
+}
+.map-region-icon { width: 32px; height: 32px; background: rgba(164,214,32,.2); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+.map-region-title { font-family: var(--font-head); font-size: 14px; font-weight: 700; }
+.map-region-sub { font-size: 11px; opacity: .7; }
+
+.map-layers { display: flex; gap: 4px; }
+.map-layer-btn {
+  padding: 8px 12px; border-radius: var(--r-btn); font-size: 12px; font-weight: 600;
+  background: rgba(46,20,56,.85); backdrop-filter: blur(12px); color: white;
+  transition: var(--transition);
+}
+.map-layer-btn.active { background: var(--c-green); color: var(--c-deep); }
+.map-layer-btn:hover:not(.active) { background: rgba(90,30,116,.9); }
+
+.map-bairros-mini {
+  position: absolute; bottom: 16px; right: 16px; z-index: 400;
+  background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+  border-radius: 16px; padding: 14px 16px; min-width: 220px;
+  box-shadow: var(--shadow-lg);
+}
+.map-bairros-mini h4 { font-family: var(--font-head); font-size: 13px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+.bairro-rank-row { display: flex; align-items: center; gap: 8px; margin-bottom: 7px; font-size: 12px; }
+.bairro-rank-num { width: 16px; font-weight: 700; color: var(--c-muted); }
+.bairro-rank-name { width: 110px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bairro-rank-bar-wrap { flex: 1; height: 6px; background: var(--c-light); border-radius: 3px; overflow: hidden; }
+.bairro-rank-bar { height: 100%; background: var(--c-green); border-radius: 3px; }
+.bairro-rank-count { font-weight: 700; color: var(--c-primary); width: 24px; text-align: right; }
+
+/* ── Mapa legenda ────────────────────────────────────────── */
+.map-legend-bar {
+  position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 400;
+  background: rgba(46,20,56,.85); backdrop-filter: blur(12px);
+  border-radius: var(--r-btn); padding: 8px 16px; color: white;
+  display: flex; align-items: center; gap: 12px; font-size: 12px; white-space: nowrap;
+}
+.legend-gradient { width: 120px; height: 8px; border-radius: 4px; background: linear-gradient(to right, var(--c-primary), var(--c-green)); }
+
+/* ── Page: Mapa Interativo ───────────────────────────────── */
+#page-mapa {
+  display: none; padding-top: 64px; height: 100vh;
+  position: relative;
+}
+#page-mapa.active { display: block; }
+#map-full { width: 100%; height: 100%; }
+
+.mapa-filters-panel {
+  position: absolute; top: 80px; left: 16px; z-index: 500;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(16px);
+  border-radius: 20px; padding: 20px; width: 300px;
+  box-shadow: var(--shadow-lg); border: 1px solid var(--c-border);
+}
+.mapa-filters-panel h3 { font-family: var(--font-head); font-size: 16px; font-weight: 800; margin-bottom: 4px; }
+.mapa-filters-panel p { font-size: 12px; color: var(--c-muted); margin-bottom: 16px; }
+.filters-badge { background: var(--c-primary); color: white; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: var(--r-btn); margin-left: 8px; }
+
+.filter-group { margin-bottom: 16px; }
+.filter-label { font-size: 12px; font-weight: 600; color: var(--c-muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; }
+.filter-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 6px 12px; border-radius: 10px; font-size: 12px; font-weight: 500;
+  border: 1.5px solid var(--c-border); color: var(--c-text); transition: var(--transition);
+}
+.filter-btn:hover { border-color: var(--c-primary); color: var(--c-primary); }
+.filter-btn.active { background: var(--c-primary); border-color: var(--c-primary); color: white; }
+
+.filter-select {
+  width: 100%; padding: 8px 12px; border: 1.5px solid var(--c-border);
+  border-radius: var(--r-input); font-family: inherit; font-size: 13px;
+  color: var(--c-text); background: var(--c-bg); outline: none;
+  transition: var(--transition);
+}
+.filter-select:focus { border-color: var(--c-primary); }
+
+.rating-range { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.rating-range input[type=range] {
+  flex: 1; accent-color: var(--c-primary);
+}
+
+/* Preview card no mapa */
+.mapa-preview-card {
+  border-top: 1px solid var(--c-border); padding-top: 14px; margin-top: 14px;
+  display: none;
+}
+.mapa-preview-card.visible { display: block; }
+.preview-img {
+  width: 100%; height: 80px; border-radius: 10px; margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--c-primary), var(--c-sec));
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
+}
+.preview-name { font-family: var(--font-head); font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.preview-addr { font-size: 12px; color: var(--c-muted); margin-bottom: 8px; }
+.preview-rating { font-size: 13px; margin-bottom: 10px; }
+.preview-actions { display: flex; gap: 6px; }
+.preview-btn-route { flex: 1; padding: 8px; background: var(--c-green); border-radius: 10px; font-size: 12px; font-weight: 700; color: var(--c-deep); display: flex; align-items: center; justify-content: center; gap: 4px; }
+.preview-btn-detail { flex: 1; padding: 8px; border: 1.5px solid var(--c-border); border-radius: 10px; font-size: 12px; font-weight: 500; color: var(--c-text); }
+
+/* Status pill */
+.mapa-status-pill {
+  position: absolute; top: 80px; left: 50%; transform: translateX(-50%); z-index: 500;
+  background: rgba(46,20,56,.9); backdrop-filter: blur(12px);
+  color: white; padding: 8px 20px; border-radius: var(--r-btn); font-size: 13px; font-weight: 600;
+  display: flex; align-items: center; gap: 8px; white-space: nowrap;
+}
+.status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-green); }
+
+/* Layer switcher */
+.mapa-layers-ctrl {
+  position: absolute; top: 80px; right: 16px; z-index: 500;
+  display: flex; gap: 4px; background: rgba(255,255,255,.95); border-radius: var(--r-btn);
+  padding: 4px; box-shadow: var(--shadow-md);
+}
+.mapa-layer-btn {
+  padding: 8px 16px; border-radius: var(--r-btn); font-size: 13px; font-weight: 600;
+  color: var(--c-muted); transition: var(--transition);
+}
+.mapa-layer-btn.active { background: var(--c-primary); color: white; }
+.mapa-layer-btn:hover:not(.active) { background: var(--c-light); color: var(--c-primary); }
+
+/* Zoom controls */
+.mapa-zoom {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%); z-index: 500;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.mapa-zoom-btn {
+  width: 40px; height: 40px; background: white; border-radius: 10px;
+  box-shadow: var(--shadow-md); font-size: 20px; color: var(--c-primary);
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.mapa-zoom-btn:hover { background: var(--c-primary); color: white; }
+
+/* Legenda mapa full */
+.mapa-legend {
+  position: absolute; bottom: 20px; left: 16px; z-index: 500;
+  background: rgba(46,20,56,.85); backdrop-filter: blur(12px);
+  border-radius: 14px; padding: 12px 16px; color: white;
+}
+.mapa-legend h5 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px; opacity: .7; }
+.legend-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 12px; }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+
+/* ── Page: Bairros ───────────────────────────────────────── */
+#page-bairros { padding: 24px; }
+.bairros-header { margin-bottom: 24px; }
+.bairros-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--c-green-dk); margin-bottom: 6px; }
+.bairros-header h1 { font-family: var(--font-head); font-size: 36px; font-weight: 800; color: var(--c-deep); margin-bottom: 8px; }
+.bairros-header p { font-size: 15px; color: var(--c-muted); max-width: 540px; }
+
+.bairros-layout { display: grid; grid-template-columns: 1fr 380px; gap: 24px; }
+.bairros-list { display: flex; flex-direction: column; gap: 12px; }
+
+.bairro-card {
+  background: var(--c-surface); border: 1.5px solid var(--c-border); border-radius: 20px;
+  padding: 20px; display: flex; align-items: center; gap: 16px;
+  transition: var(--transition); cursor: pointer; box-shadow: var(--shadow-sm);
+}
+.bairro-card:hover { border-color: rgba(90,30,116,.2); box-shadow: var(--shadow-md); }
+.bairro-card.rank-1 { border-color: var(--c-green); background: linear-gradient(135deg, rgba(164,214,32,.04), white); }
+
+.bairro-rank-num-big {
+  font-family: var(--font-head); font-size: 48px; font-weight: 800;
+  color: var(--c-light); line-height: 1; min-width: 56px; text-align: center;
+}
+.bairro-card.rank-1 .bairro-rank-num-big { color: rgba(90,30,116,.15); }
+
+.bairro-card-info { flex: 1; min-width: 0; }
+.bairro-card-name { font-family: var(--font-head); font-size: 20px; font-weight: 800; color: var(--c-deep); margin-bottom: 4px; display: flex; align-items: center; gap: 10px; }
+.badge-top { background: var(--c-green); color: var(--c-deep); font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: var(--r-btn); }
+.bairro-card-sub { font-size: 13px; color: var(--c-muted); margin-bottom: 12px; }
+
+.bairro-stats { display: flex; gap: 20px; }
+.bairro-stat { }
+.bairro-stat-val { font-family: var(--font-head); font-size: 18px; font-weight: 800; color: var(--c-primary); }
+.bairro-stat-label { font-size: 11px; color: var(--c-muted); }
+
+.bairro-volume { margin-left: auto; text-align: right; }
+.bairro-volume-label { font-size: 11px; color: var(--c-muted); margin-bottom: 6px; }
+.bairro-volume-dots { display: flex; gap: 3px; justify-content: flex-end; }
+.vol-dot { width: 10px; height: 10px; border-radius: 3px; background: var(--c-primary); opacity: .3; }
+.vol-dot.filled { opacity: 1; }
+.bairro-volume-pct { font-size: 12px; font-weight: 700; color: var(--c-primary); margin-top: 4px; }
+
+.bairros-sidebar { display: flex; flex-direction: column; gap: 20px; }
+.sidebar-card { background: var(--c-surface); border: 1.5px solid var(--c-border); border-radius: 20px; padding: 20px; box-shadow: var(--shadow-sm); }
+.sidebar-card h3 { font-family: var(--font-head); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.sidebar-card p { font-size: 12px; color: var(--c-muted); margin-bottom: 14px; }
+#chart-bairros-rating { max-height: 220px; }
+#map-bairros { height: 280px; border-radius: 14px; overflow: hidden; }
+
+/* ── Page: Estatísticas ──────────────────────────────────── */
+#page-stats { padding: 24px; }
+.stats-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+.stats-eyebrow { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--c-green-dk); margin-bottom: 6px; }
+.stats-header h1 { font-family: var(--font-head); font-size: 36px; font-weight: 800; color: var(--c-deep); margin-bottom: 6px; }
+.stats-header p { font-size: 15px; color: var(--c-muted); }
+.period-badge {
+  display: flex; align-items: center; gap: 8px; padding: 10px 16px;
+  background: var(--c-surface); border: 1.5px solid var(--c-border); border-radius: var(--r-btn);
+  font-size: 13px; font-weight: 600; color: var(--c-text); white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 80px;
+  gap: 16px;
+}
+
+.bento-card {
+  background: var(--c-surface); border: 1.5px solid var(--c-border);
+  border-radius: 20px; padding: 20px; box-shadow: var(--shadow-sm);
+  overflow: hidden; display: flex; flex-direction: column;
+}
+.bento-card h4 { font-family: var(--font-head); font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.bento-card p { font-size: 12px; color: var(--c-muted); margin-bottom: 12px; }
+
+/* Grid placements */
+.bento-bairros   { grid-column: span 5; grid-row: span 5; }
+.bento-tipos     { grid-column: span 4; grid-row: span 5; }
+.bento-kpi-avg   { grid-column: span 3; grid-row: span 3; }
+.bento-scatter   { grid-column: span 6; grid-row: span 4; }
+.bento-termos    { grid-column: span 6; grid-row: span 4; }
+.bento-consultas { grid-column: span 3; grid-row: span 3; }
+.bento-insights  { grid-column: span 9; grid-row: span 2; }
+
+.kpi-big { display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+.kpi-big-val { font-family: var(--font-head); font-size: 52px; font-weight: 800; color: var(--c-primary); line-height: 1; }
+.kpi-big-star { font-size: 28px; color: #F59E0B; }
+.kpi-big-label { font-size: 13px; color: var(--c-muted); margin-top: 4px; }
+.kpi-big-delta { font-size: 12px; color: var(--c-green-dk); font-weight: 600; display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+
+.kpi-consultas { display: flex; flex-direction: column; flex: 1; justify-content: center; }
+.kpi-big-num { font-family: var(--font-head); font-size: 40px; font-weight: 800; color: var(--c-green-dk); }
+.kpi-sub { font-size: 12px; color: var(--c-muted); }
+
+.insights-grid { display: flex; gap: 12px; flex: 1; align-items: center; }
+.insight-item {
+  flex: 1; background: var(--c-bg); border-radius: 14px; padding: 14px; display: flex; gap: 10px; align-items: flex-start;
+}
+.insight-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.insight-icon.green { background: rgba(164,214,32,.15); }
+.insight-icon.purple { background: rgba(90,30,116,.1); }
+.insight-icon.blue { background: rgba(59,130,246,.1); }
+.insight-title { font-size: 13px; font-weight: 700; margin-bottom: 2px; }
+.insight-text { font-size: 12px; color: var(--c-muted); line-height: 1.4; }
+
+/* ── Cluster custom ──────────────────────────────────────── */
+.cluster-icon {
+  background: var(--c-primary); border: 3px solid white; border-radius: 50%;
+  color: white; font-family: var(--font-head); font-weight: 800; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(46,20,56,.3);
+  transition: transform .2s;
+}
+.cluster-icon:hover { transform: scale(1.1); }
+
+/* ── Leaflet overrides ───────────────────────────────────── */
+.leaflet-control-attribution { font-size: 9px; }
+.leaflet-popup-content-wrapper { border-radius: 14px; box-shadow: var(--shadow-lg); }
+.leaflet-popup-content { margin: 14px 16px; }
+
+/* ── Scrollbar global ────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--c-light); border-radius: 3px; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .nav-btn span { display: none; }
+  #page-explorar { flex-direction: column; }
+  .explorar-left { width: 100%; max-width: 100%; height: 50vh; }
+  .explorar-right { height: 50vh; }
+  .bairros-layout { grid-template-columns: 1fr; }
+  .bento-bairros, .bento-tipos, .bento-kpi-avg, .bento-scatter,
+  .bento-termos, .bento-consultas, .bento-insights {
+    grid-column: span 12; grid-row: span 4;
+  }
+  .bento-kpi-avg, .bento-consultas { grid-row: span 3; }
+  .mapa-filters-panel { width: 260px; }
+}
+@media (max-width: 600px) {
+  #header { padding: 0 14px; gap: 12px; }
+  .search-bar { display: none; }
+  .logo-sub { display: none; }
+  .bairros-header h1, .stats-header h1 { font-size: 26px; }
+}
+</style>
 </head>
 <body>
 
-<a class="skip-link" href="#map-section">Pular para o mapa</a>
-
-<div id="app-loader" role="status" aria-live="polite">
-  <div class="loader-inner">
-    <img src="assets/logo-mark.svg" width="44" height="44" alt="">
-    <strong>AÇAÍ MAP</strong>
-    <span>Carregando dados…</span>
-    <i class="loader-bar" aria-hidden="true"></i>
+<!-- ── Header ─────────────────────────────────────────────────────────────── -->
+<header id="header">
+  <div class="logo">
+    <div class="logo-icon">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="5"/><path d="M12 15 C8 15 4 17 4 20 L20 20 C20 17 16 15 12 15Z"/><circle cx="12" cy="5" r="2" fill="rgba(164,214,32,.8)"/></svg>
+    </div>
+    <div class="logo-text">
+      <div class="logo-name">AÇAÍ MAP · BELÉM</div>
+      <div class="logo-sub">Sabores que conectam Belém</div>
+    </div>
   </div>
-</div>
 
-<!-- ─── Header ───────────────────────────────────────────── -->
-<header id="header" role="banner">
-  <a class="brand" href="#" data-view-link="overview" aria-label="Açaí Map — Belém / PA, início">
-    <img src="assets/favicon.svg" width="28" height="28" alt="">
-    <span class="brand-text"><span class="brand-name">AÇAÍ MAP</span><span class="brand-sub">BELÉM / PA</span></span>
-  </a>
-
-  <nav id="main-nav" aria-label="Navegação principal">
-    <button class="nav-btn active" data-view="overview" aria-current="page">Explorar</button>
-    <button class="nav-btn" data-view="mapa">Mapa</button>
-    <button class="nav-btn" data-view="graficos">Análises</button>
-    <button class="nav-btn" data-view="tabela">Tabela</button>
-    <button class="nav-btn" data-view="bairros">Bairros</button>
-    <button class="nav-btn" data-view="sobre">Sobre</button>
+  <nav class="nav">
+    <button class="nav-btn active" data-page="explorar" onclick="showPage('explorar',this)">
+      <div class="nav-dot"></div><span>Explorar</span>
+    </button>
+    <button class="nav-btn" data-page="mapa" onclick="showPage('mapa',this)">
+      <div class="nav-dot"></div><span>Mapa Interativo</span>
+    </button>
+    <button class="nav-btn" data-page="bairros" onclick="showPage('bairros',this)">
+      <div class="nav-dot"></div><span>Bairros</span>
+    </button>
+    <button class="nav-btn" data-page="stats" onclick="showPage('stats',this)">
+      <div class="nav-dot"></div><span>Estatísticas</span>
+    </button>
   </nav>
 
-  <div id="header-search" role="search">
-    <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="4.3"/><path d="M10.2 10.2l3.3 3.3" stroke-linecap="round"/></svg>
-    <input type="search" id="header-search-input" placeholder="Pesquisar estabelecimento…" autocomplete="off"
-           role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list" aria-label="Buscar estabelecimento">
-    <kbd class="search-kbd" aria-hidden="true">/</kbd>
-    <ul id="search-results" role="listbox" aria-label="Sugestões" hidden></ul>
+  <div class="search-bar">
+    <svg viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <input id="header-search" placeholder="Buscar locais, bairros ou sabores..." autocomplete="off">
+    <span class="kbd">⌘K</span>
   </div>
 </header>
 
-<main id="app" role="main">
-
-  <!-- HERO ───────────────────────────────────────────────── -->
-  <section id="hero" class="persistent-section" data-views="overview" aria-labelledby="hero-title">
-    <canvas id="hero-canvas" aria-hidden="true"></canvas>
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <p class="hero-eyebrow">Location Intelligence · Belém / PA</p>
-        <h1 id="hero-title">Onde o açaí aparece em Belém.</h1>
-        <p class="hero-sub">Exploração geográfica de estabelecimentos encontrados em <span id="hero-bairros-n">—</span> bairros de Belém/PA.</p>
-        <dl class="hero-micro">
-          <div><dd id="hero-stat-estabs">—</dd><dt>estabelecimentos</dt></div>
-          <div><dd id="hero-stat-bairros">—</dd><dt>bairros</dt></div>
-          <div><dd id="hero-stat-queries">—</dd><dt>consultas</dt></div>
-        </dl>
-        <div class="hero-actions">
-          <button type="button" class="btn-hero" data-goto="map-section">
-            Explorar o mapa
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 3v10M4 9l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
-          <span class="hero-source">Fonte: Google Maps · coleta de <span id="hero-date">—</span></span>
-        </div>
-      </div>
-
-      <figure class="hero-visual">
-        <div class="hv-frame" aria-hidden="true">
-        <svg viewBox="0 0 520 440" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <radialGradient id="hv-b" cx="34%" cy="28%" r="80%">
-              <stop offset="0" stop-color="#9C5DB2"/>
-              <stop offset=".55" stop-color="#55286A"/>
-              <stop offset="1" stop-color="#1F0D27"/>
-            </radialGradient>
-            <radialGradient id="hv-glow" cx="50%" cy="50%" r="50%">
-              <stop offset="0" stop-color="#A2CC24" stop-opacity=".22"/>
-              <stop offset="1" stop-color="#A2CC24" stop-opacity="0"/>
-            </radialGradient>
-          </defs>
-          <rect width="520" height="440" fill="#24102D" fill-opacity=".38"/>
-          <g fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="1">
-            <ellipse cx="120" cy="110" rx="50" ry="30" transform="rotate(-16 120 110)"/>
-            <ellipse cx="124" cy="112" rx="88" ry="56" transform="rotate(-14 124 112)"/>
-            <ellipse cx="130" cy="116" rx="130" ry="84" transform="rotate(-12 130 116)"/>
-            <ellipse cx="136" cy="120" rx="176" ry="116" transform="rotate(-10 136 120)"/>
-            <ellipse cx="450" cy="390" rx="60" ry="36" transform="rotate(20 450 390)"/>
-            <ellipse cx="446" cy="386" rx="110" ry="68" transform="rotate(18 446 386)"/>
-            <ellipse cx="440" cy="382" rx="160" ry="100" transform="rotate(16 440 382)"/>
-          </g>
-          <g fill="#fff" fill-opacity=".12">
-            <circle cx="60" cy="340" r="1.4"/><circle cx="90" cy="340" r="1.4"/><circle cx="120" cy="340" r="1.4"/>
-            <circle cx="60" cy="370" r="1.4"/><circle cx="90" cy="370" r="1.4"/><circle cx="120" cy="370" r="1.4"/>
-            <circle cx="60" cy="400" r="1.4"/><circle cx="90" cy="400" r="1.4"/><circle cx="120" cy="400" r="1.4"/>
-            <circle cx="420" cy="60" r="1.4"/><circle cx="450" cy="60" r="1.4"/><circle cx="480" cy="60" r="1.4"/>
-            <circle cx="420" cy="90" r="1.4"/><circle cx="450" cy="90" r="1.4"/><circle cx="480" cy="90" r="1.4"/>
-          </g>
-          <path d="M-20 318 C 70 262, 120 360, 210 310 S 350 222, 430 276 S 520 330, 560 292" fill="none" stroke="#A2CC24" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
-          <path d="M-20 330 C 70 274, 120 372, 210 322 S 350 234, 430 288 S 520 342, 560 304" fill="none" stroke="#A2CC24" stroke-opacity=".18" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="312" cy="196" r="130" fill="url(#hv-glow)"/>
-          <g stroke="#fff" stroke-opacity=".16" stroke-width="1.4" fill="none" stroke-linecap="round">
-            <path d="M318 44 C 316 90, 300 120, 292 160"/>
-            <path d="M318 44 C 326 96, 340 126, 336 156"/>
-            <path d="M318 44 C 318 110, 318 150, 314 200"/>
-            <path d="M306 100 C 280 130, 262 160, 258 176"/>
-            <path d="M330 104 C 356 126, 366 170, 364 196"/>
-          </g>
-          <g>
-            <circle cx="306" cy="128" r="17" fill="url(#hv-b)"/><circle cx="300" cy="122" r="4" fill="#fff" fill-opacity=".26"/>
-            <circle cx="346" cy="130" r="14" fill="url(#hv-b)"/><circle cx="341" cy="125" r="3.2" fill="#fff" fill-opacity=".24"/>
-            <circle cx="262" cy="176" r="16" fill="url(#hv-b)"/><circle cx="256" cy="170" r="3.6" fill="#fff" fill-opacity=".24"/>
-            <circle cx="292" cy="166" r="24" fill="url(#hv-b)"/><circle cx="283" cy="157" r="5.4" fill="#fff" fill-opacity=".26"/>
-            <circle cx="336" cy="162" r="22" fill="url(#hv-b)"/><circle cx="328" cy="154" r="5" fill="#fff" fill-opacity=".24"/>
-            <circle cx="372" cy="196" r="18" fill="url(#hv-b)"/><circle cx="366" cy="190" r="4" fill="#fff" fill-opacity=".22"/>
-            <circle cx="314" cy="206" r="26" fill="url(#hv-b)"/><circle cx="305" cy="196" r="6" fill="#fff" fill-opacity=".26"/>
-            <circle cx="270" cy="216" r="20" fill="url(#hv-b)"/><circle cx="263" cy="209" r="4.6" fill="#fff" fill-opacity=".22"/>
-            <circle cx="354" cy="238" r="21" fill="url(#hv-b)"/><circle cx="347" cy="231" r="4.8" fill="#fff" fill-opacity=".22"/>
-            <circle cx="304" cy="250" r="19" fill="url(#hv-b)"/><circle cx="298" cy="244" r="4.2" fill="#fff" fill-opacity=".22"/>
-            <circle cx="336" cy="276" r="15" fill="url(#hv-b)"/><circle cx="331" cy="271" r="3.4" fill="#fff" fill-opacity=".2"/>
-            <circle cx="386" cy="238" r="12" fill="url(#hv-b)"/>
-            <circle cx="244" cy="244" r="12" fill="url(#hv-b)"/>
-          </g>
-          <g>
-            <circle cx="132" cy="236" r="44" fill="none" stroke="#A2CC24" stroke-opacity=".55" stroke-width="1.2" stroke-dasharray="3 5"/>
-            <path d="M132 250s-10-9.4-10-17.2a10 10 0 1 1 20 0c0 7.8-10 17.2-10 17.2z" fill="#fff"/>
-            <circle cx="132" cy="232.8" r="3.6" fill="#4B255D"/>
-            <path d="M448 162s-7-6.6-7-12a7 7 0 1 1 14 0c0 5.4-7 12-7 12z" fill="#fff" fill-opacity=".85"/>
-            <circle cx="448" cy="150" r="2.5" fill="#4B255D"/>
-            <path d="M190 90s-6-5.6-6-10.2a6 6 0 1 1 12 0c0 4.6-6 10.2-6 10.2z" fill="#fff" fill-opacity=".7"/>
-            <circle cx="190" cy="79.8" r="2.1" fill="#4B255D"/>
-          </g>
-        </svg>
-        </div>
-        <figcaption class="hv-chips">
-          <span class="hv-chip hv-chip-a"><i></i><span>Maior presença</span><strong id="hv-top-bairro">—</strong><em id="hv-top-bairro-n"></em></span>
-          <span class="hv-chip hv-chip-b"><i></i><span>Especializados em açaí</span><strong id="hv-esp-n">—</strong><em id="hv-esp-pct"></em></span>
-        </figcaption>
-      </figure>
+<!-- ── Page: Explorar ─────────────────────────────────────────────────────── -->
+<div id="page-explorar" class="page active">
+  <div class="explorar-left">
+    <div class="explorar-left-header">
+      <h2>Explore o açaí de Belém</h2>
+      <p>Descubra os melhores batedores, tigelas e sabores da nossa terra.</p>
     </div>
-  </section>
-
-  <!-- FILTER BAR ─────────────────────────────────────────── -->
-  <div id="filter-bar" class="persistent-section" data-views="overview mapa graficos tabela"></div>
-
-  <header class="page-head persistent-section" data-views="graficos">
-    <span class="eyebrow">Análises</span>
-    <h2>Como os pontos se distribuem</h2>
-    <p>Clique em barras, fatias e pontos para filtrar mapa, indicadores e tabela.</p>
-  </header>
-  <header class="page-head persistent-section" data-views="tabela">
-    <span class="eyebrow">Dados</span>
-    <h2>Lista de estabelecimentos</h2>
-    <p>Ordene pelas colunas e clique em uma linha para localizar no mapa.</p>
-  </header>
-
-  <!-- KPIs ───────────────────────────────────────────────── -->
-  <section id="kpi-section" class="persistent-section section reveal" data-views="overview" aria-labelledby="kpi-title">
-    <div class="section-head">
-      <span class="eyebrow">Panorama</span>
-      <h2 id="kpi-title">Os números da coleta</h2>
+    <div class="filter-chips">
+      <button class="chip active" onclick="filterTipo('todos',this)">Todos</button>
+      <button class="chip" onclick="filterTipo('Especializado em açaí',this)">Especializado</button>
+      <button class="chip" onclick="filterTipo('Açaí + outro segmento',this)">Açaí + outro</button>
+      <button class="chip" onclick="filterRating(4.5,this)">Nota 4.5+</button>
     </div>
-    <div id="kpi-grid" aria-live="polite" aria-busy="true">
-      <div class="kpi-primary skeleton"></div>
-      <div class="kpi-secondary"><div class="kpi-card skeleton"></div><div class="kpi-card skeleton"></div><div class="kpi-card skeleton"></div><div class="kpi-card skeleton"></div><div class="kpi-card skeleton"></div></div>
+    <div class="list-meta">
+      <span class="list-count" id="list-count">Carregando...</span>
+      <span class="list-sort">Mais relevantes ▾</span>
     </div>
-  </section>
-
-  <!-- MAPA ───────────────────────────────────────────────── -->
-  <section id="map-section" class="persistent-section section reveal" data-views="overview mapa" aria-labelledby="map-title">
-    <div class="section-head">
-      <span class="eyebrow">Distribuição geográfica</span>
-      <h2 id="map-title">Mapa dos estabelecimentos</h2>
-    </div>
-    <div class="map-shell">
-      <div id="map-container">
-        <div class="map-topbar">
-          <div class="map-context" aria-live="polite">
-            <span class="map-state" id="map-state"><i></i><span id="map-state-label">Visão geral</span></span>
-            <div class="map-count-row">
-              <strong id="map-count">0</strong>
-              <span id="map-count-label">estabelecimentos encontrados</span>
-            </div>
-            <span class="map-context-sub" id="map-context-sub"></span>
-          </div>
-          <div class="map-toolbar" role="toolbar" aria-label="Controles do mapa">
-            <div class="mt-seg" role="radiogroup" aria-label="Modo de visualização">
-              <button type="button" role="radio" aria-checked="true" data-mode="points">Pontos</button>
-              <button type="button" role="radio" aria-checked="false" data-mode="heat">Concentração</button>
-            </div>
-            <div class="mt-seg mt-radius" role="radiogroup" aria-label="Raio de proximidade" hidden>
-              <button type="button" role="radio" aria-checked="false" data-radius="0.5">500 m</button>
-              <button type="button" role="radio" aria-checked="false" data-radius="1">1 km</button>
-              <button type="button" role="radio" aria-checked="false" data-radius="2">2 km</button>
-            </div>
-            <div class="mt-group">
-              <button type="button" class="mt-btn" id="mt-belem" title="Recentrar em Belém">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="5"/><path d="M8 1v3M8 12v3M1 8h3M12 8h3" stroke-linecap="round"/></svg>
-                <span>Belém</span>
-              </button>
-              <button type="button" class="mt-btn" id="mt-all" title="Limpar filtros e seleção e enquadrar todos os pontos">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Ver todos</span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="map-radius-legend" id="map-radius-legend" hidden aria-live="polite">
-          <i></i><span>Área de proximidade</span><strong id="mrl-km">—</strong><em id="mrl-n"></em>
-        </div>
-        <div id="map" role="region" aria-label="Mapa interativo dos estabelecimentos de açaí em Belém"></div>
-        <div class="map-legend" id="map-legend">
-          <div class="ml-points">
-            <span><i class="lg-dot t-esp"></i>Especializado em açaí</span>
-            <span><i class="lg-dot t-mix"></i>Açaí + outro segmento</span>
-            <span><i class="lg-dot t-out"></i>Outro estabelecimento</span>
-          </div>
-          <div class="ml-heat"><span>Menor</span><i class="ml-ramp"></i><span>Maior concentração</span></div>
-        </div>
-      </div>
-      <aside id="detail-panel" aria-label="Contexto do mapa">
-        <div class="panel-grip" aria-hidden="true"></div>
-        <div id="panel-body" aria-live="polite"></div>
-      </aside>
-    </div>
-  </section>
-
-  <!-- VISÃO RÁPIDA ───────────────────────────────────────── -->
-  <section id="insights-section" class="persistent-section section reveal" data-views="overview" aria-labelledby="ins-title">
-    <div class="section-head">
-      <span class="eyebrow">Visão rápida</span>
-      <h2 id="ins-title">Destaques dos resultados</h2>
-      <p class="section-note">Calculados a partir dos filtros ativos.</p>
-    </div>
-    <div id="insights-grid"></div>
-  </section>
-
-  <!-- ANÁLISES ───────────────────────────────────────────── -->
-  <section id="charts-section" class="persistent-section section reveal" data-views="overview graficos" aria-labelledby="charts-title">
-    <div class="section-head">
-      <span class="eyebrow">Análises</span>
-      <h2 id="charts-title">Como os pontos se distribuem</h2>
-      <p class="section-note">Clique para filtrar mapa, indicadores e tabela.</p>
-    </div>
-    <div class="charts-grid">
-      <article class="chart-card span-4">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Estabelecimentos por bairro</h3><p class="chart-subtitle">Bairro em que a consulta foi feita</p></div>
-          <span class="chart-num">01</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap h-lg"><canvas id="chart-bairro" role="img" aria-label="Barras: estabelecimentos por bairro"></canvas></div>
-      </article>
-      <article class="chart-card span-2">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Distribuição por tipo</h3><p class="chart-subtitle">Classificação pelo nome e categoria</p></div>
-          <span class="chart-num">02</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap h-lg"><canvas id="chart-tipo" role="img" aria-label="Rosca: distribuição por tipo"></canvas></div>
-      </article>
-      <article class="chart-card span-2">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Avaliações</h3><p class="chart-subtitle">Faixas de nota no Google Maps</p></div>
-          <span class="chart-num">03</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap"><canvas id="chart-rating-dist" role="img" aria-label="Barras: faixas de nota"></canvas></div>
-      </article>
-      <article class="chart-card span-4">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Nota × volume de avaliações</h3><p class="chart-subtitle">Cada ponto é um estabelecimento com nota · clique para localizar</p></div>
-          <span class="chart-num">04</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap"><canvas id="chart-scatter" role="img" aria-label="Dispersão: nota por número de avaliações"></canvas></div>
-      </article>
-      <article class="chart-card span-3">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Recorrência</h3><p class="chart-subtitle">Em quantas consultas cada ponto apareceu</p></div>
-          <span class="chart-num">05</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap"><canvas id="chart-recorrencia" role="img" aria-label="Barras: recorrência nas consultas"></canvas></div>
-      </article>
-      <article class="chart-card span-3">
-        <header class="chart-card-header">
-          <div><h3 class="chart-title">Termos de busca</h3><p class="chart-subtitle">Ocorrências por termo pesquisado</p></div>
-          <span class="chart-num">06</span>
-        </header>
-        <div class="is-loading chart-canvas-wrap"><canvas id="chart-termos" role="img" aria-label="Barras: ocorrências por termo"></canvas></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- TABELA ─────────────────────────────────────────────── -->
-  <section id="table-section" class="persistent-section section reveal" data-views="overview tabela" aria-labelledby="table-title">
-    <div class="section-head">
-      <span class="eyebrow">Dados</span>
-      <h2 id="table-title">Lista de estabelecimentos</h2>
-    </div>
-    <div id="table-container"></div>
-  </section>
-
-  <!-- VIEW: BAIRROS ──────────────────────────────────────── -->
-  <div class="view-section" data-view="bairros">
-    <header class="page-head">
-      <span class="eyebrow">Bairros</span>
-      <h2>Os <span data-stat="bairros">—</span> bairros pesquisados</h2>
-      <p>Ordenados pelo número de estabelecimentos encontrados. Clique para ver o bairro no mapa.</p>
-    </header>
-    <div class="section"><div id="bairros-grid"></div></div>
+    <div class="est-list" id="est-list"></div>
   </div>
 
-  <!-- VIEW: SOBRE ────────────────────────────────────────── -->
-  <div class="view-section" data-view="sobre">
-    <article class="about">
-      <img src="assets/logo.svg" width="214" height="48" alt="Açaí Map — Belém / PA" class="about-logo">
-      <h2>Sobre o projeto</h2>
-      <p>O Açaí Map reúne os estabelecimentos relacionados a açaí que apareceram em consultas ao Google Maps feitas em bairros de Belém do Pará. São <strong id="sobre-total">—</strong> estabelecimentos únicos, vindos de <strong id="sobre-queries">—</strong> consultas (bairro × termo) em <strong id="sobre-bairros">—</strong> bairros, somando <strong id="sobre-occ">—</strong> ocorrências nos resultados.</p>
-      <div class="about-box">
-        <h3>Como ler os dados</h3>
-        <ul>
-          <li><strong>Recorrência</strong> é o número de consultas em que o estabelecimento apareceu.</li>
-          <li><strong>Distância</strong> é medida até o ponto de referência do bairro pesquisado.</li>
-          <li><strong>Pontos em 500 m / 1 km / 2 km</strong> contam outros estabelecimentos da base dentro do raio.</li>
-          <li>Quando o Google não traz nota, avaliação ou endereço, o painel mostra o dado como ausente — nunca estimado.</li>
-        </ul>
+  <div class="explorar-right">
+    <div id="map-explorar"></div>
+    <div class="map-overlay-top">
+      <div class="map-region-card">
+        <div class="map-region-icon">🌿</div>
+        <div>
+          <div class="map-region-title">Belém do Pará</div>
+          <div class="map-region-sub">Tradição, sabor e território</div>
+        </div>
       </div>
-      <div class="about-box">
-        <h3>Tipos de estabelecimento</h3>
-        <ul class="about-legend">
-          <li><i class="lg-dot t-esp"></i>Especializado em açaí</li>
-          <li><i class="lg-dot t-mix"></i>Açaí + outro segmento</li>
-          <li><i class="lg-dot t-out"></i>Outro estabelecimento</li>
-        </ul>
+      <div class="map-layers">
+        <button class="map-layer-btn active" onclick="setMapLayer('pins',this)">Pins</button>
+        <button class="map-layer-btn" onclick="setMapLayer('calor',this)">Calor</button>
+        <button class="map-layer-btn" onclick="setMapLayer('zonas',this)">Zonas</button>
       </div>
-    </article>
+    </div>
+    <div class="map-bairros-mini" id="bairros-mini"></div>
+    <div class="map-legend-bar">
+      <span>Baixa oferta</span>
+      <div class="legend-gradient"></div>
+      <span>Alta oferta</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Page: Mapa Interativo ──────────────────────────────────────────────── -->
+<div id="page-mapa" class="page">
+  <div id="map-full"></div>
+
+  <div class="mapa-filters-panel">
+    <h3>Filtros Geográficos <span class="filters-badge" id="mapa-count">—</span></h3>
+    <p>Encontre os melhores açaís de Belém</p>
+
+    <div class="filter-group">
+      <div class="filter-label">Categoria</div>
+      <div class="filter-btns">
+        <button class="filter-btn active" onclick="mapaFilter('tipo','todos',this)">Todos</button>
+        <button class="filter-btn" onclick="mapaFilter('tipo','Especializado em açaí',this)">Especializado</button>
+        <button class="filter-btn" onclick="mapaFilter('tipo','Açaí + outro segmento',this)">Açaí + outro</button>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Bairro</div>
+      <select class="filter-select" id="mapa-bairro-sel" onchange="mapaFilter('bairro',this.value)">
+        <option value="todos">Todos os bairros</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-label">Nota mínima: <strong id="rating-val">0</strong>★</div>
+      <div class="rating-range">
+        <span>0</span>
+        <input type="range" min="0" max="5" step="0.5" value="0" id="rating-slider" oninput="mapaFilter('rating',this.value)">
+        <span>5.0</span>
+      </div>
+    </div>
+
+    <div class="mapa-preview-card" id="mapa-preview"></div>
   </div>
 
-  <footer class="site-footer">
-    <div class="sf-brand">
-      <img src="assets/logo-mark.svg" width="28" height="28" alt="">
-      <div>
-        <strong>AÇAÍ MAP BELÉM</strong>
-        <span>Projeto de Data Analytics + Geolocalização</span>
+  <div class="mapa-status-pill">
+    <div class="status-dot"></div>
+    <span id="mapa-status">Carregando pontos...</span>
+  </div>
+
+  <div class="mapa-layers-ctrl">
+    <button class="mapa-layer-btn" onclick="setFullMapLayer('heatmap',this)">Heatmap</button>
+    <button class="mapa-layer-btn active" onclick="setFullMapLayer('clusters',this)">Clusters</button>
+    <button class="mapa-layer-btn" onclick="setFullMapLayer('bairros',this)">Bairros</button>
+  </div>
+
+  <div class="mapa-legend">
+    <h5>Legenda</h5>
+    <div class="legend-row"><div class="legend-dot" style="background:#5A1E74"></div> Especializado em açaí</div>
+    <div class="legend-row"><div class="legend-dot" style="background:#A4D620"></div> Açaí + outro segmento</div>
+    <div class="legend-row"><div class="legend-dot" style="background:#9CA3AF"></div> Outro estabelecimento</div>
+  </div>
+</div>
+
+<!-- ── Page: Bairros ──────────────────────────────────────────────────────── -->
+<div id="page-bairros" class="page">
+  <div class="bairros-header">
+    <div class="bairros-eyebrow">Onde o açaí pulsa mais forte?</div>
+    <h1>Os 10 bairros pesquisados</h1>
+    <p>Veja os bairros com mais estabelecimentos, suas notas médias e volume de buscas no Açaí Map Belém.</p>
+  </div>
+  <div class="bairros-layout">
+    <div class="bairros-list" id="bairros-list"></div>
+    <div class="bairros-sidebar">
+      <div class="sidebar-card">
+        <h3>Mapa de concentração</h3>
+        <p>Bairros de Belém - PA</p>
+        <div id="map-bairros"></div>
+      </div>
+      <div class="sidebar-card">
+        <h3>Nota média por bairro</h3>
+        <p>Comparativo entre os bairros</p>
+        <canvas id="chart-bairros-rating"></canvas>
       </div>
     </div>
-    <div class="sf-meta">
-      <span>Dados coletados em <span data-stat="date">—</span></span>
-      <span><span data-stat="bairros">—</span> bairros · <span data-stat="queries">—</span> consultas</span>
-      <span>Dados: Google Maps · Mapa: © colaboradores do OpenStreetMap</span>
-    </div>
-    <p class="sf-note">Os resultados representam estabelecimentos encontrados nas consultas realizadas e não representam vendas, faturamento ou demanda.</p>
-  </footer>
-</main>
+  </div>
+</div>
 
-<script type="module" src="js/app.js"></script>
+<!-- ── Page: Estatísticas ─────────────────────────────────────────────────── -->
+<div id="page-stats" class="page">
+  <div class="stats-header">
+    <div>
+      <div class="stats-eyebrow" id="stats-eyebrow">Carregando...</div>
+      <h1>Análises &amp; Inteligência</h1>
+      <p>Panorama completo do mercado de açaí em Belém, com dados reais e tendências.</p>
+    </div>
+    <div class="period-badge">📅 Última coleta · Set 2026</div>
+  </div>
+
+  <div class="bento-grid">
+    <!-- Barras por bairro -->
+    <div class="bento-card bento-bairros">
+      <h4>Estabelecimentos por bairro</h4>
+      <p id="bento-sub-bairros">Total de estabelecimentos mapeados</p>
+      <canvas id="chart-por-bairro"></canvas>
+    </div>
+
+    <!-- Donut tipos -->
+    <div class="bento-card bento-tipos">
+      <h4>Distribuição por tipo</h4>
+      <p>Categorias de estabelecimentos</p>
+      <canvas id="chart-tipos"></canvas>
+    </div>
+
+    <!-- KPI avaliação -->
+    <div class="bento-card bento-kpi-avg">
+      <h4>Avaliação média geral</h4>
+      <p id="kpi-review-base">Com base em avaliações</p>
+      <div class="kpi-big">
+        <div style="display:flex;align-items:baseline;gap:8px">
+          <div class="kpi-big-val" id="kpi-avg-val">—</div>
+          <div class="kpi-big-star">★</div>
+        </div>
+        <div class="kpi-big-label">avaliação média</div>
+        <div class="kpi-big-delta">↑ Top em Belém</div>
+      </div>
+    </div>
+
+    <!-- Scatter nota x reviews -->
+    <div class="bento-card bento-scatter">
+      <h4>Nota × volume de avaliações</h4>
+      <p>Cada ponto representa um estabelecimento</p>
+      <canvas id="chart-scatter"></canvas>
+    </div>
+
+    <!-- Termos de busca -->
+    <div class="bento-card bento-termos">
+      <h4>Recorrência de termos de busca</h4>
+      <p>Principais termos relacionados ao açaí em Belém</p>
+      <canvas id="chart-termos"></canvas>
+    </div>
+
+    <!-- KPI consultas -->
+    <div class="bento-card bento-consultas">
+      <h4>Consultas realizadas</h4>
+      <p>No Google Maps</p>
+      <div class="kpi-consultas">
+        <div class="kpi-big-num" id="kpi-consultas-val">—</div>
+        <div class="kpi-sub">consultas geográficas</div>
+        <div style="margin-top:8px;font-size:12px;color:var(--c-muted)">Setembro de 2026</div>
+      </div>
+    </div>
+
+    <!-- Insights -->
+    <div class="bento-card bento-insights">
+      <h4 style="margin-bottom:12px">Insights em destaque</h4>
+      <div class="insights-grid" id="insights-grid"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Data & Scripts ──────────────────────────────────────────────────────── -->
+<script src="data/dashboard_data.js"></script>
+<script>
+// ── State ──────────────────────────────────────────────────────────────────
+const state = {
+  data: null,
+  filteredEsts: [],
+  mapExplorar: null,
+  mapFull: null,
+  mapBairros: null,
+  clusterLayerExplorar: null,
+  clusterLayerFull: null,
+  heatLayerExplorar: null,
+  heatLayerFull: null,
+  mapLayerExplorar: 'pins',
+  mapLayerFull: 'clusters',
+  filterTipo: 'todos',
+  filterRating: 0,
+  filterBairro: 'todos',
+  chartsInited: { stats: false, bairros: false },
+};
+
+// ── Emoji por tipo ─────────────────────────────────────────────────────────
+function tipoEmoji(tipo) {
+  if (!tipo) return '🍦';
+  if (tipo.includes('Especializado')) return '🫐';
+  if (tipo.includes('outro')) return '🍹';
+  return '🏪';
+}
+
+function tipoColor(tipo) {
+  if (!tipo) return '#9CA3AF';
+  if (tipo.includes('Especializado')) return '#5A1E74';
+  if (tipo.includes('outro')) return '#A4D620';
+  return '#9CA3AF';
+}
+
+// ── Page navigation ────────────────────────────────────────────────────────
+function showPage(id, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (btn) btn.classList.add('active');
+
+  if (id === 'mapa' && !state.mapFull) initMapFull();
+  if (id === 'bairros') initBairros();
+  if (id === 'stats') initStats();
+
+  // Invalidate map sizes
+  setTimeout(() => {
+    if (state.mapExplorar) state.mapExplorar.invalidateSize();
+    if (state.mapFull) state.mapFull.invalidateSize();
+    if (state.mapBairros) state.mapBairros.invalidateSize();
+  }, 100);
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+function init() {
+  if (!window.ACAI_DATA) { console.error('dashboard_data.js não carregado'); return; }
+  state.data = window.ACAI_DATA;
+  state.filteredEsts = state.data.estabelecimentos.filter(e => e.lat && e.lon);
+
+  initMapExplorar();
+  renderEstList();
+  renderBairrosMini();
+  populateBairroSelect();
+}
+
+// ── Tile layers ────────────────────────────────────────────────────────────
+function tileLayer(dark = false) {
+  if (dark) {
+    return L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+      maxZoom: 19,
+    });
+  }
+  return L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 19,
+  });
+}
+
+// ── Marker ────────────────────────────────────────────────────────────────
+function makeMarker(est, small = false) {
+  const color = tipoColor(est.tipo);
+  const size = small ? 28 : 36;
+  const icon = L.divIcon({
+    html: `<div style="width:${size}px;height:${size}px;border-radius:50%;background:${color};border:3px solid white;box-shadow:0 3px 10px rgba(0,0,0,.25);display:flex;align-items:center;justify-content:center;font-size:${small?12:16}px;">${tipoEmoji(est.tipo)}</div>`,
+    iconSize: [size, size],
+    iconAnchor: [size/2, size/2],
+    className: '',
+  });
+  return icon;
+}
+
+function createClusterGroup(onClick) {
+  return L.markerClusterGroup({
+    maxClusterRadius: 60,
+    iconCreateFunction: function(cluster) {
+      const n = cluster.getChildCount();
+      const size = n > 50 ? 54 : n > 20 ? 46 : 38;
+      return L.divIcon({
+        html: `<div class="cluster-icon" style="width:${size}px;height:${size}px">${n}</div>`,
+        iconSize: [size, size],
+        iconAnchor: [size/2, size/2],
+        className: '',
+      });
+    },
+  });
+}
+
+// ── Mapa Explorar ──────────────────────────────────────────────────────────
+function initMapExplorar() {
+  const map = L.map('map-explorar', {
+    center: [-1.4558, -48.4902], zoom: 12,
+    zoomControl: false, attributionControl: true,
+  });
+  tileLayer(true).addTo(map);
+  state.mapExplorar = map;
+
+  renderExplorarMarkers();
+}
+
+function renderExplorarMarkers() {
+  const map = state.mapExplorar;
+  if (!map) return;
+
+  if (state.clusterLayerExplorar) map.removeLayer(state.clusterLayerExplorar);
+  if (state.heatLayerExplorar) map.removeLayer(state.heatLayerExplorar);
+
+  const ests = state.filteredEsts;
+
+  if (state.mapLayerExplorar === 'calor') {
+    const pts = ests.map(e => [e.lat, e.lon, 0.5]);
+    state.heatLayerExplorar = L.heatLayer(pts, { radius: 30, blur: 20, maxZoom: 17, gradient: {0.4:'#5A1E74',0.7:'#7A3C8C',1:'#A4D620'} }).addTo(map);
+  } else {
+    const cg = createClusterGroup();
+    ests.forEach(est => {
+      const m = L.marker([est.lat, est.lon], { icon: makeMarker(est) });
+      m.bindPopup(popupHtml(est));
+      m.on('click', () => selectEst(est));
+      cg.addLayer(m);
+    });
+    state.clusterLayerExplorar = cg;
+    map.addLayer(cg);
+  }
+}
+
+function popupHtml(est) {
+  const stars = est.rating > 0 ? `<span style="color:#F59E0B">★</span> ${est.rating.toFixed(1)} (${est.reviews} avaliações)` : 'Sem avaliação';
+  return `<div style="font-family:'Plus Jakarta Sans',sans-serif;min-width:200px">
+    <div style="font-size:15px;font-weight:800;color:#2E1438;margin-bottom:4px">${est.nome}</div>
+    <div style="font-size:12px;color:#6B5C78;margin-bottom:6px">📍 ${est.bairro}</div>
+    <div style="font-size:12px;margin-bottom:8px">${stars}</div>
+    <a href="${est.link}" target="_blank" style="display:inline-block;padding:6px 12px;background:#5A1E74;color:white;border-radius:20px;font-size:12px;font-weight:600;text-decoration:none">Ver no Maps ↗</a>
+  </div>`;
+}
+
+function setMapLayer(layer, btn) {
+  document.querySelectorAll('.map-layer-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  state.mapLayerExplorar = layer;
+  renderExplorarMarkers();
+}
+
+// ── Mapa Full ──────────────────────────────────────────────────────────────
+function initMapFull() {
+  const map = L.map('map-full', {
+    center: [-1.4558, -48.4902], zoom: 12,
+    zoomControl: false,
+  });
+  tileLayer(true).addTo(map);
+  state.mapFull = map;
+
+  // Zoom controls custom
+  document.querySelectorAll('.mapa-zoom-btn').forEach((btn, i) => {
+    btn.onclick = () => i === 0 ? map.zoomIn() : map.zoomOut();
+  });
+
+  renderFullMarkers();
+  updateMapaStatus();
+}
+
+function renderFullMarkers() {
+  const map = state.mapFull;
+  if (!map) return;
+
+  if (state.clusterLayerFull) map.removeLayer(state.clusterLayerFull);
+  if (state.heatLayerFull) map.removeLayer(state.heatLayerFull);
+
+  const ests = getFilteredFull();
+
+  if (state.mapLayerFull === 'heatmap') {
+    const pts = ests.map(e => [e.lat, e.lon, 0.6]);
+    state.heatLayerFull = L.heatLayer(pts, { radius: 35, blur: 25, maxZoom: 17, gradient: {0.3:'#2E1438',0.6:'#5A1E74',1:'#A4D620'} }).addTo(map);
+  } else {
+    const cg = createClusterGroup();
+    ests.forEach(est => {
+      const m = L.marker([est.lat, est.lon], { icon: makeMarker(est) });
+      m.bindPopup(popupHtml(est));
+      m.on('click', () => showMapaPreview(est));
+      cg.addLayer(m);
+    });
+    state.clusterLayerFull = cg;
+    map.addLayer(cg);
+  }
+
+  updateMapaStatus();
+}
+
+function getFilteredFull() {
+  return state.data.estabelecimentos.filter(e => {
+    if (!e.lat || !e.lon) return false;
+    if (state.filterTipo !== 'todos' && e.tipo !== state.filterTipo) return false;
+    if (state.filterBairro !== 'todos' && e.bairro !== state.filterBairro) return false;
+    if (state.filterRating > 0 && e.rating < state.filterRating) return false;
+    return true;
+  });
+}
+
+function setFullMapLayer(layer, btn) {
+  document.querySelectorAll('.mapa-layer-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  state.mapLayerFull = layer;
+  renderFullMarkers();
+}
+
+function mapaFilter(type, val, btn) {
+  if (type === 'tipo') {
+    state.filterTipo = val;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
+  }
+  if (type === 'bairro') state.filterBairro = val;
+  if (type === 'rating') {
+    state.filterRating = parseFloat(val);
+    document.getElementById('rating-val').textContent = parseFloat(val).toFixed(1);
+  }
+  renderFullMarkers();
+  // Sync explorar too
+  state.filteredEsts = getFilteredFull();
+  renderEstList();
+  renderExplorarMarkers();
+}
+
+function updateMapaStatus() {
+  const n = getFilteredFull().length;
+  const bairros = [...new Set(getFilteredFull().map(e => e.bairro).filter(Boolean))].length;
+  document.getElementById('mapa-status').textContent = `Visualizando ${n} pontos em ${bairros} bairros`;
+  document.getElementById('mapa-count').textContent = n;
+}
+
+function showMapaPreview(est) {
+  const el = document.getElementById('mapa-preview');
+  el.classList.add('visible');
+  el.innerHTML = `
+    <div class="preview-img">${tipoEmoji(est.tipo)}</div>
+    <div class="preview-name">${est.nome}</div>
+    <div class="preview-addr">📍 ${est.endereco || est.bairro + ', Belém - PA'}</div>
+    <div class="preview-rating">${est.rating > 0 ? `<span style="color:#F59E0B">★</span> ${est.rating.toFixed(1)} · ${est.reviews} avaliações` : 'Sem avaliação'}</div>
+    <div class="preview-actions">
+      <a href="${est.link}" target="_blank" class="preview-btn-route">↗ Ver rota</a>
+      <button class="preview-btn-detail" onclick="document.getElementById('mapa-preview').classList.remove('visible')">Fechar</button>
+    </div>`;
+}
+
+function populateBairroSelect() {
+  const sel = document.getElementById('mapa-bairro-sel');
+  if (!sel || !state.data) return;
+  state.data.areas.forEach(b => {
+    const opt = document.createElement('option');
+    opt.value = b; opt.textContent = b;
+    sel.appendChild(opt);
+  });
+}
+
+// ── Lista de estabelecimentos ──────────────────────────────────────────────
+function renderEstList() {
+  const list = document.getElementById('est-list');
+  const count = document.getElementById('list-count');
+  if (!list) return;
+
+  count.textContent = `${state.filteredEsts.length} locais encontrados`;
+
+  list.innerHTML = state.filteredEsts.slice(0, 80).map(est => `
+    <div class="est-card" onclick="selectEst(${JSON.stringify(est).replace(/"/g,'&quot;')})">
+      <div class="est-card-top">
+        <div class="est-avatar">${tipoEmoji(est.tipo)}</div>
+        <div class="est-info">
+          <div class="est-name">${est.nome}</div>
+          <div class="est-bairro">📍 ${est.bairro}</div>
+        </div>
+        <span class="badge-tipo">${(est.tipo||'').split(' ')[0]}</span>
+      </div>
+      ${est.rating > 0 ? `<div class="est-rating"><span class="star">★</span><span class="rating-val">${est.rating.toFixed(1)}</span><span class="rating-count">${est.reviews} avaliações</span></div>` : ''}
+      <div class="est-tags">
+        ${est.categoria ? `<span class="tag">${est.categoria.split('/')[0].trim()}</span>` : ''}
+        ${est.termos ? `<span class="tag">${est.termos.split(',')[0].trim()}</span>` : ''}
+        ${est.ocorrencias > 1 ? `<span class="tag">↩ ${est.ocorrencias}x encontrado</span>` : ''}
+      </div>
+      <div class="est-actions">
+        <button class="btn-detail" onclick="event.stopPropagation()">Ver detalhes</button>
+        <a href="${est.link}" target="_blank" class="btn-route" onclick="event.stopPropagation()">↗ Ver rota</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function selectEst(est) {
+  if (state.mapExplorar && est.lat) {
+    state.mapExplorar.setView([est.lat, est.lon], 16);
+  }
+}
+
+function filterTipo(tipo, btn) {
+  document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  state.filteredEsts = state.data.estabelecimentos.filter(e => {
+    if (!e.lat || !e.lon) return false;
+    if (tipo !== 'todos' && e.tipo !== tipo) return false;
+    return true;
+  });
+  renderEstList();
+  renderExplorarMarkers();
+}
+
+function filterRating(min, btn) {
+  document.querySelectorAll('.filter-chips .chip').forEach(c => c.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  state.filteredEsts = state.data.estabelecimentos.filter(e => e.lat && e.lon && e.rating >= min);
+  renderEstList();
+  renderExplorarMarkers();
+}
+
+// ── Bairros mini ───────────────────────────────────────────────────────────
+function renderBairrosMini() {
+  const el = document.getElementById('bairros-mini');
+  if (!el || !state.data) return;
+  const top5 = state.data.bairros.slice(0, 5);
+  const max = top5[0]?.count || 1;
+  el.innerHTML = `<h4>📊 Bairros com maior oferta ›</h4>${top5.map((b,i) => `
+    <div class="bairro-rank-row">
+      <span class="bairro-rank-num">${i+1}</span>
+      <span class="bairro-rank-name">${b.nome}</span>
+      <div class="bairro-rank-bar-wrap"><div class="bairro-rank-bar" style="width:${Math.round(b.count/max*100)}%"></div></div>
+      <span class="bairro-rank-count">${b.count}</span>
+    </div>`).join('')}`;
+}
+
+// ── Bairros Page ───────────────────────────────────────────────────────────
+function initBairros() {
+  renderBairrosList();
+  if (!state.mapBairros) initMapBairros();
+  if (!state.chartsInited.bairros) initChartBairrosRating();
+}
+
+function renderBairrosList() {
+  const el = document.getElementById('bairros-list');
+  if (!el || !state.data) return;
+  const max = state.data.bairros[0]?.count || 1;
+  el.innerHTML = state.data.bairros.map((b, i) => {
+    const pct = Math.round(b.count / max * 100);
+    const dots = Array.from({length: 7}, (_, d) => `<div class="vol-dot${d < Math.round(pct/15) ? ' filled' : ''}"></div>`).join('');
+    return `<div class="bairro-card rank-${i+1}">
+      <div class="bairro-rank-num-big">${i+1}</div>
+      <div class="bairro-card-info">
+        <div class="bairro-card-name">${b.nome} ${i===0 ? '<span class="badge-top">👑 Maior concentração</span>' : ''}</div>
+        <div class="bairro-card-sub">Açaí, cultura e território.</div>
+        <div class="bairro-stats">
+          <div class="bairro-stat"><div class="bairro-stat-val">${b.count}</div><div class="bairro-stat-label">estabelecimentos</div></div>
+          ${b.avg_rating > 0 ? `<div class="bairro-stat"><div class="bairro-stat-val">${b.avg_rating.toFixed(1)}</div><div class="bairro-stat-label">nota média</div></div>` : ''}
+          <div class="bairro-stat"><div class="bairro-stat-val">${b.ocorrencias}</div><div class="bairro-stat-label">ocorrências</div></div>
+        </div>
+      </div>
+      <div class="bairro-volume">
+        <div class="bairro-volume-label">Volume de buscas</div>
+        <div class="bairro-volume-dots">${dots}</div>
+        <div class="bairro-volume-pct">${pct}%</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function initMapBairros() {
+  const map = L.map('map-bairros', { center: [-1.4558, -48.4902], zoom: 11, zoomControl: false });
+  tileLayer(false).addTo(map);
+  state.mapBairros = map;
+
+  // Plotar clusters por bairro
+  const ests = state.data.estabelecimentos.filter(e => e.lat && e.lon);
+  const cg = L.markerClusterGroup({ maxClusterRadius: 50 });
+  ests.forEach(e => {
+    const m = L.circleMarker([e.lat, e.lon], { radius: 5, color: '#5A1E74', fillOpacity: 0.7, weight: 1 });
+    cg.addLayer(m);
+  });
+  map.addLayer(cg);
+}
+
+function initChartBairrosRating() {
+  const ctx = document.getElementById('chart-bairros-rating');
+  if (!ctx || !state.data) return;
+  const bairros = state.data.bairros.filter(b => b.avg_rating > 0);
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: bairros.map(b => b.nome),
+      datasets: [{
+        data: bairros.map(b => b.avg_rating),
+        backgroundColor: bairros.map((_, i) => i === 0 ? '#A4D620' : '#5A1E74'),
+        borderRadius: 8,
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false } },
+      scales: { x: { min: 3, max: 5, grid: { color: 'rgba(0,0,0,.05)' } }, y: { grid: { display: false }, ticks: { font: { size: 11 } } } },
+    }
+  });
+  state.chartsInited.bairros = true;
+}
+
+// ── Estatísticas ───────────────────────────────────────────────────────────
+function initStats() {
+  if (state.chartsInited.stats) return;
+  const d = state.data;
+  if (!d) return;
+
+  // Eyebrow
+  document.getElementById('stats-eyebrow').textContent = `Dados de ${d.kpis.total_estabelecimentos} estabelecimentos · ${d.kpis.total_areas} bairros`;
+  document.getElementById('kpi-avg-val').textContent = d.kpis.avg_rating.toFixed(1);
+  document.getElementById('kpi-review-base').textContent = `Com base em ${d.kpis.total_reviews.toLocaleString('pt-BR')} avaliações`;
+  document.getElementById('kpi-consultas-val').textContent = d.kpis.total_consultas;
+  document.getElementById('bento-sub-bairros').textContent = `Total de ${d.kpis.total_estabelecimentos} estabelecimentos mapeados`;
+
+  // Chart por bairro
+  const ctxB = document.getElementById('chart-por-bairro');
+  const maxB = d.bairros[0]?.count || 1;
+  new Chart(ctxB, {
+    type: 'bar',
+    data: {
+      labels: d.bairros.map(b => b.nome),
+      datasets: [{ data: d.bairros.map(b => b.count), backgroundColor: d.bairros.map((b,i) => i===0?'#A4D620':'#5A1E74'), borderRadius: 8 }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { grid: { color: 'rgba(0,0,0,.05)' } }, y: { grid: { display: false }, ticks: { font: { size: 11 } } } },
+    }
+  });
+
+  // Chart tipos (donut)
+  const ctxT = document.getElementById('chart-tipos');
+  new Chart(ctxT, {
+    type: 'doughnut',
+    data: {
+      labels: d.tipos.map(t => t.tipo),
+      datasets: [{ data: d.tipos.map(t => t.count), backgroundColor: ['#5A1E74','#7A3C8C','#A4D620','#9CA3AF','#C4B5D9'], borderWidth: 2, borderColor: '#FAF7FB' }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12, padding: 8 } },
+      }
+    }
+  });
+
+  // Scatter
+  const ctxS = document.getElementById('chart-scatter');
+  const scatterData = d.estabelecimentos.filter(e => e.rating > 0 && e.reviews > 0).map(e => ({ x: e.reviews, y: e.rating }));
+  new Chart(ctxS, {
+    type: 'scatter',
+    data: { datasets: [{ data: scatterData, backgroundColor: 'rgba(90,30,116,.3)', pointRadius: 4 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { type: 'logarithmic', title: { display: true, text: 'Volume de avaliações (escala log)', font: { size: 10 } }, grid: { color: 'rgba(0,0,0,.05)' } },
+        y: { min: 0, max: 5, title: { display: true, text: 'Nota média', font: { size: 10 } }, grid: { color: 'rgba(0,0,0,.05)' } },
+      }
+    }
+  });
+
+  // Termos
+  const ctxTr = document.getElementById('chart-termos');
+  const top8 = d.termos.slice(0, 8);
+  new Chart(ctxTr, {
+    type: 'bar',
+    data: {
+      labels: top8.map(t => t.termo),
+      datasets: [{ data: top8.map(t => t.resultados), backgroundColor: '#7A3C8C', borderRadius: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 30 } }, y: { grid: { color: 'rgba(0,0,0,.05)' } } },
+    }
+  });
+
+  // Insights
+  const topBairro = d.bairros[0];
+  const topOcc = d.top_recorrencia[0];
+  const topReviews = [...d.estabelecimentos].sort((a,b) => b.reviews - a.reviews)[0];
+  document.getElementById('insights-grid').innerHTML = `
+    <div class="insight-item">
+      <div class="insight-icon green">📍</div>
+      <div><div class="insight-title">${topBairro?.nome} lidera</div>
+      <div class="insight-text">Concentra ${topBairro?.count} dos ${d.kpis.total_estabelecimentos} estabelecimentos mapeados.</div></div>
+    </div>
+    <div class="insight-item">
+      <div class="insight-icon purple">🔄</div>
+      <div><div class="insight-title">Maior recorrência</div>
+      <div class="insight-text">${topOcc?.nome || '—'} foi encontrado em ${topOcc?.ocorrencias || 0} consultas diferentes.</div></div>
+    </div>
+    <div class="insight-item">
+      <div class="insight-icon blue">⭐</div>
+      <div><div class="insight-title">Mais avaliado</div>
+      <div class="insight-text">${topReviews?.nome || '—'} com ${(topReviews?.reviews||0).toLocaleString('pt-BR')} avaliações no Google Maps.</div></div>
+    </div>`;
+
+  state.chartsInited.stats = true;
+}
+
+// ── Busca global ───────────────────────────────────────────────────────────
+document.getElementById('header-search').addEventListener('input', function() {
+  const q = this.value.toLowerCase().trim();
+  if (!q || !state.data) return;
+  state.filteredEsts = state.data.estabelecimentos.filter(e =>
+    e.lat && e.lon && (e.nome.toLowerCase().includes(q) || (e.bairro||'').toLowerCase().includes(q))
+  );
+  renderEstList();
+  renderExplorarMarkers();
+  document.getElementById('list-count').textContent = `${state.filteredEsts.length} locais encontrados`;
+});
+
+// ── Start ──────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', init);
+</script>
 </body>
 </html>
