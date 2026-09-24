@@ -3,10 +3,7 @@
  */
 import { state, dispatch, getFiltered, activeFilterCount } from './state.js';
 import { getByPlaceId, establishments } from './data.js';
-import { countInRadius } from './map.js';
-import { fmt, fmtRating, fmtDist, esc, tipoKey, TIPOS, icon, reducedMotion } from './utils.js';
-
-const RADII = [0.5, 1, 2];
+import { fmt, fmtRating, fmtDist, esc, tipoKey, tipoShort, TIPOS, icon, reducedMotion } from './utils.js';
 
 export function render() {
   const panel = document.getElementById('detail-panel');
@@ -20,7 +17,6 @@ export function render() {
   const paint = () => {
     body.innerHTML = sel ? _detailHtml(sel) : _summaryHtml(getFiltered());
     _bind(body);
-    if (sel) updateRadiusUI();
   };
 
   if (panel.dataset.mode === mode && mode === 'summary') { paint(); return; }
@@ -105,52 +101,57 @@ function _detailHtml(e) {
   const flag = e.flag_distancia && e.flag_distancia !== 'Normal';
   const addr = e.endereco && !/^Belém - PA, \d{5}-\d{3}$/.test(e.endereco) ? e.endereco : null;
 
-  return `
-    <button class="pb-back" data-action="back">${icon('back', 14)} Voltar ao resumo</button>
+  const pct = hasRating ? Math.max(0, Math.min(100, e.review_rating / 5 * 100)) : 0;
+  const nq = e.ocorrencias_total ?? 0;
 
-    <div class="pb-tipo t-${k}"><i class="lg-dot t-${k}"></i>${esc(e.tipo_estabelecimento)}</div>
+  return `
+    <div class="pb-card-top">
+      <button class="pb-back" data-action="back">${icon('back', 14)} Resumo</button>
+      <span class="pb-tipo t-${k}"><i class="lg-dot t-${k}"></i>${esc(tipoShort(e.tipo_estabelecimento))}</span>
+    </div>
+
     <h3 class="pb-name">${esc(e.nome_estabelecimento)}</h3>
     <div class="pb-cat">${esc(cat)}</div>
 
     <div class="pb-rating">
-      ${hasRating
-        ? `<span class="pb-rating-num">${icon('star', 15)} ${fmtRating(e.review_rating)}</span>
-           <span class="pb-rating-count">${fmt(e.review_count)} ${e.review_count === 1 ? 'avaliação' : 'avaliações'}</span>`
+      ${hasRating ? `
+        <span class="pb-rating-num">${fmtRating(e.review_rating)}</span>
+        <span class="pb-rating-side">
+          <span class="pb-stars" aria-label="Nota ${fmtRating(e.review_rating)} de 5"><span class="pb-stars-fill" style="width:${pct.toFixed(1)}%">★★★★★</span>★★★★★</span>
+          <span class="pb-rating-count">${fmt(e.review_count)} ${e.review_count === 1 ? 'avaliação' : 'avaliações'}</span>
+        </span>`
         : `<span class="pb-missing">Sem avaliações no Google Maps</span>`}
     </div>
 
-    <div class="pb-addr">
-      ${icon('pin', 15)}
-      <div>
-        <strong>${esc(e.bairro_pesquisa ?? '')}${bairroReal ? ` <span>· endereço em ${esc(bairroReal)}</span>` : ''}</strong>
-        <span>${addr ? esc(addr) : 'Endereço completo não informado'}</span>
-      </div>
-    </div>
-
-    <section class="pb-sec">
-      <div class="pb-sec-title">Recorrência</div>
-      <div class="pb-big">${fmt(e.ocorrencias_total)} <small>${e.ocorrencias_total === 1 ? 'ocorrência' : 'ocorrências'} nas consultas</small></div>
-      ${termos.length ? `<div class="pb-terms">${termos.map(t => `<span class="pb-term">${esc(t)}</span>`).join('')}</div>` : ''}
-    </section>
-
     <section class="pb-sec">
       <div class="pb-sec-title">Localização</div>
-      <div class="pb-kv"><span>Distância do bairro pesquisado</span><strong>${fmtDist(e.distancia_bairro_pesquisa_km)}</strong></div>
-      <div class="pb-kv"><span>Vizinho mais próximo</span><strong>${fmtDist(e.dist_vizinho_mais_proximo_km)}</strong></div>
-      <div class="pb-density">
-        <div><strong>${fmt(e.estabelecimentos_500m)}</strong><span>em 500 m</span></div>
-        <div><strong>${fmt(e.estabelecimentos_1km)}</strong><span>em 1 km</span></div>
-        <div><strong>${fmt(e.estabelecimentos_2km)}</strong><span>em 2 km</span></div>
+      <div class="pb-loc">
+        <strong>${esc(e.bairro_pesquisa ?? '')}${bairroReal ? ` <span>· endereço em ${esc(bairroReal)}</span>` : ''}</strong>
+        <span>${esc(e.cidade || 'Belém')} / ${esc(e.estado || 'PA')}</span>
+        <span class="pb-addr-line">${addr ? esc(addr) : 'Endereço completo não informado'}</span>
       </div>
+      <dl class="pb-coords">
+        <div><dt>Lat</dt><dd>${Number(e.latitude).toFixed(6)}</dd></div>
+        <div><dt>Lon</dt><dd>${Number(e.longitude).toFixed(6)}</dd></div>
+        <div><dt>Do bairro</dt><dd>${fmtDist(e.distancia_bairro_pesquisa_km)}</dd></div>
+      </dl>
       ${flag ? `<p class="pb-flag">${icon('alert', 13)} Coleta marcou este ponto como “${esc(e.flag_distancia)}”: está a ${fmtDist(e.distancia_bairro_pesquisa_km)} do bairro pesquisado.</p>` : ''}
     </section>
 
     <section class="pb-sec">
-      <div class="pb-sec-title">Raio de proximidade</div>
-      <div class="pb-seg" role="radiogroup" aria-label="Raio de proximidade">
-        ${RADII.map(r => `<button role="radio" aria-checked="false" data-radius="${r}">${r < 1 ? '500 m' : `${r} km`}</button>`).join('')}
-      </div>
-      <p class="pb-radius-note" id="pb-radius-note" aria-live="polite">Escolha um raio para desenhá-lo no mapa.</p>
+      <div class="pb-sec-title">Recorrência</div>
+      <div class="pb-big">${fmt(nq)} <small>${nq === 1 ? 'consulta' : 'consultas'}</small></div>
+      ${termos.length ? `<div class="pb-terms">${termos.map(t => `<span class="pb-term">${esc(t)}</span>`).join('')}</div>` : ''}
+    </section>
+
+    <section class="pb-sec">
+      <div class="pb-sec-title">Proximidade</div>
+      <ul class="pb-prox">
+        <li><strong>${fmt(e.estabelecimentos_500m)}</strong> pontos em 500 m</li>
+        <li><strong>${fmt(e.estabelecimentos_1km)}</strong> pontos em 1 km</li>
+        <li><strong>${fmt(e.estabelecimentos_2km)}</strong> pontos em 2 km</li>
+      </ul>
+      <p class="pb-prox-note">Vizinho mais próximo a ${fmtDist(e.dist_vizinho_mais_proximo_km)} · desenhe o raio pela barra do mapa.</p>
     </section>
 
     ${e.telefone || e.website ? `
@@ -162,26 +163,9 @@ function _detailHtml(e) {
     ${e.link ? `<a class="pb-cta" href="${esc(e.link)}" target="_blank" rel="noopener noreferrer">Abrir no Google Maps ${icon('external', 14)}</a>` : ''}`;
 }
 
-export function updateRadiusUI() {
-  const km = state.radiusKm;
-  document.querySelectorAll('.pb-seg [data-radius]').forEach(b => {
-    b.setAttribute('aria-checked', String(parseFloat(b.dataset.radius) === km));
-  });
-  const note = document.getElementById('pb-radius-note');
-  if (!note) return;
-  if (!km) { note.textContent = 'Escolha um raio para desenhá-lo no mapa.'; return; }
-  const n = countInRadius(km);
-  const label = km < 1 ? '500 m' : `${km} km`;
-  note.innerHTML = `<strong>${fmt(n)}</strong> outro${n === 1 ? '' : 's'} ponto${n === 1 ? '' : 's'} visíve${n === 1 ? 'l' : 'is'} em ${label}${activeFilterCount() ? ' (com os filtros atuais)' : ''}.`;
-}
-
 function _bind(root) {
   root.querySelector('[data-action="back"]')?.addEventListener('click', () => dispatch('SELECT_ESTABLISHMENT', { placeId: null }));
   root.querySelector('[data-action="clear-filters"]')?.addEventListener('click', () => dispatch('CLEAR_FILTERS'));
   root.querySelectorAll('[data-tipo]').forEach(b => b.addEventListener('click', () => dispatch('SET_FILTER', { tipos: [b.dataset.tipo] })));
   root.querySelectorAll('[data-bairro]').forEach(b => b.addEventListener('click', () => dispatch('SET_FILTER', { bairros: [b.dataset.bairro] })));
-  root.querySelectorAll('[data-radius]').forEach(b => b.addEventListener('click', () => {
-    const km = parseFloat(b.dataset.radius);
-    dispatch('SET_RADIUS', { km: state.radiusKm === km ? null : km });
-  }));
 }

@@ -6,17 +6,20 @@ import { getOccurrencesByTerm } from './data.js';
 import { tipoColor, fmt, fmtRating, TIPOS, reducedMotion } from './utils.js';
 
 const C = {
-  acai: '#7A3C8C', dark: '#4B255D', p2: '#654078', mute: '#E7E2E8',
-  lime: '#A2CC24', gray: '#A9A5AD', grid: '#F1ECF3', text: '#737078',
+  bar: '#4B255D', hover: '#9A74AA', sel: '#A2CC24', none: '#D9D3DC',
+  mute: '#E7E2E8', grid: '#F3EFF5', text: '#737078', dot: 'rgba(101,64,120,.32)',
 };
 
 const RATING_BINS = [
-  { label: '< 3,0',   apply: { ratingMin: null, ratingMax: 3,   noRating: false }, test: r => r !== null && r < 3,              color: '#D9CCE0' },
-  { label: '3,0–3,9', apply: { ratingMin: 3,    ratingMax: 4,   noRating: false }, test: r => r !== null && r >= 3 && r < 4,   color: '#B79AC4' },
-  { label: '4,0–4,4', apply: { ratingMin: 4,    ratingMax: 4.5, noRating: false }, test: r => r !== null && r >= 4 && r < 4.5, color: '#8E62A0' },
-  { label: '4,5–5,0', apply: { ratingMin: 4.5,  ratingMax: null, noRating: false }, test: r => r !== null && r >= 4.5,          color: '#4B255D' },
-  { label: 'Sem nota', apply: { ratingMin: null, ratingMax: null, noRating: true }, test: r => r === null,                      color: '#E7E2E8' },
+  { label: '< 3,0',   apply: { ratingMin: null, ratingMax: 3,   noRating: false }, test: r => r !== null && r < 3 },
+  { label: '3,0–3,9', apply: { ratingMin: 3,    ratingMax: 4,   noRating: false }, test: r => r !== null && r >= 3 && r < 4 },
+  { label: '4,0–4,4', apply: { ratingMin: 4,    ratingMax: 4.5, noRating: false }, test: r => r !== null && r >= 4 && r < 4.5 },
+  { label: '4,5–5,0', apply: { ratingMin: 4.5,  ratingMax: null, noRating: false }, test: r => r !== null && r >= 4.5 },
+  { label: 'Sem nota', apply: { ratingMin: null, ratingMax: null, noRating: true }, test: r => r === null, missing: true },
 ];
+
+/** Linguagem única de barras: roxo · hover roxo claro · selecionado verde */
+const barColor = (isSel, missing = false) => (isSel ? C.sel : missing ? C.none : C.bar);
 const OCC_BINS = [
   { label: '1',    min: 1,  max: 1 },
   { label: '2–3',  min: 2,  max: 3 },
@@ -37,8 +40,10 @@ function base(extra = {}) {
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: '#242126', padding: 10, cornerRadius: 8, displayColors: false,
-        titleFont: { family: 'Inter', size: 12, weight: '600' }, bodyFont: { family: 'Inter', size: 12 },
+        backgroundColor: '#FFFFFF', titleColor: '#242126', bodyColor: '#737078',
+        borderColor: '#E7E2E8', borderWidth: 1, padding: { x: 12, y: 9 }, cornerRadius: 10,
+        displayColors: false, caretSize: 5, caretPadding: 6,
+        titleFont: { family: 'Inter', size: 12.5, weight: '600' }, bodyFont: { family: 'Inter', size: 12 },
       },
     },
     onHover: (ev, els) => { ev.native.target.style.cursor = els.length ? 'pointer' : 'default'; },
@@ -57,8 +62,10 @@ export function init() {
   if (!window.Chart) { console.warn('Chart.js not loaded'); return; }
   Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
   Chart.defaults.color = C.text;
+  Chart.defaults.elements.bar.hoverBackgroundColor = C.hover;
   _bairro(); _tipo(); _rating(); _scatter(); _recorr(); _termos();
   updateAll();
+  document.querySelectorAll('.chart-canvas-wrap.is-loading').forEach(w => w.classList.remove('is-loading'));
 }
 
 export function updateAll() {
@@ -95,7 +102,7 @@ function _upBairro() {
   const sel = state.filters.bairros;
   c.data.labels = rows.map(r => r[0]);
   c.data.datasets[0].data = rows.map(r => r[1]);
-  c.data.datasets[0].backgroundColor = rows.map(r => (!sel.length || sel.includes(r[0]) ? C.acai : C.mute));
+  c.data.datasets[0].backgroundColor = rows.map(r => barColor(sel.includes(r[0])));
   c.update();
 }
 
@@ -175,10 +182,9 @@ function _upRating() {
   const c = charts.rating; if (!c) return;
   const list = getFiltered('rating');
   const f = state.filters;
-  const any = f.ratingMin != null || f.ratingMax != null || f.noRating;
   const idx = _ratingIdx();
   c.data.datasets[0].data = RATING_BINS.map(b => list.filter(e => b.test(rating(e))).length);
-  c.data.datasets[0].backgroundColor = RATING_BINS.map((b, i) => (!any || i === idx ? b.color : C.mute));
+  c.data.datasets[0].backgroundColor = RATING_BINS.map((b, i) => barColor(i === idx, b.missing));
   c.update();
 }
 
@@ -197,8 +203,8 @@ function _scatter() {
       },
       plugins: {
         ...base().plugins,
-        legend: { display: true, position: 'top', align: 'end', labels: { usePointStyle: true, pointStyle: 'circle', boxWidth: 7, boxHeight: 7, padding: 10, font: { size: 11 } } },
-        tooltip: { ...base().plugins.tooltip, callbacks: { title: i => i[0].raw.name, label: c => `Nota ${fmtRating(c.raw.y)} · ${fmt(c.raw.x)} avaliações` } },
+        tooltip: { ...base().plugins.tooltip, callbacks: { title: i => i[0].raw.name, label: c => `Nota ${fmtRating(c.raw.y)} · ${fmt(c.raw.x)} avaliações`, footer: () => 'Clique para abrir no mapa' },
+          footerColor: '#7A3C8C', footerFont: { family: 'Inter', size: 11, weight: '600' } },
       },
       onClick(_, els) {
         if (!els.length) return;
@@ -212,20 +218,20 @@ function _upScatter() {
   const c = charts.scatter; if (!c) return;
   const list = getFiltered().filter(e => e.review_count > 0 && e.review_rating > 0);
   const sel = state.selectedPlaceId;
-  c.data.datasets = TIPOS.map(t => {
-    const pts = list.filter(e => e.tipo_estabelecimento === t)
-      .map(e => ({ x: e.review_count, y: e.review_rating, name: e.nome_estabelecimento, id: e.place_id }));
-    const col = tipoColor(t);
-    return {
-      label: t,
-      data: pts,
-      backgroundColor: pts.map(p => (sel && p.id !== sel ? col + '33' : col + 'CC')),
-      borderColor: pts.map(p => (p.id === sel ? '#242126' : 'transparent')),
-      borderWidth: pts.map(p => (p.id === sel ? 2 : 0)),
-      pointRadius: pts.map(p => (p.id === sel ? 7 : 3.5)),
-      pointHoverRadius: 6,
-    };
-  });
+  // Selecionado por último para ficar por cima dos demais pontos
+  const pts = list
+    .map(e => ({ x: e.review_count, y: e.review_rating, name: e.nome_estabelecimento, id: e.place_id }))
+    .sort((a, b) => (a.id === sel) - (b.id === sel));
+  c.data.datasets = [{
+    label: 'Estabelecimentos',
+    data: pts,
+    backgroundColor: pts.map(p => (p.id === sel ? C.sel : C.dot)),
+    hoverBackgroundColor: pts.map(p => (p.id === sel ? C.sel : C.bar)),
+    borderColor: pts.map(p => (p.id === sel ? '#fff' : 'transparent')),
+    borderWidth: pts.map(p => (p.id === sel ? 2 : 0)),
+    pointRadius: pts.map(p => (p.id === sel ? 7 : 3.5)),
+    pointHoverRadius: 6,
+  }];
   c.update();
 }
 
@@ -255,12 +261,11 @@ function _upRecorr() {
   const c = charts.recorr; if (!c) return;
   const list = getFiltered('ocorr');
   const f = state.filters;
-  const any = f.ocorrMin != null || f.ocorrMax != null;
   c.data.datasets[0].data = OCC_BINS.map(b => list.filter(e => {
     const n = e.ocorrencias_total ?? 0;
     return n >= b.min && (b.max == null || n <= b.max);
   }).length);
-  c.data.datasets[0].backgroundColor = OCC_BINS.map(b => (!any || (f.ocorrMin === b.min && f.ocorrMax === b.max) ? C.p2 : C.mute));
+  c.data.datasets[0].backgroundColor = OCC_BINS.map(b => barColor(f.ocorrMin === b.min && f.ocorrMax === b.max));
   c.update();
 }
 
@@ -291,7 +296,7 @@ function _upTermos() {
   const sel = state.filters.termos;
   c.data.labels = rows.map(r => r.termo);
   c.data.datasets[0].data = rows.map(r => r.count);
-  c.data.datasets[0].backgroundColor = rows.map(r => (!sel.length || sel.includes(r.termo) ? '#8DB51E' : C.mute));
+  c.data.datasets[0].backgroundColor = rows.map(r => barColor(sel.includes(r.termo)));
   c.update();
 }
 

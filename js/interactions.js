@@ -3,7 +3,7 @@
  */
 import { state, dispatch } from './state.js';
 import { establishments } from './data.js';
-import { debounce, normalize, esc, tipoKey, tipoShort, reducedMotion } from './utils.js';
+import { debounce, normalize, esc, tipoKey, tipoShort, reducedMotion, icon } from './utils.js';
 
 const VIEWS = ['overview', 'mapa', 'graficos', 'tabela', 'bairros', 'sobre'];
 
@@ -30,7 +30,21 @@ function _initNav() {
 }
 
 /* ── Busca global ──────────────────────────────── */
-let results = [], active = -1;
+let results = [], active = -1, showingRecent = false;
+const RECENT_KEY = 'acai-map:recent';
+
+function _getRecent() {
+  try {
+    const ids = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]');
+    return ids.map(id => establishments.find(e => e.place_id === id)).filter(Boolean);
+  } catch { return []; }
+}
+function _pushRecent(id) {
+  try {
+    const ids = JSON.parse(localStorage.getItem(RECENT_KEY) || '[]').filter(x => x !== id);
+    localStorage.setItem(RECENT_KEY, JSON.stringify([id, ...ids].slice(0, 5)));
+  } catch { /* armazenamento indisponível: recentes são opcionais */ }
+}
 
 function _initSearch() {
   const input = document.getElementById('header-search-input');
@@ -41,7 +55,9 @@ function _initSearch() {
 
   const run = debounce(() => {
     const q = normalize(input.value);
+    if (!q.length) { _paintRecent(); return; }
     if (q.length < 2) { _hide(); return; }
+    showingRecent = false;
     const starts = [], contains = [];
     for (const it of index) {
       const i = it.n.indexOf(q);
@@ -53,10 +69,11 @@ function _initSearch() {
   }, 90);
 
   input.addEventListener('input', run);
-  input.addEventListener('focus', () => { if (normalize(input.value).length >= 2) run(); });
+  input.addEventListener('focus', () => run());
   input.addEventListener('keydown', ev => {
     if (list.hidden) { if (ev.key === 'Enter' && input.value.trim()) _applyText(input); return; }
-    const total = results.length + 1;
+    const total = results.length + (showingRecent ? 0 : 1);
+    if (!total) { if (ev.key === 'Escape') _hide(); return; }
     if (ev.key === 'ArrowDown') { ev.preventDefault(); active = (active + 1) % total; _mark(); }
     else if (ev.key === 'ArrowUp') { ev.preventDefault(); active = (active - 1 + total) % total; _mark(); }
     else if (ev.key === 'Enter') {
@@ -67,6 +84,29 @@ function _initSearch() {
   });
   document.addEventListener('mousedown', ev => {
     if (!ev.target.closest('#header-search')) _hide();
+  });
+}
+
+function _paintRecent() {
+  const input = document.getElementById('header-search-input');
+  const list = document.getElementById('search-results');
+  results = _getRecent();
+  showingRecent = true;
+  if (!results.length) { _hide(); return; }
+  active = -1;
+  list.innerHTML = `
+    <li class="sr-head" role="presentation">${icon('clock', 12)} Recentes</li>
+    ${results.map((e, i) => `
+      <li role="option" id="sr-${i}" class="sr-item" data-i="${i}" aria-selected="false">
+        <i class="lg-dot t-${tipoKey(e.tipo_estabelecimento)}"></i>
+        <span class="sr-name">${esc(e.nome_estabelecimento)}</span>
+        <span class="sr-meta">${esc(e.bairro_pesquisa ?? '')} · ${tipoShort(e.tipo_estabelecimento)}</span>
+      </li>`).join('')}`;
+  list.hidden = false;
+  input.setAttribute('aria-expanded', 'true');
+  list.querySelectorAll('.sr-item').forEach(li => {
+    li.addEventListener('mousedown', ev => { ev.preventDefault(); _choose(results[+li.dataset.i], input); });
+    li.addEventListener('mousemove', () => { active = +li.dataset.i; _mark(); });
   });
 }
 
@@ -120,6 +160,7 @@ function _hide() {
 }
 
 function _choose(e, input) {
+  _pushRecent(e.place_id);
   input.value = '';
   _hide();
   input.blur();

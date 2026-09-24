@@ -24,20 +24,20 @@ export function render() {
   const dens = maxBy(e => e.estabelecimentos_500m ?? 0);
 
   const cards = [
-    { ic: 'grid', k: 'Maior concentração', v: topB, m: `${fmt(topBn)} estabelecimentos · ${Math.round(topBn / list.length * 100)}% dos resultados`, act: `bairro:${topB}` },
-    { ic: 'repeat', k: 'Maior recorrência', v: recorr.nome_estabelecimento, m: `${fmt(recorr.ocorrencias_total)} ocorrências nas consultas`, act: `sel:${recorr.place_id}` },
+    { k: 'Maior presença na base', v: topB, n: topBn, u: topBn === 1 ? 'estabelecimento' : 'estabelecimentos', act: `bairro:${topB}` },
+    { k: 'Maior recorrência', v: recorr.nome_estabelecimento, n: recorr.ocorrencias_total, u: recorr.ocorrencias_total === 1 ? 'consulta' : 'consultas', act: `sel:${recorr.place_id}` },
     reviews.review_count > 0
-      ? { ic: 'chat', k: 'Maior volume de avaliações', v: reviews.nome_estabelecimento, m: `${fmt(reviews.review_count)} avaliações · nota ${fmtRating(reviews.review_rating)}`, act: `sel:${reviews.place_id}` }
-      : { ic: 'chat', k: 'Maior volume de avaliações', v: 'Sem avaliações', m: 'nenhum resultado tem avaliações no Google', act: null },
-    { ic: 'radius', k: 'Maior densidade local', v: dens.nome_estabelecimento, m: `${fmt(dens.estabelecimentos_500m)} estabelecimentos em 500 m`, act: `sel:${dens.place_id}` },
+      ? { k: 'Maior volume de avaliações', v: reviews.nome_estabelecimento, n: reviews.review_count, u: `avaliações · nota ${fmtRating(reviews.review_rating)}`, act: `sel:${reviews.place_id}` }
+      : { k: 'Maior volume de avaliações', v: 'Sem avaliações', n: null, u: 'nenhum resultado tem avaliações no Google', act: null },
+    { k: 'Maior densidade local', v: dens.nome_estabelecimento, n: dens.estabelecimentos_500m, u: 'pontos em 500 m', act: `sel:${dens.place_id}` },
   ];
 
-  grid.innerHTML = cards.map(c => `
+  grid.innerHTML = cards.map((c, i) => `
     <button type="button" class="ins-card" ${c.act ? `data-act="${esc(c.act)}"` : 'disabled'}>
-      <span class="ins-k">${icon(c.ic, 14)} ${c.k}</span>
+      <span class="ins-top"><span class="ins-idx">${String(i + 1).padStart(2, '0')}</span><span class="ins-k">${c.k}</span></span>
       <span class="ins-v">${esc(c.v)}</span>
-      <span class="ins-m">${c.m}</span>
-      ${c.act ? `<span class="ins-go">${c.act.startsWith('bairro') ? 'Filtrar bairro' : 'Ver no mapa'} →</span>` : ''}
+      <span class="ins-m">${c.n != null ? `<strong>${fmt(c.n)}</strong> ` : ''}${c.u}</span>
+      ${c.act ? `<span class="ins-go">${c.act.startsWith('bairro') ? 'Filtrar bairro' : 'Ver no mapa'} ${icon('arrow', 12)}</span>` : ''}
     </button>`).join('');
 
   grid.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {

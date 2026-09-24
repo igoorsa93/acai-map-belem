@@ -167,6 +167,8 @@ function _updateContext(filtered) {
   const countEl = document.getElementById('map-count');
   const label = document.getElementById('map-count-label');
   const sub = document.getElementById('map-context-sub');
+  _updateState();
+  _syncRadiusUI();
   if (countEl) countUp(countEl, filtered.length, 350, 0);
   if (label) label.textContent = filtered.length === 1 ? 'estabelecimento encontrado' : 'estabelecimentos encontrados';
   if (sub) {
@@ -178,6 +180,46 @@ function _updateContext(filtered) {
   }
 }
 
+/** Indicador de estado no topo do mapa: visão geral / filtro / seleção */
+function _updateState() {
+  const box = document.getElementById('map-state');
+  const label = document.getElementById('map-state-label');
+  if (!box || !label) return;
+  const f = state.filters;
+  let kind = 'all', text = 'Visão geral';
+  const sel = state.selectedPlaceId ? getByPlaceId(state.selectedPlaceId) : null;
+  if (sel) {
+    kind = 'sel';
+    text = `Selecionado · ${sel.nome_estabelecimento}`;
+  } else if (activeFilterCount()) {
+    const parts = [];
+    if (f.bairros.length) parts.push(f.bairros.length === 1 ? f.bairros[0] : `${f.bairros.length} bairros`);
+    if (f.tipos.length) parts.push(f.tipos.length === 1 ? f.tipos[0] : `${f.tipos.length} tipos`);
+    const rest = activeFilterCount() - f.bairros.length - f.tipos.length;
+    if (rest > 0) parts.push(`+${rest} filtro${rest > 1 ? 's' : ''}`);
+    kind = 'filter';
+    text = parts.join(' · ');
+  }
+  box.dataset.kind = kind;
+  label.textContent = text;
+  box.title = text;
+}
+
+function _syncRadiusUI() {
+  const km = state.radiusKm;
+  const group = document.querySelector('.mt-radius');
+  if (group) group.hidden = !state.selectedPlaceId;
+  document.querySelectorAll('.mt-radius [data-radius]').forEach(b =>
+    b.setAttribute('aria-checked', String(parseFloat(b.dataset.radius) === km)));
+  const legend = document.getElementById('map-radius-legend');
+  if (!legend) return;
+  legend.hidden = !(state.selectedPlaceId && km);
+  if (legend.hidden) return;
+  const n = countInRadius(km);
+  document.getElementById('mrl-km').textContent = km < 1 ? '500 m' : `${km} km`;
+  document.getElementById('mrl-n').textContent = `${fmt(n)} ${n === 1 ? 'ponto visível' : 'pontos visíveis'}`;
+}
+
 /* ── Selection ─────────────────────────────────── */
 export function selectEstablishment(placeId) {
   if (!map) return;
@@ -185,6 +227,8 @@ export function selectEstablishment(placeId) {
   _clearRadius();
   if (selMarker) { map.removeLayer(selMarker); selMarker = null; }
   el.classList.toggle('has-selection', !!placeId);
+  _updateState();
+  _syncRadiusUI();
 
   if (!placeId) {
     _refresh();
@@ -213,6 +257,7 @@ export function selectEstablishment(placeId) {
 export function updateRadius(km) {
   if (!map) return;
   _clearRadius();
+  _syncRadiusUI();
   const e = state.selectedPlaceId ? getByPlaceId(state.selectedPlaceId) : null;
   if (!e || !km) return;
 
@@ -220,11 +265,11 @@ export function updateRadius(km) {
   radiusCircle = L.circle([e.latitude, e.longitude], {
     radius: km * 1000,
     color: '#654078',
-    weight: 1.5,
-    opacity: 0.9,
-    dashArray: '4 6',
+    weight: 1,
+    opacity: 0.5,
+    dashArray: '2 6',
     fillColor: '#7A3C8C',
-    fillOpacity: 0.07,
+    fillOpacity: 0.045,
     interactive: false,
     className: 'acai-radius',
   }).addTo(map);
@@ -278,11 +323,16 @@ export function setMode(mode) {
         gradient: { 0.2: '#D9CCE0', 0.45: '#B79AC4', 0.65: '#7A3C8C', 0.85: '#4B255D', 1: '#A2CC24' },
       });
     }
-    heat.setLatLngs(getFiltered().map(e => [e.latitude, e.longitude, 1]));
     if (map.hasLayer(cluster)) map.removeLayer(cluster);
     if (!map.hasLayer(heat)) heat.addTo(map);
+    // Só depois de estar no mapa: setLatLngs agenda redesenho e lê heat._map
+    heat.setLatLngs(getFiltered().map(e => [e.latitude, e.longitude, 1]));
   } else {
-    if (heat && map.hasLayer(heat)) map.removeLayer(heat);
+    if (heat && map.hasLayer(heat)) {
+      // leaflet-heat agenda um redesenho por frame; se rodar após a remoção, lê _map nulo
+      if (heat._frame) { L.Util.cancelAnimFrame(heat._frame); heat._frame = null; }
+      map.removeLayer(heat);
+    }
     if (!map.hasLayer(cluster)) { map.addLayer(cluster); _refresh(); }
   }
 }
@@ -293,7 +343,15 @@ function _bindToolbar() {
   document.querySelectorAll('.mt-seg [data-mode]').forEach(btn => {
     btn.addEventListener('click', () => dispatch('SET_MAP_MODE', { mode: btn.dataset.mode }));
   });
+  document.querySelectorAll('.mt-radius [data-radius]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const km = parseFloat(btn.dataset.radius);
+      dispatch('SET_RADIUS', { km: state.radiusKm === km ? null : km });
+    });
+  });
 }
+
+export function syncOverlays() { _updateState(); _syncRadiusUI(); }
 
 export function invalidate() {
   if (!map) return;

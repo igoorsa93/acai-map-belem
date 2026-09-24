@@ -119,6 +119,8 @@ const ICON_PATHS = {
   check:   '<path d="M3.5 8.5l3 3 6-7"/>',
   close:   '<path d="M4 4l8 8M12 4l-8 8"/>',
   back:    '<path d="M10 3L5 8l5 5"/>',
+  arrow:   '<path d="M3 8h10M9 4l4 4-4 4"/>',
+  clock:   '<circle cx="8" cy="8" r="6"/><path d="M8 4.5V8l2.5 1.5"/>',
   chevron: '<path d="M4 6l4 4 4-4"/>',
   target:  '<circle cx="8" cy="8" r="5"/><path d="M8 1v3M8 12v3M1 8h3M12 8h3"/>',
   expand:  '<path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10"/>',

@@ -65,7 +65,7 @@ export function render() {
     const on = sortKey === c.key;
     return `<th scope="col" class="${c.num ? 'num' : ''}${on ? ' is-sorted' : ''}" aria-sort="${on ? (sortAsc ? 'ascending' : 'descending') : 'none'}">
       <button type="button" data-key="${c.key}">${c.label}<span class="sort-ic">${on ? (sortAsc ? '↑' : '↓') : '↕'}</span></button></th>`;
-  }).join('')}</tr>`;
+  }).join('')}<th scope="col" class="th-action"><span class="sr-only">Ação</span></th></tr>`;
 
   const sel = state.selectedPlaceId;
   container.querySelector('tbody').innerHTML = slice.length ? slice.map(e => {
@@ -80,8 +80,9 @@ export function render() {
         <td class="num">${e.review_count ? fmt(e.review_count) : '<span class="tb-na">0</span>'}</td>
         <td class="num">${fmt(e.ocorrencias_total ?? 0)}</td>
         <td class="num">${fmt(e.estabelecimentos_500m ?? 0)}</td>
+        <td class="td-action"><span class="tb-go">Ver no mapa →</span></td>
       </tr>`;
-  }).join('') : `<tr><td colspan="${COLS.length}" class="tb-empty">Nenhum estabelecimento corresponde à busca.</td></tr>`;
+  }).join('') : `<tr><td colspan="${COLS.length + 1}" class="tb-empty">Nenhum estabelecimento corresponde à busca.</td></tr>`;
 
   container.querySelector('.tb-pages').innerHTML = _pagination(currentPage, pages);
   _bind(container);

@@ -49,19 +49,17 @@ function _globalModel() {
     },
     cards: [
       { id: 'rating', ic: 'star', label: 'Avaliação média', value: avg, dec: 2,
-        desc: avg ? `entre ${fmt(rated.length)} com nota no Google` : 'nenhum com nota nos filtros',
-        delta: isF && avg ? _diff(avg - g.avgRating, 2, 'vs. média geral') : null },
-      { id: 'reviews', ic: 'chat', label: 'Avaliações', value: reviews,
-        desc: 'somadas no Google Maps',
+        desc: avg ? `${fmt(rated.length)} com nota` : 'sem notas nos filtros',
+        delta: isF && avg ? _diff(avg - g.avgRating, 2, 'vs. geral') : null },
+      { id: 'reviews', ic: 'chat', label: 'Avaliações acumuladas', value: reviews,
+        desc: 'no Google Maps',
         delta: isF ? `${pct(reviews, g.totalRatings)}% do total` : null },
-      { id: 'bairros', ic: 'grid', label: 'Bairros', value: new Set(f.map(e => e.bairro_pesquisa)).size,
+      { id: 'bairros', ic: 'grid', label: 'Bairros pesquisados', value: new Set(f.map(e => e.bairro_pesquisa)).size,
         desc: 'com ao menos um ponto', delta: isF ? `de ${fmt(g.bairros)}` : null },
-      { id: 'queries', ic: 'search', label: 'Consultas', value: q,
-        desc: isF ? 'em que estes pontos apareceram' : 'bairro × termo no Google Maps', delta: isF ? `de ${fmt(g.queries)}` : null },
+      { id: 'queries', ic: 'search', label: 'Consultas realizadas', value: q,
+        desc: isF ? 'com estes pontos' : 'bairro × termo', delta: isF ? `de ${fmt(g.queries)}` : null },
       { id: 'occ', ic: 'repeat', label: 'Ocorrências', value: occ,
-        desc: 'aparições nos resultados de busca', delta: isF ? `${pct(occ, g.occurrencesTotal)}% do total` : null },
-      { id: 'rated', ic: 'check', label: 'Com avaliação', value: rated.length,
-        desc: `${pct(rated.length, f.length)}% têm nota no Google`, delta: null },
+        desc: 'aparições nos resultados', delta: isF ? `${pct(occ, g.occurrencesTotal)}% do total` : null },
     ],
   };
 }
@@ -73,16 +71,15 @@ function _selectedModel(e) {
     primary: {
       eyebrow: 'Estabelecimento selecionado',
       name: e.nome_estabelecimento,
-      meta: `<i class="lg-dot t-${k}"></i>${esc(e.tipo_estabelecimento)} · ${esc(e.bairro_pesquisa ?? '')}`,
+      meta: `<i class="lg-dot t-${k}"></i>${esc(e.tipo_estabelecimento)} · ${esc(e.bairro_pesquisa ?? '')} · ${fmtDist(e.distancia_bairro_pesquisa_km)} do bairro`,
     },
     cards: [
       { id: 's-rating', ic: 'star', label: 'Avaliação', value: hasR ? e.review_rating : null, dec: 1,
-        desc: hasR ? 'nota no Google Maps' : 'sem avaliações no Google' },
+        desc: hasR ? 'nota no Google' : 'sem avaliações' },
       { id: 's-reviews', ic: 'chat', label: 'Avaliações', value: e.review_count ?? 0, desc: 'no Google Maps' },
-      { id: 's-recorr', ic: 'repeat', label: 'Recorrência', value: e.ocorrencias_total ?? 0, desc: 'ocorrências nas consultas' },
-      { id: 's-dist', ic: 'ruler', label: 'Distância', text: fmtDist(e.distancia_bairro_pesquisa_km), desc: 'do ponto de referência do bairro' },
-      { id: 's-500', ic: 'radius', label: 'Em 500 m', value: e.estabelecimentos_500m ?? 0, desc: 'estabelecimentos próximos' },
-      { id: 's-1k', ic: 'radius', label: 'Em 1 km', value: e.estabelecimentos_1km ?? 0, desc: 'estabelecimentos próximos' },
+      { id: 's-recorr', ic: 'repeat', label: 'Recorrência', value: e.ocorrencias_total ?? 0, desc: 'consultas' },
+      { id: 's-500', ic: 'radius', label: 'Em 500 m', value: e.estabelecimentos_500m ?? 0, desc: 'pontos próximos' },
+      { id: 's-1k', ic: 'radius', label: 'Em 1 km', value: e.estabelecimentos_1km ?? 0, desc: 'pontos próximos' },
     ],
   };
 }
@@ -97,13 +94,14 @@ function _build(grid, m) {
   const p = m.primary;
   grid.innerHTML = `
     <article class="kpi-primary${p.name ? ' is-selected' : ''}">
-      <div class="kpi-eyebrow">${icon(p.name ? 'target' : 'pin', 14)} ${p.eyebrow}</div>
+      ${p.name ? `<div class="kpi-eyebrow">${icon('target', 14)} ${p.eyebrow}</div>` : ''}
       ${p.name ? `
         <div class="kpi-sel-name">${esc(p.name)}</div>
         <div class="kpi-sel-meta">${p.meta}</div>
         <button class="kpi-sel-clear" type="button">${icon('close', 12)} Limpar seleção</button>
       ` : `
         <div class="kpi-hero-num" id="kpi-main-val">0</div>
+        <div class="kpi-hero-label">Estabelecimentos<br>encontrados</div>
         <div class="kpi-delta" id="kpi-main-delta">${p.delta}</div>
         <div class="kpi-typebar" id="kpi-typebar" role="group" aria-label="Distribuição por tipo">${_typebar(p)}</div>
       `}
@@ -121,6 +119,7 @@ function _build(grid, m) {
         </article>`).join('')}
     </div>`;
 
+  grid.setAttribute('aria-busy', 'false');
   grid.querySelector('.kpi-sel-clear')?.addEventListener('click', () => dispatch('SELECT_ESTABLISHMENT', { placeId: null }));
   _bindTypebar(grid);
   _update(grid, m);
@@ -128,6 +127,11 @@ function _build(grid, m) {
 
 function _update(grid, m) {
   const p = m.primary;
+  if (!reducedMotion()) {
+    grid.querySelectorAll('.kpi-hero-num, .kpi-value').forEach(el => {
+      el.classList.remove('is-updating'); void el.offsetWidth; el.classList.add('is-updating');
+    });
+  }
   const main = document.getElementById('kpi-main-val');
   if (main) countUp(main, p.value, 450, 0);
   const d = document.getElementById('kpi-main-delta');

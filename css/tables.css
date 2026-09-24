@@ -12,13 +12,14 @@
 .tb-size select { height: 30px; border: 1px solid var(--gray-light); border-radius: var(--radius-sm); padding: 0 6px; font-size: 12.5px; background: #fff; color: var(--text); }
 
 /* ─── Tabela ──────────────────────────────────────── */
-.table-wrap { background: #fff; border: 1px solid var(--gray-light); border-radius: var(--radius-lg); overflow-x: auto; box-shadow: var(--shadow-xs); }
+.table-wrap { background: #fff; border: 1px solid var(--gray-light); border-radius: var(--radius-card); overflow-x: auto; box-shadow: var(--shadow-sm); }
 .data-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
-.data-table th { background: var(--bg-subtle); border-bottom: 1px solid var(--gray-light); text-align: left; padding: 0; white-space: nowrap; }
+.data-table th { background: #fff; border-bottom: 1px solid var(--gray-light); text-align: left; padding: 0; white-space: nowrap; position: sticky; top: 0; }
 .data-table th button {
-  width: 100%; display: flex; align-items: center; gap: 6px; padding: 10px 14px;
-  font-size: 11px; font-weight: 600; letter-spacing: .6px; text-transform: uppercase; color: var(--gray);
+  width: 100%; display: flex; align-items: center; gap: 6px; padding: 12px 14px 11px;
+  font-size: 10.5px; font-weight: 600; letter-spacing: .9px; text-transform: uppercase; color: var(--gray);
 }
+.data-table td.num strong { font-weight: 600; }
 .data-table th.num button { justify-content: flex-end; }
 .data-table th button:hover { color: var(--acai-dark); }
 .data-table th.is-sorted button { color: var(--acai-dark); }
@@ -27,7 +28,18 @@
 .data-table td { padding: 10px 14px; border-bottom: 1px solid #F1ECF3; vertical-align: middle; }
 .data-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .data-table tbody tr { cursor: pointer; transition: background var(--t-fast); }
+.data-table tbody tr:nth-child(even) { background: #FCFAFD; }
 .data-table tbody tr:hover { background: var(--acai-50); }
+.th-action, .td-action { width: 1%; text-align: right; }
+.tb-go {
+  display: inline-block; padding: 5px 10px; border-radius: 8px; white-space: nowrap;
+  font-size: 11.5px; font-weight: 600; color: var(--acai);
+  opacity: 0; transform: translateX(-4px);
+  transition: opacity var(--t-fast), transform var(--t-fast), background var(--t-fast);
+}
+.data-table tbody tr:hover .tb-go, .data-table tbody tr:focus-visible .tb-go, .data-table tbody tr.is-selected .tb-go { opacity: 1; transform: none; }
+.data-table tbody tr:hover .tb-go { background: #fff; }
+@media (hover: none) { .tb-go { opacity: 1; transform: none; } }
 .data-table tbody tr:focus-visible { outline: 2px solid var(--acai); outline-offset: -2px; }
 .data-table tbody tr.is-selected { background: var(--acai-100); box-shadow: inset 3px 0 0 var(--acai); }
 .data-table tbody tr:last-child td { border-bottom: 0; }
@@ -44,6 +56,7 @@
   font-size: 13px; font-weight: 500; color: var(--text); border: 1px solid transparent;
 }
 .pg-btn:hover:not(:disabled) { background: #fff; border-color: var(--gray-light); }
-.pg-btn.is-current { background: var(--acai-dark); color: #fff; }
+.pg-btn { font-variant-numeric: tabular-nums; transition: background var(--t-fast), border-color var(--t-fast); }
+.pg-btn.is-current { background: var(--acai-dark); color: #fff; font-weight: 600; }
 .pg-btn:disabled { color: var(--gray-300); cursor: default; }
 .pg-gap { color: var(--gray-300); padding: 0 4px; }

@@ -3,7 +3,7 @@
  */
 import { getBairros, getCategorias } from './data.js';
 import { state, dispatch, getFiltered } from './state.js';
-import { esc, fmt, fmtDist, normalize, tipoKey, TIPOS, icon } from './utils.js';
+import { esc, fmt, fmtDist, normalize, tipoKey, tipoShort, TIPOS, icon } from './utils.js';
 
 const r = e => (e.review_rating > 0 ? e.review_rating : null);
 
@@ -48,7 +48,7 @@ export function render() {
         <span class="fb-label">${icon('filter', 14)} Filtrar</span>
         ${DEFS.map(d => `
           <button type="button" class="fb-btn" data-key="${d.key}" aria-haspopup="dialog" aria-expanded="false">
-            <span>${d.label}</span><span class="fb-badge" hidden></span>${icon('chevron', 12)}
+            <span class="fb-k">${d.label}</span><span class="fb-v" hidden></span><span class="fb-badge" hidden></span>${icon('chevron', 12)}
           </button>`).join('')}
       </div>
       <div class="fb-result" aria-live="polite"><strong id="fb-count">0</strong> <span id="fb-count-label">resultados</span></div>
@@ -95,9 +95,18 @@ export function update() {
     const d = DEFS.find(x => x.key === btn.dataset.key);
     const n = d.type === 'multi' ? f[d.stateKey].length : (d.current(f) ? 1 : 0);
     const badge = btn.querySelector('.fb-badge');
+    const val = btn.querySelector('.fb-v');
+    let shown = '';
+    if (d.type === 'multi' && n === 1) shown = d.key === 'tipo' ? tipoShort(f[d.stateKey][0]) : f[d.stateKey][0];
+    else if (d.type === 'single' && n) {
+      const cur = d.current(f);
+      shown = d.options.find(o => o.id === cur)?.label ?? 'Faixa do gráfico';
+    }
     btn.classList.toggle('is-active', n > 0);
-    badge.hidden = !n;
-    badge.textContent = d.type === 'multi' ? n : '•';
+    val.hidden = !shown;
+    val.textContent = shown;
+    badge.hidden = !(d.type === 'multi' && n > 1);
+    badge.textContent = n;
   });
   const count = getFiltered().length;
   const cEl = document.getElementById('fb-count');
