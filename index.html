@@ -392,10 +392,11 @@ svg { display: block; }
 .lg-scale { display: flex; justify-content: space-between; font-size: 10px; opacity: .7; }
 
 /* ══ Áreas (ranking) ═════════════════════════════════════ */
-#page-areas { padding: calc(var(--header-h) + 28px) 28px 40px; }
-.pg-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
-.pg-head h1 { font-family: var(--f-head); font-size: 38px; font-weight: 800; color: var(--c-deep); letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 10px; }
-.pg-head p { font-size: 14.5px; line-height: 1.55; color: var(--c-muted); max-width: 580px; }
+#page-areas { padding: calc(var(--header-h) + 32px) 32px 48px; }
+.pg-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 32px; }
+.pg-head .eyebrow { font-family: var(--f-head); font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 8px; }
+.pg-head h1 { font-family: var(--f-head); font-size: 42px; font-weight: 800; color: var(--c-deep); letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 12px; }
+.pg-head p { font-size: 14.5px; line-height: 1.6; color: var(--c-muted); max-width: 560px; }
 .pill-static {
   display: flex; align-items: center; gap: 9px; padding: 11px 18px; background: #fff;
   border: 1.5px solid var(--c-border); border-radius: var(--r-pill); font-family: var(--f-head);
@@ -403,39 +404,58 @@ svg { display: block; }
 }
 .pill-static svg { width: 15px; height: 15px; stroke: var(--c-primary); fill: none; stroke-width: 2; }
 
-.areas-layout { display: grid; grid-template-columns: minmax(0,1fr) 390px; gap: 22px; align-items: start; }
-.areas-list { display: flex; flex-direction: column; gap: 12px; }
+.areas-layout { display: grid; grid-template-columns: minmax(0,1fr) 400px; gap: 24px; align-items: start; }
+.areas-list { display: flex; flex-direction: column; gap: 10px; }
 
 .area-card {
-  background: #fff; border: 1.5px solid var(--c-border); border-radius: var(--r-card);
-  padding: 20px 22px; display: flex; align-items: center; gap: 18px;
+  background: #fff; border: 1.5px solid var(--c-border); border-radius: 22px;
+  padding: 22px 24px; display: flex; align-items: center; gap: 20px;
   box-shadow: var(--sh-sm); transition: var(--t-fast); cursor: pointer;
+  position: relative; overflow: hidden;
 }
-.area-card:hover { border-color: rgba(90,30,116,.2); box-shadow: var(--sh-md); transform: translateY(-2px); }
-.area-card.first { border-color: var(--c-green); background: linear-gradient(115deg, rgba(164,214,32,.05), #fff 42%); }
-.area-card.active-filter { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(90,30,116,.08); }
+.area-card::before { content: ''; position: absolute; inset: 0; opacity: 0; background: radial-gradient(ellipse at 20% 50%, rgba(90,30,116,.03), transparent 60%); transition: opacity .3s; }
+.area-card:hover { border-color: rgba(90,30,116,.22); box-shadow: var(--sh-md); transform: translateY(-2px); }
+.area-card:hover::before { opacity: 1; }
+.area-card.first {
+  border-color: rgba(164,214,32,.5);
+  background: linear-gradient(120deg, rgba(164,214,32,.06) 0%, #fff 50%);
+  box-shadow: 0 4px 20px rgba(164,214,32,.12), var(--sh-sm);
+}
+.area-card.active-filter { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(90,30,116,.1), var(--sh-md); }
 .area-n {
-  font-family: var(--f-head); font-size: 46px; font-weight: 800; line-height: 1;
-  min-width: 52px; text-align: center; color: transparent;
-  -webkit-text-stroke: 1.6px rgba(90,30,116,.28);
+  font-family: var(--f-head); font-size: 56px; font-weight: 900; line-height: 1;
+  min-width: 58px; text-align: center;
+  color: rgba(90,30,116,.07);
+  -webkit-text-stroke: 1.5px rgba(90,30,116,.18);
+  flex-shrink: 0;
+  letter-spacing: -2px;
 }
-.area-card.first .area-n { -webkit-text-stroke-color: rgba(123,175,16,.55); }
+.area-card.first .area-n { color: rgba(123,175,16,.08); -webkit-text-stroke-color: rgba(123,175,16,.4); }
 .area-info { flex: 1; min-width: 0; }
-.area-name { font-family: var(--f-head); font-size: 20px; font-weight: 800; color: var(--c-deep); display: flex; align-items: center; gap: 11px; flex-wrap: wrap; margin-bottom: 4px; letter-spacing: -.3px; }
-.area-desc { font-size: 12.5px; color: var(--c-muted); margin-bottom: 13px; }
-.area-chips { display: flex; gap: 9px; flex-wrap: wrap; }
-.achip { display: flex; align-items: center; gap: 8px; padding: 7px 13px; background: var(--c-bg); border: 1px solid var(--c-border); border-radius: var(--r-sm); }
+.area-name { font-family: var(--f-head); font-size: 21px; font-weight: 800; color: var(--c-deep); display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 3px; letter-spacing: -.4px; }
+.area-tagline { font-size: 12px; color: var(--c-muted); margin-bottom: 14px; line-height: 1.4; }
+.area-chips { display: flex; gap: 8px; flex-wrap: wrap; }
+.achip {
+  display: flex; align-items: center; gap: 7px; padding: 8px 14px;
+  background: #fff; border: 1px solid rgba(90,30,116,.1);
+  border-radius: 11px; box-shadow: 0 1px 4px rgba(46,20,56,.05);
+  transition: var(--t-fast);
+}
+.achip:hover { border-color: rgba(90,30,116,.25); box-shadow: 0 3px 10px rgba(46,20,56,.08); }
 .achip svg { width: 15px; height: 15px; stroke: var(--c-primary); fill: none; stroke-width: 2; flex-shrink: 0; }
-.achip-v { font-family: var(--f-head); font-size: 14.5px; font-weight: 800; color: var(--c-primary); line-height: 1.1; }
-.achip-l { font-size: 9.5px; color: var(--c-muted); }
-.area-share { text-align: right; flex-shrink: 0; }
-.area-share-l { font-size: 10px; color: var(--c-muted); margin-bottom: 7px; }
-.share-dots { display: flex; gap: 2px; justify-content: flex-end; margin-bottom: 5px; }
-.sdot { width: 16px; height: 8px; border-radius: 3px; background: var(--c-light); }
-.sdot.on { background: var(--c-primary); }
-.area-card.first .sdot.on { background: var(--c-green-dk); }
-.area-share-p { font-family: var(--f-head); font-size: 12.5px; font-weight: 700; color: var(--c-primary); }
-.area-mini { width: 74px; height: 58px; flex-shrink: 0; border-radius: 10px; background: var(--c-bg); border: 1px solid var(--c-border); }
+.area-card.first .achip svg { stroke: var(--c-green-dk); }
+.achip-v { font-family: var(--f-head); font-size: 15px; font-weight: 800; color: var(--c-primary); line-height: 1; }
+.area-card.first .achip-v { color: var(--c-green-dk); }
+.achip-l { font-size: 9px; color: var(--c-muted); margin-top: 1px; }
+.area-side { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; flex-shrink: 0; }
+.area-share { text-align: right; }
+.area-share-l { font-size: 9.5px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; color: var(--c-muted); margin-bottom: 6px; }
+.share-bar-track { width: 88px; height: 6px; background: var(--c-light); border-radius: 3px; overflow: hidden; margin-bottom: 5px; }
+.share-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(to right, var(--c-sec), var(--c-primary)); transition: width .6s cubic-bezier(.4,0,.2,1); }
+.area-card.first .share-bar-fill { background: linear-gradient(to right, #8FD11F, var(--c-green-dk)); }
+.area-share-p { font-family: var(--f-head); font-size: 13px; font-weight: 700; color: var(--c-primary); }
+.area-card.first .area-share-p { color: var(--c-green-dk); }
+.area-mini { width: 74px; height: 58px; flex-shrink: 0; border-radius: 12px; background: linear-gradient(145deg, rgba(90,30,116,.04), rgba(164,214,32,.06)); border: 1px solid var(--c-border); }
 
 .side-col { display: flex; flex-direction: column; gap: 18px; position: sticky; top: calc(var(--header-h) + 20px); }
 .card {
@@ -1399,28 +1419,30 @@ function renderAreas(list) {
 
   el.innerHTML = ag.length ? ag.map((a, i) => {
     const share = Math.round(a.n / total * 100);
-    const onDots = Math.max(1, Math.round(a.n / max * 7));
-    const dots = Array.from({ length: 7 }, (_, d) => `<i class="sdot${d < onDots ? ' on' : ''}"></i>`).join('');
+    const barPct = Math.max(4, Math.round(a.n / max * 100));
     const sel = S.filters.area === a.nome;
     const ico = p => `<svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const tagline = i === 0 ? 'Maior densidade de estabelecimentos' : `${share}% dos locais mapeados`;
     return `
     <article class="area-card${i === 0 ? ' first' : ''}${sel ? ' active-filter' : ''}" onclick="toggleArea('${esc(a.nome)}')" title="Filtrar por ${esc(a.nome)}">
       <div class="area-n">${i+1}</div>
       <div class="area-info">
         <h3 class="area-name">${esc(a.nome)}${i === 0 ? '<span class="badge badge-green"><svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;display:inline-block;vertical-align:middle;margin-right:3px"><path d="M2 4l4 8 6-5 6 5 4-8"/><line x1="2" y1="20" x2="22" y2="20"/></svg>Maior concentração</span>' : ''}</h3>
-        <div class="area-desc">${nf(a.n)} de ${nf(total)} estabelecimentos encontrados nesta área</div>
+        <div class="area-tagline">${tagline}</div>
         <div class="area-chips">
-          <div class="achip">${ico('<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>')}<div><div class="achip-v">${nf(a.n)}</div><div class="achip-l">estabelecimentos</div></div></div>
-          <div class="achip">${ico('<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>')}<div><div class="achip-v">${a.rating > 0 ? dec(a.rating, 2) : '—'}</div><div class="achip-l">nota média</div></div></div>
-          <div class="achip">${ico('<polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>')}<div><div class="achip-v">${nf(a.ocorrencias)}</div><div class="achip-l">ocorrências de busca</div></div></div>
+          <div class="achip">${ico('<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>')}<div><div class="achip-v">${nf(a.n)}</div><div class="achip-l">locais</div></div></div>
+          <div class="achip">${ico('<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>')}<div><div class="achip-v">${a.rating > 0 ? dec(a.rating, 2) : '—'}</div><div class="achip-l">nota</div></div></div>
+          <div class="achip">${ico('<circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>')}<div><div class="achip-v">${nf(a.ocorrencias)}</div><div class="achip-l">buscas</div></div></div>
         </div>
       </div>
-      <div class="area-share">
-        <div class="area-share-l">Volume de buscas</div>
-        <div class="share-dots">${dots}</div>
-        <div class="area-share-p">${share}%</div>
+      <div class="area-side">
+        <div class="area-share">
+          <div class="area-share-l">Volume</div>
+          <div class="share-bar-track"><div class="share-bar-fill" style="width:${barPct}%"></div></div>
+          <div class="area-share-p">${share}%</div>
+        </div>
+        ${miniMapSvg(a.nome, list)}
       </div>
-      ${miniMapSvg(a.nome, list)}
     </article>`;
   }).join('') : `<div class="card" style="text-align:center;color:var(--c-muted);font-size:13px">Nenhuma área corresponde aos filtros.</div>`;
 
