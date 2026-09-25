@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-  <defs>
-    <radialGradient id="fv-b" cx="0.36" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#9657AB"/>
-      <stop offset=".5" stop-color="#5E2D73"/>
-      <stop offset="1" stop-color="#2E1638"/>
-    </radialGradient>
-  </defs>
-  <path d="M24 45.6C18.8 39.8 8.2 30.4 8.2 19a15.8 15.8 0 0 1 31.6 0c0 11.4-10.6 20.8-15.8 26.6z" fill="url(#fv-b)" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
-  <path d="M12.6 21.6c3-3.6 6-4 8.9-.8s5.9 2.8 8.9-.8c1.7-2 3.3-2.6 4.9-2.1" stroke="#A2CC24" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <rect width="48" height="48" rx="11" fill="#5A1E74"/>
+  <circle cx="24" cy="25.5" r="9.5" fill="#FAF7FB"/>
+  <circle cx="24" cy="26.4" r="6.8" fill="#2E1438"/>
+  <circle cx="21.4" cy="23.9" r="2" fill="#A4D620"/>
+  <path d="M24 15.6c-1.5-3.1-4.5-4.8-7.8-4.7.6 3.3 3 5.8 6.2 6.5Z" fill="#A4D620"/>
+  <path d="M24 15.6c1.5-3.1 4.5-4.8 7.8-4.7-.6 3.3-3 5.8-6.2 6.5Z" fill="#7BAF10"/>
 </svg>

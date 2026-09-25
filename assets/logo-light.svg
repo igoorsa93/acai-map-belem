@@ -1,14 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212 48" fill="none" role="img" aria-label="Açaí Map — Belém / PA">
-  <defs>
-    <radialGradient id="ll-b" cx="0.36" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#9657AB"/>
-      <stop offset=".5" stop-color="#5E2D73"/>
-      <stop offset="1" stop-color="#2E1638"/>
-    </radialGradient>
-  </defs>
-  <path d="M24 45C19 39.4 9 30.2 9 19a15 15 0 0 1 30 0c0 11.2-10 20.4-15 26z" fill="url(#ll-b)" stroke="#fff" stroke-opacity=".9" stroke-width="1.5" stroke-linejoin="round"/>
-  <path d="M12.8 21.4c2.9-3.5 5.8-3.9 8.6-.8s5.8 2.7 8.6-.8c1.7-2 3.2-2.6 4.8-2.1" stroke="#A2CC24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="18.3" cy="12.6" r="2.6" fill="#fff" fill-opacity=".32"/>
-  <text x="54" y="25.5" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="800" font-size="19" letter-spacing="1" fill="#FFFFFF">AÇAÍ MAP</text>
-  <text x="55" y="39.5" font-family="Inter, 'Segoe UI', Arial, sans-serif" font-weight="600" font-size="9" letter-spacing="3.2" fill="#FFFFFF" fill-opacity=".6">BELÉM / PA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 56" width="300" height="56" role="img" aria-label="Açaí Map · Belém">
+  <g transform="translate(4,4)">
+    <path d="M22 0c7.594 0 13.75 5.951 13.75 13.292 0 9.075-9.497 19.268-12.852 22.605a1.283 1.283 0 0 1-1.796 0C17.747 32.56 8.25 22.367 8.25 13.292 8.25 5.951 14.406 0 22 0Z" fill="#FFFFFF"/>
+    <circle cx="22" cy="13.3" r="6.6" fill="#5A1E74"/>
+    <circle cx="22" cy="14.1" r="4.7" fill="#2E1438"/>
+    <circle cx="20.3" cy="12.4" r="1.4" fill="#A4D620"/>
+    <path d="M22 6.8c-1.1-2.3-3.3-3.6-5.8-3.5.5 2.5 2.2 4.3 4.6 4.9Z" fill="#A4D620"/>
+    <path d="M22 6.8c1.1-2.3 3.3-3.6 5.8-3.5-.5 2.5-2.2 4.3-4.6 4.9Z" fill="#7BAF10"/>
+  </g>
+  <text x="52" y="27" font-family="Poppins, 'Segoe UI', sans-serif" font-size="18" font-weight="800" fill="#FFFFFF" letter-spacing="-0.3">AÇAÍ MAP · BELÉM</text>
+  <text x="53" y="41" font-family="Inter, 'Segoe UI', sans-serif" font-size="8.5" font-weight="500" fill="rgba(255,255,255,.72)" letter-spacing="1.6">SABORES QUE CONECTAM BELÉM</text>
 </svg>

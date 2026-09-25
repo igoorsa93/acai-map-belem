@@ -1,12 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" role="img" aria-label="Açaí Map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Açaí Map">
   <defs>
-    <radialGradient id="am-b" cx="0.36" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#9657AB"/>
-      <stop offset=".5" stop-color="#5E2D73"/>
-      <stop offset="1" stop-color="#2E1638"/>
-    </radialGradient>
+    <linearGradient id="lmBerry" x1="12" y1="14" x2="36" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7A3C8C"/>
+      <stop offset="1" stop-color="#2E1438"/>
+    </linearGradient>
   </defs>
-  <path d="M24 45C19 39.4 9 30.2 9 19a15 15 0 0 1 30 0c0 11.2-10 20.4-15 26z" fill="url(#am-b)"/>
-  <path d="M12.8 21.4c2.9-3.5 5.8-3.9 8.6-.8s5.8 2.7 8.6-.8c1.7-2 3.2-2.6 4.8-2.1" stroke="#A2CC24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="18.3" cy="12.6" r="2.6" fill="#fff" fill-opacity=".32"/>
+  <!-- pin de localizacao -->
+  <path d="M24 4c8.284 0 15 6.492 15 14.5 0 9.9-10.36 21.02-14.02 24.66a1.4 1.4 0 0 1-1.96 0C19.36 39.52 9 28.4 9 18.5 9 10.492 15.716 4 24 4Z" fill="url(#lmBerry)"/>
+  <!-- fruto do acai -->
+  <circle cx="24" cy="18.5" r="7.2" fill="#FAF7FB"/>
+  <circle cx="24" cy="19.4" r="5.1" fill="#5A1E74"/>
+  <circle cx="22.1" cy="17.6" r="1.5" fill="#A4D620" opacity=".85"/>
+  <!-- folhas -->
+  <path d="M24 11.4c-1.2-2.5-3.6-3.9-6.3-3.8.5 2.7 2.4 4.7 5 5.3Z" fill="#A4D620"/>
+  <path d="M24 11.4c1.2-2.5 3.6-3.9 6.3-3.8-.5 2.7-2.4 4.7-5 5.3Z" fill="#7BAF10"/>
 </svg>
