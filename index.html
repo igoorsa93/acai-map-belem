@@ -174,15 +174,13 @@ svg { display: block; }
 .est-card:hover { border-color: rgba(90,30,116,.22); box-shadow: var(--sh-md); transform: translateY(-2px); }
 .est-card.selected { border-color: var(--c-primary); box-shadow: 0 0 0 3px rgba(90,30,116,.09), var(--sh-md); }
 
-.est-top { display: flex; align-items: flex-start; gap: 13px; }
-.est-thumb {
-  width: 62px; height: 62px; border-radius: 15px; flex-shrink: 0;
-  display: flex; align-items: center; justify-content: center; font-size: 25px;
-  background: linear-gradient(140deg, var(--c-sec), var(--c-deep));
-  box-shadow: 0 4px 14px rgba(46,20,56,.2); transition: transform var(--t-fast);
+.est-top { display: flex; align-items: flex-start; gap: 14px; }
+.est-photo {
+  width: 104px; height: 104px; border-radius: 14px; flex-shrink: 0;
+  object-fit: cover; display: block; background: var(--c-light);
+  box-shadow: 0 4px 14px rgba(46,20,56,.16); transition: transform var(--t-fast);
 }
-.est-card:hover .est-thumb { transform: scale(1.06); }
-.est-thumb.top { background: linear-gradient(140deg, #B9E83A, var(--c-green-dk)); color: var(--c-deep); }
+.est-card:hover .est-photo { transform: scale(1.04); }
 .est-body { flex: 1; min-width: 0; }
 .est-name-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 3px; }
 .est-name { font-family: var(--f-head); font-size: 14px; font-weight: 700; color: var(--c-deep); line-height: 1.3; flex: 1; min-width: 0; }
@@ -200,8 +198,18 @@ svg { display: block; }
 .est-rating span { color: var(--c-muted); font-size: 12px; }
 .est-norating { margin: 9px 0 0; font-size: 12px; color: var(--c-muted); font-style: italic; }
 
-.est-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
-.tag { font-size: 10.5px; padding: 4px 9px; border-radius: 7px; background: var(--c-bg); color: var(--c-muted); border: 1px solid var(--c-border); }
+.est-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+.tag {
+  font-size: 11px; font-weight: 500; padding: 5px 11px; border-radius: var(--r-pill);
+  background: rgba(122,60,140,.09); color: var(--c-primary); border: none;
+  max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.est-addr {
+  font-size: 12px; color: var(--c-muted); line-height: 1.45; margin-top: 11px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.fotos-nota { font-size: 10.5px; line-height: 1.45; color: var(--c-muted); padding: 0 24px 12px; }
+.fotos-nota a { color: var(--c-sec); text-decoration: underline; }
 .est-actions { display: flex; gap: 8px; margin-top: 12px; }
 .btn {
   flex: 1; padding: 9px 10px; border-radius: 11px; font-family: var(--f-head);
@@ -574,6 +582,10 @@ svg { display: block; }
         </select>
       </span>
     </div>
+    <p class="fotos-nota">
+      Fotos ilustrativas de açaí, do <a href="https://commons.wikimedia.org/wiki/Category:A%C3%A7a%C3%AD" target="_blank" rel="noopener">Wikimedia Commons</a> (CC).
+      Não são imagens dos estabelecimentos.
+    </p>
     <div class="est-list" id="est-list"></div>
   </div>
 
@@ -837,6 +849,24 @@ const tokens = q => norm(q).split(/\s+/).filter(Boolean);
 // todas as palavras precisam aparecer, em qualquer ordem
 const matches = (hay, toks) => toks.every(t => hay.includes(t));
 const haystack = e => norm(`${e.nome} ${e.bairro} ${e.categoria} ${e.endereco} ${e.tipo}`);
+
+// Fotos ilustrativas de açaí (Wikimedia Commons). NÃO são imagens dos estabelecimentos:
+// a base não possui fotos próprias. Atribuídas de forma determinística só para ilustrar o card.
+const FOTOS = [
+  ['acai-01.jpg', 'Marcuskuhl · CC BY-SA 4.0'],
+  ['acai-02.jpg', 'Marcuskuhl · CC BY-SA 4.0'],
+  ['acai-03.jpg', 'Marcuskuhl · CC BY-SA 4.0'],
+  ['acai-04.jpg', 'Marcuskuhl · CC BY-SA 4.0'],
+  ['acai-05.jpg', 'Gervásio Baptista/ABr · CC BY 3.0 BR'],
+  ['acai-06.jpg', 'Túllio F · CC BY-SA 4.0'],
+  ['acai-07.jpg', 'Olga Kreglicka · CC BY-SA 3.0'],
+  ['acai-08.jpg', 'Joe Crawford · CC BY 2.0'],
+];
+function fotoDe(id) {
+  let h = 0;
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+  return FOTOS[h % FOTOS.length];
+}
 const esc = s => (s ?? '').toString().replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
 function haversine(a, b, c, d) {
@@ -1154,31 +1184,34 @@ function renderList(list) {
 
   el.innerHTML = list.slice(0, 60).map(e => {
     const top = e.rating >= 4.7 && e.reviews >= 50;
-    const cat = e.categoria && e.categoria !== 'Não informado' ? e.categoria : 'Categoria não informada';
+    const cat = e.categoria && e.categoria !== 'Não informado' ? e.categoria : '';
     const termo = (e.termos || '').split('|')[0].trim();
+    const [arq, credito] = fotoDe(e.place_id);
     return `
     <article class="est-card" data-id="${esc(e.place_id)}" onclick="selectById('${esc(e.place_id)}',false)">
       <div class="est-top">
-        <div class="est-thumb${top ? ' top' : ''}">${top ? '★' : tipoEmoji(e.tipo)}</div>
+        <img class="est-photo" src="assets/fotos/${arq}" loading="lazy"
+             alt="Foto ilustrativa de açaí — não é imagem deste estabelecimento"
+             title="Imagem ilustrativa · ${esc(credito)}">
         <div class="est-body">
           <div class="est-name-row">
             <h3 class="est-name">${esc(e.nome)}</h3>
             <span class="badge ${top ? 'badge-green' : 'badge-purple'}">${top ? '★ Destaque' : esc(e.tipo.split(' ')[0])}</span>
           </div>
-          <div class="est-cat">${esc(cat)}</div>
           <div class="est-area">
             <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             ${esc(e.bairro)}
           </div>
+          ${e.rating > 0
+            ? `<div class="est-rating"><span class="star">★</span><b>${dec(e.rating)}</b><span>(${nf(e.reviews)} avaliações)</span></div>`
+            : `<div class="est-norating">Sem avaliação registrada</div>`}
+          <div class="est-tags">
+            ${cat ? `<span class="tag">${esc(cat)}</span>` : ''}
+            ${termo ? `<span class="tag">${esc(termo)}</span>` : ''}
+          </div>
         </div>
       </div>
-      ${e.rating > 0
-        ? `<div class="est-rating"><span class="star">★</span><b>${dec(e.rating)}</b><span>(${nf(e.reviews)} avaliações)</span></div>`
-        : `<div class="est-norating">Sem avaliação registrada</div>`}
-      <div class="est-tags">
-        ${termo ? `<span class="tag">${esc(termo)}</span>` : ''}
-        ${e.ocorrencias > 1 ? `<span class="tag">${nf(e.ocorrencias)} consultas</span>` : ''}
-      </div>
+      <div class="est-addr">${esc(e.endereco || 'Endereço não disponível')}</div>
       <div class="est-actions">
         <button class="btn btn-outline" onclick="event.stopPropagation();goDetail('${esc(e.place_id)}')">Ver detalhes</button>
         <a class="btn btn-primary" href="${esc(e.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
