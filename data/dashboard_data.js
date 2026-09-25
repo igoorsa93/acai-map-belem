@@ -3,11 +3,11 @@
 window.ACAI_DATA = {
   "kpis": {
     "total_estabelecimentos": 488,
-    "total_ocorrencias": 1812,
+    "total_ocorrencias": 1818,
     "total_consultas": 60,
     "total_areas": 36,
     "avg_rating": 4.62,
-    "total_reviews": 33082,
+    "total_reviews": 33219,
     "rodada": 2,
     "data_coleta": "Setembro de 2026"
   },
@@ -9283,15 +9283,105 @@ window.ACAI_DATA = {
       "link": "https://www.google.com/maps/place/?q=place_id:ChIJHfTow3RnpJIR6rrTxkKW028",
       "termos": "loja de acai",
       "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJ5e2JaXxhpJIRgRerI_aXpXI",
+      "nome": "Sucos Naturais Jane",
+      "endereco": "Sucos Naturais Jane - Passagem Sexta Linha, do - número 2002 - Tenoné, Belém - PA, 66820-170",
+      "categoria": "Loja de sucos",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.315411,
+      "lon": -48.436265,
+      "rating": 5.0,
+      "reviews": 3,
+      "ocorrencias": 1,
+      "bairro": "Tenoné",
+      "termos_encontrado": "polpa de acai",
+      "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJMy7QbE1hpJIRNHtaCWffb5o",
+      "nome": "Barraca do Loro - Açaí e Peixe Frito",
+      "endereco": "Feira do Ver o Peso Barraca 11 - Tv. L Doze - Coqueiro, Belém - PA, 66013-030",
+      "categoria": "Restaurante",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.350634,
+      "lon": -48.438936,
+      "rating": 4.9,
+      "reviews": 9,
+      "ocorrencias": 1,
+      "bairro": "Coqueiro",
+      "termos_encontrado": "acai grosso",
+      "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJQa1UVPVgpJIRGCDYu89BwG0",
+      "nome": "Açaí Do Mario",
+      "endereco": "Açaí Do Mario - Quarenta Horas, Ananindeua - PA",
+      "categoria": "Restaurante",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.341155,
+      "lon": -48.418958,
+      "rating": 5.0,
+      "reviews": 6,
+      "ocorrencias": 1,
+      "bairro": "Ananindeua",
+      "termos_encontrado": "acai batido",
+      "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJgfnDQQBhpJIRiSZJ8H8z4pU",
+      "nome": "Açaí gold",
+      "endereco": "Açaí gold - R. dos Cabanos, 324 - Quarenta Horas, Ananindeua - PA, 67140-680",
+      "categoria": "Restaurante",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.349439,
+      "lon": -48.412958,
+      "rating": 4.0,
+      "reviews": 4,
+      "ocorrencias": 1,
+      "bairro": "Ananindeua",
+      "termos_encontrado": "acai grosso",
+      "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJ19wWYwBhpJIREBtslJ-O0h4",
+      "nome": "Mania do Açaí",
+      "endereco": "Mania do Açaí - R. Providência, 281 - Coqueiro, Ananindeua - PA, 67113-374",
+      "categoria": "Loja de açaí",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.351381,
+      "lon": -48.410619,
+      "rating": null,
+      "reviews": null,
+      "ocorrencias": 1,
+      "bairro": "Ananindeua",
+      "termos_encontrado": "acai grosso",
+      "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJ-TdNBsplpJIRdkBUegzc7xY",
+      "nome": "Restaurante Na Panela de Barro",
+      "endereco": "Restaurante Na Panela de Barro - R. Siqueira Mendes, 311 - Cruzeiro, Belém - PA, 66810-050",
+      "categoria": "Restaurante",
+      "tipo": "Acai + outro segmento",
+      "lat": -1.29784,
+      "lon": -48.489636,
+      "rating": 4.2,
+      "reviews": 115,
+      "ocorrencias": 1,
+      "bairro": "Icoaraci",
+      "termos_encontrado": "acai grosso",
+      "data_coleta": "2026-09-25"
     }
   ],
   "bairros": [
     {
       "nome": "Ananindeua",
-      "count": 114,
-      "avg_rating": 4.65,
-      "total_reviews": 7365,
-      "ocorrencias": 292
+      "count": 117,
+      "avg_rating": 4.64,
+      "total_reviews": 7375,
+      "ocorrencias": 295
     },
     {
       "nome": "Pratinha",
@@ -9308,6 +9398,13 @@ window.ACAI_DATA = {
       "ocorrencias": 200
     },
     {
+      "nome": "Icoaraci",
+      "count": 41,
+      "avg_rating": 4.59,
+      "total_reviews": 8567,
+      "ocorrencias": 95
+    },
+    {
       "nome": "Tapanã",
       "count": 40,
       "avg_rating": 4.58,
@@ -9315,18 +9412,11 @@ window.ACAI_DATA = {
       "ocorrencias": 200
     },
     {
-      "nome": "Icoaraci",
-      "count": 40,
-      "avg_rating": 4.6,
-      "total_reviews": 8452,
-      "ocorrencias": 94
-    },
-    {
       "nome": "Coqueiro",
-      "count": 37,
-      "avg_rating": 4.29,
-      "total_reviews": 1046,
-      "ocorrencias": 167
+      "count": 38,
+      "avg_rating": 4.31,
+      "total_reviews": 1055,
+      "ocorrencias": 168
     },
     {
       "nome": "Mangueirão",
@@ -9351,10 +9441,10 @@ window.ACAI_DATA = {
     },
     {
       "nome": "Tenoné",
-      "count": 20,
-      "avg_rating": 4.69,
-      "total_reviews": 101,
-      "ocorrencias": 49
+      "count": 21,
+      "avg_rating": 4.72,
+      "total_reviews": 104,
+      "ocorrencias": 50
     },
     {
       "nome": "Parque Guajará",
@@ -9551,12 +9641,16 @@ window.ACAI_DATA = {
     {
       "tipo": "Outro estabelecimento",
       "count": 25
+    },
+    {
+      "tipo": "Acai + outro segmento",
+      "count": 6
     }
   ],
   "categorias": [
     {
       "categoria": "Restaurante",
-      "count": 130
+      "count": 134
     },
     {
       "categoria": "Açaíteria / Loja de Açaí",
@@ -9595,11 +9689,11 @@ window.ACAI_DATA = {
       "count": 11
     },
     {
-      "categoria": "Fabricante de Alimentos",
-      "count": 9
+      "categoria": "Loja de açaí",
+      "count": 10
     },
     {
-      "categoria": "Loja de açaí",
+      "categoria": "Fabricante de Alimentos",
       "count": 9
     },
     {
