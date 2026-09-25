@@ -430,8 +430,8 @@ svg { display: block; }
 .achip-l { font-size: 9.5px; color: var(--c-muted); }
 .area-share { text-align: right; flex-shrink: 0; }
 .area-share-l { font-size: 10px; color: var(--c-muted); margin-bottom: 7px; }
-.share-dots { display: flex; gap: 3px; justify-content: flex-end; margin-bottom: 5px; }
-.sdot { width: 11px; height: 11px; border-radius: 3px; background: var(--c-light); }
+.share-dots { display: flex; gap: 2px; justify-content: flex-end; margin-bottom: 5px; }
+.sdot { width: 16px; height: 8px; border-radius: 3px; background: var(--c-light); }
 .sdot.on { background: var(--c-primary); }
 .area-card.first .sdot.on { background: var(--c-green-dk); }
 .area-share-p { font-family: var(--f-head); font-size: 12.5px; font-weight: 700; color: var(--c-primary); }
@@ -614,7 +614,7 @@ svg { display: block; }
   <div class="search-wrap">
     <div class="search-bar">
       <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="header-search" placeholder="Buscar estabelecimento, área, categoria..." autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggest">
+      <input id="header-search" placeholder="Buscar bairro, local ou açaí..." autocomplete="off" role="combobox" aria-expanded="false" aria-controls="suggest">
       <span class="kbd">⌘K</span>
     </div>
     <div class="suggest" id="suggest" role="listbox"></div>
@@ -781,9 +781,9 @@ svg { display: block; }
 <section id="page-areas" class="page">
   <div class="pg-head">
     <div>
-      <div class="eyebrow">Onde o açaí foi mapeado</div>
-      <h1>As 10 áreas pesquisadas</h1>
-      <p>Veja como os estabelecimentos encontrados estão distribuídos pela área estudada.</p>
+      <div class="eyebrow" style="color:var(--c-green-dk);font-weight:700;">ONDE O AÇAÍ PULSA MAIS FORTE?</div>
+      <h1>Ranking de Bairros</h1>
+      <p>Distribuição e concentração dos estabelecimentos de açaí mapeados em Belém do Pará.</p>
     </div>
     <div class="pill-static">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -795,13 +795,13 @@ svg { display: block; }
     <div class="areas-list" id="areas-list"></div>
     <div class="side-col">
       <div class="card">
-        <h3>Mapa de concentração</h3>
-        <p>Estabelecimentos encontrados por área</p>
+        <h3>Mapa de concentração de estabelecimentos</h3>
+        <p>Estabelecimentos encontrados por bairro</p>
         <div id="map-areas"></div>
         <div class="conc-legend"><span>Menor</span><div class="legend-grad" style="width:96px"></div><span>Maior</span></div>
       </div>
       <div class="card">
-        <h3>Nota média por área</h3>
+        <h3>Nota média por bairro</h3>
         <p id="nota-sub">Comparativo entre as áreas com avaliação</p>
         <div class="chart-wrap"><canvas id="chart-nota"></canvas></div>
       </div>
@@ -1407,7 +1407,7 @@ function renderAreas(list) {
     <article class="area-card${i === 0 ? ' first' : ''}${sel ? ' active-filter' : ''}" onclick="toggleArea('${esc(a.nome)}')" title="Filtrar por ${esc(a.nome)}">
       <div class="area-n">${i+1}</div>
       <div class="area-info">
-        <h3 class="area-name">${esc(a.nome)}${i === 0 ? '<span class="badge badge-green">Maior presença na base</span>' : ''}</h3>
+        <h3 class="area-name">${esc(a.nome)}${i === 0 ? '<span class="badge badge-green"><svg viewBox="0 0 24 24" style="width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.5;display:inline-block;vertical-align:middle;margin-right:3px"><path d="M2 4l4 8 6-5 6 5 4-8"/><line x1="2" y1="20" x2="22" y2="20"/></svg>Maior concentração</span>' : ''}</h3>
         <div class="area-desc">${nf(a.n)} de ${nf(total)} estabelecimentos encontrados nesta área</div>
         <div class="area-chips">
           <div class="achip">${ico('<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>')}<div><div class="achip-v">${nf(a.n)}</div><div class="achip-l">estabelecimentos</div></div></div>
@@ -1416,7 +1416,7 @@ function renderAreas(list) {
         </div>
       </div>
       <div class="area-share">
-        <div class="area-share-l">Participação na base</div>
+        <div class="area-share-l">Volume de buscas</div>
         <div class="share-dots">${dots}</div>
         <div class="area-share-p">${share}%</div>
       </div>
