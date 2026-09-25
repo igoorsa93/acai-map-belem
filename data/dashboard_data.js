@@ -9284,5 +9284,635 @@ window.ACAI_DATA = {
       "termos": "loja de acai",
       "data_coleta": "2026-09-25"
     }
+  ],
+  "bairros": [
+    {
+      "nome": "Benguí",
+      "count": 25,
+      "avg_rating": 4.47,
+      "total_reviews": 244,
+      "ocorrencias": 58
+    },
+    {
+      "nome": "Cabanagem",
+      "count": 26,
+      "avg_rating": 4.66,
+      "total_reviews": 4907,
+      "ocorrencias": 35
+    },
+    {
+      "nome": "Coqueiro",
+      "count": 48,
+      "avg_rating": 4.67,
+      "total_reviews": 3415,
+      "ocorrencias": 134
+    },
+    {
+      "nome": "Icoaraci",
+      "count": 66,
+      "avg_rating": 4.74,
+      "total_reviews": 1283,
+      "ocorrencias": 76
+    },
+    {
+      "nome": "Parque Guajará",
+      "count": 38,
+      "avg_rating": 4.56,
+      "total_reviews": 473,
+      "ocorrencias": 55
+    },
+    {
+      "nome": "Parque Verde",
+      "count": 98,
+      "avg_rating": 4.62,
+      "total_reviews": 20658,
+      "ocorrencias": 825
+    },
+    {
+      "nome": "Pratinha",
+      "count": 48,
+      "avg_rating": 4.69,
+      "total_reviews": 144,
+      "ocorrencias": 149
+    },
+    {
+      "nome": "Tapajós",
+      "count": 25,
+      "avg_rating": 4.67,
+      "total_reviews": 680,
+      "ocorrencias": 163
+    },
+    {
+      "nome": "Tenoné",
+      "count": 74,
+      "avg_rating": 4.6,
+      "total_reviews": 596,
+      "ocorrencias": 234
+    },
+    {
+      "nome": "Una",
+      "count": 40,
+      "avg_rating": 4.48,
+      "total_reviews": 682,
+      "ocorrencias": 83
+    }
+  ],
+  "tipos": [
+    {
+      "tipo": "Especializado em açaí",
+      "count": 242
+    },
+    {
+      "tipo": "Açaí + outro segmento",
+      "count": 221
+    },
+    {
+      "tipo": "Outro estabelecimento",
+      "count": 25
+    }
+  ],
+  "categorias": [
+    {
+      "categoria": "Restaurante",
+      "count": 130
+    },
+    {
+      "categoria": "Açaíteria / Loja de Açaí",
+      "count": 120
+    },
+    {
+      "categoria": "Açaíteria / Sorveteria",
+      "count": 49
+    },
+    {
+      "categoria": "Entrega de Refeições / Delivery",
+      "count": 19
+    },
+    {
+      "categoria": "Fornecedor / Distribuidor de Alimentos",
+      "count": 19
+    },
+    {
+      "categoria": "Não informado",
+      "count": 16
+    },
+    {
+      "categoria": "Loja de Produtos Naturais / Orgânicos",
+      "count": 16
+    },
+    {
+      "categoria": "Lanchonete",
+      "count": 15
+    },
+    {
+      "categoria": "Outro (Não Alimentício)",
+      "count": 14
+    },
+    {
+      "categoria": "Loja / Comércio",
+      "count": 11
+    },
+    {
+      "categoria": "Fabricante de Alimentos",
+      "count": 9
+    },
+    {
+      "categoria": "Loja de açaí",
+      "count": 9
+    },
+    {
+      "categoria": "Mercado / Mercearia",
+      "count": 8
+    },
+    {
+      "categoria": "Lanchonete / Sucos e Vitaminas",
+      "count": 8
+    },
+    {
+      "categoria": "Praça de Alimentação / Shopping",
+      "count": 6
+    },
+    {
+      "categoria": "Restaurante Saudável",
+      "count": 5
+    },
+    {
+      "categoria": "Açaíteria / Doceria",
+      "count": 4
+    },
+    {
+      "categoria": "Fornecedor de produtos alimentícios",
+      "count": 3
+    },
+    {
+      "categoria": "Atacado de Alimentos",
+      "count": 2
+    },
+    {
+      "categoria": "Bar",
+      "count": 2
+    }
+  ],
+  "top_recorrencia": [
+    {
+      "place_id": "ChIJ8zrh2n5hpJIRsOGKoucm9Xs",
+      "nome": "Açaiteria e Sorveteria Ula Ula Belém",
+      "categoria": "Açaíteria / Sorveteria",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaiteria e Sorveteria Ula Ula Belém - Rod. Mário Covas - Parque Verde, Belém - PA, 67110-000",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.347333,
+      "lon": -48.451268,
+      "telefone": "91982615836",
+      "website": "http://wa.me/5591982615836",
+      "rating": 4.8,
+      "reviews": 130,
+      "ocorrencias": 28,
+      "link": "https://www.google.com/maps/place/A%C3%A7aiteria+e+Sorveteria+Ula+Ula+Bel%C3%A9m/data=!4m7!3m6!1s0x92a4617edae13af3:0x7bf526e7a28ae1b0!8m2!3d-1.3473333!4d-48.4512676!16s%2Fg%2F11l34kbvtr!19sChIJ8zrh2n5hpJIRsOGKoucm9Xs?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaíteria | açaí delivery | açaí | casa de açaí | ponto de açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJ5VmvBfhhpJIRv5WycZiqio8",
+      "nome": "ACAI DA HORA BELEM",
+      "categoria": "Restaurante",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "ACAI DA HORA BELEM - Rod. Augusto Montenegro, 8499-8357 - Parque Verde, Belém - PA, 66823-060",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.352739,
+      "lon": -48.452889,
+      "telefone": "91980176204",
+      "website": "http://instagram.com/acaidahorabelem",
+      "rating": 4.4,
+      "reviews": 349,
+      "ocorrencias": 28,
+      "link": "https://www.google.com/maps/place/ACAI+DA+HORA+BELEM/data=!4m7!3m6!1s0x92a461f805af59e5:0x8f8aaa9871b295bf!8m2!3d-1.3527386!4d-48.452889!16s%2Fg%2F11h02jsfbg!19sChIJ5VmvBfhhpJIRv5WycZiqio8?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaíteria | casa de açaí | ponto de açaí | açaí na tigela | açaí delivery | açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJH8dS98iLpJIRU-RZYsegoIw",
+      "nome": "NOSSO AÇAÍ",
+      "categoria": "Fabricante de Alimentos",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "NOSSO AÇAÍ - R. Lameira Bittencourt, 1129 - Benguí, Belém - PA, 66630-010",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.376783,
+      "lon": -48.449875,
+      "telefone": "91993528603",
+      "website": "https://www.facebook.com/NAnossoacai",
+      "rating": 4.9,
+      "reviews": 14,
+      "ocorrencias": 25,
+      "link": "https://www.google.com/maps/place/NOSSO+A%C3%87A%C3%8D/data=!4m7!3m6!1s0x92a48bc8f752c71f:0x8ca0a0c76259e453!8m2!3d-1.3767828!4d-48.4498752!16s%2Fg%2F11j0k59zcl!19sChIJH8dS98iLpJIRU-RZYsegoIw?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaíteria | açaí | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJSwYGfzJgpJIR8bj-D9zR3pk",
+      "nome": "Açaí do Cocota (Cabanagem)",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí do Cocota (Cabanagem) - R. Fé em Deus, 77b - Cabanagem, Belém - PA, 66650-111",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.363437,
+      "lon": -48.436081,
+      "telefone": "91989914356",
+      "website": "https://acaidococota.menudino.com/",
+      "rating": 4.5,
+      "reviews": 56,
+      "ocorrencias": 22,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+do+Cocota+%28Cabanagem%29/data=!4m7!3m6!1s0x92a460327f06064b:0x99ded1dc0ffeb8f1!8m2!3d-1.3634366!4d-48.4360807!16s%2Fg%2F11c5t2_pgy!19sChIJSwYGfzJgpJIR8bj-D9zR3pk?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaí | açaíteria",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJvfvweH9hpJIRtFQWFRZmU6I",
+      "nome": "PONTO DO AÇAÍ",
+      "categoria": "Fornecedor / Distribuidor de Alimentos",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "PONTO DO AÇAÍ - Rodovia do tapana, R. Beta, 1 - box 3, Belém - PA, 66823-060",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.348401,
+      "lon": -48.461619,
+      "telefone": "91981490091",
+      "website": "",
+      "rating": 1.7,
+      "reviews": 19,
+      "ocorrencias": 22,
+      "link": "https://www.google.com/maps/place/PONTO+DO+A%C3%87A%C3%8D/data=!4m7!3m6!1s0x92a4617f78f0fbbd:0xa2536616151654b4!8m2!3d-1.3484008!4d-48.4616188!16s%2Fg%2F11tcjml3y1!19sChIJvfvweH9hpJIRtFQWFRZmU6I?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "ponto de açaí | açaí delivery | açaí | açaíteria | açaí na tigela | casa de açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJNWx9WgBhpJIRRglDJqfMnk0",
+      "nome": "Açaíteria Quiosquinho Quero Mais",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaíteria Quiosquinho Quero Mais - Passagem John Engelhard, 401 - Pratinha, Belém - PA, 66816-730",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.361285,
+      "lon": -48.46998,
+      "telefone": "",
+      "website": "",
+      "rating": 5.0,
+      "reviews": 2,
+      "ocorrencias": 20,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%ADteria+Quiosquinho+Quero+Mais/data=!4m7!3m6!1s0x92a461005a7d6c35:0x4d9ecca726430946!8m2!3d-1.3612851!4d-48.4699801!16s%2Fg%2F11vxkbkbh4!19sChIJNWx9WgBhpJIRRglDJqfMnk0?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaíteria | açaí | açaí delivery",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJpSFtTZ1hpJIRtF4MKQgXwGY",
+      "nome": "AÇAÍ DE CASA",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "AÇAÍ DE CASA - R.presidente lula quadra 25 número 44 Pratinha 2, Belém - PA, 66816-214",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.363656,
+      "lon": -48.467023,
+      "telefone": "91980613621",
+      "website": "",
+      "rating": 4.9,
+      "reviews": 24,
+      "ocorrencias": 19,
+      "link": "https://www.google.com/maps/place/A%C3%87A%C3%8D+DE+CASA/data=!4m7!3m6!1s0x92a4619d4d6d21a5:0x66c01708290c5eb4!8m2!3d-1.3636556!4d-48.4670233!16s%2Fg%2F11lgd3_5v7!19sChIJpSFtTZ1hpJIRtF4MKQgXwGY?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaí | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJ40Hf54NhpJIRYOaxe5pDdqg",
+      "nome": "Açaí Bom Todo",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí Bom Todo - R. São Clemente, 807b - Tapanã, Belém - PA, 66830-720",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.352566,
+      "lon": -48.466338,
+      "telefone": "91989303903",
+      "website": "https://instagram.com/acaibomtodo?igshid=MzRlODBiNWFlZA==",
+      "rating": 4.8,
+      "reviews": 20,
+      "ocorrencias": 19,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+Bom+Todo/data=!4m7!3m6!1s0x92a46183e7df41e3:0xa876439a7bb1e660!8m2!3d-1.3525664!4d-48.4663385!16s%2Fg%2F11r4bv753t!19sChIJ40Hf54NhpJIRYOaxe5pDdqg?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaí | açaíteria",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJkfAqoZdhpJIRIGf9vYZSLKE",
+      "nome": "Açaíteria Maguari",
+      "categoria": "Açaíteria / Sorveteria",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaíteria Maguari - Av. Principal, 70 - Coqueiro, Belém - PA, 66823-072",
+      "bairro": "Tapajós",
+      "cidade": "Belém",
+      "lat": -1.331217,
+      "lon": -48.442043,
+      "telefone": "",
+      "website": "",
+      "rating": 4.7,
+      "reviews": 58,
+      "ocorrencias": 19,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%ADteria+Maguari/data=!4m7!3m6!1s0x92a46197a12af091:0xa12c5286bdfd6720!8m2!3d-1.3312171!4d-48.4420428!16s%2Fg%2F11kc3vnptp!19sChIJkfAqoZdhpJIRIGf9vYZSLKE?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaíteria | açaí | casa de açaí | ponto de açaí | açaí delivery | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJT6YylFxhpJIReZrdfWYCqPc",
+      "nome": "Casa do Açaí",
+      "categoria": "Entrega de Refeições / Delivery",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "Cordeiro de Farias - Alameda Quatro, 65 - Tapanã, Belém - PA, 66833-040",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.349413,
+      "lon": -48.463529,
+      "telefone": "91982799994",
+      "website": "https://instagram.com/casadoacai1996?igshid=6kybm4z63xiu",
+      "rating": 4.1,
+      "reviews": 68,
+      "ocorrencias": 17,
+      "link": "https://www.google.com/maps/place/Casa+do+A%C3%A7a%C3%AD/data=!4m7!3m6!1s0x92a4615c9432a64f:0xf7a802667ddd9a79!8m2!3d-1.3494127!4d-48.4635291!16s%2Fg%2F11f9xjjmfv!19sChIJT6YylFxhpJIReZrdfWYCqPc?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | açaí delivery | açaí | açaíteria | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJK26t5IJhpJIReiHhtpvPrBQ",
+      "nome": "Açaí do Pateta",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí do Pateta - Av. Principal, 74c - Coqueiro, Belém - PA, 66823-095",
+      "bairro": "Tapajós",
+      "cidade": "Belém",
+      "lat": -1.331391,
+      "lon": -48.441993,
+      "telefone": "91980890566",
+      "website": "https://menu.brendi.com.br/acai-do-pateta-coqueiro-conjunto-maguari",
+      "rating": 4.8,
+      "reviews": 133,
+      "ocorrencias": 17,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+do+Pateta/data=!4m7!3m6!1s0x92a46182e4ad6e2b:0x14accf9bb6e1217a!8m2!3d-1.3313912!4d-48.4419931!16s%2Fg%2F11v9k6lkk8!19sChIJK26t5IJhpJIReiHhtpvPrBQ?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaí | açaíteria | açaí delivery | casa de açaí | ponto de açaí | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJoz6HeF1hpJIRuBWmqwSlNA4",
+      "nome": "Cantinho do Açaí",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Cantinho do Açaí - R. Bom Sucesso, 149 - Cabanagem, Belém - PA, 66625-787",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.361552,
+      "lon": -48.439484,
+      "telefone": "",
+      "website": "",
+      "rating": 4.8,
+      "reviews": 6,
+      "ocorrencias": 16,
+      "link": "https://www.google.com/maps/place/Cantinho+do+A%C3%A7a%C3%AD/data=!4m7!3m6!1s0x92a4615d78873ea3:0xe34a504aba615b8!8m2!3d-1.361552!4d-48.439484!16s%2Fg%2F11rrc1m9x7!19sChIJoz6HeF1hpJIRuBWmqwSlNA4?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJeygJb3KKpJIRq6acHSx3peo",
+      "nome": "Bengui Açai",
+      "categoria": "Restaurante",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "Bengui Açai - Tv. São Pedro, 204 - Benguí, Belém - PA, 66630-130",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.377945,
+      "lon": -48.455509,
+      "telefone": "91989075043",
+      "website": "",
+      "rating": 4.7,
+      "reviews": 36,
+      "ocorrencias": 16,
+      "link": "https://www.google.com/maps/place/Bengui+A%C3%A7ai/data=!4m7!3m6!1s0x92a48a726f09287b:0xeaa5772c1d9ca6ab!8m2!3d-1.3779448!4d-48.4555089!16s%2Fg%2F11j4t6jz0t!19sChIJeygJb3KKpJIRq6acHSx3peo?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaí delivery | açaí | açaíteria | casa de açaí | ponto de açaí | açaí na tigela",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJ1anJ7aFhpJIR8eVd_f90FTU",
+      "nome": "Açaí DuElvis",
+      "categoria": "Restaurante Saudável",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "Açaí DuElvis - Tv. Henrique Dias, 166 - Cabanagem, Belém - PA, 66625-620",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.36776,
+      "lon": -48.435827,
+      "telefone": "91983616891",
+      "website": "https://www.instagram.com/acaiduelvis/",
+      "rating": 4.4,
+      "reviews": 35,
+      "ocorrencias": 15,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+DuElvis/data=!4m7!3m6!1s0x92a461a1edc9a9d5:0x351574fffd5de5f1!8m2!3d-1.3677604!4d-48.4358268!16s%2Fg%2F11hzd05rp7!19sChIJ1anJ7aFhpJIR8eVd_f90FTU?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaí delivery | açaí | açaí na tigela | açaíteria | casa de açaí | ponto de açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJo15sbwCLpJIR4mwfhScKYSw",
+      "nome": "Açaiteria Lá creme",
+      "categoria": "Açaíteria / Sorveteria",
+      "tipo": "Especializado em açaí",
+      "endereco": "Box 06 - Rod. Augusto Montenegro, S/N - Quadra 13 - Loja 1 - Mangueirão, Belém - PA, 66625-650",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.378183,
+      "lon": -48.438481,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 14,
+      "link": "https://www.google.com/maps/place/A%C3%A7aiteria+L%C3%A1+creme/data=!4m7!3m6!1s0x92a48b006f6c5ea3:0x2c610a27851f6ce2!8m2!3d-1.3781832!4d-48.4384813!16s%2Fg%2F11ytkzv1xs!19sChIJo15sbwCLpJIR4mwfhScKYSw?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaíteria | casa de açaí | ponto de açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJ7eiBH7hhpJIRKI5UCGh5mf8",
+      "nome": "Açaí & Açaí Frozen - Parque Shopping",
+      "categoria": "Açaíteria / Sorveteria",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí & Açaí Frozen - Parque Shopping - Rod. Augusto Montenegro, 4300 - Parque Verde, Belém - PA, 66635-110",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.370621,
+      "lon": -48.446794,
+      "telefone": "91986062348",
+      "website": "",
+      "rating": 3.8,
+      "reviews": 15,
+      "ocorrencias": 14,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+%26+A%C3%A7a%C3%AD+Frozen+-+Parque+Shopping/data=!4m7!3m6!1s0x92a461b81f81e8ed:0xff99796808548e28!8m2!3d-1.3706205!4d-48.4467944!16s%2Fg%2F11rgx33w8p!19sChIJ7eiBH7hhpJIRKI5UCGh5mf8?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "açaíteria | casa de açaí | ponto de açaí | açaí na tigela | açaí delivery | açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJvctQs2CLpJIRVg78FhtnzTY",
+      "nome": "Açaí Bem Estar7",
+      "categoria": "Fornecedor / Distribuidor de Alimentos",
+      "tipo": "Açaí + outro segmento",
+      "endereco": "Açaí Bem Estar7 - R. Roberto Regateiro, Q 21 - casa 140 - Mangueirão, Belém - PA, 66640-405",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.379847,
+      "lon": -48.435023,
+      "telefone": "91981670675",
+      "website": "",
+      "rating": 4.9,
+      "reviews": 28,
+      "ocorrencias": 14,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+Bem+Estar7/data=!4m7!3m6!1s0x92a48b60b350cbbd:0x36cd671b16fc0e56!8m2!3d-1.3798474!4d-48.4350233!16s%2Fg%2F11k0pqk38t!19sChIJvctQs2CLpJIRVg78FhtnzTY?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | açaí delivery | açaí | ponto de açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJtcXvUWBhpJIRLFoV-Mzxo_w",
+      "nome": "Açaí VIP Independência",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí VIP Independência - Av. Independência, 1124 - Cabanagem, Belém - PA, 66635-894",
+      "bairro": "Coqueiro",
+      "cidade": "Belém",
+      "lat": -1.366017,
+      "lon": -48.435292,
+      "telefone": "91985993599",
+      "website": "",
+      "rating": 4.8,
+      "reviews": 5,
+      "ocorrencias": 14,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+VIP+Independ%C3%AAncia/data=!4m7!3m6!1s0x92a4616051efc5b5:0xfca3f1ccf8155a2c!8m2!3d-1.3660169!4d-48.4352922!16s%2Fg%2F11q8srch1f!19sChIJtcXvUWBhpJIRLFoV-Mzxo_w?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJ_xW1pe9hpJIRXwXDXeKN82s",
+      "nome": "SL-Açaí",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "SL-Açaí - Estr. do Benjamin, s/n - Cabanagem, Belém - PA, 66625-410",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.362552,
+      "lon": -48.43318,
+      "telefone": "91998281960",
+      "website": "",
+      "rating": 4.9,
+      "reviews": 8,
+      "ocorrencias": 13,
+      "link": "https://www.google.com/maps/place/SL-A%C3%A7a%C3%AD/data=!4m7!3m6!1s0x92a461efa5b515ff:0x6bf38de25dc3055f!8m2!3d-1.3625517!4d-48.4331804!16s%2Fg%2F11s2q8yql3!19sChIJ_xW1pe9hpJIRXwXDXeKN82s?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "casa de açaí | ponto de açaí | açaí delivery | açaí",
+      "data_coleta": "2026-09-23"
+    },
+    {
+      "place_id": "ChIJAZJ8I-2LpJIRzt5H1xYKvYc",
+      "nome": "Açaí da Nath Mangueirão",
+      "categoria": "Açaíteria / Loja de Açaí",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí da Nath Mangueirão - Tv. Santa Rita de Cássia, 127 - Mangueirão, Belém - PA, 66630-850",
+      "bairro": "Parque Verde",
+      "cidade": "Belém",
+      "lat": -1.380459,
+      "lon": -48.448533,
+      "telefone": "91987283419",
+      "website": "",
+      "rating": 5.0,
+      "reviews": 1,
+      "ocorrencias": 13,
+      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+da+Nath+Mangueir%C3%A3o/data=!4m7!3m6!1s0x92a48bed237c9201:0x87bd0a16d747dece!8m2!3d-1.3804595!4d-48.4485329!16s%2Fg%2F11wbkhtsp0!19sChIJAZJ8I-2LpJIRzt5H1xYKvYc?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
+      "termos": "ponto de açaí | açaí delivery | casa de açaí",
+      "data_coleta": "2026-09-23"
+    }
+  ],
+  "termos": [
+    {
+      "termo": "açaí delivery",
+      "resultados": 392
+    },
+    {
+      "termo": "casa de açaí",
+      "resultados": 350
+    },
+    {
+      "termo": "ponto de açaí",
+      "resultados": 314
+    },
+    {
+      "termo": "açaí",
+      "resultados": 276
+    },
+    {
+      "termo": "açaíteria",
+      "resultados": 268
+    },
+    {
+      "termo": "açaí na tigela",
+      "resultados": 166
+    }
+  ],
+  "consultas_por_bairro": [
+    {
+      "bairro": "Parque Verde",
+      "count": 6
+    },
+    {
+      "bairro": "Tapajós",
+      "count": 6
+    },
+    {
+      "bairro": "Pratinha",
+      "count": 6
+    },
+    {
+      "bairro": "Tenoné",
+      "count": 6
+    },
+    {
+      "bairro": "Coqueiro",
+      "count": 6
+    },
+    {
+      "bairro": "Benguí",
+      "count": 6
+    },
+    {
+      "bairro": "Icoaraci",
+      "count": 6
+    },
+    {
+      "bairro": "Una",
+      "count": 6
+    },
+    {
+      "bairro": "Cabanagem",
+      "count": 6
+    },
+    {
+      "bairro": "Parque Guajará",
+      "count": 6
+    }
+  ],
+  "areas": [
+    "Benguí",
+    "Cabanagem",
+    "Coqueiro",
+    "Icoaraci",
+    "Parque Guajará",
+    "Parque Verde",
+    "Pratinha",
+    "Tapajós",
+    "Tenoné",
+    "Una"
   ]
 };
