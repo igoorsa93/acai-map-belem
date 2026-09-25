@@ -76,10 +76,16 @@ svg { display: block; }
   border-bottom: 1px solid var(--c-border);
   display: flex; align-items: center; gap: 24px; padding: 0 24px;
 }
-.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.logo img { width: 34px; height: 34px; }
-.logo-name { font-family: var(--f-head); font-size: 15px; font-weight: 800; color: var(--c-deep); letter-spacing: -.3px; line-height: 1.15; }
-.logo-sub { font-size: 9px; font-weight: 500; color: var(--c-muted); letter-spacing: 1.3px; text-transform: uppercase; }
+.logo { display: flex; align-items: center; gap: 9px; flex-shrink: 0; }
+.logo img { width: 32px; height: 32px; }
+.logo-name {
+  font-family: var(--f-head); font-size: 14px; font-weight: 800; color: #1B1626;
+  letter-spacing: -.2px; line-height: 1.2; white-space: nowrap;
+}
+.logo-sub {
+  font-family: var(--f-head); font-size: 8px; font-weight: 600; color: var(--c-sec);
+  letter-spacing: 1.15px; text-transform: uppercase; white-space: nowrap;
+}
 
 .nav { display: flex; align-items: center; gap: 2px; flex: 1; justify-content: center; }
 .nav-btn {
@@ -145,19 +151,23 @@ svg { display: block; }
   display: flex; flex-direction: column; background: var(--c-surface);
   border-right: 1px solid var(--c-border); overflow: hidden;
 }
-.exp-head { padding: 24px 24px 16px; }
+.exp-head { padding: 22px 22px 14px; }
 .eyebrow { font-family: var(--f-head); font-size: 10.5px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--c-green-dk); margin-bottom: 8px; }
-.exp-head h1 { font-family: var(--f-head); font-size: 25px; font-weight: 800; color: var(--c-deep); letter-spacing: -.5px; line-height: 1.15; margin-bottom: 7px; }
-.exp-head p { font-size: 13.5px; line-height: 1.5; color: var(--c-muted); }
+.exp-head h1 { font-family: var(--f-head); font-size: 22px; font-weight: 800; color: #1B1626; letter-spacing: -.5px; line-height: 1.2; margin-bottom: 6px; }
+.exp-head p { font-size: 12.5px; line-height: 1.55; color: var(--c-muted); }
 
-.chips { display: flex; gap: 8px; flex-wrap: wrap; padding: 0 24px 16px; }
+.chips { display: flex; gap: 7px; flex-wrap: wrap; padding: 0 22px 16px; }
 .chip {
-  padding: 7px 15px; border-radius: var(--r-pill); font-size: 12.5px; font-weight: 500;
-  border: 1.5px solid var(--c-border); color: var(--c-muted); background: #fff;
+  padding: 8px 16px; border-radius: var(--r-pill); font-size: 12px; font-weight: 500;
+  border: 1px solid #E9E4EE; color: #3B3346; background: #fff;
+  box-shadow: 0 1px 2px rgba(46,20,56,.04);
   transition: var(--t-fast); white-space: nowrap;
 }
-.chip:hover { border-color: rgba(90,30,116,.3); color: var(--c-primary); }
-.chip.active { background: var(--c-primary); border-color: var(--c-primary); color: #fff; font-weight: 600; }
+.chip:hover { border-color: rgba(90,30,116,.28); color: var(--c-primary); }
+.chip.active {
+  background: var(--c-primary); border-color: var(--c-primary); color: #fff; font-weight: 600;
+  box-shadow: 0 2px 8px rgba(90,30,116,.28);
+}
 
 .list-meta { display: flex; align-items: center; justify-content: space-between; padding: 13px 24px; border-top: 1px solid var(--c-border); font-size: 13px; }
 .list-count { font-weight: 600; color: var(--c-text); }
@@ -231,16 +241,35 @@ svg { display: block; }
 .map-top { position: absolute; top: 16px; left: 16px; right: 16px; z-index: 600; display: flex; align-items: flex-start; gap: 10px; pointer-events: none; }
 .map-top > * { pointer-events: auto; }
 .glass-dark { background: rgba(38,16,48,.82); backdrop-filter: blur(14px); border: 1px solid rgba(255,255,255,.08); color: #fff; }
-.map-card { border-radius: var(--r-md); padding: 11px 16px; display: flex; align-items: center; gap: 11px; max-width: 380px; }
-.map-card-ico { width: 34px; height: 34px; border-radius: 10px; background: rgba(164,214,32,.16); display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
-.map-card-t { font-family: var(--f-head); font-size: 13.5px; font-weight: 700; line-height: 1.25; }
-.map-card-s { font-size: 11px; opacity: .68; }
-.map-card svg { width: 15px; height: 15px; stroke: #fff; fill: none; stroke-width: 2.5; opacity: .5; flex-shrink: 0; }
+.map-card {
+  border-radius: 16px; padding: 10px 16px 10px 11px; display: flex; align-items: center; gap: 12px;
+  max-width: 340px; color: #fff;
+  background: rgba(23,21,34,.94); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.07); box-shadow: 0 8px 26px rgba(10,6,18,.42);
+}
+.map-card-ico {
+  width: 36px; height: 36px; border-radius: 11px; flex-shrink: 0;
+  background: rgba(124,175,16,.18); display: flex; align-items: center; justify-content: center;
+}
+.map-card-ico svg { width: 19px; height: 19px; }
+.map-card-t { font-family: var(--f-head); font-size: 14px; font-weight: 700; line-height: 1.25; letter-spacing: -.2px; }
+.map-card-s { font-size: 11px; color: rgba(255,255,255,.55); margin-top: 1px; }
+.map-card-chev { width: 16px; height: 16px; stroke: rgba(255,255,255,.45); fill: none; stroke-width: 2.5; flex-shrink: 0; margin-left: 4px; }
 
-.map-layers { display: flex; gap: 5px; margin-left: auto; }
-.layer-pill { padding: 9px 15px; border-radius: var(--r-pill); font-family: var(--f-head); font-size: 12px; font-weight: 600; transition: var(--t-fast); }
-.layer-pill.glass-dark:hover { background: rgba(90,30,116,.9); }
-.layer-pill.active { background: var(--c-green); color: var(--c-deep); border-color: transparent; }
+.map-layers {
+  display: flex; gap: 3px; margin-left: auto; padding: 5px;
+  border-radius: var(--r-pill);
+  background: rgba(23,21,34,.94); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.07); box-shadow: 0 8px 26px rgba(10,6,18,.42);
+}
+.layer-pill {
+  display: flex; align-items: center; gap: 7px; padding: 8px 15px;
+  border-radius: var(--r-pill); font-family: var(--f-head); font-size: 12.5px; font-weight: 600;
+  color: rgba(255,255,255,.82); transition: var(--t-fast); white-space: nowrap;
+}
+.layer-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+.layer-pill:hover:not(.active) { background: rgba(255,255,255,.08); color: #fff; }
+.layer-pill.active { background: var(--c-green); color: #1B1626; box-shadow: 0 2px 10px rgba(164,214,32,.35); }
 
 .map-ctrl-stack { position: absolute; top: 74px; right: 16px; z-index: 600; display: flex; flex-direction: column; gap: 6px; }
 .map-ctrl {
@@ -261,20 +290,23 @@ svg { display: block; }
 .legend-grad { width: 110px; height: 7px; border-radius: 4px; background: linear-gradient(to right, var(--c-primary), var(--c-green)); }
 
 .map-rank {
-  position: absolute; bottom: 18px; right: 16px; z-index: 600; width: 268px;
+  position: absolute; bottom: 18px; right: 16px; z-index: 600; width: 306px;
   background: rgba(255,255,255,.97); backdrop-filter: blur(14px);
   border-radius: 18px; padding: 15px 16px; box-shadow: var(--sh-lg);
 }
-.map-rank h4 { font-family: var(--f-head); font-size: 12.5px; font-weight: 700; color: var(--c-deep); margin-bottom: 3px; display: flex; align-items: center; gap: 7px; }
-.map-rank h4 svg { width: 14px; height: 14px; stroke: var(--c-primary); fill: none; stroke-width: 2; }
-.map-rank .sub { font-size: 10.5px; color: var(--c-muted); margin-bottom: 11px; }
-.rank-row { display: flex; align-items: center; gap: 9px; margin-bottom: 8px; font-size: 11.5px; }
+.map-rank h4 {
+  font-family: var(--f-head); font-size: 14px; font-weight: 700; color: #1B1626;
+  margin-bottom: 13px; display: flex; align-items: center; gap: 9px; letter-spacing: -.2px;
+}
+.map-rank h4 svg.ico { width: 17px; height: 17px; stroke: var(--c-primary); fill: none; stroke-width: 2.2; flex-shrink: 0; }
+.map-rank h4 svg.chev { width: 15px; height: 15px; stroke: #9C93A8; fill: none; stroke-width: 2.5; margin-left: auto; flex-shrink: 0; }
+.rank-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 13px; }
 .rank-row:last-child { margin-bottom: 0; }
-.rank-n { width: 13px; font-family: var(--f-head); font-weight: 700; color: var(--c-muted); font-size: 11px; }
-.rank-name { width: 96px; font-weight: 500; color: var(--c-text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.rank-bar-bg { flex: 1; height: 7px; background: var(--c-light); border-radius: 4px; overflow: hidden; }
-.rank-bar { height: 100%; border-radius: 4px; background: linear-gradient(to right, var(--c-green), var(--c-primary)); transition: width .5s cubic-bezier(.4,0,.2,1); }
-.rank-v { width: 26px; text-align: right; font-family: var(--f-head); font-weight: 700; color: var(--c-primary); font-size: 11.5px; }
+.rank-n { width: 12px; font-family: var(--f-head); font-weight: 700; color: #1B1626; font-size: 13px; }
+.rank-name { width: 104px; font-weight: 500; color: #1B1626; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rank-bar-bg { flex: 1; height: 9px; background: #EDE9F1; border-radius: 5px; overflow: hidden; }
+.rank-bar { height: 100%; border-radius: 5px; background: linear-gradient(to right, #8FD11F, var(--c-primary)); transition: width .5s cubic-bezier(.4,0,.2,1); }
+.rank-v { width: 24px; text-align: right; font-family: var(--f-head); font-weight: 600; color: #57505F; font-size: 13px; }
 
 /* ══ Mapa Interativo ═════════════════════════════════════ */
 #page-mapa { padding-top: var(--header-h); height: 100vh; position: relative; }
@@ -525,7 +557,7 @@ svg { display: block; }
     <img src="assets/logo-mark.svg" alt="">
     <span>
       <span class="logo-name">AÇAÍ MAP · BELÉM</span><br>
-      <span class="logo-sub">Sabores que conectam Belém</span>
+      <span class="logo-sub">Sabores que movem a cidade</span>
     </span>
   </a>
 
@@ -566,7 +598,6 @@ svg { display: block; }
 <section id="page-explorar" class="page active">
   <div class="exp-left">
     <div class="exp-head">
-      <div class="eyebrow">Explore o açaí de Belém</div>
       <h1>Explore o açaí de Belém</h1>
       <p id="exp-sub">Estabelecimentos de açaí mapeados no Google Maps em 10 áreas de Belém.</p>
     </div>
@@ -593,18 +624,29 @@ svg { display: block; }
     <div id="map-explorar"></div>
 
     <div class="map-top">
-      <div class="map-card glass-dark">
-        <div class="map-card-ico">🫐</div>
-        <div>
-          <div class="map-card-t">Açaí Map · Belém</div>
-          <div class="map-card-s" id="map-card-sub">Mapeamento geográfico do açaí</div>
+      <div class="map-card">
+        <div class="map-card-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#A4D620" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
         </div>
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        <div>
+          <div class="map-card-t">Belém do Pará</div>
+          <div class="map-card-s" id="map-card-sub">Tradição, sabor e território</div>
+        </div>
+        <svg class="map-card-chev" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </div>
       <div class="map-layers">
-        <button class="layer-pill glass-dark" onclick="setExpLayer('calor',this)">Calor</button>
-        <button class="layer-pill glass-dark active" onclick="setExpLayer('pins',this)">Pins</button>
-        <button class="layer-pill glass-dark" onclick="setExpLayer('areas',this)">Áreas</button>
+        <button class="layer-pill" onclick="setExpLayer('calor',this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4.97 0 8-3.1 8-7 0-4.5-3.5-7.5-5-11-1 2.5-2 3.5-3.5 5C10 10.5 8 12 8 15c0-1.5-.8-2.6-1.6-3.4C4.9 13.2 4 14.9 4 17c0 3 3 5 8 5Z"/></svg>
+          Calor
+        </button>
+        <button class="layer-pill active" onclick="setExpLayer('pins',this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Pins
+        </button>
+        <button class="layer-pill" onclick="setExpLayer('areas',this)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          Zonas
+        </button>
       </div>
     </div>
 
@@ -623,10 +665,10 @@ svg { display: block; }
 
     <div class="map-rank">
       <h4>
-        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <svg class="ico" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         Áreas com mais estabelecimentos
+        <svg class="chev" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </h4>
-      <div class="sub">Top 5 por estabelecimentos encontrados</div>
       <div id="rank-rows"></div>
     </div>
   </div>
@@ -1590,7 +1632,6 @@ function init() {
 
   document.getElementById('exp-sub').textContent =
     `${nf(k.total_estabelecimentos)} estabelecimentos mapeados no Google Maps em ${nf(k.total_areas)} áreas de Belém.`;
-  document.getElementById('map-card-sub').textContent = `${nf(k.total_areas)} áreas · ${nf(k.total_consultas)} consultas`;
 
   buildChips();
   initExpMap();

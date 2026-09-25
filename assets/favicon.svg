@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <rect width="48" height="48" rx="11" fill="#5A1E74"/>
-  <circle cx="24" cy="25.5" r="9.5" fill="#FAF7FB"/>
-  <circle cx="24" cy="26.4" r="6.8" fill="#2E1438"/>
-  <circle cx="21.4" cy="23.9" r="2" fill="#A4D620"/>
-  <path d="M24 15.6c-1.5-3.1-4.5-4.8-7.8-4.7.6 3.3 3 5.8 6.2 6.5Z" fill="#A4D620"/>
-  <path d="M24 15.6c1.5-3.1 4.5-4.8 7.8-4.7-.6 3.3-3 5.8-6.2 6.5Z" fill="#7BAF10"/>
+  <defs>
+    <radialGradient id="fvFruto" cx="34%" cy="27%" r="80%">
+      <stop offset="0" stop-color="#9451AE"/>
+      <stop offset="52%" stop-color="#5A1E74"/>
+      <stop offset="1" stop-color="#2A1033"/>
+    </radialGradient>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="#FAF7FB"/>
+  <path d="M23.3 15C19.6 7.6 12.6 6.1 8.2 8.3c1.1 6.6 7.8 9.5 14.4 8.5Z" fill="#7BAF10"/>
+  <path d="M24.9 15C28.1 8 34.2 6.3 38.8 8.5c-1 6.4-6.9 9.3-13.4 8.5Z" fill="#A4D620"/>
+  <path d="M24 16.8v-3.4" stroke="#44700A" stroke-width="2.6" stroke-linecap="round"/>
+  <circle cx="24" cy="30.4" r="13.6" fill="url(#fvFruto)"/>
+  <ellipse cx="18.8" cy="25.2" rx="4.3" ry="2.9" fill="#FFFFFF" opacity=".2" transform="rotate(-28 18.8 25.2)"/>
 </svg>
