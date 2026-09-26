@@ -21,6 +21,7 @@
 
 <!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
 <style>
 /* ══ Tokens ══════════════════════════════════════════════ */
@@ -468,54 +469,177 @@ svg { display: block; }
 .conc-legend { display: flex; align-items: center; justify-content: center; gap: 10px; margin-top: 11px; font-size: 10.5px; color: var(--c-muted); }
 .chart-wrap { position: relative; height: 210px; }
 
-/* ══ Estatísticas ════════════════════════════════════════ */
-#page-stats { padding: calc(var(--header-h) + 28px) 28px 40px; }
-.bento { display: grid; grid-template-columns: repeat(12,1fr); gap: 18px; }
-.bento .card { display: flex; flex-direction: column; overflow: hidden; }
-.b-areas   { grid-column: span 5; }
-.b-tipos   { grid-column: span 4; }
-.b-nota    { grid-column: span 3; }
-.b-scatter { grid-column: span 6; }
-.b-termos  { grid-column: span 6; }
-.b-cons    { grid-column: span 4; }
-.b-ins     { grid-column: span 8; }
-.b-areas .chart-wrap   { height: 320px; }
-.b-tipos .chart-wrap   { height: 250px; }
-.b-scatter .chart-wrap { height: 240px; }
-.b-termos .chart-wrap  { height: 240px; }
-.b-cons .chart-wrap    { height: 120px; }
+/* ══ Estatísticas — novo layout ══════════════════════════ */
+#page-stats { padding: calc(var(--header-h)) 0 48px; background: var(--c-bg); }
 
-.kpi-center { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; padding: 12px 0; }
-.kpi-val { font-family: var(--f-head); font-size: 56px; font-weight: 800; color: var(--c-primary); line-height: 1; letter-spacing: -2px; display: flex; align-items: center; gap: 10px; }
-.kpi-val .star { font-size: 30px; color: var(--c-green); }
-.kpi-lbl { font-size: 12.5px; color: var(--c-muted); }
-.kpi-note { font-size: 11px; color: var(--c-muted); text-align: center; line-height: 1.45; margin-top: 6px; padding: 7px 11px; background: var(--c-bg); border-radius: 9px; }
-
-.cons-big { display: flex; align-items: center; gap: 16px; margin-bottom: 6px; }
-.cons-ico { width: 48px; height: 48px; border-radius: 14px; background: rgba(164,214,32,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.cons-ico svg { width: 22px; height: 22px; stroke: var(--c-green-dk); fill: none; stroke-width: 2; }
-.cons-n { font-family: var(--f-head); font-size: 40px; font-weight: 800; color: var(--c-deep); line-height: 1; letter-spacing: -1.4px; }
-.cons-s { font-size: 11.5px; color: var(--c-muted); margin-top: 3px; }
-
-.tipos-legend { display: flex; flex-direction: column; gap: 9px; margin-top: 12px; }
-.tl-row { display: flex; align-items: center; gap: 10px; font-size: 12.5px; }
-.tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
-.tl-name { flex: 1; color: var(--c-text); }
-.tl-v { font-family: var(--f-head); font-weight: 700; color: var(--c-deep); }
-.tl-p { color: var(--c-muted); font-size: 11.5px; width: 52px; text-align: right; }
-
-.ins-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; flex: 1; }
-.ins {
-  background: var(--c-bg); border: 1px solid var(--c-border); border-radius: var(--r-md);
-  padding: 15px; display: flex; gap: 11px; align-items: flex-start;
+/* Hero */
+.sh-hero {
+  display: flex; align-items: stretch; gap: 0;
+  background: #fff; border-bottom: 1px solid var(--c-border);
+  padding: 28px 32px 28px; position: relative; overflow: hidden; min-height: 122px;
 }
-.ins-ico { width: 38px; height: 38px; border-radius: 11px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.ins-ico svg { width: 17px; height: 17px; fill: none; stroke-width: 2; }
-.ins-ico.g { background: rgba(164,214,32,.16); } .ins-ico.g svg { stroke: var(--c-green-dk); }
-.ins-ico.p { background: rgba(90,30,116,.09); } .ins-ico.p svg { stroke: var(--c-primary); }
-.ins-ico.s { background: rgba(122,60,140,.1); } .ins-ico.s svg { stroke: var(--c-sec); }
-.ins-t { font-family: var(--f-head); font-size: 12.5px; font-weight: 700; color: var(--c-deep); margin-bottom: 3px; }
-.ins-x { font-size: 11.5px; color: var(--c-muted); line-height: 1.45; }
+.sh-hero-text { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; z-index: 2; }
+.sh-hero-title-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.sh-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #A4D620; color: #2E1438; font-family: var(--f-head);
+  font-size: 11px; font-weight: 800; letter-spacing: .6px; padding: 6px 13px;
+  border-radius: var(--r-pill); white-space: nowrap; flex-shrink: 0;
+}
+.sh-hero h1 { font-family: var(--f-head); font-size: 32px; font-weight: 800; color: #1B1626; letter-spacing: -1px; line-height: 1.15; }
+.sh-hero p { font-size: 13px; color: var(--c-muted); line-height: 1.55; max-width: 560px; margin-top: 2px; }
+.sh-hero-side {
+  position: relative; width: 260px; flex-shrink: 0; margin: -28px -32px -28px 0;
+  background: linear-gradient(135deg, #2E1438 0%, #5A1E74 55%, #3B1B4D 100%);
+  display: flex; align-items: flex-start; justify-content: flex-end; padding: 18px 20px 0 0; overflow: hidden;
+}
+.sh-hero-side::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("assets/fotos/acai-08.jpg") center/cover no-repeat;
+  opacity: .18; mix-blend-mode: luminosity;
+}
+.sh-slogan {
+  font-family: var(--f-head); font-size: 14px; font-weight: 900;
+  color: rgba(255,255,255,.9); line-height: 1.1; letter-spacing: .4px;
+  text-align: right; z-index: 1;
+}
+.sh-slogan em { color: #A4D620; font-style: normal; }
+
+/* KPI row */
+.sh-kpis {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0; border-bottom: 1px solid var(--c-border); background: #fff;
+}
+.sh-kpi {
+  display: flex; align-items: center; gap: 18px;
+  padding: 22px 26px; border-right: 1px solid var(--c-border);
+}
+.sh-kpi:last-child { border-right: none; }
+.sh-kpi-ico {
+  width: 52px; height: 52px; border-radius: 16px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.sh-kpi-ico.purple { background: var(--c-primary); }
+.sh-kpi-ico.green  { background: var(--c-green); }
+.sh-kpi-ico.purple-lt { background: rgba(90,30,116,.12); }
+.sh-kpi-ico.green-lt  { background: rgba(164,214,32,.18); }
+.sh-kpi-ico svg { width: 24px; height: 24px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.sh-kpi-ico.purple-lt svg { stroke: var(--c-primary); }
+.sh-kpi-ico.green-lt  svg { stroke: var(--c-green-dk); }
+.sh-kpi-body { min-width: 0; }
+.sh-kpi-label { font-size: 12px; color: var(--c-muted); font-weight: 500; margin-bottom: 2px; }
+.sh-kpi-value { font-family: var(--f-head); font-size: 34px; font-weight: 800; color: var(--c-deep); letter-spacing: -1.2px; line-height: 1.05; display: flex; align-items: center; gap: 6px; }
+.sh-kpi-value .kstar { color: #F5A623; font-size: 22px; }
+.sh-kpi-badge { display: inline-block; background: #A4D620; color: #2E1438; font-size: 10.5px; font-weight: 700; padding: 3px 9px; border-radius: 99px; margin: 4px 0 2px; }
+.sh-kpi-badge.blue { background: rgba(90,30,116,.1); color: var(--c-primary); }
+.sh-kpi-sub { font-size: 11.5px; color: var(--c-muted); }
+
+/* Main 3-col row */
+.sh-main {
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 18px; padding: 22px 32px;
+}
+.sh-card {
+  background: #fff; border: 1.5px solid var(--c-border); border-radius: var(--r-card);
+  padding: 20px; box-shadow: var(--sh-sm); display: flex; flex-direction: column;
+}
+.sh-card-head { margin-bottom: 14px; }
+.sh-card-head h3 { font-family: var(--f-head); font-size: 15px; font-weight: 700; color: var(--c-deep); margin-bottom: 2px; }
+.sh-card-head p { font-size: 11.5px; color: var(--c-muted); }
+
+/* Top Áreas card */
+.sa-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 13px; flex-wrap: wrap; }
+.sa-toggles { display: flex; gap: 6px; }
+.sa-toggle {
+  padding: 7px 14px; border-radius: 9px; font-family: var(--f-head);
+  font-size: 11.5px; font-weight: 600; border: 1.5px solid var(--c-border);
+  color: var(--c-text); background: #fff; transition: var(--t-fast);
+}
+.sa-toggle.active { background: var(--c-primary); border-color: var(--c-primary); color: #fff; }
+.sa-toggle:hover:not(.active) { border-color: rgba(90,30,116,.3); color: var(--c-primary); }
+.sa-search {
+  display: flex; align-items: center; gap: 8px;
+  border: 1.5px solid var(--c-border); border-radius: 10px; padding: 8px 12px;
+  background: var(--c-bg); margin-bottom: 12px;
+}
+.sa-search svg { width: 14px; height: 14px; stroke: var(--c-muted); fill: none; stroke-width: 2; flex-shrink: 0; }
+.sa-search input { border: none; background: none; outline: none; font-family: inherit; font-size: 12.5px; color: var(--c-text); flex: 1; }
+.sa-search input::placeholder { color: var(--c-muted); }
+.sa-list { display: flex; flex-direction: column; gap: 10px; overflow-y: auto; flex: 1; }
+.sa-row { display: flex; align-items: center; gap: 11px; }
+.sa-num {
+  width: 28px; height: 28px; border-radius: 50%; background: #A4D620;
+  color: #2E1438; font-family: var(--f-head); font-size: 12px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.sa-name { flex: 1; font-size: 13px; font-weight: 600; color: var(--c-deep); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.sa-bar-bg { flex: 1.4; height: 8px; background: var(--c-light); border-radius: 4px; overflow: hidden; min-width: 0; }
+.sa-bar { height: 100%; border-radius: 4px; background: #A4D620; transition: width .5s cubic-bezier(.4,0,.2,1); }
+.sa-count { font-family: var(--f-head); font-size: 13px; font-weight: 700; color: var(--c-text); width: 28px; text-align: right; flex-shrink: 0; }
+
+/* Distribuição por Segmento */
+.seg-chart-wrap { position: relative; height: 210px; }
+.seg-center-label {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; pointer-events: none;
+}
+.seg-center-val { font-family: var(--f-head); font-size: 28px; font-weight: 800; color: var(--c-deep); letter-spacing: -1px; line-height: 1; }
+.seg-center-sub { font-size: 10px; color: var(--c-muted); margin-top: 3px; }
+.seg-legend { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.seg-row { display: flex; align-items: center; gap: 10px; font-size: 12.5px; }
+.seg-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.seg-name { flex: 1; color: var(--c-text); }
+.seg-pct { font-family: var(--f-head); font-size: 12.5px; font-weight: 700; color: var(--c-deep); }
+
+/* Termos chart */
+.termos-chart-wrap { position: relative; flex: 1; min-height: 0; }
+
+/* Highlights row */
+.sh-highlights { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; padding: 0 32px 8px; }
+.sh-hl {
+  background: #fff; border: 1.5px solid var(--c-border); border-radius: var(--r-card);
+  overflow: hidden; box-shadow: var(--sh-sm); display: flex; flex-direction: column;
+  min-height: 200px; position: relative;
+}
+.sh-hl-img {
+  position: absolute; inset: 0; object-fit: cover; width: 100%; height: 100%; opacity: .22;
+}
+.sh-hl-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(130deg, #fff 38%, rgba(255,255,255,0) 100%);
+  z-index: 1;
+}
+.sh-hl-body { position: relative; z-index: 2; padding: 22px 24px; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+.sh-hl-badge { display: flex; align-items: center; gap: 7px; font-size: 11px; font-weight: 700; color: var(--c-muted); letter-spacing: .4px; text-transform: uppercase; margin-bottom: 10px; }
+.sh-hl-badge .hl-ico { font-size: 15px; }
+.sh-hl-name { font-family: var(--f-head); font-size: 22px; font-weight: 800; color: var(--c-deep); letter-spacing: -.5px; line-height: 1.2; margin-bottom: 6px; }
+.sh-hl-stat { font-family: var(--f-head); font-size: 18px; font-weight: 700; color: var(--c-primary); margin-bottom: 4px; line-height: 1.3; }
+.sh-hl-desc { font-size: 12px; color: var(--c-muted); line-height: 1.6; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.sh-hl-arrow {
+  width: 38px; height: 38px; border-radius: 50%; background: var(--c-primary); color: #fff;
+  display: flex; align-items: center; justify-content: center; align-self: flex-start;
+  margin-top: 14px; transition: var(--t-fast); cursor: pointer; border: none;
+}
+.sh-hl-arrow:hover { background: var(--c-deep); }
+.sh-hl-arrow svg { width: 16px; height: 16px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Responsivo stats */
+@media (max-width: 1100px) {
+  .sh-kpis { grid-template-columns: repeat(2,1fr); }
+  .sh-main  { grid-template-columns: 1fr 1fr; }
+  .sh-highlights { grid-template-columns: 1fr 1fr; }
+  .sh-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .sh-kpis { grid-template-columns: 1fr 1fr; }
+  .sh-kpi  { padding: 16px 14px; gap: 12px; }
+  .sh-kpi-value { font-size: 26px; }
+  .sh-main { grid-template-columns: 1fr; padding: 14px 16px; }
+  .sh-highlights { grid-template-columns: 1fr; padding: 0 16px 8px; }
+  .sh-hero { padding: 20px 16px; }
+  .sh-hero-side { width: 140px; }
+  .sh-slogan { font-size: 11px; }
+}
 
 /* ══ Leaflet ═════════════════════════════════════════════ */
 .leaflet-container.tint .leaflet-tile-pane { filter: sepia(.5) hue-rotate(216deg) saturate(2.4) brightness(.82) contrast(1.05); }
@@ -831,74 +955,166 @@ svg { display: block; }
 
 <!-- ═══ Estatísticas ═══ -->
 <section id="page-stats" class="page">
-  <div class="pg-head">
-    <div>
-      <div class="eyebrow" id="stats-eyebrow">Carregando…</div>
-      <h1>Análises &amp; Inteligência</h1>
-      <p>Panorama dos estabelecimentos de açaí mapeados em Belém, a partir dos dados coletados no Google Maps.</p>
+
+  <!-- Hero -->
+  <div class="sh-hero">
+    <div class="sh-hero-text">
+      <div class="sh-hero-title-row">
+        <h1>Análises &amp; Inteligência</h1>
+        <div class="sh-badge" id="sh-badge">BASE AMPLIADA: 780 ESTABELECIMENTOS · 54 ÁREAS</div>
+      </div>
+      <p>Dados reais do ecossistema do açaí em Belém e Ananindeua, Pará. Mais sabor, mais dados, mais oportunidades.</p>
     </div>
-    <div class="pill-static">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      <span id="coleta-label">Coleta</span>
+    <div class="sh-hero-side">
+      <div class="sh-slogan">NOSSO<br><em>AÇAÍ</em><br>MOVE<br>BELÉM</div>
     </div>
   </div>
 
-  <div class="bento">
-    <div class="card b-areas">
-      <h3>Estabelecimentos por área</h3>
-      <p id="sub-areas">—</p>
-      <div class="chart-wrap"><canvas id="chart-areas"></canvas></div>
-    </div>
-
-    <div class="card b-tipos">
-      <h3>Distribuição por tipo</h3>
-      <p>Classificação analítica dos estabelecimentos</p>
-      <div class="chart-wrap"><canvas id="chart-tipos"></canvas></div>
-      <div class="tipos-legend" id="tipos-legend"></div>
-    </div>
-
-    <div class="card b-nota">
-      <h3>Avaliação média geral</h3>
-      <p id="sub-nota">—</p>
-      <div class="kpi-center">
-        <div class="kpi-val"><span id="kpi-nota">—</span><span class="star">★</span></div>
-        <div class="kpi-lbl">avaliação média</div>
+  <!-- KPIs -->
+  <div class="sh-kpis">
+    <div class="sh-kpi">
+      <div class="sh-kpi-ico purple">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
       </div>
-      <div class="kpi-note" id="nota-note">—</div>
+      <div class="sh-kpi-body">
+        <div class="sh-kpi-label">Estabelecimentos</div>
+        <div class="sh-kpi-value" id="sk-total">780</div>
+        <div class="sh-kpi-badge" id="sk-novos">+524 novos</div>
+        <div class="sh-kpi-sub">no total mapeados</div>
+      </div>
     </div>
-
-    <div class="card b-scatter">
-      <h3>Nota × volume de avaliações</h3>
-      <p>Cada ponto é um estabelecimento avaliado</p>
-      <div class="chart-wrap"><canvas id="chart-scatter"></canvas></div>
+    <div class="sh-kpi">
+      <div class="sh-kpi-ico purple-lt">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div class="sh-kpi-body">
+        <div class="sh-kpi-label">Bairros &amp; Áreas</div>
+        <div class="sh-kpi-value" id="sk-areas">54</div>
+        <div class="sh-kpi-badge blue">Belém + Ananindeua</div>
+        <div class="sh-kpi-sub">áreas mapeadas</div>
+      </div>
     </div>
-
-    <div class="card b-termos">
-      <h3>Resultados por termo de busca</h3>
-      <p>Resultados retornados por termo nas consultas executadas</p>
-      <div class="chart-wrap"><canvas id="chart-termos"></canvas></div>
+    <div class="sh-kpi">
+      <div class="sh-kpi-ico green">
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="white" stroke="white"/></svg>
+      </div>
+      <div class="sh-kpi-body">
+        <div class="sh-kpi-label">Nota Média Geral</div>
+        <div class="sh-kpi-value"><span id="sk-nota">4,59</span><span class="kstar">★</span></div>
+        <div class="sh-kpi-sub" id="sk-avaliados">618 locais avaliados</div>
+      </div>
     </div>
+    <div class="sh-kpi">
+      <div class="sh-kpi-ico purple-lt">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <div class="sh-kpi-body">
+        <div class="sh-kpi-label">Volume de Avaliações</div>
+        <div class="sh-kpi-value" id="sk-reviews">153.410</div>
+        <div class="sh-kpi-sub">avaliações Google Maps somadas</div>
+      </div>
+    </div>
+  </div>
 
-    <div class="card b-cons">
-      <h3>Consultas executadas</h3>
-      <p>Buscas geográficas realizadas no Google Maps</p>
-      <div class="cons-big">
-        <div class="cons-ico">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+  <!-- 3 colunas -->
+  <div class="sh-main">
+
+    <!-- Top Áreas -->
+    <div class="sh-card">
+      <div class="sh-card-head">
+        <h3>Top Áreas por Concentração</h3>
+        <p>Áreas com mais estabelecimentos mapeados</p>
+      </div>
+      <div class="sa-toolbar">
+        <div class="sa-toggles">
+          <button class="sa-toggle active" id="sa-top10-btn" onclick="saSetLimit(10,this)">Top 10</button>
+          <button class="sa-toggle" id="sa-all-btn" onclick="saSetLimit(999,this)" id="sa-all-btn">Ver Todas as <span id="sa-all-count">54</span></button>
         </div>
+      </div>
+      <div class="sa-search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="sa-search-inp" placeholder="Buscar bairro ou área..." oninput="saFilter(this.value)">
+      </div>
+      <div class="sa-list" id="sa-list"></div>
+    </div>
+
+    <!-- Distribuição por Segmento -->
+    <div class="sh-card">
+      <div class="sh-card-head">
+        <h3>Distribuição por Segmento</h3>
+        <p>Perfil dos estabelecimentos mapeados</p>
+      </div>
+      <div class="seg-chart-wrap">
+        <canvas id="chart-seg"></canvas>
+        <div class="seg-center-label">
+          <div class="seg-center-val" id="seg-center-val">780</div>
+          <div class="seg-center-sub">estabelecimentos</div>
+        </div>
+      </div>
+      <div class="seg-legend" id="seg-legend"></div>
+    </div>
+
+    <!-- Termos de Busca -->
+    <div class="sh-card">
+      <div class="sh-card-head">
+        <h3>Termos de Busca mais Frequentes</h3>
+        <p>Principais termos pesquisados pelos usuários</p>
+      </div>
+      <div class="termos-chart-wrap" style="height:260px">
+        <canvas id="chart-termos"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 cards destaque -->
+  <div class="sh-highlights">
+    <div class="sh-hl">
+      <img class="sh-hl-img" src="assets/fotos/acai-06.jpg" alt="" aria-hidden="true">
+      <div class="sh-hl-grad"></div>
+      <div class="sh-hl-body">
         <div>
-          <div class="cons-n" id="cons-n">—</div>
-          <div class="cons-s" id="cons-s">—</div>
+          <div class="sh-hl-badge"><span class="hl-ico">🏆</span> Líder da Base</div>
+          <div class="sh-hl-name" id="hl-lider-nome">—</div>
+          <div class="sh-hl-stat" id="hl-lider-stat">—</div>
+          <div class="sh-hl-desc" id="hl-lider-desc">—</div>
         </div>
+        <button class="sh-hl-arrow" onclick="goPage('areas')">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
       </div>
-      <div class="chart-wrap"><canvas id="chart-consultas"></canvas></div>
     </div>
-
-    <div class="card b-ins">
-      <h3 style="margin-bottom:14px">Destaques da base</h3>
-      <div class="ins-grid" id="ins-grid"></div>
+    <div class="sh-hl">
+      <img class="sh-hl-img" src="assets/fotos/acai-04.jpg" alt="" aria-hidden="true">
+      <div class="sh-hl-grad"></div>
+      <div class="sh-hl-body">
+        <div>
+          <div class="sh-hl-badge"><span class="hl-ico">⭐</span> Recorde de Avaliações</div>
+          <div class="sh-hl-name" id="hl-rec-nome">—</div>
+          <div class="sh-hl-stat" id="hl-rec-stat">—</div>
+          <div class="sh-hl-desc" id="hl-rec-desc">—</div>
+        </div>
+        <button class="sh-hl-arrow" onclick="goPage('explorar')">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="sh-hl">
+      <img class="sh-hl-img" src="assets/fotos/acai-05.jpg" alt="" aria-hidden="true">
+      <div class="sh-hl-grad"></div>
+      <div class="sh-hl-body">
+        <div>
+          <div class="sh-hl-badge"><span class="hl-ico">🔄</span> Maior Recorrência</div>
+          <div class="sh-hl-name" id="hl-occ-nome">—</div>
+          <div class="sh-hl-stat" id="hl-occ-stat">—</div>
+          <div class="sh-hl-desc" id="hl-occ-desc">—</div>
+        </div>
+        <button class="sh-hl-arrow" onclick="goPage('explorar')">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
     </div>
   </div>
+
 </section>
 
 <script src="data/dashboard_data.js"></script>
@@ -1481,10 +1697,35 @@ function drawNotaChart(ag) {
 }
 
 /* ══ Estatísticas ══ */
+let _saLimit = 10, _saFilter = '';
+function saSetLimit(n, btn) {
+  _saLimit = n;
+  document.querySelectorAll('.sa-toggle').forEach(b => b.classList.toggle('active', b === btn));
+  _renderSaList(S.view);
+}
+function saFilter(q) {
+  _saFilter = (q || '').toLowerCase();
+  _renderSaList(S.view);
+}
+function _renderSaList(list) {
+  const el = document.getElementById('sa-list'); if (!el) return;
+  const ag = areaAggregates(list);
+  const max = ag[0] ? ag[0].n : 1;
+  let rows = ag;
+  if (_saFilter) rows = rows.filter(a => a.nome.toLowerCase().includes(_saFilter));
+  if (_saLimit < 999) rows = rows.slice(0, _saLimit);
+  el.innerHTML = rows.map((a, i) => `
+    <div class="sa-row" onclick="toggleArea('${esc(a.nome)}')">
+      <span class="sa-num">${i + 1}</span>
+      <span class="sa-name">${esc(a.nome)}</span>
+      <div class="sa-bar-bg"><div class="sa-bar" style="width:${Math.round(a.n/max*100)}%"></div></div>
+      <span class="sa-count">${nf(a.n)}</span>
+    </div>`).join('');
+  const allBtn = document.getElementById('sa-all-btn');
+  if (allBtn) allBtn.innerHTML = `Ver Todas as <span id="sa-all-count">${ag.length}</span>`;
+}
 function initStats() {
   S.ready.stats = true;
-  const k = S.data.kpis;
-  document.getElementById('coleta-label').textContent = `Coleta · ${k.data_coleta}`;
   updateStats(S.view);
 }
 function countUp(el, target, dur = 700, fmt = nf) {
@@ -1497,30 +1738,88 @@ function countUp(el, target, dur = 700, fmt = nf) {
   requestAnimationFrame(step);
 }
 function updateStats(list) {
-  if (!S.ready.stats) return;
+  if (!S.ready.stats || !S.data) return;
   const k = S.data.kpis;
   const rated = list.filter(e => e.rating > 0);
   const avg = rated.length ? rated.reduce((s, e) => s + e.rating, 0) / rated.length : 0;
   const reviews = list.reduce((s, e) => s + (e.reviews || 0), 0);
   const ag = areaAggregates(list);
-  const filtered = list.length !== S.data.estabelecimentos.length;
 
-  document.getElementById('stats-eyebrow').textContent =
-    `${nf(list.length)} estabelecimentos · ${ag.length} ${ag.length === 1 ? 'área' : 'áreas'}${filtered ? ' (filtrado)' : ''}`;
-  document.getElementById('sub-areas').textContent = `${nf(list.length)} estabelecimentos mapeados`;
-  document.getElementById('sub-nota').textContent = `Com base em ${nf(rated.length)} estabelecimentos avaliados`;
-  document.getElementById('nota-note').textContent = `${nf(reviews)} avaliações somadas · ${nf(list.length - rated.length)} sem avaliação registrada`;
-  countUp(document.getElementById('kpi-nota'), avg, 700, v => dec(v, 2));
+  // KPIs
+  const elTotal = document.getElementById('sk-total');
+  if (elTotal) countUp(elTotal, list.length);
+  const elAreas = document.getElementById('sk-areas');
+  if (elAreas) countUp(elAreas, ag.length, 500, v => Math.round(v).toString());
+  const elNota = document.getElementById('sk-nota');
+  if (elNota) countUp(elNota, avg, 700, v => dec(v, 2));
+  const elAvaliados = document.getElementById('sk-avaliados');
+  if (elAvaliados) elAvaliados.textContent = `${nf(rated.length)} locais avaliados`;
+  const elRev = document.getElementById('sk-reviews');
+  if (elRev) countUp(elRev, reviews);
 
-  document.getElementById('cons-n').textContent = nf(k.total_consultas);
-  document.getElementById('cons-s').textContent = `consultas em ${nf(k.total_areas)} áreas · ${nf(k.total_ocorrencias)} ocorrências`;
+  // Top Áreas
+  _renderSaList(list);
 
-  drawAreasChart(ag);
-  drawTiposChart(list);
-  drawScatter(list);
+  // Gráficos
+  drawSegChart(list);
   drawTermos();
-  drawConsultas();
-  drawInsights(list, ag);
+  drawStatsHighlights(list, ag);
+}
+function drawSegChart(list) {
+  const cv = document.getElementById('chart-seg'); if (!cv || !window.Chart) return;
+  // Labels internos (para filtro) vs labels de exibição
+  const tipoKeys  = ['Especializado em açaí','Açaí + outro segmento','Outro estabelecimento'];
+  const tipoLabel = ['Especializado em Açaí','Açaí + Outro','Outros'];
+  const counts = tipoKeys.map(t => list.filter(e => e.tipo === t).length);
+  const total = counts.reduce((a, b) => a + b, 0) || 1;
+  const colors = ['#5A1E74', '#A4D620', '#C8A0D8'];
+  const pcts = counts.map(c => dec(c / total * 100));
+  if (S.charts.seg) S.charts.seg.destroy();
+  S.charts.seg = new Chart(cv, {
+    type: 'doughnut',
+    data: { labels: tipoLabel, datasets: [{ data: counts, backgroundColor: colors, borderWidth: 3, borderColor: '#fff', hoverOffset: 6 }] },
+    options: {
+      responsive: true, maintainAspectRatio: false, cutout: '68%', animation: { duration: 420 },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: c => `${nf(c.parsed)} (${dec(c.parsed/total*100)}%)` } },
+        datalabels: { display: false },
+      },
+      onClick: (_, els) => { if (els.length) setFilter('tipo', S.filters.tipo === tipoKeys[els[0].index] ? 'todos' : tipoKeys[els[0].index]); },
+    },
+  });
+  const cvVal = document.getElementById('seg-center-val');
+  if (cvVal) cvVal.textContent = nf(total);
+  const leg = document.getElementById('seg-legend');
+  if (leg) leg.innerHTML = tipoLabel.map((t, i) => `
+    <div class="seg-row" onclick="setFilter('tipo','${tipoKeys[i]}')">
+      <i class="seg-dot" style="background:${colors[i]}"></i>
+      <span class="seg-name">${esc(t)}</span>
+      <span class="seg-pct">${pcts[i]}%</span>
+    </div>`).join('');
+}
+function drawStatsHighlights(list, ag) {
+  const topArea = ag[0];
+  const topRev  = [...list].sort((a, b) => b.reviews - a.reviews)[0];
+  const topOcc  = [...list].sort((a, b) => b.ocorrencias - a.ocorrencias)[0];
+  const total   = list.length || 1;
+  function set(id, v) { const el = document.getElementById(id); if (el) el.textContent = v; }
+  function html(id, v) { const el = document.getElementById(id); if (el) el.innerHTML = v; }
+  if (topArea) {
+    set('hl-lider-nome', topArea.nome);
+    set('hl-lider-stat', `${nf(topArea.n)} estabelecimentos`);
+    set('hl-lider-desc', `${dec(topArea.n/total*100)}% da cobertura total`);
+  }
+  if (topRev) {
+    set('hl-rec-nome', topRev.nome);
+    html('hl-rec-stat', `<span style="font-size:28px;letter-spacing:-1px">${nf(topRev.reviews)}</span>`);
+    set('hl-rec-desc', `avaliações no Google Maps`);
+  }
+  if (topOcc) {
+    set('hl-occ-nome', topOcc.nome);
+    html('hl-occ-stat', `presente em`);
+    html('hl-occ-desc', `<span style="font-family:var(--f-head);font-size:26px;font-weight:800;color:var(--c-deep);letter-spacing:-1px">${nf(topOcc.ocorrencias)}</span> <span>consultas distintas</span>`);
+  }
 }
 function drawAreasChart(ag) {
   const cv = document.getElementById('chart-areas'); if (!cv || !window.Chart) return;
@@ -1593,18 +1892,33 @@ function drawScatter(list) {
 function drawTermos() {
   const cv = document.getElementById('chart-termos'); if (!cv || !window.Chart) return;
   const t = S.data.termos;
+  const DL = window.ChartDataLabels;
   if (S.charts.termos) S.charts.termos.destroy();
+  const barColors = ['#A4D620','#7A3C8C','#9B4EAB','#B87CC4'];
   S.charts.termos = new Chart(cv, {
+    plugins: DL ? [DL] : [],
     type: 'bar',
     data: { labels: t.map(x => x.termo), datasets: [{
-      data: t.map(x => x.resultados), borderRadius: 8, barThickness: 30,
-      backgroundColor: t.map((_, i) => i === 0 ? '#A4D620' : '#5A1E74'),
+      data: t.map(x => x.resultados), borderRadius: 8, barThickness: 40,
+      backgroundColor: t.map((_, i) => barColors[i] || '#7A3C8C'),
     }] },
     options: {
       responsive: true, maintainAspectRatio: false, animation: { duration: 420 },
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => `${nf(c.parsed.y)} resultados` } } },
-      scales: { x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 22 } },
-                y: { grid: { color: 'rgba(46,20,56,.06)' }, ticks: { font: { size: 10 } } } },
+      layout: { padding: { top: 26 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: c => `${nf(c.parsed.y)} resultados` } },
+        datalabels: DL ? {
+          anchor: 'end', align: 'end', offset: 2,
+          font: { family: "'Poppins',sans-serif", size: 11, weight: '700' },
+          color: '#1B1626',
+          formatter: v => nf(v),
+        } : undefined,
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 10 }, maxRotation: 15 } },
+        y: { grid: { color: 'rgba(46,20,56,.06)' }, ticks: { font: { size: 10 }, callback: v => nf(v) } },
+      },
     },
   });
 }
