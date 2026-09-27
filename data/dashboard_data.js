@@ -1,11 +1,11 @@
 window.ACAI_DATA = {
   "kpis": {
-    "total_estabelecimentos": 780,
+    "total_estabelecimentos": 779,
     "total_ocorrencias": 1818,
     "total_consultas": 60,
-    "total_areas": 54,
-    "avg_rating": 4.59,
-    "total_reviews": 153410,
+    "total_areas": 56,
+    "avg_rating": 4.58,
+    "total_reviews": 153192,
     "rodada": 2,
     "data_coleta": "Setembro de 2026"
   },
@@ -10043,7 +10043,7 @@ window.ACAI_DATA = {
       "categoria": "Fabricante de alimentos congelados",
       "tipo": "Especializado em açaí",
       "endereco": "Açai Kaa - Estr. do Outeiro, sn - Quadra 1, Lote 1 - Distrito Industrial de Icoaraci, Belém - PA, 66815-555",
-      "bairro": "Distrito Industrial de Icoaraci",
+      "bairro": "Maracacuera",
       "cidade": "Belém",
       "lat": -1.282849,
       "lon": -48.454242,
@@ -10157,7 +10157,7 @@ window.ACAI_DATA = {
       "categoria": "Restaurante",
       "tipo": "Açaí + Outro segmento",
       "endereco": "Vício do Açaí - Estr. da Maracacuera, 306 c - Box b - Campina, Belém - PA, 66811-460",
-      "bairro": "Icoaraci",
+      "bairro": "Campina de Icoaraci",
       "cidade": "Belém",
       "lat": -1.301824,
       "lon": -48.466587,
@@ -10594,7 +10594,7 @@ window.ACAI_DATA = {
       "categoria": "Restaurante",
       "tipo": "Açaí + Outro segmento",
       "endereco": "AÇAÍ SUPREMO - Av. Perimetral - Marco, Belém - PA, 66077-830",
-      "bairro": "Marco",
+      "bairro": "Montese",
       "cidade": "Belém",
       "lat": -1.463636,
       "lon": -48.446698,
@@ -12741,7 +12741,7 @@ window.ACAI_DATA = {
       "categoria": "Loja de açaí",
       "tipo": "Especializado em açaí",
       "endereco": "Açaí Riacho Doce - Av. Rômulo Maiorana, 1622 - São Brás, Belém - PA, 66093-674",
-      "bairro": "São Brás",
+      "bairro": "Marco",
       "cidade": "Belém",
       "lat": -1.433709,
       "lon": -48.460352,
@@ -14795,7 +14795,7 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Icoaraci",
-      "total": 116
+      "total": 115
     },
     {
       "bairro": "Tapanã",
@@ -14807,7 +14807,7 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Coqueiro",
-      "total": 56
+      "total": 55
     },
     {
       "bairro": "Cabanagem",
@@ -14850,15 +14850,15 @@ window.ACAI_DATA = {
       "total": 13
     },
     {
-      "bairro": "São Brás",
-      "total": 9
-    },
-    {
       "bairro": "Una",
       "total": 8
     },
     {
       "bairro": "Outeiro",
+      "total": 8
+    },
+    {
+      "bairro": "São Brás",
       "total": 8
     },
     {
@@ -14954,7 +14954,11 @@ window.ACAI_DATA = {
       "total": 1
     },
     {
-      "bairro": "Distrito Industrial de Icoaraci",
+      "bairro": "Maracacuera",
+      "total": 1
+    },
+    {
+      "bairro": "Campina de Icoaraci",
       "total": 1
     },
     {
@@ -14963,6 +14967,10 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Orla de Icoaraci",
+      "total": 1
+    },
+    {
+      "bairro": "Montese",
       "total": 1
     },
     {
