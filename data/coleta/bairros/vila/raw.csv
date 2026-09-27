@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJOdvAyLprpJIRoO9_E3vdMok,Açaíteria Mosqueiro Ilhaçaí,-1.164775,-48.472277,5.000000,1,"Açaíteria Mosqueiro Ilhaçaí - Tv. Carlos Bentes - Vila, Belém - PA, 66914-050",,BAIRRO_VIZINHO,Vila,r2|r3,False,True,False,False,False,True
+ChIJybfzNFRepJIRC4MG08HUmww,Acaí Da Hora Jg,-1.337184,-48.361531,,1,"Acaí Da Hora Jg - R. Vila Vitória, 996 - Distrito Industrial, Ananindeua - PA, 67035-150",Vila,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJHzc80W2LpJIRSgof6YrafLU,Residencial Açaí,-1.403585,-48.425442,,2,"Residencial Açaí - Passagem José de Alencar, 55 - Castanheira, Belém - PA, 66645-020",Vila,BAIRRO_VIZINHO,Castanheira,r3,False,False,False,False,False,True
+ChIJT7PxV0OOpJIR5OqVOvmWknM,Açaí do Biro,-1.467823,-48.503672,,9,"Açaí do Biro - Vila Martins, 159 - Cidade Velha, Belém - PA, 66023-300",Vila,BAIRRO_VIZINHO,Cidade Velha,r3,False,False,False,False,False,True

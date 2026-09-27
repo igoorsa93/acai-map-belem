@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJEyH7HCyJpJIRzgYvaXuqh0E,Lá casa do açaí / Açaí do Barão,-1.401554,-48.483421,5.000000,1,"Lá casa do açaí / Açaí do Barão - Tv. Sn-8, 225 - Itaiteua, Belém - PA, 66842-390",Itaiteua,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ1zDuRABnpJIRSk-gwUeTjGc,Açaí do Ricardo,-1.271931,-48.446042,,1,"Açaí do Ricardo - Passagem Manoel Dias, 207 - Itaiteua, Belém - PA, 66842-010",Itaiteua,DENTRO,-1,endereco,r3,False,False,False,False,False,True

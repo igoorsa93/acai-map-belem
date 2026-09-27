@@ -1,0 +1,16 @@
+{
+  "bairro": "Água Boa",
+  "slug": "agua_boa",
+  "timestamp": "2026-09-27T22:22:17.847318+00:00",
+  "duracao_s": 0.001,
+  "total_raw": 20,
+  "total_validado": 11,
+  "distribuicao": {
+    "DENTRO": 11,
+    "BAIRRO_VIZINHO": 7,
+    "FORA_BAIRRO": 2,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 55.0
+}

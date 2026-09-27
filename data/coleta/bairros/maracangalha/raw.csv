@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJbeosQH6JpJIRl2O-G0Rmcw8,Point Açaí,-1.403702,-48.480125,4.000000,3,"Point Açaí - Av. dos Tucanos - Maracangalha, Belém - PA",,DENTRO,Maracangalha,r2,False,True,False,False,False,False
+ChIJecG4j3-JpJIRGvfCncApB8s,Açaí Do Irmão Manoel,-1.40142,-48.480637,3.700000,9,"Açaí Do Irmão Manoel - Rua Rio Amazonas, Q4C4 - Maracangalha, Belém - PA, 66110-340",,DENTRO,Maracangalha,r2,False,True,False,False,False,False
+ChIJhT0jkGaJpJIRWtHUjpVel8Y,açai da pp III,-1.399684,-48.485199,5.000000,3,"açai da pp III - rua 29 esquina com avenida norte quadra 80 numero - Maracangalha, Belém - PA, 66110-022",,BAIRRO_VIZINHO,Maracangalha,r2|r3,False,True,False,False,False,True
+ChIJHaH34dWLpJIRdLi6UnJ-bIo,CASA DO AÇAI,-1.404554,-48.47778,0.000000,0,"CASA DO AÇAI - Passagem Marajoara Um, 128 - Maracangalha, Belém - PA, 66110-270",,DENTRO,Maracangalha,r2,False,True,False,False,False,False
+ChIJIYoW_n-JpJIR31bCmkOSMcg,AÇAÍ D'CASA,-1.401131,-48.478781,0.000000,0,"AÇAÍ D'CASA - Av. Oeste - Maracangalha, Belém - PA, 66110-052",,DENTRO,Maracangalha,r2,False,True,False,False,False,False

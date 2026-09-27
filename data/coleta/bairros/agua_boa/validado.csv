@@ -1,0 +1,12 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ89nwTnpppJIRhvBK1xewaVU,Açaí Dantas,-1.252378,-48.455318,,9,"Açaí Dantas - Av. Paulo Costa, 2935 - Água Boa, Belém - PA, 66843-005",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJE1JSC55opJIRJecmV0K71Bc,Açaí Santana,-1.253667,-48.454024,,1,"Açaí Santana - Av. Paulo Costa, 2839 - Água Boa, Belém - PA, 66843-005",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJOzQD9cJppJIRscS-q8uucJM,Açaí Brasil,-1.252301,-48.45915,,0,"Açaí Brasil - Av. Nossa Sra. da Conceição, 15 - Água Boa, Belém - PA, 66840-450",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ8euPtPVppJIRlWvfO7lBbsQ,Açaí puro sabor & mercearia,-1.246112,-48.450376,,2,"Açaí puro sabor & mercearia - Água Boa, Belém - PA",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJmZCpMAxnpJIRCTqGhRBNqlo,Açaí da Drica,-1.255209,-48.452415,,28,"Açaí da Drica - Av. Paulo Costa - Água Boa, Belém - PA, 66843-580",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJW2GNdztmpJIRMo5ipD2p26E,Açaí Do Irmão,-1.263555,-48.453246,,1,"Açaí Do Irmão - Av. das Mangueiras, 30 - Água Boa (Outeiro), Belém - PA, 66843-400",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJEwG9ZZ5opJIRC0knblm5Nw0,Açai Karibe,-1.25315,-48.454571,,0,"Açai Karibe - Av. Paulo Costa, 2872 - Água Boa, Belém - PA, 66843-005",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJi82UiSVppJIRbJZ1qNeLAGk,Açaí e conveniência da Deusa,-1.246123,-48.4504,,1,"Açaí e conveniência da Deusa - Rua adenilton Amorim, estrada do fama, 22 - Água Boa, Belém - PA, 66840-530",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJIfqiMp9opJIRVDVcA3dr3bc,Açai da Curva,-1.251053,-48.456909,,0,"Açai da Curva - Av. Paulo Costa - Água Boa (Outeiro), Belém - PA, 66843-440",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJky09fABppJIRH2ctrCtAAjI,Outeiro Beach Club Dance,-1.251884,-48.458939,,0,"Outeiro Beach Club Dance - Av. Nossa Sra. da Conceição - Água Boa, Belém - PA, 66843-154",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJOVD5TgBnpJIR8Nlh3EW6410,Casa,-1.262115,-48.452225,,0,"Casa - R. Buriti, 44 - Água Boa, Belém - PA, 66843-330",Água Boa,DENTRO,-1,endereco,r3,False,False,False,False,False,True

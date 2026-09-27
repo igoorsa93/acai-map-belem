@@ -1,0 +1,14 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ__ZattZrpJIR8veRbiSSEq8,Vila açaí,-1.165,-48.47039,,0,"Vila açaí - Tv. Carlos Bentes - Vila, Belém - PA, 66910-110",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJ5WO4FdUVpJIRo0FBsHCZtZA,Açaí da Renatinha,-1.138489,-48.459555,,0,"Açaí da Renatinha - Av. 16 de Novembro, 730 - Chapéu Virado, Belém - PA, 66913-430",Ariramba,BAIRRO_VIZINHO,Chapéu Virado,r3,False,False,False,False,False,True
+ChIJNzem-O1rpJIRxSF2sjaQIg0,Point do Açai,-1.165266,-48.462612,,5,"Point do Açai - R. João Tocantis Pena, 22 - Maracajá, Belém - PA",Ariramba,BAIRRO_VIZINHO,Maracajá,r3,False,False,False,False,False,True
+ChIJFWQI3SRrpJIRNaWQhRt_iUg,Nat Açaí,-1.162148,-48.467397,,0,"Nat Açaí - R. Cmte. Ernesto Dias - Vila, Belém - PA, 66910-090",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJ_7MxIWBrpJIR_eGXrL-rNOA,Guaraná da Amazônia - Bestguaraná,-1.164275,-48.472282,,9,"sorveteria gelatto Mix - Praça matriz de Mosqueiro Carrinho de guaraná da Amazônia (de frente p, Belém - PA, 66910-020",Ariramba,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJb-YBqSJrpJIR5XQJJ2hrj0g,Ponto Do Açaí,-1.163847,-48.471556,,9,"Ponto Do Açaí - Tv. Pratiquara, 13 - Vila, Belém - PA, 66910-020",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJMyC0TwBrpJIROxrDPLcv7Uc,Açaí do Jorge,-1.167296,-48.470483,,1,"Açaí do Jorge - Passagem Igrejinha - Vila, Belém - PA, 66910-010",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJ1dpSXndrpJIRA9aH5R40SRI,Sorveteria Gela Guela,-1.164822,-48.473945,,31,"Sorveteria Gela Guela - Praça Princesa Isabel - Vila, Belém - PA, 66910-000",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJyWM9IABrpJIRgs0H6sYCqY4,AÇAI E ASSADOS DO GORDO,-1.159537,-48.468905,,0,"AÇAI E ASSADOS DO GORDO - R. 15 de Novembro - Mosqueiro, Belém - PA, 66910-000",Ariramba,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJlVwAfM4UpJIRHCWPwu_5XD4,Cantinh do Açai,-1.134488,-48.451023,,2,"Cantinh do Açai - R. Artur Pires Teixeira - Mosqueiro, Belém - PA, 66918-540",Ariramba,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJwaMLCvlrpJIRl8p8v3MUCFM,Açaí do Vini,-1.167721,-48.470001,,1,"Açaí do Vini - R. Marquês Braga - Vila, Belém - PA, 66910-500",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJj97p41NrpJIR7Gk48TKSE6A,Açaí da Jane,-1.16762,-48.46909,,1,"Açaí da Jane - R. Marquês Braga - Vila, Belém - PA, 66910-500",Ariramba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJwRfL9HRrpJIRn5CZf-tz9JI,Comercial Papão,-1.164814,-48.460967,,130,"Comercial Papão - Travessa Siqueira Mendes, 1430 - Maracajá, Belém - PA, 66910-110",Ariramba,BAIRRO_VIZINHO,Maracajá,r3,False,False,False,False,False,True

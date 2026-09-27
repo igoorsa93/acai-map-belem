@@ -1,0 +1,16 @@
+{
+  "bairro": "Una",
+  "slug": "una",
+  "timestamp": "2026-09-27T22:22:17.830369+00:00",
+  "duracao_s": 0.001,
+  "total_raw": 46,
+  "total_validado": 2,
+  "distribuicao": {
+    "DENTRO": 2,
+    "BAIRRO_VIZINHO": 11,
+    "FORA_BAIRRO": 2,
+    "FORA_BELEM": 31,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 4.3
+}

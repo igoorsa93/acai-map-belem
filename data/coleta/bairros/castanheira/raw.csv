@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJXxSZtgCLpJIR1W1BsO7_CCE,Açai da Larinha,-1.402408,-48.431516,5.000000,18,"Açai da Larinha - Passagem São Luís 158, R. Álvaro Adolfo, 210 - Castanheira, Belém - PA, 66645-300",,BAIRRO_VIZINHO,Castanheira,r2|r3,False,True,False,False,False,True
+ChIJeeFxtryLpJIRM-FQe-ucdBs,Assaí Atacadista,-1.4094,-48.437507,4.500000,928,"Assaí Atacadista - Av. Alm. Barroso, 5386 - Castanheira, Belém - PA, 66645-250",,DENTRO,Castanheira,r2,False,True,False,False,False,False
+ChIJpRNKywlhpJIR1xYLQAz9rdA,Açaí Do Rogério,-1.341166,-48.45125,0.000000,0,"Açaí Do Rogério - Rod. Augusto Montenegro, 14 - Castanheira, Belém - PA, 66645-001",,DENTRO,Castanheira,r2,False,True,False,False,False,False
+ChIJqU_0Av6KpJIR575v5PhVD4c,POLPAS BELEM,-1.399921,-48.434244,5.000000,8,"POLPAS BELEM - Tv. Dois, 152 - Castanheira, Belém - PA, 66645-830",,DENTRO,Castanheira,r2,False,True,False,False,False,False

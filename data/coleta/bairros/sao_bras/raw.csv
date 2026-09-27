@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJe92VAseNpJIR7v4LHED5WGY,GINGA AÇAÍ,-1.452967,-48.472655,0.000000,0,"GINGA AÇAÍ - Tv. Quatorze de Abril, N° 1473 - São Brás, Belém - PA, 66063-005",,DENTRO,São Brás,r2,False,True,False,False,False,False
+ChIJwZGfvyWMpJIR3qXvHUF6cA4,Restaurante Caçarola,-1.451014,-48.472371,4.400000,723,"Restaurante Caçarola - Tv. Quatorze de Abril, 1242 - São Brás, Belém - PA, 66060-460",,DENTRO,São Brás,r2,False,True,False,False,False,False
+ChIJy0zPUsWNpJIRtdKHG61NVzY,Açaí Belém,-1.456184,-48.467803,0.000000,0,"Açaí Belém - Av. Conselheiro Furtado, 3402 - São Brás, Belém - PA, 66073-160",,BAIRRO_VIZINHO,São Brás,r2|r3,False,True,False,False,False,True
+ChIJyf6z_yuMpJIR7iGmo_b8hEw,Divino Açaí do Diego,-1.455861,-48.473768,4.500000,10,"Divino Açaí do Diego - Tv. Três de Maio, 1811 - São Brás, Belém - PA, 66063-390",,BAIRRO_VIZINHO,São Brás,r2|r3,False,True,False,False,False,True
+ChIJ1XXXAwCNpJIRoFufmH2bZIs,Açaí Riacho Doce,-1.433709,-48.460352,3.000000,2,"Açaí Riacho Doce - Av. Rômulo Maiorana, 1622 - São Brás, Belém - PA, 66093-674",,DENTRO,São Brás,r2,False,True,False,False,False,False

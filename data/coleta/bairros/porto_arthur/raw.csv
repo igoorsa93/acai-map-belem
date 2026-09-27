@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJAQWZcGcVpJIR3edNEe_Mg7w,Açaí do Dodó,-1.129553,-48.447557,4.800000,20,"Açaí do Dodó - R. Artur Pires Teixeira - Porto Arthur, Belém - PA, 66918-540",,BAIRRO_VIZINHO,Porto Arthur,r2|r3,False,True,False,False,False,True
+ChIJb1O-ej0VpJIRzQrxXovEWP4,açai especial da sandra,-1.128669,-48.446714,4.800000,5,"açai especial da sandra - R. Variante, n36 - Porto Arthur, Belém - PA, 66913-670",,BAIRRO_VIZINHO,Porto Arthur,r2|r3,False,True,False,False,False,True

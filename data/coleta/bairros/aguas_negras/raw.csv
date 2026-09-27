@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJox9QhCpnpJIROBvj8qyNb10,Açaí + Sabor,-1.305194,-48.461039,5.000000,2,"Açaí + Sabor - Tv. Águas Negras, 22 - Águas Negras, Belém - PA, 66822-430",,DENTRO,Águas Negras,r2|r3,False,True,False,False,False,True
+ChIJedZEIABnpJIRKQQL8gyWgLM,Açaí Vilhena,-1.305066,-48.461523,,0,"Esquina com Brasilia - Tv. Águas Negras, 340 - Águas Negras, Belém - PA, 66822-430",Águas Negras,DENTRO,Águas Negras,r3,False,False,False,False,False,True
+ChIJZ_ti5zlnpJIRqFo5UZOzE9A,Império dos sucos,-1.305744,-48.458924,,0,"Império dos sucos - Passagem São Raimundo, N° 92 - Águas Negras, Belém - PA, 66822-470",Águas Negras,DENTRO,Águas Negras,r3,False,False,False,False,False,True
+ChIJyWhhXWZhpJIRbvw9brwolFU,Assaí Augusto Montenegro,-1.327613,-48.449217,,125,"Assaí Augusto Montenegro - Rod. Augusto Montenegro, s/n - KM 21 - Tenoné, Belém - PA, 66820-000",Águas Negras,BAIRRO_VIZINHO,Tenoné,r3,False,False,False,False,False,True

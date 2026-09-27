@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJFY68lxWLpJIRQxE7RlcJ1pU,Açaí duas irmãs Rayanne e aryella,-1.395609,-48.4076,5.000000,3,"Açaí duas irmãs Rayanne e aryella - Av. Ricardo Borges - Guanabara, Belém - PA, 67110-290",,BAIRRO_VIZINHO,Guanabara,r2|r3,False,True,False,False,False,True

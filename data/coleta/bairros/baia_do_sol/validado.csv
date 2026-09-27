@@ -1,0 +1,4 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJlbHhGwA9pJIRq4KJ60atzL8,Praia Grande da Baia do Sol,-1.062283,-48.345122,,20,"Praia Grande da Baia do Sol - R. da Praia Grande - Baía do Sol, Belém - PA",Baía do Sol,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJS48IGQA9pJIRJXFcAqBP7RI,Açaí do manoel,-1.071961,-48.353222,,0,"Açaí do manoel - R. Conceição, 193 - Baía do Sol, Belém - PA, 66910-150",Baía do Sol,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJM6VbawA9pJIREbxMV8jDIxY,Açaí do Nezinho,-1.063424,-48.33392,,1,"Açaí do Nezinho - Av. Beira Mar - Baía do Sol, Belém - PA",Baía do Sol,DENTRO,-1,endereco,r3,False,False,False,False,False,True

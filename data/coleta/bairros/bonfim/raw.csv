@@ -1,0 +1,10 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ6Y5sNA9YpJIRQDa8JuQoX1A,Bondvera Açaí,-1.309902,-48.220833,,1,"Bondvera Açaí - Av. Jarbas Passarinho, 2 - Bacabeira, Benevides - PA, 68795-000",Bonfim,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJ0ZmZtuqNpJIRuZyoTwXYc50,Sorveteria Caribe Belém,-1.436019,-48.471072,,17,"Sorveteria Caribe Belém - Tv. Humaitá, 1316 - Pedreira, Belém - PA, 66085-148",Bonfim,BAIRRO_VIZINHO,Pedreira,r3,False,False,False,False,False,True
+ChIJS_wOOpL5pJIRUaFzq8syRlg,Indústria Açaí Paraense,-1.373589,-48.239072,,47,"Indústria Açaí Paraense - Rua Paraíso III, Benevides - PA, 68795-000",Bonfim,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJuaCxCQCLpJIRU6Q1KJgbneo,Top Açaí Sorvetes,-1.401472,-48.46092,,5,"Top Açaí Sorvetes - R. da Mata - Marambaia, Belém - PA, 68447-000",Bonfim,BAIRRO_VIZINHO,Marambaia,r3,False,False,False,False,False,True
+ChIJcW__CDKMpJIRZTV8ZAlpIJ0,Açaí da Conselheiro - Delivery,-1.456187,-48.468566,,5,"Açaí da Conselheiro - Delivery - Av. Conselheiro Furtado, 3326 - São Brás, Belém - PA, 66073-160",Bonfim,BAIRRO_VIZINHO,São Brás,r3,False,False,False,False,False,True
+ChIJj8DTUTqLpJIRyIm_fDiMv-E,Açai Marambaia,-1.404086,-48.444499,,3,"Açai Marambaia - R. Anchieta, 293 - Terreo - Marambaia, Belém - PA, 66615-030",Bonfim,BAIRRO_VIZINHO,Marambaia,r3,False,False,False,False,False,True
+ChIJVxUJOACPpJIRG8uRk20eTIE,Cia do açaí,-1.442436,-48.480868,,3,"Cia do açaí - R. Diogo Móia, 924 - Umarizal, Belém - PA, 66055-171",Bonfim,BAIRRO_VIZINHO,Umarizal,r3,False,False,False,False,False,True
+ChIJiyU04o6NpJIRl9J5MBMnp_4,Rei do açai,-1.459034,-48.453137,,1,"Rei do açai - R. São Domingos, 26b - Terra Firme, Belém - PA, 66077-650",Bonfim,BAIRRO_VIZINHO,Montese,r3,False,False,False,False,False,True
+ChIJNfWTbxGPpJIRtQWX3j6pEaA,Açaí Vip,-1.451769,-48.497226,,3,"Açaí Vip - Tv. 1º de Março, 378 - Campina, Belém - PA, 66015-053",Bonfim,BAIRRO_VIZINHO,Campina,r3,False,False,False,False,False,True

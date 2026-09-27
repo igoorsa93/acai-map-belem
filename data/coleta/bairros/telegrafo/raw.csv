@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJjbaznGyPpJIROo0uFE8_-j0,Açai do arlen,-1.430943,-48.481001,4.300000,27,"Açai do arlen - Tv. do Chaco, 875 - Telégrafo, Belém - PA, 66113-085",,DENTRO,Telégrafo,r2,False,True,False,False,False,False
+ChIJ6xC_5P-JpJIRyTB40s33o4g,Açaí do Bi,-1.424992,-48.4804,4.400000,5,"Açaí do Bi - Passagem Miracy, n27 - Telégrafo, Belém - PA, 66083-420",,DENTRO,Telégrafo,r2,False,True,False,False,False,False
+ChIJJ-_44aCJpJIRkKDv9g-AXSs,Açai Du Pará Artesanal,-1.428719,-48.486278,5.000000,1,"Açai Du Pará Artesanal - Tv. Cel. Luíz Bentes, 223 - Telégrafo, Belém - PA, 66113-085",,DENTRO,Telégrafo,r2,False,True,False,False,False,False
+ChIJK0TWz8iPpJIRXrhGtT001Rc,Açai Real,-1.435567,-48.480762,5.000000,6,"Açai Real - Tv. 14 de Março, 46 - Telégrafo, Belém - PA, 66640-740",,DENTRO,Telégrafo,r2,False,True,False,False,False,False

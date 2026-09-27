@@ -1,0 +1,7 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJu_6uVnyPpJIRyadrA4VOSxg,Açaí da 14 de Março,-1.448134,-48.480855,3.900000,19,"Açaí da 14 de Março - R. João Balbi, 794 - Nazaré, Belém - PA, 66055-280",Nazaré,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJw_vZZ5qOpJIR5l6idQucjTU,Açaí do Alonso,-1.450046,-48.487805,4.600000,276,"Açaí do Alonso - R. João Balbi, 55 - Nazaré, Belém - PA, 66055-280",Nazaré,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ_YBbBgCPpJIR0eaTNIN26N4,Açaí de Ponta,-1.448167,-48.486049,,0,"Açaí de Ponta - R. Boaventura da Silva - Nazaré, Belém - PA, 66055-090",Nazaré,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJC36ZY4SOpJIRh3oHmx24Jpc,Açaí da Braz,-1.453857,-48.484086,,24,"Açaí da Braz - Av. Cmte. Brás de Aguiar, 821 - Nazaré, Belém - PA, 66035-395",Nazaré,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJq68j79OPpJIRXIuH7dz0OJ0,Açaí da serzedelo,-1.455117,-48.491944,,2,"Açaí da serzedelo - Av. Serzedelo Corrêa, 145 - Nazaré, Belém - PA, 66033-770",Nazaré,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJdSBUu4WOpJIRrvsPGL1B_34,Marahú Sorvetes Artesanais,-1.454582,-48.485731,,116,"Marahú Sorvetes Artesanais - Av. Cmte. Brás de Aguiar, 650 - Nazaré, Belém - PA, 66035-190",Nazaré,DENTRO,-1,endereco,r3,False,False,False,False,False,True

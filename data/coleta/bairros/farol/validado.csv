@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJqdgN6PePpJIRIweuJTyIS0s,Maná Pizza Burguer,-1.137947,-48.459302,,78,"Maná Pizza Burguer - Av. 16 de Novembro, 624 - Farol, Belém - PA, 66910-140",Farol,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJreYtf8oUpJIR6taK4St808I,Comercial Hemanoely,-1.136451,-48.458654,,213,"Comercial Hemanoely - Estr. da Bateria, 1040 - Farol, Belém - PA",Farol,DENTRO,-1,endereco,r3,False,False,False,False,False,True

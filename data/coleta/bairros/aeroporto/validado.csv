@@ -1,0 +1,4 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJjapUUwBrpJIR9AHGRCW_BxU,Açaí Elite / Mosqueiro,-1.140461,-48.455895,,6,"Açaí Elite / Mosqueiro - R. Nova, 1776 - Aeroporto, Belém - PA",Aeroporto,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ18tJMWZrpJIRXP4jkyNywq0,Açaí do Neves - Açaiteria,-1.143064,-48.456531,5.0,25,"Ao lado igreja católica sra Fátima - Av. Camilo Salgado, 164 - Aeroporto, Belém - PA, 66913-320",Aeroporto,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJyZkK5-5rpJIRcgqmbrgF8cA,Açaí do gomes,-1.139202,-48.457763,,0,"Açaí do gomes - R. Camilo Salgado Filho - Aeroporto, Belém - PA, 66915-220",Aeroporto,DENTRO,-1,endereco,r3,False,False,False,False,False,True

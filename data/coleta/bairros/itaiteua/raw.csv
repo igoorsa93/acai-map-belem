@@ -1,0 +1,13 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJEyH7HCyJpJIRzgYvaXuqh0E,Lá casa do açaí / Açaí do Barão,-1.401554,-48.483421,5.000000,1,"Lá casa do açaí / Açaí do Barão - Tv. Sn-8, 225 - Itaiteua, Belém - PA, 66842-390",,DENTRO,Itaiteua,r2|r3,False,True,False,False,False,True
+ChIJDSXuNgBppJIRrHh_vVRrekU,Açaí da ilha,-1.253625,-48.460033,,0,"Açaí da ilha - Av. Nossa Sra. da Conceição - Outeiro, Belém - PA, 66840-060",Itaiteua,BAIRRO_VIZINHO,São João do Outeiro,r3,False,False,False,False,False,True
+ChIJQ1gkhBBmpJIRMR9rjFO010Q,Açai Nativos,-1.262379,-48.465891,,2,"Açai Nativos - R. Manoel Barata - São João do Outeiro, Belém - PA, 66840-040",Itaiteua,BAIRRO_VIZINHO,São João do Outeiro,r3,False,False,False,False,False,True
+ChIJ23o69lpfpJIRAdZLnUYHyGY,Açaí do Tio Barriga,-1.334612,-48.37209,,4,"Açaí do Tio Barriga - Av. Beira Mar - Maguari, Ananindeua - PA, 67146-476",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJnyY_GQBfpJIRjWu32m_52yw,AÇAÍ BETEL,-1.336552,-48.375861,,3,"AÇAÍ BETEL - R. Boa Esperança - Curuçambá, Ananindeua - PA, 67145-120",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJBd89DABfpJIR76D1zwWbENQ,Açaí Tacajós,-1.354388,-48.368505,,0,"Açaí Tacajós - Av. Independência, 57 - Centro, Ananindeua - PA, 67030-000",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJWyMpSABfpJIRCDn1pgLfVT8,Açaí do Jota,-1.359538,-48.36633,,5,"e um - Q. Cinqüenta - Centro, Ananindeua - PA, 67040-580",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJQzxqgrNfpJIR5PmItdy2IDE,AÇAI ORIGINALE,-1.333937,-48.355424,,4,"AÇAI ORIGINALE - Distrito Industrial, Ananindeua - PA",Itaiteua,FORA_BELEM,outra_cidade,r3,False,False,False,False,False,True
+ChIJiyv2gk1fpJIRqA-bgoA1BhY,Açaí Nativu's,-1.335223,-48.386567,,1,"Açaí Nativu's - Av Rio Amazonas, Conj. Paar, Qd 76 - nº 35 Box 05 - Maguari, Ananindeua - PA, 67145-825",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJvSBxZgBfpJIRm6HuRQlrfGI,Açaí iaçã,-1.349708,-48.388034,,2,"Açaí iaçã - Rua três, Tv. Guajará I, 504 - Cj - Maguari, Ananindeua - PA, 67145-290",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJ72UtMwBfpJIRQTaj-qLpBYo,Açaí do tiaguinho,-1.340719,-48.390019,,2,"Açaí do tiaguinho - Quadra, 121 - número 12 - Maguari, Ananindeua - PA, 67113-535",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJS7AMBQBfpJIR3XBFvaMJeoE,AÇAÍ BETEL,-1.352769,-48.388107,,0,"AÇAÍ BETEL - Tv. We 67-A - Coqueiro, Ananindeua - PA, 67143-430",Itaiteua,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True

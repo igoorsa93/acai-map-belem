@@ -1,0 +1,8 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJW1xA_SuMpJIR4PzPXVbOwqQ,Casa do Açaí,-1.456619,-48.474346,3.900000,48,"Casa do Açaí - Av. Conselheiro Furtado, 2698 - Cremação, Belém - PA, 66040-100",Cremação,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJy0qNFQCNpJIRw6lAmROE7jU,Açaíze Gastronomia Paraense,-1.458001,-48.475343,4.400000,110,"Açaíze Gastronomia Paraense - Tv. Nove de Janeiro, 2071 - Cremação, Belém - PA, 66060-585",Cremação,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ2X7kWfKPpJIRoWHdOm7uXjk,Açaí no Ponto,-1.467321,-48.487375,5.000000,1,"Esquina com Roberto Camilie - R. Eng. Fernando Guilhon, 1190 - Cremação, Belém - PA, 66033-310",Cremação,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJS0rUzYGOpJIRWr88JSfFzFs,Açai Tropical,-1.458056,-48.4792,3.900000,25,"Açai Tropical - R. dos Mundurucus, 2991 - Cremação, Belém - PA, 66040-033",Cremação,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJ6XBWtWmNpJIRNAJPZhllCrU,Ki-Delicia de Açaí,-1.466243,-48.47663,5.0,4,"Ki-Delicia de Açaí - Av. Alcindo Cacela, 3336 - Cremação, Belém - PA, 66065-205",Cremação,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJbVl2L8-PpJIRzf-r29ne2bY,Delas Açaiteria,-1.45824,-48.481785,5.0,2,"Delas Açaiteria - R. dos Mundurucus, 2699 B - Cremação, Belém - PA, 66063-023",Cremação,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJC99BQHyNpJIRwQRhe22UflE,Açaí do Seu Ronaldo-Açaí 3 M,-1.46141,-48.477847,,2,"Açaí do Seu Ronaldo-Açaí 3 M - Passagem União, 214 - A - Cremação, Belém - PA, 66045-550",Cremação,DENTRO,-1,endereco,r3,False,False,False,False,False,True

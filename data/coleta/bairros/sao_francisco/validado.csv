@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJA7YrBLMVpJIRnw0QGdHUIvI,Sorveteria Pai d'egua,-1.108182,-48.416537,,9,"Sorveteria Pai d'egua - Estr. do São Francisco, 61 - São Francisco, Belém - PA, 66920-780",São Francisco,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJH34UPAAVpJIREnp2fCYyZBg,Açaí da Bia,-1.107857,-48.413318,,0,"Açaí da Bia - Alameda São Jorge, 134 - São Francisco, Belém - PA, 66923-110",São Francisco,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJz5jH4EEVpJIRDQawosHKjJY,Keise sorveteria e Delícias da Walda,-1.109817,-48.414488,,2,"Keise sorveteria e Delícias da Walda - R. Marabá, N° 236 - São Francisco, Belém - PA, 66920-450",São Francisco,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ_ebgeO4VpJIRgwDMtcGCAaA,CLUBE CHURRASCO DA ILHA,-1.108561,-48.417399,,38,"CLUBE CHURRASCO DA ILHA - Estr. do São Francisco, 70 - São Francisco, Belém - PA, 66920-790",São Francisco,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJvT2Y5VxrpJIRtVDiQPYB_fM,Praia Grande,-1.150169,-48.469716,,135,"Praia Grande - Mosqueiro, Belém - PA",São Francisco,DENTRO,387,centroide,r3,False,False,False,False,False,True

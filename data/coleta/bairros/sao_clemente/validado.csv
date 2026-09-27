@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ2ycRkG5hpJIRoRnikN2RTXI,Açaí da neth,-1.361164,-48.467745,4.7,7,"Açaí da neth - R. Doroth - São Clemente, Belém - PA, 66816-310",São Clemente,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJu8VdBn5hpJIR9HuOMqferxs,Açai do Primo,-1.360508,-48.464598,4.9,8,"Açai do Primo - Passagem Bom Jesus, 12 - São Clemente, Belém - PA, 66643-870",São Clemente,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJFejiQO9hpJIRwma7TbP2034,Açaí Do Bijú,-1.363327,-48.464776,5.0,6,"Açaí Do Bijú - R. São Clemente - São Clemente, Belém - PA, 66816-214",São Clemente,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJHf8FmJ9mpJIReZd_yqAngsg,Casa Pena,-1.298065,-48.476273,,102,"Casa Pena - Tv. Cristóvão Colombo, 1440 - São Clemente, Belém - PA, 66810-000",São Clemente,DENTRO,-1,endereco,r3,False,False,False,False,False,True

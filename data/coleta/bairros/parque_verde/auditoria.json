@@ -1,0 +1,16 @@
+{
+  "bairro": "Parque Verde",
+  "slug": "parque_verde",
+  "timestamp": "2026-09-27T22:22:17.824245+00:00",
+  "duracao_s": 0.003,
+  "total_raw": 112,
+  "total_validado": 29,
+  "distribuicao": {
+    "DENTRO": 29,
+    "BAIRRO_VIZINHO": 76,
+    "FORA_BAIRRO": 1,
+    "FORA_BELEM": 6,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 25.9
+}

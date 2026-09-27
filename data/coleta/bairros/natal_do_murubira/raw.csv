@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJE0-ctUYVpJIR3Fom5UfKFgo,Império do Açaí,-1.100836,-48.401063,,4,"Império do Açaí - R. Ramal do Dmer - Carananduba, Belém - PA, 66923-370",Natal do Murubira,BAIRRO_VIZINHO,Carananduba,r3,False,False,False,False,False,True
+ChIJISbcLwBvpJIR0tA3_cH5OHA,Açaí Vitória,-14.409526,-51.316863,,1,,Natal do Murubira,FORA_BELEM,,r3,False,False,False,False,False,True

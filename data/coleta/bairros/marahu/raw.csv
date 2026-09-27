@@ -1,0 +1,8 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJPx2zq-EXpJIRXDX9Gt13xkg,Jurubeba Marahu,-1.07314,-48.400722,,888,"Praia do - Avenida Beira Mar - Marahú, Belém - PA, 66931-020",Marahú,DENTRO,Marahú,r3,False,False,False,False,False,True
+ChIJdSBUu4WOpJIRrvsPGL1B_34,Marahú Sorvetes Artesanais,-1.454582,-48.485731,,116,"Marahú Sorvetes Artesanais - Av. Cmte. Brás de Aguiar, 650 - Nazaré, Belém - PA, 66035-190",Marahú,BAIRRO_VIZINHO,Nazaré,r3,False,False,False,False,False,True
+ChIJKyRZgoEVpJIRlcAL-ydeuOs,Chalé Marahu,-1.082221,-48.415048,,15,"Chalé Marahu - Marahu, Belém - PA 66923-040, Belém - PA, 66923-040",Marahú,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJt5M_QHlrpJIRjNogjZ3SR_w,Mercado Municipal de Mosqueiro,-1.164965,-48.472555,,532,"Mercado Municipal de Mosqueiro - Travessa Siqueira Mendes, 17 - Vila, Belém - PA, 66910-110",Marahú,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJscyHMfc9pJIRetp3MpDPKPU,Casa de Praia no Marahu,-1.07093,-48.39415,,0,"Casa de Praia no Marahu - Caruara, Belém - PA",Marahú,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJKQPagWVrpJIR_hWsZ3W6wMg,Acai do Zequinha,-1.158561,-48.468929,,2,"Acai do Zequinha - Vila, Belém - PA, 66910-000",Marahú,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJf4YfFw8XpJIRZw2ardKMylc,Pousada Marahú,-1.074078,-48.406917,,95,"Pousada Marahú - Estr. do Marahu, 25-15 - Marahú, Belém - PA, 66931-010",Marahú,DENTRO,Marahú,r3,False,False,False,False,False,True

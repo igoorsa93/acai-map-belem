@@ -1,0 +1,12 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJbeosQH6JpJIRl2O-G0Rmcw8,Point Açaí,-1.403702,-48.480125,4.000000,3,"Point Açaí - Av. dos Tucanos - Maracangalha, Belém - PA",Maracangalha,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJecG4j3-JpJIRGvfCncApB8s,Açaí Do Irmão Manoel,-1.40142,-48.480637,3.700000,9,"Açaí Do Irmão Manoel - Rua Rio Amazonas, Q4C4 - Maracangalha, Belém - PA, 66110-340",Maracangalha,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJhT0jkGaJpJIRWtHUjpVel8Y,açai da pp III,-1.399684,-48.485199,5.000000,3,"açai da pp III - rua 29 esquina com avenida norte quadra 80 numero - Maracangalha, Belém - PA, 66110-022",Maracangalha,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJHaH34dWLpJIRdLi6UnJ-bIo,CASA DO AÇAI,-1.404554,-48.47778,0.000000,0,"CASA DO AÇAI - Passagem Marajoara Um, 128 - Maracangalha, Belém - PA, 66110-270",Maracangalha,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJIYoW_n-JpJIR31bCmkOSMcg,AÇAÍ D'CASA,-1.401131,-48.478781,0.000000,0,"AÇAÍ D'CASA - Av. Oeste - Maracangalha, Belém - PA, 66110-052",Maracangalha,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJ34jyAWKJpJIRANaJaSyneaQ,Açaí da PP,-1.397551,-48.480231,4.8,25,"Açaí da PP - R. 15A, 92 - Maracangalha, Belém - PA, 66110-060",Maracangalha,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJMbaBWQCJpJIRz5QOTeXRgRs,Casa Dú Açaí,-1.398096,-48.483644,5.0,1,"Casa Dú Açaí - Vila Vinagre - Maracangalha, Belém - PA, 66812-310",Maracangalha,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJ86dai_aLpJIRCZOsgeHg1no,AÇAÍ DO PRIMO™ – Maracangalha,-1.401438,-48.473283,,49,"AÇAÍ DO PRIMO™ – Maracangalha - Passagem Santo Amaro, 5 - Maracangalha, Belém - PA, 66110-210",Maracangalha,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJtYXp7oGJpJIRDEoVLanH9kc,Açaí Do Cadu,-1.400427,-48.482873,,13,"Açaí Do Cadu - R. Vinte e Três, 211 - Maracangalha, Belém - PA, 66110-014",Maracangalha,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJxXNsg-uJpJIRkOLjfdkJFaQ,Rei do Açaí,-1.398286,-48.479904,,14,"Rei do Açaí - Av. Norte, 435-475 - Maracangalha, Belém - PA, 66110-054",Maracangalha,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ29We6ASJpJIRKDE7IkXDXKc,Paraíso do Acaí,-1.406428,-48.480187,,4,"Paraíso do Acaí - Tv. Rio Paru, 34 - Maracangalha, Belém - PA, 66110-000",Maracangalha,DENTRO,-1,endereco,r3,False,False,False,False,False,True

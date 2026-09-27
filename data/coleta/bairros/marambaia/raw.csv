@@ -1,0 +1,14 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJY5BxIa-LpJIRf4lGB-uRRpM,Ws açaí.,-1.401409,-48.44783,0.000000,0,"Ws açaí. - Passagem Iracema, 224 - Marambaia, Belém - PA, 66623-140",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJb90yLgCLpJIRg3JZwTEes28,PARÁIAÇÁ,-1.401414,-48.453578,4.000000,89,"PARÁIAÇÁ - Av. Rodolfo Chermont, 910 - Marambaia, Belém - PA, 66620-000",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJcUQ4006KpJIRBuBooeokMaw,Açaí do Zeca 1,-1.395218,-48.453697,4.300000,36,"Açaí do Zeca 1 - Av. Rodolfo Chermont, 1596 - Marambaia, Belém - PA, 66620-430",,BAIRRO_VIZINHO,Marambaia,r2|r3,False,True,False,False,False,True
+ChIJd2WzTGSLpJIRHgRzClXU-mY,SORVETINHO BELÉM,-1.401542,-48.460184,4.700000,95,"SORVETINHO BELÉM - R. da Mata, 0 - Marambaia, Belém - PA, 66615-420",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJdQdE6rSLpJIRfn2t549vsGU,AÇAI DUELVIS,-1.401427,-48.455204,4.200000,6,"AÇAI DUELVIS - Marambaia, Belém - PA, 66615-420",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJn0ct1KuLpJIRUEmSYzumc3Y,Açai Bis,-1.403895,-48.441728,4.000000,184,"Açai Bis - Av. Dalva, 304 - Marambaia, Belém - PA, 66615-850",,BAIRRO_VIZINHO,Marambaia,r2|r3,False,True,False,False,False,True
+ChIJvVIdrStgpJIR9tRTvcHoFlE,Cabanagem,-1.368,-48.432515,0.000000,0,Belém - PA,,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJwTxTq_-KpJIRqh3ziKzkylE,Açaí do Cowboy,-1.399015,-48.437217,4.400000,41,"Açaí do Cowboy - R. We-3, 532 - Marambaia, Belém - PA, 66623-283",,BAIRRO_VIZINHO,Marambaia,r2|r3,False,True,False,False,False,True
+ChIJw_SzZgCLpJIRLUTTtdEKoaQ,casa do açaí,-1.398078,-48.45152,0.000000,0,"casa do açaí - Viela Cel. Artur, 45 - Marambaia, Belém - PA, 66620-580",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJyZ9wTmGLpJIROdqd2v-z-AQ,Açaí tatuoca,-1.414147,-48.473927,5.000000,2,"Açaí tatuoca - Tv. Alferes Costa - Marambaia, Belém - PA, 66120-330",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJz8EfEWiLpJIRMTM-cCn4Sf8,Delicias du Pará | Toc-Toc du Delicias,-1.403807,-48.442701,4.500000,1889,"Delicias du Pará | Toc-Toc du Delicias - Av. Dalva, 198 - Marambaia, Belém - PA, 66615-850",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJ21NDv--LpJIRd3sq5a1HrPQ,Sorveteria Nova Canaã,-1.397728,-48.452449,4.700000,25,"Sorveteria Nova Canaã - Viela Cel. Artur, 25 - Marambaia, Belém - PA, 66620",,DENTRO,Marambaia,r2,False,True,False,False,False,False
+ChIJKezBIwGLpJIRhePzZgP8BF0,Esquina do Açaí - Luiz Carlos,-1.402918,-48.435857,4.600000,24,"Esquina do Açaí - Luiz Carlos - Passagem Cajuí - Marambaia, Belém - PA, 66623-580",,BAIRRO_VIZINHO,Marambaia,r2|r3,False,True,False,False,False,True

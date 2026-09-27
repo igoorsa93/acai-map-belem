@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJox9QhCpnpJIROBvj8qyNb10,Açaí + Sabor,-1.305194,-48.461039,5.000000,2,"Açaí + Sabor - Tv. Águas Negras, 22 - Águas Negras, Belém - PA, 66822-430",Águas Negras,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJedZEIABnpJIRKQQL8gyWgLM,Açaí Vilhena,-1.305066,-48.461523,,0,"Esquina com Brasilia - Tv. Águas Negras, 340 - Águas Negras, Belém - PA, 66822-430",Águas Negras,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJZ_ti5zlnpJIRqFo5UZOzE9A,Império dos sucos,-1.305744,-48.458924,,0,"Império dos sucos - Passagem São Raimundo, N° 92 - Águas Negras, Belém - PA, 66822-470",Águas Negras,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ5T6KY31npJIRtCtXiglKl28,EBA AÇAÍ DO ALISSON,-1.311533,-48.447444,4.9,43,"EBA AÇAÍ DO ALISSON - Passagem Tancredo Neves, 121 - Águas Negras, Belém - PA, 66822-330",Águas Negras,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJNV2J-SdnpJIRLWoViR-3dVk,Açai & CIA,-1.307124,-48.458585,4.0,1,"Açai & CIA - Passagem São Raimundo, 109 - Águas Negras, Belém - PA, 66822-470",Águas Negras,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

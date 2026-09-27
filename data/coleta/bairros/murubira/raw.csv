@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJH-QzbqUVpJIRO09omPBXp9g,Açai do martinho 2,-1.128038,-48.445234,5.000000,6,"Açai do martinho 2 - R. Variante - Murubira, Belém - PA, 66913-670",,BAIRRO_VIZINHO,Murubira,r2|r3,False,True,False,False,False,True
+ChIJVUR9tVYVpJIRmGvhLXMPVsU,Restaurante Clube da Ilha | Mosqueiro - Pará,-1.131072,-48.429454,,139,"ao lado do hotel furacão - Rodovia Engenheiro, Rod. Augusto Meira Filho, 16 - Murubira, Belém - PA, 66000-000",Murubira,DENTRO,Murubira,r3,False,False,False,False,False,True

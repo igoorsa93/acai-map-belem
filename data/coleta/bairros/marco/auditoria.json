@@ -1,0 +1,16 @@
+{
+  "bairro": "Marco",
+  "slug": "marco",
+  "timestamp": "2026-09-27T22:22:17.802636+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 10,
+  "total_validado": 10,
+  "distribuicao": {
+    "DENTRO": 10,
+    "BAIRRO_VIZINHO": 0,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 100.0
+}

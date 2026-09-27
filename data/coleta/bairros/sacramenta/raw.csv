@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJIQN0T8OLpJIRQkwFalD50l0,Açaí do Edir,-1.412354,-48.468099,4.400000,86,"Açaí do Edir - Passagem Mucajá, 192 - Sacramenta, Belém - PA, 66120-080",,BAIRRO_VIZINHO,Sacramenta,r2|r3,False,True,False,False,False,True

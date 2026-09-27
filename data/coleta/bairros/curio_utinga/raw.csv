@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJm1SU2IWLpJIRQbHlg9GcYPg,Açaí Do Davi,-1.426596,-48.446578,4.800000,12,"Açaí Do Davi - Passagem Ana Deusa, 42 - Curió-Utinga, Belém - PA, 66610-290",,DENTRO,Curió-Utinga,r2,False,True,False,False,False,False

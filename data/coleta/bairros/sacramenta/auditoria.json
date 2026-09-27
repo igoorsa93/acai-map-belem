@@ -1,0 +1,16 @@
+{
+  "bairro": "Sacramenta",
+  "slug": "sacramenta",
+  "timestamp": "2026-09-27T22:22:17.811407+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 1,
+  "total_validado": 1,
+  "distribuicao": {
+    "DENTRO": 1,
+    "BAIRRO_VIZINHO": 0,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 100.0
+}

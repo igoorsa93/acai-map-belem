@@ -1,0 +1,9 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJh1bwHQAVpJIRb5k3Ke6-Cis,Açaiteria Ponto Frio,-1.103352,-48.401205,0.000000,0,"Açaiteria Ponto Frio - Rod. Eng. Augusto Meira Filho - Carananduba, Belém - PA, 66923-120",Carananduba,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJhxIl-fgVpJIRgCfmHnpIfbY,Açaí point dos amigos,-1.101434,-48.412982,5.000000,2,"Açaí point dos amigos - Carananduba, Belém - PA",Carananduba,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJf_Z1GQ0VpJIRCYhPzhMYnR4,Mais açaí,-1.100216,-48.400712,,3,"Mais açaí - R. Ramal do Dmer - Carananduba, Belém - PA",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJne3tTIAVpJIRUD3JwPbFl-Q,Ilhaçaí Frozen Carananduba,-1.093876,-48.409807,,1,"em frente ao Posto de saúde - Magalhães Barata Praça do - Carananduba, Belém - PA, 66000-001",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ5eKLuIQVpJIRQliyd08OGZQ,Açaí da Rosy,-1.09623,-48.408141,,2,"Açaí da Rosy - R. da Pedreira, ° 362 - Carananduba, Belém - PA, 66923-370",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJMYsd8doVpJIR_jUHL6tJy-s,Sorveteria & Pizzaria KATI MOSQUEIRO,-1.096298,-48.411032,,39,"Sorveteria & Pizzaria KATI MOSQUEIRO - Estr. do Cajueiro, 552A - Carananduba, Belém - PA, 66913-430",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJDd-vbdoVpJIRIPljPrKbvY4,Açaí Point Dos Amigos,-1.094019,-48.402125,,2,"Açaí Point Dos Amigos - R. Lalor Mota - Carananduba, Belém - PA, 66923-060",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJE0-ctUYVpJIR3Fom5UfKFgo,Império do Açaí,-1.100836,-48.401063,,4,"Império do Açaí - R. Ramal do Dmer - Carananduba, Belém - PA, 66923-370",Carananduba,DENTRO,-1,endereco,r3,False,False,False,False,False,True

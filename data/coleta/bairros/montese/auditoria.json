@@ -1,0 +1,16 @@
+{
+  "bairro": "Montese",
+  "slug": "montese",
+  "timestamp": "2026-09-27T22:22:17.807704+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 0,
+  "total_validado": 0,
+  "distribuicao": {
+    "DENTRO": 0,
+    "BAIRRO_VIZINHO": 0,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 0.0
+}

@@ -1,0 +1,16 @@
+{
+  "bairro": "Marahú",
+  "slug": "marahu",
+  "timestamp": "2026-09-27T22:22:17.857241+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 7,
+  "total_validado": 2,
+  "distribuicao": {
+    "DENTRO": 2,
+    "BAIRRO_VIZINHO": 3,
+    "FORA_BAIRRO": 2,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 28.6
+}

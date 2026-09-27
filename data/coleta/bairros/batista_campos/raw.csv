@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ68EhHXuPpJIRVieH1xwFkWg,Assaí Atacadista - Batista Campos,-1.463819,-48.495134,4.400000,1006,"Assaí Atacadista - Batista Campos - Av. Conselheiro Furtado, 76 - Batista Campos, Belém - PA, 66025-160",,BAIRRO_VIZINHO,Batista Campos,r2|r3,False,True,False,False,False,True
+ChIJA9RCucSPpJIRfDqDg7gIKhY,Açaí Tropical Belém,-1.465487,-48.488176,0.000000,0,"Açaí Tropical Belém - R. dos Timbiras, 1397 - Batista Campos, Belém - PA, 66033-331",,DENTRO,Batista Campos,r2,False,True,False,False,False,False

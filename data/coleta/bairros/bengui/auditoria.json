@@ -1,0 +1,16 @@
+{
+  "bairro": "Benguí",
+  "slug": "bengui",
+  "timestamp": "2026-09-27T22:22:17.818356+00:00",
+  "duracao_s": 0.001,
+  "total_raw": 31,
+  "total_validado": 13,
+  "distribuicao": {
+    "DENTRO": 13,
+    "BAIRRO_VIZINHO": 18,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 41.9
+}

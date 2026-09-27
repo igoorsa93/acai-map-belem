@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJu_6uVnyPpJIRyadrA4VOSxg,Açaí da 14 de Março,-1.448134,-48.480855,3.900000,19,"Açaí da 14 de Março - R. João Balbi, 794 - Nazaré, Belém - PA, 66055-280",,BAIRRO_VIZINHO,Nazaré,r2|r3,False,True,False,False,False,True
+ChIJw_vZZ5qOpJIR5l6idQucjTU,Açaí do Alonso,-1.450046,-48.487805,4.600000,276,"Açaí do Alonso - R. João Balbi, 55 - Nazaré, Belém - PA, 66055-280",,BAIRRO_VIZINHO,Nazaré,r2|r3,False,True,False,False,False,True

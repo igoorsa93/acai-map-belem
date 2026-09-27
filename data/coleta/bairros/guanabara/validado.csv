@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJFY68lxWLpJIRQxE7RlcJ1pU,Açaí duas irmãs Rayanne e aryella,-1.395609,-48.4076,5.000000,3,"Açaí duas irmãs Rayanne e aryella - Av. Ricardo Borges - Guanabara, Belém - PA, 67110-290",Guanabara,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJw4EFRbmLpJIRny50LZTOVN8,Açaí paì D'egua,-1.394119,-48.418463,3.7,3,"Açaí paì D'egua - #302A, R. do Fio - Guanabara, Belém - PA, 67010-550",Guanabara,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

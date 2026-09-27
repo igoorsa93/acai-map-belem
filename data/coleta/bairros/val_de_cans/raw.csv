@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJm3wB7rqLpJIR8iiBc84ix78,DON RAMONN SORVETERIA E LANCHONETE,-1.398183,-48.474398,4.700000,7,"DON RAMONN SORVETERIA E LANCHONETE - R. Olinda, 05 - Val-de-Cans, Belém - PA, 66617-570",,DENTRO,Val-de-Cans,r2,False,True,False,False,False,False
+ChIJsUSZweKLpJIRAr51BlL611Q,Guaraná Tropical,-1.398366,-48.474922,4.700000,13,"Guaraná Tropical - R. Olinda, 3854 - Val-de-Cans, Belém - PA, 66617-570",,DENTRO,Val-de-Cans,r2,False,True,False,False,False,False
+ChIJtz4CJv2LpJIRScWxwfIuT_M,Açaí do Bacana,-1.398284,-48.470121,4.700000,14,"Açaí do Bacana - R. Florianópolis - Val-de-Cans, Belém - PA, 66617-190",,BAIRRO_VIZINHO,Val-de-Cans,r2|r3,False,True,False,False,False,True
+ChIJzf_PyA6LpJIRCfdTkVTldcQ,Cairu,-1.388998,-48.464671,4.300000,95,"Cairu - Av. Centenário, 1052 - 1º piso - Val-de-Cans, Belém - PA, 66635-894",,DENTRO,Val-de-Cans,r2,False,True,False,False,False,False

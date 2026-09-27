@@ -1,0 +1,10 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJZblcyKeOpJIRFJ3h_g2Fpao,Açaí tropical do Pará,-1.438349,-48.480725,5.000000,3,"Açaí tropical do Pará - Tv. 14 de Março - Umarizal, Belém - PA, 66050-430",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJky4Hup2OpJIRDM2GPHbUjBc,Cairu,-1.449107,-48.480668,4.700000,2812,"Cairu - Tv. 14 de Março, 1570 - Umarizal, Belém - PA, 66055-490",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJn2TOBYyPpJIRWffJNWJNYx4,Restaurante Amazônia na Cuia - Comidas Típicas Paraenses,-1.445001,-48.480011,4.900000,12313,"Restaurante Amazônia na Cuia - Comidas Típicas Paraenses - R. Domingos Marreiros, 851 - Umarizal, Belém - PA, 66055-215",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJq6ij16OOpJIRvzx_VvEQzr4,Cairu,-1.442062,-48.484044,4.700000,3988,"Cairu - Tv. Dom Romualdo de Seixas, 1139 - Umarizal, Belém - PA, 66055-200",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJw6DtK7COpJIRo-OdJxLg-J8,Açaí Umarizal,-1.436047,-48.489051,3.500000,6,"Açaí Umarizal - R. Municipalidade, 1563 - Umarizal, Belém - PA, 66050-350",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJxwecvXOPpJIRxqybGC_9fck,DuNorte Açaí,-1.440703,-48.486641,5.000000,1,"DuNorte Açaí - Tv. Dom Romualdo Coelho, 733 - Umarizal, Belém - PA, 66055-190",,BAIRRO_VIZINHO,Umarizal,r2|r3,False,True,False,False,False,True
+ChIJH5Dzb2eNpJIRFsFJbZoUcbw,Amazônia Açaí,-1.440071,-48.477276,4.800000,18,"Amazônia Açaí - Av. Alcindo Cacela, 838 - Umarizal, Belém - PA, 66060-271",,DENTRO,Umarizal,r2,False,True,False,False,False,False
+ChIJJRQ5ySGMpJIRQmR0B2OEzeU,Açaí & Cia Delivery!,-1.445454,-48.475622,5.000000,5,"Açaí & Cia Delivery! - Tv. Nove de Janeiro, 671 - Umarizal, Belém - PA, 66060-370",,BAIRRO_VIZINHO,Umarizal,r2|r3,False,True,False,False,False,True
+ChIJKxJ0H72OpJIRJ4fM02BMxXA,Maioca - Sorveteria Artesanal,-1.443134,-48.487092,4.700000,1677,"Maioca - Sorveteria Artesanal - R. Bernal do Couto, 308 - Umarizal, Belém - PA, 66055-080",,BAIRRO_VIZINHO,Umarizal,r2|r3,False,True,False,False,False,True

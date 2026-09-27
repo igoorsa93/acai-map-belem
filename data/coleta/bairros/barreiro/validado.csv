@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ_SN-USyJpJIROLAPRMNJwPU,AÇAI DO NANDO,-1.41018,-48.478837,5.000000,3,"AÇAI DO NANDO - Pss são Sebastião, Tv. São Sebastião, 11 - Casa - Barreiro, Belém - PA, 66120-340",Barreiro,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJzal_5NqLpJIRVBGmME59YtM,Bombons Regionais Paraense,-1.402462,-48.46008,4.500000,6,"Bombons Regionais Paraense - Rua da mata, Passagem São Jorge, 46, Belém - PA, 66615-550",Barreiro,DENTRO,186,centroide,r2,False,True,False,False,False,False

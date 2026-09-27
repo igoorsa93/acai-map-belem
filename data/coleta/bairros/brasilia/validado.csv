@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ-X1WRgBlpJIRxo2QA97PMOs,Açai da Pérola,-1.286696,-48.47888,0.000000,0,"Açai da Pérola - Av. BL Dez, 2084 - Brasília, Belém - PA, 66845-830",Brasília,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ5-UzwoNnpJIR2mPJNlhCISY,Sorveteria Pai D'égua,-1.279754,-48.470851,5.000000,9,"Sorveteria Pai D'égua - R. das Orquídeas, N° 35 - Brasília, Belém - PA, 66845-410",Brasília,DENTRO,-1,endereco,r2,False,True,False,False,False,False

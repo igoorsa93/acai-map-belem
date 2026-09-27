@@ -1,0 +1,16 @@
+{
+  "bairro": "Cabanagem",
+  "slug": "cabanagem",
+  "timestamp": "2026-09-27T22:22:17.819441+00:00",
+  "duracao_s": 0.001,
+  "total_raw": 27,
+  "total_validado": 19,
+  "distribuicao": {
+    "DENTRO": 19,
+    "BAIRRO_VIZINHO": 4,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 4,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 70.4
+}

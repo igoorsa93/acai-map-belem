@@ -1,0 +1,13 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJScKYr6VmpJIR0TJKu6vT1E8,Açaí Da Rosa,-1.304477,-48.471722,5.000000,1,"Açaí Da Rosa - Passagem São José de Ribamar - Agulha, Belém - PA, 66811",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJW31UTmxnpJIRd0FmlWDxxbk,Moara sorveteria artesanal,-1.29965,-48.472274,4.900000,23,"Moara sorveteria artesanal - Rod. Augusto Montenegro, 671 - Agulha, Belém - PA, 66645-001",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJiybEdahmpJIRCRF5ffyg4SQ,Açai Norte,-1.306083,-48.477222,0.000000,0,"Açai Norte - Tv. Berredos, 1533 - Agulha, Belém - PA, 66811-005",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJq3D8Pb5mpJIRXbZ4tap-UoM,Açai Raízes do Pedrinho,-1.299123,-48.462493,4.500000,14,"Açai Raízes do Pedrinho - Passagem Brasília, 10 - Agulha, Belém - PA, 66815-160",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJ57k_EKRnpJIRmxBKuPTBsoU,Açaí Bom Sabor,-1.30057,-48.462333,0.000000,0,"Açaí Bom Sabor - Passagem Brasília, 784 - Agulha, Belém - PA, 66846-490",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJO3BxHNNnpJIRgtCdPtMjAtw,Açaí mania Icoaraci,-1.298712,-48.473889,0.000000,0,"Açaí mania Icoaraci - Padre Júlio Gomes - Agulha de Icoaraci, Belém - PA, 66813-050",,DENTRO,Agulha,r2|r3,False,True,False,False,False,True
+ChIJ6y-eLqVmpJIRtQ3tFnLrj14,Agulha,-1.305475,-48.469292,,0,Belém - PA,Agulha,BAIRRO_VIZINHO,Maracacuera,r3,False,False,False,False,False,True
+ChIJhauXIKxmpJIRBscyBLzYhRo,Açai das Meninas,-1.309457,-48.472231,,0,"Açai das Meninas - Tv. da Soledade, 37 - Agulha, Belém - PA, 66812-030",Agulha,DENTRO,Agulha,r3,False,False,False,False,False,True
+ChIJe4c13KtmpJIRXWsh3l07dXk,Açaí DO IRMÃO Raimundo,-1.309781,-48.475088,,6,"Açaí DO IRMÃO Raimundo - Tv. da Soledade, 78 - Ponta Grossa, Belém - PA, 66812-030",Agulha,BAIRRO_VIZINHO,Ponta Grossa,r3,False,False,False,False,False,True
+ChIJBVBQj5lmpJIRw2cHOYaqRUA,Sou D Mais Açaí,-1.309277,-48.470624,,0,"Sou D Mais Açaí - travessa da soledade, 14 próximo a 2 de dezembro, em frente ao mercantil o favorito - ponto grossa, Belém - PA, 66812-030",Agulha,BAIRRO_VIZINHO,Maracacuera,r3,False,False,False,False,False,True
+ChIJoRmKoMlnpJIRFEwi-NaHKVc,Açaí da Lene,-1.308529,-48.474351,,0,"travesa das andradas - Alameda princesa isabel 2 entre setima e, R. Oito de Maio, casa N° 8 - Agulha, Belém - PA, 66811-150",Agulha,DENTRO,Agulha,r3,False,False,False,False,False,True
+ChIJ8YedUKVmpJIR916CCZub_Nw,A casa do Açaí,-1.30558,-48.469392,,9,"A casa do Açaí - R. Oito de Maio - Ponta Grossa, Belém - PA, 66813-015",Agulha,BAIRRO_VIZINHO,Ponta Grossa,r3,False,False,False,False,False,True

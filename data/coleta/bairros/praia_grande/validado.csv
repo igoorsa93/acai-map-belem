@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJR0tOMqeNpJIRvo1ZQDinEaA,Açai da Deusa,-1.461992,-48.458669,,0,"Açai da Deusa - Passagem Modelo Ramo I, 98 - Praia Grande (Mosqueiro), Belém - PA, 66914-010",Praia Grande,DENTRO,-1,endereco,r3,False,False,False,False,False,True

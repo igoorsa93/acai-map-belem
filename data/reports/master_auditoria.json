@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-09-27T22:22:17.889551+00:00",
+  "total_pids": 821,
+  "total_linhas_lidas": 821,
+  "bairros_processados": 71,
+  "bairros_pulados": [],
+  "distribuicao_status": {
+    "DENTRO": 821
+  },
+  "distribuicao_bairro": {
+    "Pratinha": 62,
+    "Tapanã": 60,
+    "Coqueiro": 58,
+    "Campina de Icoaraci": 50,
+    "Cabanagem": 43,
+    "Parque Verde": 37,
+    "Mangueirão": 33,
+    "Benguí": 29,
+    "Cruzeiro": 28,
+    "Pedreira": 28,
+    "Marambaia": 25,
+    "Parque Guajará": 24,
+    "São João do Outeiro": 22,
+    "Tenoné": 22,
+    "Umarizal": 18,
+    "Agulha": 14,
+    "Maracacuera": 14,
+    "Marco": 14,
+    "Vila": 13,
+    "Água Boa": 11,
+    "Campina": 11,
+    "Maracangalha": 11,
+    "Ponta Grossa": 11,
+    "São Brás": 11,
+    "Jurunas": 10,
+    "Paracuri": 10,
+    "Sacramenta": 10,
+    "Batista Campos": 8,
+    "Carananduba": 8,
+    "Guamá": 8
+  },
+  "distribuicao_metodo": {
+    "endereco": 793,
+    "centroide": 28
+  },
+  "pids_multi_bairro": 0,
+  "issues": [
+    {
+      "tipo": "BAIRRO_SEM_ESTABELECIMENTO",
+      "count": 5,
+      "descricao": "Bairros validados mas sem nenhum estabelecimento DENTRO",
+      "exemplos": [
+        "caruara",
+        "miramar",
+        "natal_do_murubira",
+        "paraiso",
+        "universitario"
+      ]
+    }
+  ],
+  "consistencia": "1 issue(s) detectado(s)"
+}

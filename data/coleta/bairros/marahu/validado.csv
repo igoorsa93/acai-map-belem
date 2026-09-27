@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJPx2zq-EXpJIRXDX9Gt13xkg,Jurubeba Marahu,-1.07314,-48.400722,,888,"Praia do - Avenida Beira Mar - Marahú, Belém - PA, 66931-020",Marahú,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJf4YfFw8XpJIRZw2ardKMylc,Pousada Marahú,-1.074078,-48.406917,,95,"Pousada Marahú - Estr. do Marahu, 25-15 - Marahú, Belém - PA, 66931-010",Marahú,DENTRO,-1,endereco,r3,False,False,False,False,False,True

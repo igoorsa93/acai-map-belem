@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ6xjjho6PpJIRXcQDkzRPT0g,"Belém, Pará, Açaí",-1.463639,-48.491671,,0,"Belém, Pará, Açaí - R. dos Mundurucus, 1338 - Batista Campos, Belém - PA, 66033-726",Caruará,BAIRRO_VIZINHO,Batista Campos,r3,False,False,False,False,False,True
+ChIJk7THZtxfpJIRaMhY-njVDxU,Açai da Emilia,-1.35235,-48.391666,,26,"Açai da Emilia - TV WE 68 A (CONJ GUAJARÁ I), 1392 - Coqueiro, Ananindeua - PA, 67143-440",Caruará,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJc4C3cgCPpJIRD7ZNVwEVadQ,Açaí Tuíra,-1.460178,-48.49858,,1,"Açaí Tuíra - R. Óbidos, 656 - Cidade Velha, Belém - PA, 66020-448",Caruará,BAIRRO_VIZINHO,Cidade Velha,r3,False,False,False,False,False,True
+ChIJc8zFY-uOpJIRiQx3WQT5NYE,Cairu,-1.448864,-48.500364,,1051,"Cairu - Blvd. Castilhos França, 707 - Campina, Belém - PA, 66010-020",Caruará,BAIRRO_VIZINHO,Campina,r3,False,False,False,False,False,True
+ChIJOdIzlG5hpJIRfnh5VF-XBB4,Açaí ideal delivery,-1.348985,-48.4028,,3,"Açaí ideal delivery - Cidade nova 6, Tv. We Setenta e Seis, n° 302 - Cidade Nova, Ananindeua - PA, 67120-170",Caruará,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True

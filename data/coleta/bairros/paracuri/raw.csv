@@ -1,0 +1,14 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJWfg0i05hpJIRV5l4KRc7kY4,Açaí do maik,-1.313296,-48.478681,0.000000,0,"Açaí do maik - R 10 manacá, Paracuri 1 - Paracuri, Belém - PA, 66814-150",,DENTRO,Paracuri,r2|r3,False,True,False,False,False,True
+ChIJXyuBh_1npJIRZhS1kj8o6XA,Açai top,-1.310622,-48.468834,0.000000,0,"Açai top - R. Oito de Maio - Paracuri, Belém - PA, 66814-155",,BAIRRO_VIZINHO,Paracuri,r2|r3,False,True,False,False,False,True
+ChIJi06Fq61npJIR4nPT9vJeWc0,Açaí Do Irmão,-1.312195,-48.470862,5.000000,1,"Açaí Do Irmão - R. L Um, 47 - Paracuri, Belém - PA, 66814-005",,BAIRRO_VIZINHO,Paracuri,r2|r3,False,True,False,False,False,True
+ChIJnfhsaRdnpJIRySmzydfhmEw,REI DO AÇAI o melhor de Icoaraci,-1.311077,-48.471996,0.000000,0,"REI DO AÇAI o melhor de Icoaraci - R. Castelo Branco, 218 B - Paracuri, Belém - PA, 66811-535",,DENTRO,Paracuri,r2,False,True,False,False,False,False
+ChIJ_W2MewBkpJIRjK3qj6KD73I,Açai Cametaense,-1.313078,-48.48089,,1,"Açai Cametaense - R. Cel. Juvêncio Sarmento, 67 - Paracuri, Belém - PA, 66810-080",Paracuri,DENTRO,Paracuri,r3,False,False,False,False,False,True
+ChIJfdLRrVdhpJIR7MSpoU4GVA8,Paracuri,-1.316582,-48.48549,,0,Belém - PA,Paracuri,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJUZ2BgSZjpJIRMux5Y-1gu80,Sagrado açaí,-1.316682,-48.48514,,0,"Sagrado açaí - R. Dom Pedro I, 2 - Paracuri, Belém - PA, 66816-205",Paracuri,DENTRO,Paracuri,r3,False,False,False,False,False,True
+ChIJ_-PakXNjpJIRUvy4g6_szdQ,Restaurante e açaí Da Tia,-1.317288,-48.485428,,8,"Restaurante e açaí Da Tia - R. Dom Pedro I - Paracuri, Belém - PA, 66816-263",Paracuri,DENTRO,Paracuri,r3,False,False,False,False,False,True
+ChIJ1zDuRABnpJIRSk-gwUeTjGc,Açaí do Ricardo,-1.271931,-48.446042,,1,"Açaí do Ricardo - Passagem Manoel Dias, 207 - Itaiteua, Belém - PA, 66842-010",Paracuri,BAIRRO_VIZINHO,Itaiteua,r3,False,False,False,False,False,True
+ChIJYUjIrTBfpJIRFVfVEoPTcbc,Pará Açaí,-1.34717,-48.37875,,1,"Pará Açaí - Estr. do Maguari, 1 - Centro, Ananindeua - PA, 67030-320",Paracuri,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJVxMVuN1npJIRwDQeYBTe9Hk,AÇAÍ da MORENA,-1.269605,-48.473025,,13,"AÇAÍ da MORENA - Av. Nossa Sra. da Conceição, 105 - São João do Outeiro, Belém - PA, 66840-450",Paracuri,BAIRRO_VIZINHO,São João do Outeiro,r3,False,False,False,False,False,True
+ChIJwfQ6OK5npJIR26NxeJ14gZU,Açaí da Curva,-1.269539,-48.47301,,1,"Açaí da Curva - Av. Nossa Sra. da Conceição, 107 - Outeiro, Belém - PA, 66840-060",Paracuri,BAIRRO_VIZINHO,São João do Outeiro,r3,False,False,False,False,False,True
+ChIJJ3LVtFpfpJIRSAcnwVsMdbQ,Ouro Preto Açaí,-1.339261,-48.379902,,30,"Ouro Preto Açaí - Estrada do Curuçambá, 21 Conj. Paar, Qd. 22 - Maguari, Ananindeua - PA, 67145-260",Paracuri,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True

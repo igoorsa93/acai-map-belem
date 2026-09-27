@@ -1,0 +1,13 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJXcvR-GOLpJIRSVA4y3XQz4g,GUARANÁ DO MARCINHO,-1.41741,-48.468912,4.400000,81,"GUARANÁ DO MARCINHO - Rua Antonio Everdosa Entre: Rua Alferes Costa Entre:, Tv. São Sebastião - Pedreira, Belém - PA, 66085-757",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJex0RXOSLpJIRfRUNGvbIPg8,CASA DO ACAI,-1.420657,-48.472218,0.000000,0,"CASA DO ACAI - Tv. Dr. Enéas Pinheiro, 35 - Pedreira, Belém - PA, 66083-156",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJkxsSnV-NpJIRO99rerOtZOg,Maioca - Sorveteria Artesanal Duque,-1.440815,-48.468871,4.500000,546,"Maioca - Sorveteria Artesanal Duque - Tv. Curuzú, 1377 - Pedreira, Belém - PA, 66093-801",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJl7F_CE-LpJIRfNxqFNtPRas,Açaí Do DH,-1.42776,-48.478188,5.000000,1,"Açaí Do DH - Tv. Timbó, 512 - Pedreira, Belém - PA, 66083-049",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJo_1aMPSLpJIRqWuFkpMPnDw,Empório Amazônico,-1.424918,-48.457808,4.700000,1627,"Empório Amazônico - Tv. Alferes Costa, 2695 - Pedreira, Belém - PA, 66083-109",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJtQ6UIciLpJIRTcFTgOpusO4,Super açaí da Cris,-1.427353,-48.478549,5.000000,30,"Super açaí da Cris - Tv. Timbó, 334 - Pedreira, Belém - PA, 66083-047",,BAIRRO_VIZINHO,Pedreira,r2|r3,False,True,False,False,False,True
+ChIJw6DWw-aLpJIRvUGrgC7gb_g,Açaí do Bi,-1.418005,-48.472697,4.500000,6,"Açaí do Bi - R. Nova, 1652B - Pedreira, Belém - PA, 66083-444",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJy9N9W_uLpJIRxEvHXbcUb-k,Açaí Da Hilma,-1.423488,-48.473283,4.800000,12,"Açaí Da Hilma - R. Antônio Everdosa, 1541 - Pedreira, Belém - PA, 66085-755",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJ78owNQCLpJIR3w85bWhTh6Y,Açaízes,-1.429321,-48.469425,5.000000,3,"Açaízes - Av. Marquês de Herval - Pedreira, Belém - PA, 66085-314",,BAIRRO_VIZINHO,Pedreira,r2|r3,False,True,False,False,False,True
+ChIJFcnbIvyLpJIRswDLtafORcc,Açaí do Jorge,-1.426095,-48.475117,4.600000,25,"Açaí do Jorge - Tv. Mauriti, 682 - Pedreira, Belém - PA, 66080-650",,DENTRO,Pedreira,r2,False,True,False,False,False,False
+ChIJJzKa2e2LpJIRQSRwMl320nE,Casa do Açaí,-1.421429,-48.463404,4.600000,18,"Casa do Açaí - Tv. Alferes Costa, 1900 - Pedreira, Belém - PA, 66087-660",,BAIRRO_VIZINHO,Pedreira,r2|r3,False,True,False,False,False,True
+ChIJK9Yi8ceNpJIRiyoLuqxF2Yg,Point do Açaí Express - Marco,-1.430722,-48.462946,3.800000,26,"Point do Açaí Express - Marco - Tv. Angustura, 2648 - Pedreira, Belém - PA, 66087-710",,BAIRRO_VIZINHO,Pedreira,r2|r3,False,True,False,False,False,True

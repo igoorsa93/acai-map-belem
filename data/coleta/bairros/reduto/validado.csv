@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJYefA8ZeOpJIR10irPNCLs1Y,Cairu,-1.445671,-48.489149,4.700000,2412,"Cairu - Av. Visc. de Souza Franco, 776 - 412 - Reduto, Belém - PA, 66053-972",Reduto,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJaz6WfZGOpJIRKTQ9EZ3pzNw,Seuaçaibel,-1.450251,-48.493645,5.000000,1,"Seuaçaibel - R. Tiradentes, 79 - Reduto, Belém - PA, 68374-999",Reduto,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJfws9DJSOpJIRrd4Som1XTfI,C.A.M.T.A - Cooperativa Agrícola Mista de Tomé-Açu,-1.447579,-48.493785,4.600000,67,"C.A.M.T.A - Cooperativa Agrícola Mista de Tomé-Açu - R. Sen. Manoel Barata, 1335 - Reduto, Belém - PA, 66053-320",Reduto,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJE-74JC-PpJIRxIIQnfwRSYU,Açaí & Açaí Frozen - Unidade Doca,-1.447334,-48.487967,3.900000,14,"Açaí & Açaí Frozen - Unidade Doca - Av. Visc. de Souza Franco, 1012 - Reduto, Belém - PA, 66053-000",Reduto,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJm2G1obuOpJIRYhy7gLiakYg,Point do Açai Umarizal,-1.440489,-48.491465,4.5,898,"Point do Açai Umarizal - R. Municipalidade, 897 - Reduto, Belém - PA, 66053-180",Reduto,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

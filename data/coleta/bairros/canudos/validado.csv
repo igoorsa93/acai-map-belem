@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJf6uMOBmNpJIRLgVtHgGevZc,EGUA DO AÇAI BELÉM,-1.451628,-48.461303,4.8,45,"EGUA DO AÇAI BELÉM - Tv. Teófilo Condurú, 452 - Canudos, Belém - PA, 66070-530",Canudos,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

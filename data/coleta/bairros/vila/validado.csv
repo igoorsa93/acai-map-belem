@@ -1,0 +1,14 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJOdvAyLprpJIRoO9_E3vdMok,Açaíteria Mosqueiro Ilhaçaí,-1.164775,-48.472277,5.000000,1,"Açaíteria Mosqueiro Ilhaçaí - Tv. Carlos Bentes - Vila, Belém - PA, 66914-050",Vila,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ__ZattZrpJIR8veRbiSSEq8,Vila açaí,-1.165,-48.47039,,0,"Vila açaí - Tv. Carlos Bentes - Vila, Belém - PA, 66910-110",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJFWQI3SRrpJIRNaWQhRt_iUg,Nat Açaí,-1.162148,-48.467397,,0,"Nat Açaí - R. Cmte. Ernesto Dias - Vila, Belém - PA, 66910-090",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJb-YBqSJrpJIR5XQJJ2hrj0g,Ponto Do Açaí,-1.163847,-48.471556,,9,"Ponto Do Açaí - Tv. Pratiquara, 13 - Vila, Belém - PA, 66910-020",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJMyC0TwBrpJIROxrDPLcv7Uc,Açaí do Jorge,-1.167296,-48.470483,,1,"Açaí do Jorge - Passagem Igrejinha - Vila, Belém - PA, 66910-010",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ1dpSXndrpJIRA9aH5R40SRI,Sorveteria Gela Guela,-1.164822,-48.473945,,31,"Sorveteria Gela Guela - Praça Princesa Isabel - Vila, Belém - PA, 66910-000",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJwaMLCvlrpJIRl8p8v3MUCFM,Açaí do Vini,-1.167721,-48.470001,,1,"Açaí do Vini - R. Marquês Braga - Vila, Belém - PA, 66910-500",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJj97p41NrpJIR7Gk48TKSE6A,Açaí da Jane,-1.16762,-48.46909,,1,"Açaí da Jane - R. Marquês Braga - Vila, Belém - PA, 66910-500",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJvR1NbwBrpJIRC4Ag6X8I69U,Fonte do Açaí,-1.163719,-48.468745,,0,"Fonte do Açaí - R. 15 de Novembro, 599 - Vila, Belém - PA, 66910-000",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJgzBxTmZrpJIR0KPlF-t-jbg,ESPETINHO MIX,-1.158827,-48.469492,,124,"ESPETINHO MIX - Tv. Cel. José Mota, n°14 - Vila, Belém - PA, 66910-680",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJt5M_QHlrpJIRjNogjZ3SR_w,Mercado Municipal de Mosqueiro,-1.164965,-48.472555,,532,"Mercado Municipal de Mosqueiro - Travessa Siqueira Mendes, 17 - Vila, Belém - PA, 66910-110",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJKQPagWVrpJIR_hWsZ3W6wMg,Acai do Zequinha,-1.158561,-48.468929,,2,"Acai do Zequinha - Vila, Belém - PA, 66910-000",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJs0I0aHlrpJIRGBvutyuuUbI,Tapiocaria de Mosqueiro,-1.164598,-48.472559,,3026,"Tapiocaria de Mosqueiro - Tv. Carlos Bentes - Vila, Belém - PA, 66914-050",Vila,DENTRO,-1,endereco,r3,False,False,False,False,False,True

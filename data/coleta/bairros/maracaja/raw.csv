@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJX4cAXwpfpJIR7La3z6yORvQ,Açaí Marajó,-1.352463,-48.38818,,3,"Açaí Marajó - Tv. We Sessenta e Oito - Coqueiro, Ananindeua - PA, 67143-440",Maracajá,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJcSDDUwBfpJIRqc7MqfxNTTk,Açaí da Praça Curuçamba,-1.328627,-48.372717,,5,"Açaí da Praça Curuçamba - Av. Rio Baraúna, 951-905 - Maguari, Ananindeua - PA, 67146-394",Maracajá,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJG-q_mXWLpJIRyZ060yDLG8A,Açaí Marajoara,-1.416965,-48.474716,,2,"Açaí Marajoara - Passagem Comendador Pinho, 125 - Sacramenta, Belém - PA, 66083-200",Maracajá,BAIRRO_VIZINHO,Sacramenta,r3,False,False,False,False,False,True
+ChIJJx7MlkWNpJIRFIHmW0N9AKk,Açaí Sabor do Marajó,-1.458668,-48.448855,,2,"Açaí Sabor do Marajó - Av. Celso Malcher, 995 - Montese Ou T Firme, Belém - PA, 66077-000",Maracajá,BAIRRO_VIZINHO,Montese,r3,False,False,False,False,False,True

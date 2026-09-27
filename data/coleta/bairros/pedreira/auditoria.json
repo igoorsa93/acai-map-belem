@@ -1,0 +1,16 @@
+{
+  "bairro": "Pedreira",
+  "slug": "pedreira",
+  "timestamp": "2026-09-27T22:22:17.810857+00:00",
+  "duracao_s": 0.001,
+  "total_raw": 12,
+  "total_validado": 12,
+  "distribuicao": {
+    "DENTRO": 12,
+    "BAIRRO_VIZINHO": 0,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 100.0
+}

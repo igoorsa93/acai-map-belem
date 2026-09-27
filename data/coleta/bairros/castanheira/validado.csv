@@ -1,0 +1,8 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJXxSZtgCLpJIR1W1BsO7_CCE,Açai da Larinha,-1.402408,-48.431516,5.000000,18,"Açai da Larinha - Passagem São Luís 158, R. Álvaro Adolfo, 210 - Castanheira, Belém - PA, 66645-300",Castanheira,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJeeFxtryLpJIRM-FQe-ucdBs,Assaí Atacadista,-1.4094,-48.437507,4.500000,928,"Assaí Atacadista - Av. Alm. Barroso, 5386 - Castanheira, Belém - PA, 66645-250",Castanheira,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJpRNKywlhpJIR1xYLQAz9rdA,Açaí Do Rogério,-1.341166,-48.45125,0.000000,0,"Açaí Do Rogério - Rod. Augusto Montenegro, 14 - Castanheira, Belém - PA, 66645-001",Castanheira,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJqU_0Av6KpJIR575v5PhVD4c,POLPAS BELEM,-1.399921,-48.434244,5.000000,8,"POLPAS BELEM - Tv. Dois, 152 - Castanheira, Belém - PA, 66645-830",Castanheira,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJffez-2GLpJIRZPM8P2nAP30,Açaítería Mister,-1.401915,-48.431998,4.2,19,"Açaítería Mister - R. Péricles Guedes de Oliveira, 190 - Castanheira, Belém - PA, 66645-290",Castanheira,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJwcfwDP6KpJIRu0Gjw5PMJFE,Sabor do Açaí,-1.399162,-48.434182,,21,"Sabor do Açaí - Tv. Dois, 232A - Castanheira, Belém - PA, 66645-830",Castanheira,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJHzc80W2LpJIRSgof6YrafLU,Residencial Açaí,-1.403585,-48.425442,,2,"Residencial Açaí - Passagem José de Alencar, 55 - Castanheira, Belém - PA, 66645-020",Castanheira,DENTRO,-1,endereco,r3,False,False,False,False,False,True

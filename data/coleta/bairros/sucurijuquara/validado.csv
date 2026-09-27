@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJifYLMwBhpJIRynUiYv2Ny5o,Sucurijuquara,-1.313558,-48.454638,,0,"Sucurijuquara - R. Fé Em Deus, N° 03 - Sucurijuquara, Belém - PA, 66933-010",Sucurijuquara,DENTRO,-1,endereco,r3,False,False,False,False,False,True

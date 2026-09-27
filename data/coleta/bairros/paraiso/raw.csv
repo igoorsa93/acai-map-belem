@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJ29We6ASJpJIRKDE7IkXDXKc,Paraíso do Acaí,-1.406428,-48.480187,,4,"Paraíso do Acaí - Tv. Rio Paru, 34 - Maracangalha, Belém - PA, 66110-000",Paraíso,BAIRRO_VIZINHO,Maracangalha,r3,False,False,False,False,False,True
+ChIJD74MaxCNpJIRoHNlX70rawk,Balneário Restaurante Paraiso Verde,-1.458507,-48.418483,,446,"Comunidade Porto da Ceasa - Curió-Utinga, Belém - PA, 66610-840",Paraíso,BAIRRO_VIZINHO,Curió-Utinga,r3,False,False,False,False,False,True
+ChIJbeaGk3dbpJIR65ddV_o-BiM,Açaí do Paraiso,-1.291652,-48.318601,,0,"Açaí do Paraiso - Av. Martinho Monteiro, 1205 - Benfica, Benevides - PA, 68795-000",Paraíso,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJt9UwrFFhpJIR0Qt2Xo-cLLo,Açaí do Enzo,-1.349119,-48.423658,,1,"Açaí do Enzo - Rod. Do 40 horas, Residencial Jardim Paraíso Q.12 c. 8 B, Ananindeua - PA, 67120-424",Paraíso,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJqVBVSiuMpJIRUo32YzWDHks,Açai do Céu,-1.459295,-48.474824,,1,"Açai do Céu - R. dos Pariquis, 3260 - Jurunas, Belém - PA, 66045-645",Paraíso,BAIRRO_VIZINHO,Jurunas,r3,False,False,False,False,False,True

@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJF-AmsckUpJIR_PUNeHCr1xY,Sorvetes Laiun,-1.133575,-48.457297,,121,"Sorvetes Laiun - 16750, Av. 16 de Novembro, 16604 - Mosqueiro, Belém - PA",Bonfim,DENTRO,546,centroide,r3,False,False,False,False,False,True

@@ -1,0 +1,6 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJRXhJ5O9rpJIRh21LRqgi37Y,Restaurante da ilha,-1.136985,-48.45862,,73,"Restaurante da ilha - Av. 16 de Novembro - Chapéu Virado, Belém - PA",Farol,BAIRRO_VIZINHO,Chapéu Virado,r3,False,False,False,False,False,True
+ChIJqdgN6PePpJIRIweuJTyIS0s,Maná Pizza Burguer,-1.137947,-48.459302,,78,"Maná Pizza Burguer - Av. 16 de Novembro, 624 - Farol, Belém - PA, 66910-140",Farol,DENTRO,Farol,r3,False,False,False,False,False,True
+ChIJlziFvUyMpJIRBI4nAViEjII,Açai lider,-1.458244,-48.452894,,9,"Açai lider - R. São Domingos, 17 - Terra Firme, Belém - PA, 66077-650",Farol,BAIRRO_VIZINHO,Montese,r3,False,False,False,False,False,True
+ChIJreYtf8oUpJIR6taK4St808I,Comercial Hemanoely,-1.136451,-48.458654,,213,"Comercial Hemanoely - Estr. da Bateria, 1040 - Farol, Belém - PA",Farol,DENTRO,Farol,r3,False,False,False,False,False,True
+ChIJwcfwDP6KpJIRu0Gjw5PMJFE,Sabor do Açaí,-1.399162,-48.434182,,21,"Sabor do Açaí - Tv. Dois, 232A - Castanheira, Belém - PA, 66645-830",Farol,BAIRRO_VIZINHO,Castanheira,r3,False,False,False,False,False,True

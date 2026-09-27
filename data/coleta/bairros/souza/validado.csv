@@ -1,0 +1,7 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJcSWUer2LpJIRRSfXgDe-SJY,Açai Natural,-1.414552,-48.450711,5.000000,1,"Açai Natural - Souza, Belém - PA, 66613-070",Souza,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJy7x6wqCLpJIRuOZn9iHVzf0,Casa Do Açaí,-1.411988,-48.440449,5.000000,1,"Casa Do Açaí - Alameda Walter Putz, 15 - Souza, Belém - PA, 66613-085",Souza,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJM2SI2DGLpJIR5oLi_G2-zVs,Maioca - Marambaia,-1.404895,-48.448806,3.800000,93,"Maioca - Marambaia - Av. Tavares Bastos, 1055 - Souza, Belém - PA, 66615-005",Souza,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJm76CAK6LpJIRuwB5TAg182g,Top Açaí Sorvetes,-1.416218,-48.449281,4.8,18,"Top Açaí Sorvetes - Passagem Getúlio Vargas, 537-501 - Souza, Belém - PA, 66613-080",Souza,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJXy5zIfWLpJIRR6HsUSHIl2M,"Açaí ta on, Fábrica de Açaí gourmet e Sorveteria",-1.408901,-48.445262,4.5,21,"Açaí ta on, Fábrica de Açaí gourmet e Sorveteria - Av. Tavares Bastos, 459 - Souza, Belém - PA, 66615-005",Souza,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJFazU5pmLpJIR7drsaRQtB_A,Açaí e Restô Imperial,-1.417785,-48.448434,,190,"Açaí e Restô Imperial - Passagem Getúlio Vargas, nº 17 - Souza, Belém - PA, 66613-070",Souza,DENTRO,-1,endereco,r3,False,False,False,False,False,True

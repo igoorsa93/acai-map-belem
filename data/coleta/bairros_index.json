@@ -1,0 +1,570 @@
+{
+  "batista_campos": {
+    "nome": "Batista Campos",
+    "slug": "batista_campos",
+    "distrito": "DABEL",
+    "lat": -1.4439,
+    "lon": -48.4823,
+    "raio_m": 800
+  },
+  "campina": {
+    "nome": "Campina",
+    "slug": "campina",
+    "distrito": "DABEL",
+    "lat": -1.4542,
+    "lon": -48.4972,
+    "raio_m": 600
+  },
+  "cidade_velha": {
+    "nome": "Cidade Velha",
+    "slug": "cidade_velha",
+    "distrito": "DABEL",
+    "lat": -1.4568,
+    "lon": -48.5041,
+    "raio_m": 700
+  },
+  "marco": {
+    "nome": "Marco",
+    "slug": "marco",
+    "distrito": "DABEL",
+    "lat": -1.4272,
+    "lon": -48.4722,
+    "raio_m": 900
+  },
+  "nazare": {
+    "nome": "Nazaré",
+    "slug": "nazare",
+    "distrito": "DABEL",
+    "lat": -1.4506,
+    "lon": -48.4836,
+    "raio_m": 800
+  },
+  "reduto": {
+    "nome": "Reduto",
+    "slug": "reduto",
+    "distrito": "DABEL",
+    "lat": -1.4479,
+    "lon": -48.4951,
+    "raio_m": 600
+  },
+  "sao_bras": {
+    "nome": "São Brás",
+    "slug": "sao_bras",
+    "distrito": "DABEL",
+    "lat": -1.4399,
+    "lon": -48.4869,
+    "raio_m": 700
+  },
+  "umarizal": {
+    "nome": "Umarizal",
+    "slug": "umarizal",
+    "distrito": "DABEL",
+    "lat": -1.4424,
+    "lon": -48.4919,
+    "raio_m": 800
+  },
+  "canudos": {
+    "nome": "Canudos",
+    "slug": "canudos",
+    "distrito": "DAGUA",
+    "lat": -1.4638,
+    "lon": -48.507,
+    "raio_m": 700
+  },
+  "condor": {
+    "nome": "Condor",
+    "slug": "condor",
+    "distrito": "DAGUA",
+    "lat": -1.47,
+    "lon": -48.512,
+    "raio_m": 700
+  },
+  "cremacao": {
+    "nome": "Cremação",
+    "slug": "cremacao",
+    "distrito": "DAGUA",
+    "lat": -1.4562,
+    "lon": -48.511,
+    "raio_m": 700
+  },
+  "guama": {
+    "nome": "Guamá",
+    "slug": "guama",
+    "distrito": "DAGUA",
+    "lat": -1.469,
+    "lon": -48.495,
+    "raio_m": 1200
+  },
+  "jurunas": {
+    "nome": "Jurunas",
+    "slug": "jurunas",
+    "distrito": "DAGUA",
+    "lat": -1.4611,
+    "lon": -48.5,
+    "raio_m": 900
+  },
+  "montese": {
+    "nome": "Montese",
+    "slug": "montese",
+    "distrito": "DAGUA",
+    "lat": -1.464,
+    "lon": -48.483,
+    "raio_m": 800
+  },
+  "barreiro": {
+    "nome": "Barreiro",
+    "slug": "barreiro",
+    "distrito": "DASAC",
+    "lat": -1.4011,
+    "lon": -48.4591,
+    "raio_m": 700
+  },
+  "fatima": {
+    "nome": "Fátima",
+    "slug": "fatima",
+    "distrito": "DASAC",
+    "lat": -1.4168,
+    "lon": -48.4712,
+    "raio_m": 700
+  },
+  "maracangalha": {
+    "nome": "Maracangalha",
+    "slug": "maracangalha",
+    "distrito": "DASAC",
+    "lat": -1.3803,
+    "lon": -48.4529,
+    "raio_m": 700
+  },
+  "miramar": {
+    "nome": "Miramar",
+    "slug": "miramar",
+    "distrito": "DASAC",
+    "lat": -1.426,
+    "lon": -48.462,
+    "raio_m": 700
+  },
+  "pedreira": {
+    "nome": "Pedreira",
+    "slug": "pedreira",
+    "distrito": "DASAC",
+    "lat": -1.4069,
+    "lon": -48.4657,
+    "raio_m": 900
+  },
+  "sacramenta": {
+    "nome": "Sacramenta",
+    "slug": "sacramenta",
+    "distrito": "DASAC",
+    "lat": -1.4145,
+    "lon": -48.4581,
+    "raio_m": 900
+  },
+  "telegrafo": {
+    "nome": "Telégrafo",
+    "slug": "telegrafo",
+    "distrito": "DASAC",
+    "lat": -1.418,
+    "lon": -48.4498,
+    "raio_m": 800
+  },
+  "aguas_lindas": {
+    "nome": "Águas Lindas",
+    "slug": "aguas_lindas",
+    "distrito": "DAENT",
+    "lat": -1.3703,
+    "lon": -48.4457,
+    "raio_m": 900
+  },
+  "aura": {
+    "nome": "Aurá",
+    "slug": "aura",
+    "distrito": "DAENT",
+    "lat": -1.407,
+    "lon": -48.4302,
+    "raio_m": 1000
+  },
+  "castanheira": {
+    "nome": "Castanheira",
+    "slug": "castanheira",
+    "distrito": "DAENT",
+    "lat": -1.3942,
+    "lon": -48.4502,
+    "raio_m": 800
+  },
+  "curio_utinga": {
+    "nome": "Curió-Utinga",
+    "slug": "curio_utinga",
+    "distrito": "DAENT",
+    "lat": -1.422,
+    "lon": -48.419,
+    "raio_m": 1100
+  },
+  "guanabara": {
+    "nome": "Guanabara",
+    "slug": "guanabara",
+    "distrito": "DAENT",
+    "lat": -1.3801,
+    "lon": -48.4398,
+    "raio_m": 800
+  },
+  "mangueirao": {
+    "nome": "Mangueirão",
+    "slug": "mangueirao",
+    "distrito": "DAENT",
+    "lat": -1.382,
+    "lon": -48.445,
+    "raio_m": 900
+  },
+  "marambaia": {
+    "nome": "Marambaia",
+    "slug": "marambaia",
+    "distrito": "DAENT",
+    "lat": -1.368,
+    "lon": -48.4351,
+    "raio_m": 1000
+  },
+  "souza": {
+    "nome": "Souza",
+    "slug": "souza",
+    "distrito": "DAENT",
+    "lat": -1.402,
+    "lon": -48.438,
+    "raio_m": 800
+  },
+  "universitario": {
+    "nome": "Universitário",
+    "slug": "universitario",
+    "distrito": "DAENT",
+    "lat": -1.413,
+    "lon": -48.443,
+    "raio_m": 700
+  },
+  "val_de_cans": {
+    "nome": "Val-de-Cans",
+    "slug": "val_de_cans",
+    "distrito": "DAENT",
+    "lat": -1.378,
+    "lon": -48.476,
+    "raio_m": 900
+  },
+  "bengui": {
+    "nome": "Benguí",
+    "slug": "bengui",
+    "distrito": "DABEN",
+    "lat": -1.3789,
+    "lon": -48.452,
+    "raio_m": 900
+  },
+  "cabanagem": {
+    "nome": "Cabanagem",
+    "slug": "cabanagem",
+    "distrito": "DABEN",
+    "lat": -1.396,
+    "lon": -48.42,
+    "raio_m": 1000
+  },
+  "coqueiro": {
+    "nome": "Coqueiro",
+    "slug": "coqueiro",
+    "distrito": "DABEN",
+    "lat": -1.3329,
+    "lon": -48.4472,
+    "raio_m": 1100
+  },
+  "parque_verde": {
+    "nome": "Parque Verde",
+    "slug": "parque_verde",
+    "distrito": "DABEN",
+    "lat": -1.41,
+    "lon": -48.425,
+    "raio_m": 1100
+  },
+  "pratinha": {
+    "nome": "Pratinha",
+    "slug": "pratinha",
+    "distrito": "DABEN",
+    "lat": -1.355,
+    "lon": -48.465,
+    "raio_m": 1000
+  },
+  "sao_clemente": {
+    "nome": "São Clemente",
+    "slug": "sao_clemente",
+    "distrito": "DABEN",
+    "lat": -1.365,
+    "lon": -48.438,
+    "raio_m": 800
+  },
+  "tapana": {
+    "nome": "Tapanã",
+    "slug": "tapana",
+    "distrito": "DABEN",
+    "lat": -1.345,
+    "lon": -48.462,
+    "raio_m": 1100
+  },
+  "una": {
+    "nome": "Una",
+    "slug": "una",
+    "distrito": "DABEN",
+    "lat": -1.3854,
+    "lon": -48.4302,
+    "raio_m": 1100
+  },
+  "aguas_negras": {
+    "nome": "Águas Negras",
+    "slug": "aguas_negras",
+    "distrito": "DAICO",
+    "lat": -1.32,
+    "lon": -48.473,
+    "raio_m": 900
+  },
+  "agulha": {
+    "nome": "Agulha",
+    "slug": "agulha",
+    "distrito": "DAICO",
+    "lat": -1.3048,
+    "lon": -48.4791,
+    "raio_m": 700
+  },
+  "campina_de_icoaraci": {
+    "nome": "Campina de Icoaraci",
+    "slug": "campina_de_icoaraci",
+    "distrito": "DAICO",
+    "lat": -1.294,
+    "lon": -48.464,
+    "raio_m": 700
+  },
+  "cruzeiro": {
+    "nome": "Cruzeiro",
+    "slug": "cruzeiro",
+    "distrito": "DAICO",
+    "lat": -1.298,
+    "lon": -48.476,
+    "raio_m": 700
+  },
+  "maracacuera": {
+    "nome": "Maracacuera",
+    "slug": "maracacuera",
+    "distrito": "DAICO",
+    "lat": -1.31,
+    "lon": -48.468,
+    "raio_m": 800
+  },
+  "paracuri": {
+    "nome": "Paracuri",
+    "slug": "paracuri",
+    "distrito": "DAICO",
+    "lat": -1.2841,
+    "lon": -48.461,
+    "raio_m": 800
+  },
+  "parque_guajara": {
+    "nome": "Parque Guajará",
+    "slug": "parque_guajara",
+    "distrito": "DAICO",
+    "lat": -1.322,
+    "lon": -48.448,
+    "raio_m": 900
+  },
+  "ponta_grossa": {
+    "nome": "Ponta Grossa",
+    "slug": "ponta_grossa",
+    "distrito": "DAICO",
+    "lat": -1.276,
+    "lon": -48.454,
+    "raio_m": 800
+  },
+  "tenone": {
+    "nome": "Tenoné",
+    "slug": "tenone",
+    "distrito": "DAICO",
+    "lat": -1.3629,
+    "lon": -48.4329,
+    "raio_m": 900
+  },
+  "agua_boa": {
+    "nome": "Água Boa",
+    "slug": "agua_boa",
+    "distrito": "DAOUT",
+    "lat": -1.227,
+    "lon": -48.511,
+    "raio_m": 900
+  },
+  "brasilia": {
+    "nome": "Brasília",
+    "slug": "brasilia",
+    "distrito": "DAOUT",
+    "lat": -1.238,
+    "lon": -48.495,
+    "raio_m": 900
+  },
+  "itaiteua": {
+    "nome": "Itaiteua",
+    "slug": "itaiteua",
+    "distrito": "DAOUT",
+    "lat": -1.208,
+    "lon": -48.502,
+    "raio_m": 900
+  },
+  "sao_joao_do_outeiro": {
+    "nome": "São João do Outeiro",
+    "slug": "sao_joao_do_outeiro",
+    "distrito": "DAOUT",
+    "lat": -1.2181,
+    "lon": -48.51,
+    "raio_m": 800
+  },
+  "aeroporto": {
+    "nome": "Aeroporto",
+    "slug": "aeroporto",
+    "distrito": "DAMOS",
+    "lat": -1.123,
+    "lon": -48.473,
+    "raio_m": 800
+  },
+  "ariramba": {
+    "nome": "Ariramba",
+    "slug": "ariramba",
+    "distrito": "DAMOS",
+    "lat": -1.1561,
+    "lon": -48.481,
+    "raio_m": 800
+  },
+  "baia_do_sol": {
+    "nome": "Baía do Sol",
+    "slug": "baia_do_sol",
+    "distrito": "DAMOS",
+    "lat": -1.125,
+    "lon": -48.4961,
+    "raio_m": 700
+  },
+  "bonfim": {
+    "nome": "Bonfim",
+    "slug": "bonfim",
+    "distrito": "DAMOS",
+    "lat": -1.135,
+    "lon": -48.462,
+    "raio_m": 800
+  },
+  "carananduba": {
+    "nome": "Carananduba",
+    "slug": "carananduba",
+    "distrito": "DAMOS",
+    "lat": -1.148,
+    "lon": -48.466,
+    "raio_m": 800
+  },
+  "caruara": {
+    "nome": "Caruará",
+    "slug": "caruara",
+    "distrito": "DAMOS",
+    "lat": -1.168,
+    "lon": -48.459,
+    "raio_m": 800
+  },
+  "chapeu_virado": {
+    "nome": "Chapéu Virado",
+    "slug": "chapeu_virado",
+    "distrito": "DAMOS",
+    "lat": -1.144,
+    "lon": -48.4521,
+    "raio_m": 700
+  },
+  "farol": {
+    "nome": "Farol",
+    "slug": "farol",
+    "distrito": "DAMOS",
+    "lat": -1.134,
+    "lon": -48.486,
+    "raio_m": 700
+  },
+  "mangueiras": {
+    "nome": "Mangueiras",
+    "slug": "mangueiras",
+    "distrito": "DAMOS",
+    "lat": -1.173,
+    "lon": -48.469,
+    "raio_m": 800
+  },
+  "maracaja": {
+    "nome": "Maracajá",
+    "slug": "maracaja",
+    "distrito": "DAMOS",
+    "lat": -1.162,
+    "lon": -48.481,
+    "raio_m": 700
+  },
+  "marahu": {
+    "nome": "Marahú",
+    "slug": "marahu",
+    "distrito": "DAMOS",
+    "lat": -1.155,
+    "lon": -48.4911,
+    "raio_m": 700
+  },
+  "murubira": {
+    "nome": "Murubira",
+    "slug": "murubira",
+    "distrito": "DAMOS",
+    "lat": -1.131,
+    "lon": -48.479,
+    "raio_m": 700
+  },
+  "natal_do_murubira": {
+    "nome": "Natal do Murubira",
+    "slug": "natal_do_murubira",
+    "distrito": "DAMOS",
+    "lat": -1.142,
+    "lon": -48.484,
+    "raio_m": 700
+  },
+  "paraiso": {
+    "nome": "Paraíso",
+    "slug": "paraiso",
+    "distrito": "DAMOS",
+    "lat": -1.158,
+    "lon": -48.487,
+    "raio_m": 700
+  },
+  "porto_arthur": {
+    "nome": "Porto Arthur",
+    "slug": "porto_arthur",
+    "distrito": "DAMOS",
+    "lat": -1.169,
+    "lon": -48.478,
+    "raio_m": 700
+  },
+  "praia_grande": {
+    "nome": "Praia Grande",
+    "slug": "praia_grande",
+    "distrito": "DAMOS",
+    "lat": -1.127,
+    "lon": -48.502,
+    "raio_m": 700
+  },
+  "sao_francisco": {
+    "nome": "São Francisco",
+    "slug": "sao_francisco",
+    "distrito": "DAMOS",
+    "lat": -1.149,
+    "lon": -48.473,
+    "raio_m": 700
+  },
+  "sucurijuquara": {
+    "nome": "Sucurijuquara",
+    "slug": "sucurijuquara",
+    "distrito": "DAMOS",
+    "lat": -1.182,
+    "lon": -48.484,
+    "raio_m": 700
+  },
+  "vila": {
+    "nome": "Vila",
+    "slug": "vila",
+    "distrito": "DAMOS",
+    "lat": -1.138,
+    "lon": -48.477,
+    "raio_m": 700
+  }
+}

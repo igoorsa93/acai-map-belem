@@ -1,0 +1,3 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJr4yWZQCPpJIRQiiG80zsV-s,Açai DuElvis,-1.445013,-48.483912,4.800000,6,"Açai DuElvis - R. Antônio Barreto, 478 - Fátima, Belém - PA, 66055-050",Fátima,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJdR4s0meNpJIRP5KmOqvDv5k,Açaí do Anderson,-1.448592,-48.470963,,10,"Açaí do Anderson - Tv. Francisco Caldeira Castelo Branco - Fátima, Belém - PA, 66060-220",Fátima,DENTRO,-1,endereco,r3,False,False,False,False,False,True

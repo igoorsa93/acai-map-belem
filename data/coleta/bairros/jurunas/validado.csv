@@ -1,0 +1,11 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJUVJzayWPpJIRwGAjKB7qsOA,Dr. Açaí Belém,-1.462178,-48.493397,5.000000,17,"Dr. Açaí Belém - Tv. dos Tupinambás, 54 - Jurunas, Belém - PA, 66033-815",Jurunas,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJZz6Ed0GOpJIR0yS7Ux98fZ8,Açaí da Orla,-1.471512,-48.501265,4.800000,22,"Açaí da Orla - R. Osvaldo de Caldas Brito, 52 - Jurunas, Belém - PA, 66025-190",Jurunas,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJ_foSdL2PpJIR9yvgfQiAmOQ,AÇAÍZÃO EXPRESSO,-1.464961,-48.493142,3.000000,2,"e Honório. Em frente à igreja Universal - Rua dos Mundurucus, 1109 Entre, Av. Roberto Camelier - Jurunas, Belém - PA, 66025-660",Jurunas,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJ34KI_UyPpJIRFa8rLtMmw60,Açaí raiz,-1.46883,-48.487189,4.900000,8,"Açaí raiz - Av. Roberto Camelier, 1054B - Jurunas, Belém - PA, 66025-450",Jurunas,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ4dAdYQePpJIRdBqnFAKy5VA,Love Açaí,-1.470393,-48.491639,4.400000,7,"Love Açaí - Tv. Bom Jardim, 1555 - Jurunas, Belém - PA, 66025-184",Jurunas,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJDV71eACPpJIRMxKQJhaSu4Q,La Fábrica de Açaí,-1.464521,-48.492684,4.200000,24,"La Fábrica de Açaí - Av. Roberto Camelier, 280 - Jurunas, Belém - PA, 66025-442",Jurunas,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJC7P6XHePpJIRcpld6E5Vnjc,Ponto do Açaí,-1.471623,-48.490446,4.5,13,"Ponto do Açaí - Tv. Bom Jardim, 1758 - Jurunas, Belém - PA, 66025-184",Jurunas,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJbbqqHGiOpJIReBOulXYY2u8,Açaí do Brazil,-1.467738,-48.498233,,8,"Açaí do Brazil - R. Osvaldo de Caldas Brito, 632 - Jurunas, Belém - PA, 66025-190",Jurunas,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJqVBVSiuMpJIRUo32YzWDHks,Açai do Céu,-1.459295,-48.474824,,1,"Açai do Céu - R. dos Pariquis, 3260 - Jurunas, Belém - PA, 66045-645",Jurunas,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJ5StXgoqOpJIRN5uUsOve_PM,Martins,-1.45981,-48.496671,,3,"Martins - Tv. São Francisco - Belém, PA, 66030-270",Jurunas,DENTRO,396,centroide,r3,False,False,False,False,False,True

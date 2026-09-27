@@ -1,0 +1,16 @@
+{
+  "bairro": "São Brás",
+  "slug": "sao_bras",
+  "timestamp": "2026-09-27T22:22:17.804107+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 5,
+  "total_validado": 5,
+  "distribuicao": {
+    "DENTRO": 5,
+    "BAIRRO_VIZINHO": 0,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 100.0
+}

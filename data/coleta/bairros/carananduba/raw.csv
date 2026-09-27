@@ -1,0 +1,14 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJh1bwHQAVpJIRb5k3Ke6-Cis,Açaiteria Ponto Frio,-1.103352,-48.401205,0.000000,0,"Açaiteria Ponto Frio - Rod. Eng. Augusto Meira Filho - Carananduba, Belém - PA, 66923-120",,DENTRO,Carananduba,r2|r3,False,True,False,False,False,True
+ChIJhxIl-fgVpJIRgCfmHnpIfbY,Açaí point dos amigos,-1.101434,-48.412982,5.000000,2,"Açaí point dos amigos - Carananduba, Belém - PA",,DENTRO,Carananduba,r2|r3,False,True,False,False,False,True
+ChIJOxgVVBkVpJIRuvs2zjboQp0,Açaí do Luís,-1.133617,-48.438036,,1,"Açaí do Luís - Rodovia Engenheiro Augusto Meira Filho n52b, Belém - PA, 66923-120",Carananduba,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJf_Z1GQ0VpJIRCYhPzhMYnR4,Mais açaí,-1.100216,-48.400712,,3,"Mais açaí - R. Ramal do Dmer - Carananduba, Belém - PA",Carananduba,DENTRO,Carananduba,r3,False,False,False,False,False,True
+ChIJne3tTIAVpJIRUD3JwPbFl-Q,Ilhaçaí Frozen Carananduba,-1.093876,-48.409807,,1,"em frente ao Posto de saúde - Magalhães Barata Praça do - Carananduba, Belém - PA, 66000-001",Carananduba,DENTRO,Carananduba,r3,False,False,False,False,False,True
+ChIJ9V2ZIzEVpJIR1UCywQyAr6E,Açaí Ouro Preto,-1.133359,-48.439088,,2,"Açaí Ouro Preto - Rod. Augusto Meira Filho, 140 - Murubira, Belém - PA, 66923-120",Carananduba,BAIRRO_VIZINHO,Murubira,r3,False,False,False,False,False,True
+ChIJw_AgAwAVpJIRPXT_uUImEsc,Açaí Ouro preto,-1.132955,-48.439528,,0,"Açaí Ouro preto - Rod. Augusto Meira Filho - Mosqueiro, Belém - PA",Carananduba,FORA_BAIRRO,,r3,False,False,False,False,False,True
+ChIJF-AmsckUpJIR_PUNeHCr1xY,Sorvetes Laiun,-1.133575,-48.457297,,121,"Sorvetes Laiun - 16750, Av. 16 de Novembro, 16604 - Mosqueiro, Belém - PA",Carananduba,BAIRRO_VIZINHO,Bonfim,r3,False,False,False,False,False,True
+ChIJ5eKLuIQVpJIRQliyd08OGZQ,Açaí da Rosy,-1.09623,-48.408141,,2,"Açaí da Rosy - R. da Pedreira, ° 362 - Carananduba, Belém - PA, 66923-370",Carananduba,DENTRO,Carananduba,r3,False,False,False,False,False,True
+ChIJa6d-Nt0UpJIR0Kfp5TcBwyY,Cairu,-1.124737,-48.448607,,1849,"Cairu - Av. Beira Mar - Porto Arthur, Belém - PA",Carananduba,BAIRRO_VIZINHO,Porto Arthur,r3,False,False,False,False,False,True
+ChIJvR1NbwBrpJIRC4Ag6X8I69U,Fonte do Açaí,-1.163719,-48.468745,,0,"Fonte do Açaí - R. 15 de Novembro, 599 - Vila, Belém - PA, 66910-000",Carananduba,BAIRRO_VIZINHO,Vila,r3,False,False,False,False,False,True
+ChIJMYsd8doVpJIR_jUHL6tJy-s,Sorveteria & Pizzaria KATI MOSQUEIRO,-1.096298,-48.411032,,39,"Sorveteria & Pizzaria KATI MOSQUEIRO - Estr. do Cajueiro, 552A - Carananduba, Belém - PA, 66913-430",Carananduba,DENTRO,Carananduba,r3,False,False,False,False,False,True
+ChIJAXwfWaGJpJIR3G2sf2m_NAg,Açaí do Luiz,-1.429508,-48.480574,,4,"Açaí do Luiz - Tv. Humaitá, 71 - Pedreira, Belém - PA, 66083-340",Carananduba,BAIRRO_VIZINHO,Pedreira,r3,False,False,False,False,False,True

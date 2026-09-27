@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJx-W9WwBhpJIRpelgZ-6Hb5g,Açaí do Rogério,-1.332419,-48.443548,0.0,0,"Açaí do Rogério - Av. Secundária - Ariramba, Belém - PA",Ariramba,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

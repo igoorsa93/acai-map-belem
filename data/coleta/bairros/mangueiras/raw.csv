@@ -1,0 +1,2 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJH6bYy9GNpJIRd4wIpiri2ag,Açaiteria Pai D`égua,-1.144378,-48.462326,4.900000,7,"Açaiteria Pai D`égua - Av. 16 de Novembro - Mangueiras, Belém - PA, 66913-430",,BAIRRO_VIZINHO,Mangueiras,r2|r3,False,True,False,False,False,True

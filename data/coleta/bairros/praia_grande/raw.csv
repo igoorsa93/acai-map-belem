@@ -1,0 +1,4 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJvT2Y5VxrpJIRtVDiQPYB_fM,Praia Grande,-1.150169,-48.469716,,135,"Praia Grande - Mosqueiro, Belém - PA",Praia Grande,BAIRRO_VIZINHO,São Francisco,r3,False,False,False,False,False,True
+ChIJFwtdDqprpJIRqfiR6MNn1y4,Açai Da Ilha,-1.164904,-48.469586,,1,"Açai Da Ilha - Travessa Siqueira Mendes, 457 - São João do Outeiro (Outeiro), Belém - PA, 66910-110",Praia Grande,BAIRRO_VIZINHO,São João do Outeiro,r3,False,False,False,False,False,True
+ChIJR0tOMqeNpJIRvo1ZQDinEaA,Açai da Deusa,-1.461992,-48.458669,,0,"Açai da Deusa - Passagem Modelo Ramo I, 98 - Praia Grande (Mosqueiro), Belém - PA, 66914-010",Praia Grande,DENTRO,Praia Grande,r3,False,False,False,False,False,True

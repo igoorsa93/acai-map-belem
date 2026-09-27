@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJcUxevcFhpJIRLW5_GxctBe0,Açaí Marajó,-1.367614,-48.428404,5.000000,8,"Açaí Marajó - Passagem dos Comerciários, 99 - Una, Belém - PA, 66650-550",Una,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ5WuNADFhpJIRBgXMH2oNxFY,Engenheiros do Açaí 2,-1.376916,-48.428946,,0,"Engenheiros do Açaí 2 - R. Bom Jesus, 50 - Una, Belém - PA, 66652-020",Una,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+ChIJo2HuM2GLpJIRhIVDzjPxwMk,CASA DO AÇAÍ JESUS,-1.378541,-48.428673,5.0,1,"CASA DO AÇAÍ JESUS - Passagem Jarbas Passarinho, 29 - Una, Belém - PA, 66652-030",Una,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJh9Uqv-aLpJIR3FXk7R6EU6I,Ponto de Açaí,-1.376916,-48.428945,5.0,1,"Ponto de Açaí - R. Bom Jesus, 50 - Una, Belém - PA, 66652-020",Una,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

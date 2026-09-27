@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJW1xA_SuMpJIR4PzPXVbOwqQ,Casa do Açaí,-1.456619,-48.474346,3.900000,48,"Casa do Açaí - Av. Conselheiro Furtado, 2698 - Cremação, Belém - PA, 66040-100",,BAIRRO_VIZINHO,Cremação,r2|r3,False,True,False,False,False,True
+ChIJy0qNFQCNpJIRw6lAmROE7jU,Açaíze Gastronomia Paraense,-1.458001,-48.475343,4.400000,110,"Açaíze Gastronomia Paraense - Tv. Nove de Janeiro, 2071 - Cremação, Belém - PA, 66060-585",,BAIRRO_VIZINHO,Cremação,r2|r3,False,True,False,False,False,True
+ChIJ2X7kWfKPpJIRoWHdOm7uXjk,Açaí no Ponto,-1.467321,-48.487375,5.000000,1,"Esquina com Roberto Camilie - R. Eng. Fernando Guilhon, 1190 - Cremação, Belém - PA, 66033-310",,DENTRO,Cremação,r2,False,True,False,False,False,False
+ChIJS0rUzYGOpJIRWr88JSfFzFs,Açai Tropical,-1.458056,-48.4792,3.900000,25,"Açai Tropical - R. dos Mundurucus, 2991 - Cremação, Belém - PA, 66040-033",,DENTRO,Cremação,r2,False,True,False,False,False,False

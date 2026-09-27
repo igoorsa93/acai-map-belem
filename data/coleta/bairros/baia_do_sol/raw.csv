@@ -1,0 +1,9 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJE7dWCa2LpJIRDfeTpeQElPU,Baía do Sol,-1.065549,-48.337085,,0,Belém - PA,Baía do Sol,FORA_BELEM,,r3,False,False,False,False,False,True
+ChIJlbHhGwA9pJIRq4KJ60atzL8,Praia Grande da Baia do Sol,-1.062283,-48.345122,,20,"Praia Grande da Baia do Sol - R. da Praia Grande - Baía do Sol, Belém - PA",Baía do Sol,DENTRO,Baía do Sol,r3,False,False,False,False,False,True
+ChIJS48IGQA9pJIRJXFcAqBP7RI,Açaí do manoel,-1.071961,-48.353222,,0,"Açaí do manoel - R. Conceição, 193 - Baía do Sol, Belém - PA, 66910-150",Baía do Sol,DENTRO,Baía do Sol,r3,False,False,False,False,False,True
+ChIJM6VbawA9pJIREbxMV8jDIxY,Açaí do Nezinho,-1.063424,-48.33392,,1,"Açaí do Nezinho - Av. Beira Mar - Baía do Sol, Belém - PA",Baía do Sol,DENTRO,Baía do Sol,r3,False,False,False,False,False,True
+ChIJ6-TvhqM9pJIR0f_Ddb1Y1nk,Açaí do Valdecy,-1.065264,-48.336103,,0,"Açaí do Valdecy - Loteamento baia do sol Rd, Rod. BL 13, 330 - Mosqueiro, Belém - PA, 66921-250",Baía do Sol,FORA_BELEM,,r3,False,False,False,False,False,True
+ChIJQcfRjW9fpJIRlodiJ3bOy6c,Açaí Pérola Da Amazônia,-1.361306,-48.347347,,20,"Açaí Pérola Da Amazônia - R. Assis Dória, 350 - Pedreirinha, Marituba - PA, 67200-000",Baía do Sol,FORA_BELEM,Ananindeua,r3,False,False,False,False,False,True
+ChIJDd-vbdoVpJIRIPljPrKbvY4,Açaí Point Dos Amigos,-1.094019,-48.402125,,2,"Açaí Point Dos Amigos - R. Lalor Mota - Carananduba, Belém - PA, 66923-060",Baía do Sol,BAIRRO_VIZINHO,Carananduba,r3,False,False,False,False,False,True
+ChIJyZkK5-5rpJIRcgqmbrgF8cA,Açaí do gomes,-1.139202,-48.457763,,0,"Açaí do gomes - R. Camilo Salgado Filho - Aeroporto, Belém - PA, 66915-220",Baía do Sol,BAIRRO_VIZINHO,Aeroporto,r3,False,False,False,False,False,True

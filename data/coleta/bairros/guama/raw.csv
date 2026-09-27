@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJxa-_NxyNpJIR5FqivmasvmQ,CASA AÇAI,-1.46622,-48.460816,4.800000,4,"CASA AÇAI - Passagem Sururina, 268 - Guamá, Belém - PA, 66075-440",,DENTRO,Guamá,r2,False,True,False,False,False,False
+ChIJ3w4UaJGNpJIRgaktUT-vFKM,Supremo Açaí,-1.456531,-48.472108,4.100000,13,"Supremo Açaí - Av. Conselheiro Furtado, 2950 - Guamá, Belém - PA, 66063-060",,BAIRRO_VIZINHO,Guamá,r2|r3,False,True,False,False,False,True
+ChIJCdj5HAeNpJIRWH-cJj0soiA,Açaí Belém,-1.468191,-48.455169,3.000000,1,"Açaí Belém - R. da Olaria, 117 - Guamá, Belém - PA, 66079-051",,BAIRRO_VIZINHO,Guamá,r2|r3,False,True,False,False,False,True
+ChIJIYLbC32NpJIR_NbBryeWsqw,Tudo Bom Açai,-1.472203,-48.455442,0.000000,0,"Tudo Bom Açai - Av. Perimetral - Guamá, Belém - PA, 66079-051",,DENTRO,Guamá,r2,False,True,False,False,False,False

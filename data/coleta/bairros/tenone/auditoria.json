@@ -1,0 +1,16 @@
+{
+  "bairro": "Tenoné",
+  "slug": "tenone",
+  "timestamp": "2026-09-27T22:22:17.845489+00:00",
+  "duracao_s": 0.003,
+  "total_raw": 78,
+  "total_validado": 7,
+  "distribuicao": {
+    "DENTRO": 7,
+    "BAIRRO_VIZINHO": 53,
+    "FORA_BAIRRO": 2,
+    "FORA_BELEM": 16,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 9.0
+}

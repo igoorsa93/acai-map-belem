@@ -1,0 +1,16 @@
+{
+  "bairro": "Chapéu Virado",
+  "slug": "chapeu_virado",
+  "timestamp": "2026-09-27T22:22:17.855264+00:00",
+  "duracao_s": 0.0,
+  "total_raw": 6,
+  "total_validado": 3,
+  "distribuicao": {
+    "DENTRO": 3,
+    "BAIRRO_VIZINHO": 3,
+    "FORA_BAIRRO": 0,
+    "FORA_BELEM": 0,
+    "INCERTO": 0
+  },
+  "taxa_dentro_pct": 50.0
+}

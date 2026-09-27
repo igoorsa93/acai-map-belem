@@ -1,0 +1,4 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+ChIJcSWUer2LpJIRRSfXgDe-SJY,Açai Natural,-1.414552,-48.450711,5.000000,1,"Açai Natural - Souza, Belém - PA, 66613-070",,DENTRO,Souza,r2,False,True,False,False,False,False
+ChIJy7x6wqCLpJIRuOZn9iHVzf0,Casa Do Açaí,-1.411988,-48.440449,5.000000,1,"Casa Do Açaí - Alameda Walter Putz, 15 - Souza, Belém - PA, 66613-085",,DENTRO,Souza,r2,False,True,False,False,False,False
+ChIJM2SI2DGLpJIR5oLi_G2-zVs,Maioca - Marambaia,-1.404895,-48.448806,3.800000,93,"Maioca - Marambaia - Av. Tavares Bastos, 1055 - Souza, Belém - PA, 66615-005",,DENTRO,Souza,r2,False,True,False,False,False,False

@@ -1,0 +1,5 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJTSIKQnaOpJIR5ZvI9w-EQi4,Açai Do Naldo,-1.469455,-48.480091,3.500000,10,"Açai Do Naldo - R. Nova I, 560B - Condor, Belém - PA, 66033-570",Condor,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJh0XkK96NpJIRs6vRvie7WVw,Kiara Self-service Sorvetes Pizzaria e Açais (Em Breva Hamburgue artesanal),-1.475211,-48.475679,4.100000,138,"Kiara Self-service Sorvetes Pizzaria e Açais (Em Breva Hamburgue artesanal) - Av. Alcindo Cacela, 4197 - Condor, Belém - PA, 66065-217",Condor,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJvxHvrjKNpJIRLg5pt_4ttys,Açaí pai d'égua,-1.46768,-48.475387,4.900000,29,"Açaí pai d'égua - Passagem Mucajás, 370 - Condor, Belém - PA, 66065-203",Condor,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJ4SVspu-PpJIRp1DegHDiaTI,Açaiteria Ki-delicia,-1.47002,-48.478941,3.5,8,"Açaiteria Ki-delicia - R. dos Tambés, 45 - Condor, Belém - PA, 66033-780",Condor,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True

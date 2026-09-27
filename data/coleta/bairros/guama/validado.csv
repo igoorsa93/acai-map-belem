@@ -1,0 +1,9 @@
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+ChIJxa-_NxyNpJIR5FqivmasvmQ,CASA AÇAI,-1.46622,-48.460816,4.800000,4,"CASA AÇAI - Passagem Sururina, 268 - Guamá, Belém - PA, 66075-440",Guamá,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJ3w4UaJGNpJIRgaktUT-vFKM,Supremo Açaí,-1.456531,-48.472108,4.100000,13,"Supremo Açaí - Av. Conselheiro Furtado, 2950 - Guamá, Belém - PA, 66063-060",Guamá,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJCdj5HAeNpJIRWH-cJj0soiA,Açaí Belém,-1.468191,-48.455169,3.000000,1,"Açaí Belém - R. da Olaria, 117 - Guamá, Belém - PA, 66079-051",Guamá,DENTRO,-1,endereco,r2|r3,False,True,False,False,False,True
+ChIJIYLbC32NpJIR_NbBryeWsqw,Tudo Bom Açai,-1.472203,-48.455442,0.000000,0,"Tudo Bom Açai - Av. Perimetral - Guamá, Belém - PA, 66079-051",Guamá,DENTRO,-1,endereco,r2,False,True,False,False,False,False
+ChIJqQfO7QSNpJIReH4H4vONo3g,La casa do açaí,-1.467238,-48.4547,5.0,1,"La casa do açaí - Passagem Tucunduba, 1551 - Guamá, Belém - PA, 66075-045",Guamá,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJ80YjX86NpJIRYhYlVlqxSeU,Açaíze 1 - São Bras,-1.456415,-48.470781,4.5,568,"Açaíze 1 - São Bras - Av. Conselheiro Furtado, 3094 - Guamá, Belém - PA, 66040-100",Guamá,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+ChIJW0RauCyNpJIRP-tVRtDxK8s,Açaí dos Primos,-1.458196,-48.456674,5.0,27,"Açaí dos Primos - Passagem São José, 60 - Guamá, Belém - PA, 66077-061",Guamá,DENTRO,-1,endereco,r1,True,False,False,False,False,False
+ChIJSW4aVsqNpJIRZv4Eb3ak880,Açaí Ferreira | Guamá,-1.456986,-48.463798,,25,"Próx. ao Hospital Barros Barreto - R. dos Mundurucus, 4657 - Guamá, Belém - PA, 66073-005",Guamá,DENTRO,-1,endereco,r3,False,False,False,False,False,True
