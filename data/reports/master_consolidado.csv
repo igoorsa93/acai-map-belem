@@ -125,7 +125,7 @@ ChIJ4bDguoeKpJIRE6xfUkP9EZ0,Acai da Eliete,-1.376824,-48.437023,5.0,1,Cabanagem,
 ChIJi3bZ-FBhpJIRSCP2FeEe3GE,JB açaí gourmet,-1.369519,-48.442462,5.0,1,Cabanagem,DENTRO,-1,endereco,r1,1,True,False,False,False,False,False,Cabanagem
 ChIJ_V46FgCLpJIRFOIi8kP5jos,ON Açaí,-1.371894,-48.430126,0.0,0,Cabanagem,DENTRO,-1,endereco,r1|r3,2,True,False,False,False,False,True,Cabanagem
 ChIJwTbtQClgpJIRL5O_14wgaqQ,Açai Do Jhony,-1.36787,-48.432577,5.0,3,Cabanagem,DENTRO,-1,endereco,r1,1,True,False,False,False,False,False,Cabanagem
-ChIJb5UZnKNnpJIRaXmFmPVUO5U,Vício do Açaí,-1.301824,-48.466587,4.700000,7,Campina,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Campina
+ChIJb5UZnKNnpJIRaXmFmPVUO5U,Vício do Açaí,-1.301824,-48.466587,4.700000,7,Campina de Icoaraci,CORRIGIDO,-1,auditoria_geo_2026,r2|r3,2,False,True,False,False,False,True,Campina
 ChIJdzPsoPOOpJIRpbNHPUMnYJQ,Restaurante Sinhá - Buffet livre (Comida por quilo),-1.453791,-48.500245,4.500000,1089,Campina,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Campina
 ChIJey840HaPpJIRPMAeqsglK_I,Terrace Açai Gourmet,-1.448649,-48.500101,3.900000,82,Campina,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Campina
 ChIJr5NrtF6PpJIRTYlcLlXbyLc,Point do Açaí Belle Époque Bar,-1.448743,-48.498461,4.600000,147,Campina,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Campina
@@ -431,7 +431,7 @@ ChIJYRRBdbaLpJIRa5vn4Jmmzec,Amazônia na Cuia Marco,-1.425891,-48.458936,4.90000
 ChIJZ5cXPwCNpJIRH__wJrDEuiI,Umami Sorvete Artesanal,-1.436608,-48.459776,5.000000,7,Marco,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Marco
 ChIJ_V3jcwqMpJIRw6cLxpfATqs,Açai Duque,-1.430013,-48.462319,4.600000,23,Marco,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Marco
 ChIJaZ58ucSNpJIRswiuWlClZqE,AÇAI ORIGINAL,-1.435245,-48.465182,4.000000,9,Marco,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Marco
-ChIJgTqjW66NpJIRDQpqgeZgU60,AÇAÍ SUPREMO,-1.463636,-48.446698,0.000000,0,Marco,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Marco
+ChIJgTqjW66NpJIRDQpqgeZgU60,AÇAÍ SUPREMO,-1.463636,-48.446698,0.000000,0,Montese,CORRIGIDO,-1,auditoria_geo_2026,r2,1,False,True,False,False,False,False,Marco
 ChIJiQPkJXeMpJIRuKIQI_Sgaxk,Açaí Do Anderson,-1.432737,-48.450839,3.300000,66,Marco,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Marco
 ChIJieYQTYqNpJIRxtnqorTbvA8,Açaí das meninas,-1.4408,-48.451254,5.000000,2,Marco,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Marco
 ChIJsajgVviNpJIR9njBgkFy2Uo,Live Açaí - Av. João Paulo II,-1.441358,-48.457798,4.300000,20,Marco,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Marco
@@ -554,7 +554,7 @@ ChIJB23qwu2LpJIRDGQOiX_01lE,Açaí do Neco,-1.419093,-48.462208,,53,Pedreira,DEN
 ChIJ3zWRsPGLpJIROrxHw2UZcFI,Açaí do Rei,-1.423811,-48.465812,,29,Pedreira,DENTRO,-1,endereco,r3,1,False,False,False,False,False,True,Pedreira
 ChIJUxchpARkpJIRj8tjXtCJZxE,Restaurante Companhia do Açaí,-1.306802,-48.484044,0.000000,0,Ponta Grossa,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
 ChIJVyhf4CtlpJIReS76Ie-j9qI,Açaí gelomar,-1.30879,-48.481242,1.000000,3,Ponta Grossa,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
-ChIJ_ZxQTgBnpJIRJXkIArlautY,Açai Kaa,-1.282849,-48.454242,4.800000,4,Ponta Grossa,DENTRO,762,centroide,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
+ChIJ_ZxQTgBnpJIRJXkIArlautY,Açai Kaa,-1.282849,-48.454242,4.800000,4,Maracacuera,CORRIGIDO,762,auditoria_geo_2026,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
 ChIJjy0ihIRnpJIRuao0UZK1IA8,Espaço Novo Sabor - Espetinhos & Comidas Típicas,-1.307624,-48.470796,4.800000,143,Ponta Grossa,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,Ponta Grossa
 ChIJpWPvsqxlpJIRHhfaXRD1ARA,Açaí paiD'égua Restô,-1.306287,-48.480062,4.300000,6,Ponta Grossa,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
 ChIJve7EJHxlpJIRENldxJUAZdQ,Sorveteria Poco Loco,-1.302366,-48.483521,4.800000,44,Ponta Grossa,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,Ponta Grossa
@@ -648,7 +648,7 @@ ChIJe92VAseNpJIR7v4LHED5WGY,GINGA AÇAÍ,-1.452967,-48.472655,0.000000,0,São Br
 ChIJwZGfvyWMpJIR3qXvHUF6cA4,Restaurante Caçarola,-1.451014,-48.472371,4.400000,723,São Brás,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,São Brás
 ChIJy0zPUsWNpJIRtdKHG61NVzY,Açaí Belém,-1.456184,-48.467803,0.000000,0,São Brás,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,São Brás
 ChIJyf6z_yuMpJIR7iGmo_b8hEw,Divino Açaí do Diego,-1.455861,-48.473768,4.500000,10,São Brás,DENTRO,-1,endereco,r2|r3,2,False,True,False,False,False,True,São Brás
-ChIJ1XXXAwCNpJIRoFufmH2bZIs,Açaí Riacho Doce,-1.433709,-48.460352,3.000000,2,São Brás,DENTRO,-1,endereco,r2,1,False,True,False,False,False,False,São Brás
+ChIJ1XXXAwCNpJIRoFufmH2bZIs,Açaí Riacho Doce,-1.433709,-48.460352,3.000000,2,Marco,CORRIGIDO,-1,auditoria_geo_2026,r2,1,False,True,False,False,False,False,São Brás
 ChIJkQEjShmNpJIR5KiJA9KY9Cg,TÉDOIDÉ AÇAÍ,-1.447555,-48.473378,4.6,91,São Brás,DENTRO,-1,endereco,r1|r3,2,True,False,False,False,False,True,São Brás
 ChIJHaPbrzCMpJIRafOZRGbgy0I,Açaí No Ponto,-1.452296,-48.464249,5.0,1,São Brás,DENTRO,-1,endereco,r1,1,True,False,False,False,False,False,São Brás
 ChIJy4c9qTuMpJIRtFq6FM-O_cg,AçaíBonD+,-1.44947,-48.4647,4.4,386,São Brás,DENTRO,-1,endereco,r1|r3,2,True,False,False,False,False,True,São Brás
