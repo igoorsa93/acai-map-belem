@@ -12584,25 +12584,6 @@ window.ACAI_DATA = {
       "data_coleta": "2026-09-25"
     },
     {
-      "place_id": "ChIJszLNrXivpZIR29OLTT-ZoMI",
-      "nome": "Açaí&Açaí Frozen",
-      "categoria": "Loja de açaí",
-      "tipo": "Especializado em açaí",
-      "endereco": "Açaí&Açaí Frozen - Tv. Quintino Bocaiúva, 2547 - Centro, Castanhal - PA, 68740-020",
-      "bairro": "Coqueiro",
-      "cidade": "Belém",
-      "lat": -1.289471,
-      "lon": -47.926306,
-      "telefone": "(91) 99154-0505",
-      "website": "",
-      "rating": 4.8,
-      "reviews": 218,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD%26A%C3%A7a%C3%AD+Frozen/data=!4m7!3m6!1s0x92a5af78adcd32b3:0xc2a0993f4d8bd3db!8m2!3d-1.2894709!4d-47.9263061!16s%2Fg%2F11hz0r987m!19sChIJszLNrXivpZIR29OLTT-ZoMI?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkyMy4wIJJjKgBIAVAD&rclk=1",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
       "place_id": "ChIJ-4T4SwBhpJIRrFZuLK3VfpA",
       "nome": "Açaí Cr",
       "categoria": "Mercado",
