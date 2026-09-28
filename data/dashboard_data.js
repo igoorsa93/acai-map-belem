@@ -1,9 +1,9 @@
 window.ACAI_DATA = {
   "kpis": {
-    "total_estabelecimentos": 769,
+    "total_estabelecimentos": 778,
     "total_ocorrencias": 1818,
     "total_consultas": 60,
-    "total_areas": 48,
+    "total_areas": 54,
     "avg_rating": 4.58,
     "total_reviews": 153117,
     "rodada": 2,
@@ -14596,6 +14596,159 @@ window.ACAI_DATA = {
       "link": "https://www.google.com/maps/place/Sorveteria+Fiorella/@-1.330378,-48.437926,17z/data=!4m6!3m5!1s0x92a46100367c6c49:0x6229e0d7156266a8!8m2!3d-1.3303785!4d-48.4379261!16s%2Fg%2F11x0py99n4?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D",
       "termos": "açaí",
       "data_coleta": "2026-09-25"
+    },
+    {
+      "place_id": "ChIJH6bYy9GNpJIRd4wIpiri2ag",
+      "nome": "Açaiteria Pai D`égua",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaiteria Pai D`égua - Av. 16 de Novembro - Mangueiras, Belém - PA, 66913-430",
+      "bairro": "Mangueiras",
+      "cidade": "Belém",
+      "lat": -1.144378,
+      "lon": -48.462326,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJ18tJMWZrpJIRXP4jkyNywq0",
+      "nome": "Açaí do Neves - Açaiteria",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Ao lado igreja católica sra Fátima - Av. Camilo Salgado, 164 - Aeroporto, Belém - PA, 66913-320",
+      "bairro": "Aeroporto",
+      "cidade": "Belém",
+      "lat": -1.143064,
+      "lon": -48.456531,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJLwrW56MVpJIRYfhykTIwa1A",
+      "nome": "AÇAI DO MARTINHO",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "AÇAI DO MARTINHO - Av. 16 de Novembro, 12 - São João do Outeiro (Outeiro, Belém - PA, 66923-120",
+      "bairro": "São João do Outeiro",
+      "cidade": "Belém",
+      "lat": -1.133196,
+      "lon": -48.435518,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJ528_FgAVpJIRE7CRSMaffYs",
+      "nome": "Sol e Mar - Açaiteria",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Sol e Mar - Açaiteria - Av. Beira Mar - Chapéu Virado, Belém - PA, 66910-150",
+      "bairro": "Chapéu Virado",
+      "cidade": "Belém",
+      "lat": -1.130047,
+      "lon": -48.452889,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJAQWZcGcVpJIR3edNEe_Mg7w",
+      "nome": "Açaí do Dodó",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí do Dodó - R. Artur Pires Teixeira - Porto Arthur, Belém - PA, 66918-540",
+      "bairro": "Porto Arthur",
+      "cidade": "Belém",
+      "lat": -1.129553,
+      "lon": -48.447557,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJb1O-ej0VpJIRzQrxXovEWP4",
+      "nome": "açai especial da sandra",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "açai especial da sandra - R. Variante, n36 - Porto Arthur, Belém - PA, 66913-670",
+      "bairro": "Porto Arthur",
+      "cidade": "Belém",
+      "lat": -1.128669,
+      "lon": -48.446714,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJH-QzbqUVpJIRO09omPBXp9g",
+      "nome": "Açai do martinho 2",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açai do martinho 2 - R. Variante - Murubira, Belém - PA, 66913-670",
+      "bairro": "Murubira",
+      "cidade": "Belém",
+      "lat": -1.128038,
+      "lon": -48.445234,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJh1bwHQAVpJIRb5k3Ke6-Cis",
+      "nome": "Açaiteria Ponto Frio",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaiteria Ponto Frio - Rod. Eng. Augusto Meira Filho - Carananduba, Belém - PA, 66923-120",
+      "bairro": "Carananduba",
+      "cidade": "Belém",
+      "lat": -1.103352,
+      "lon": -48.401205,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
+    },
+    {
+      "place_id": "ChIJhxIl-fgVpJIRgCfmHnpIfbY",
+      "nome": "Açaí point dos amigos",
+      "categoria": "Não informado",
+      "tipo": "Especializado em açaí",
+      "endereco": "Açaí point dos amigos - Carananduba, Belém - PA",
+      "bairro": "Carananduba",
+      "cidade": "Belém",
+      "lat": -1.101434,
+      "lon": -48.412982,
+      "telefone": "",
+      "website": "",
+      "rating": 0.0,
+      "reviews": 0,
+      "ocorrencias": 1,
+      "link": ""
     }
   ],
   "bairros": [
@@ -14720,11 +14873,19 @@ window.ACAI_DATA = {
       "total": 3
     },
     {
+      "bairro": "São João do Outeiro",
+      "total": 3
+    },
+    {
       "bairro": "Nazaré",
       "total": 2
     },
     {
-      "bairro": "São João do Outeiro",
+      "bairro": "Porto Arthur",
+      "total": 2
+    },
+    {
+      "bairro": "Carananduba",
       "total": 2
     },
     {
@@ -14789,6 +14950,22 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Agulha de Icoaraci",
+      "total": 1
+    },
+    {
+      "bairro": "Mangueiras",
+      "total": 1
+    },
+    {
+      "bairro": "Aeroporto",
+      "total": 1
+    },
+    {
+      "bairro": "Chapéu Virado",
+      "total": 1
+    },
+    {
+      "bairro": "Murubira",
       "total": 1
     }
   ],
