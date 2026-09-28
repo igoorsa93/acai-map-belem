@@ -388,5 +388,5 @@ O deploy é automático via **GitHub Pages** a partir do branch `master`. Qualqu
 
 ## 👤 Autor
 
-**[@Igoorsa93](https://github.com/igoorsa93)** — Igor Rodrigues  
+**[@Igoorsa93](https://github.com/igoorsa93)** — Igor Cardoso 
 Desenvolvido com IA generativa (Claude Sonnet 4.6 · Anthropic) · Belém, Pará, Brasil · 2026
