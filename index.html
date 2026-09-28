@@ -356,6 +356,7 @@ svg { display: block; }
 .sel-foto img { width: 100%; height: 160px; object-fit: cover; display: block; }
 .pop-foto { margin: -16px -16px 10px; overflow: hidden; border-radius: 8px 8px 0 0; }
 .pop-foto img { width: 100%; height: 120px; object-fit: cover; display: block; }
+/* legado — mantido para compatibilidade */
 .sel-name { font-family: var(--f-head); font-size: 14.5px; font-weight: 700; color: var(--c-deep); line-height: 1.3; margin-bottom: 3px; }
 .sel-cat { font-size: 11.5px; color: var(--c-muted); margin-bottom: 9px; }
 .sel-rating { display: flex; align-items: center; gap: 6px; font-size: 13px; margin-bottom: 11px; }
@@ -649,37 +650,68 @@ svg { display: block; }
 .leaflet-container.tint .leaflet-tile-pane { filter: sepia(.5) hue-rotate(216deg) saturate(2.4) brightness(.82) contrast(1.05); }
 .leaflet-control-attribution { font-size: 9px; background: rgba(255,255,255,.75) !important; }
 .leaflet-popup-content-wrapper { border-radius: 16px; box-shadow: var(--sh-lg); padding: 0; }
-.leaflet-popup-content { margin: 0; font-family: var(--f-body); width: 262px !important; }
-.leaflet-popup-close-button { top: 10px !important; right: 10px !important; color: #9C93A8 !important; font-size: 18px !important; }
+.leaflet-popup-content { margin: 0; font-family: var(--f-body); width: 280px !important; }
+.leaflet-popup-close-button { top: 8px !important; right: 8px !important; color: #fff !important; font-size: 20px !important; text-shadow: 0 1px 4px rgba(0,0,0,.5) !important; z-index: 10 !important; }
 
-.pop { padding: 16px 16px 14px; }
-.pop-nome { font-family: var(--f-head); font-size: 15px; font-weight: 700; color: #1B1626; line-height: 1.3; padding-right: 16px; margin-bottom: 3px; }
-.pop-meta { font-size: 12px; color: var(--c-muted); line-height: 1.4; }
-.pop-rating { display: flex; align-items: center; gap: 5px; font-size: 13px; margin-top: 9px; }
-.pop-rating .star { color: #F5A623; font-size: 14px; }
-.pop-rating b { font-family: var(--f-head); font-weight: 700; color: #1B1626; }
-.pop-rating span { color: var(--c-muted); font-size: 12px; }
-.pop-sem { font-size: 12px; color: var(--c-muted); font-style: italic; margin-top: 9px; }
+/* ── Popup card ── */
+.pop { padding: 0 0 14px; }
 
-.pop-rows { border-top: 1px solid #EFEAF3; margin-top: 12px; padding-top: 11px; display: flex; flex-direction: column; gap: 9px; }
-.pop-row { display: flex; gap: 9px; font-size: 12px; line-height: 1.45; align-items: flex-start; }
+/* Cabeçalho: foto real ou placeholder gradiente */
+.pop-header { position: relative; margin-bottom: 0; border-radius: 8px 8px 0 0; overflow: hidden; height: 140px; }
+.pop-header img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pop-header-ph {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #3B1A5E 0%, #7B3FA0 50%, #2d8c50 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.pop-header-ph-icon { font-size: 40px; line-height: 1; filter: drop-shadow(0 2px 8px rgba(0,0,0,.3)); }
+.pop-header-ph-label { font-family: var(--f-head); font-size: 10px; font-weight: 700; color: rgba(255,255,255,.6); letter-spacing: .08em; text-transform: uppercase; }
+/* overlay de gradiente sobre a foto para ler o chip de tipo */
+.pop-header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 56px; background: linear-gradient(transparent, rgba(0,0,0,.55)); pointer-events: none; }
+/* chip de tipo sobre a foto */
+.pop-tipo-chip {
+  position: absolute; bottom: 10px; left: 12px; z-index: 2;
+  font-family: var(--f-head); font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 99px; color: #fff;
+}
+.pop-tipo-esp  { background: rgba(107,47,178,.85); } /* Especializado */
+.pop-tipo-mix  { background: rgba(30,115,61,.85); }  /* Açaí + outro  */
+.pop-tipo-out  { background: rgba(80,60,100,.7); }   /* Outro / sem   */
+
+/* Corpo */
+.pop-body { padding: 13px 14px 0; }
+.pop-nome { font-family: var(--f-head); font-size: 14.5px; font-weight: 700; color: #1B1626; line-height: 1.3; padding-right: 14px; margin-bottom: 2px; }
+.pop-meta { font-size: 11.5px; color: var(--c-muted); line-height: 1.4; }
+
+/* Rating com estrelas */
+.pop-rating { display: flex; align-items: center; gap: 6px; margin-top: 9px; }
+.pop-stars { display: flex; gap: 1.5px; }
+.pop-stars svg { width: 12px; height: 12px; }
+.pop-rating-num { font-family: var(--f-head); font-size: 14px; font-weight: 700; color: #1B1626; line-height: 1; }
+.pop-rating-ct  { font-size: 11.5px; color: var(--c-muted); }
+.pop-sem { font-size: 11.5px; color: var(--c-muted); font-style: italic; margin-top: 8px; }
+
+/* Linhas de info */
+.pop-rows { border-top: 1px solid #EFEAF3; margin-top: 11px; padding-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.pop-row { display: flex; gap: 8px; font-size: 11.5px; line-height: 1.45; align-items: flex-start; }
 .pop-row svg { width: 14px; height: 14px; stroke: var(--c-primary); fill: none; stroke-width: 2; flex-shrink: 0; margin-top: 1px; }
 .pop-row .v { color: #3B3346; min-width: 0; word-break: break-word; }
 .pop-row a.v { color: var(--c-primary); font-weight: 600; }
 .pop-row a.v:hover { text-decoration: underline; }
 
-.pop-actions { display: flex; gap: 8px; margin-top: 13px; }
+/* Botões */
+.pop-actions { display: flex; gap: 7px; margin-top: 13px; padding: 0 14px; }
 .pop-btn {
-  display: flex; align-items: center; justify-content: center; gap: 7px;
-  flex: 1; padding: 10px; border-radius: var(--r-pill);
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  flex: 1; padding: 10px 8px; border-radius: var(--r-pill);
   background: var(--c-primary); color: #fff;
-  font-family: var(--f-head); font-size: 12.5px; font-weight: 600;
-  transition: var(--t-fast);
+  font-family: var(--f-head); font-size: 12px; font-weight: 700; letter-spacing: .01em;
+  transition: var(--t-fast); white-space: nowrap;
 }
 .pop-btn-rota { background: #2d8c50; }
 .pop-btn-rota:hover { background: #226b3d; }
 .pop-btn:hover { background: var(--c-deep); }
-.pop-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2.2; }
+.pop-btn svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.3; flex-shrink: 0; }
 .area-tip { background: rgba(38,16,48,.9) !important; border: none !important; color: #fff !important; font-family: var(--f-head); font-size: 11px; font-weight: 600; box-shadow: none !important; }
 .area-tip::before { display: none !important; }
 
@@ -1332,7 +1364,7 @@ function clusterGroup() {
 }
 const HEAT_GRAD = { 0.15:'#3B1B4D', 0.38:'#6B2589', 0.58:'#8E4BA0', 0.76:'#7BAF10', 1:'#C2EE3C' };
 // Sobras no auto-pan para o popup não abrir atrás dos overlays flutuantes do mapa.
-const POPUP_OPTS = { autoPanPaddingTopLeft: [24, 96], autoPanPaddingBottomRight: [24, 60], maxWidth: 262 };
+const POPUP_OPTS = { autoPanPaddingTopLeft: [24, 96], autoPanPaddingBottomRight: [24, 60], maxWidth: 280 };
 const HEAT_OPTS = { radius: 26, blur: 20, maxZoom: 16, max: 1, minOpacity: .32, gradient: HEAT_GRAD };
 
 function areaAggregates(list) {
@@ -1481,9 +1513,38 @@ function tipoDeLink(url) {
 function popupHtml(e) {
   const P = 'stroke-linecap="round" stroke-linejoin="round"';
   const ico = d => `<svg viewBox="0 0 24 24" ${P}>${d}</svg>`;
-  const cat = e.categoria && e.categoria !== 'Não informado' ? e.categoria : 'Categoria não informada';
+  const cat = e.categoria && e.categoria !== 'Não informado' ? e.categoria : null;
   const rede = tipoDeLink(e.website);
 
+  /* ── Cabeçalho (foto ou placeholder) ── */
+  let tipoChipClass = 'pop-tipo-out', tipoChipLabel = '';
+  if (e.tipo === 'Especializado em açaí') { tipoChipClass = 'pop-tipo-esp'; tipoChipLabel = 'Especializado em Açaí'; }
+  else if (e.tipo === 'Açaí + outro segmento') { tipoChipClass = 'pop-tipo-mix'; tipoChipLabel = 'Açaí + Outro Segmento'; }
+  else if (e.tipo) { tipoChipClass = 'pop-tipo-out'; tipoChipLabel = e.tipo; }
+
+  const headerHtml = e.foto
+    ? `<img src="${esc(e.foto)}" alt="${esc(e.nome)}" loading="lazy"
+         onerror="this.parentElement.innerHTML='<div class=\\'pop-header-ph\\'><div class=\\'pop-header-ph-icon\\'>🍇</div><div class=\\'pop-header-ph-label\\'>Estabelecimento</div></div>'">`
+    : `<div class="pop-header-ph">
+         <div class="pop-header-ph-icon">🍇</div>
+         <div class="pop-header-ph-label">Foto não disponível</div>
+       </div>`;
+
+  /* ── Estrelas visuais ── */
+  function starsSvg(rating) {
+    const filled  = '<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#F5A623" stroke="#F5A623" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+    const empty   = '<svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="none" stroke="#D0C4DA" stroke-width="1.5" stroke-linejoin="round"/></svg>';
+    const half    = '<svg viewBox="0 0 24 24"><defs><clipPath id="pc"><rect x="0" y="0" width="12" height="24"/></clipPath></defs><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="none" stroke="#D0C4DA" stroke-width="1.5" stroke-linejoin="round"/><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26" fill="#F5A623" stroke="#F5A623" stroke-width="1.5" stroke-linejoin="round" clip-path="url(#pc)"/></svg>';
+    let out = '';
+    for (let i = 1; i <= 5; i++) {
+      if (rating >= i - 0.25) out += filled;
+      else if (rating >= i - 0.75) out += half;
+      else out += empty;
+    }
+    return out;
+  }
+
+  /* ── Info rows ── */
   const linhas = [];
   if (e.endereco) linhas.push(
     `<div class="pop-row">${ico('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>')}<span class="v">${esc(e.endereco)}</span></div>`);
@@ -1491,25 +1552,32 @@ function popupHtml(e) {
     `<div class="pop-row">${ico('<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/>')}<a class="v" href="tel:+55${esc((e.telefone||'').replace(/\D/g,''))}">${esc(telFormatado(e.telefone))}</a></div>`);
   if (rede) linhas.push(
     `<div class="pop-row">${rede.svg}<a class="v" href="${esc(e.website)}" target="_blank" rel="noopener">${esc(rede.nome)}</a></div>`);
-  if (!e.telefone && !rede) linhas.push(
-    `<div class="pop-row">${ico('<circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/>')}<span class="v" style="color:#6B5C78">Contato não disponível</span></div>`);
 
   return `<div class="pop">
-    ${e.foto ? `<div class="pop-foto"><img src="${esc(e.foto)}" alt="${esc(e.nome)}" loading="lazy" onerror="this.closest('.pop-foto').style.display='none'"></div>` : ''}
-    <div class="pop-nome">${esc(e.nome)}</div>
-    <div class="pop-meta">${esc(cat)} · ${esc(e.bairro)}</div>
-    ${e.rating > 0
-      ? `<div class="pop-rating"><span class="star">★</span><b>${dec(e.rating)}</b><span>· ${nf(e.reviews)} ${e.reviews === 1 ? 'avaliação' : 'avaliações'}</span></div>`
-      : `<div class="pop-sem">Sem avaliação registrada</div>`}
-    <div class="pop-rows">${linhas.join('')}</div>
+    <div class="pop-header">
+      ${headerHtml}
+      ${tipoChipLabel ? `<div class="pop-tipo-chip ${tipoChipClass}">${esc(tipoChipLabel)}</div>` : ''}
+    </div>
+    <div class="pop-body">
+      <div class="pop-nome">${esc(e.nome)}</div>
+      <div class="pop-meta">${cat ? esc(cat) + ' · ' : ''}${esc(e.bairro)}</div>
+      ${e.rating > 0
+        ? `<div class="pop-rating">
+             <div class="pop-stars">${starsSvg(e.rating)}</div>
+             <span class="pop-rating-num">${dec(e.rating)}</span>
+             <span class="pop-rating-ct">· ${nf(e.reviews)} ${e.reviews === 1 ? 'avaliação' : 'avaliações'}</span>
+           </div>`
+        : `<div class="pop-sem">Sem avaliação registrada</div>`}
+      ${linhas.length ? `<div class="pop-rows">${linhas.join('')}</div>` : ''}
+    </div>
     <div class="pop-actions">
       <a class="pop-btn pop-btn-rota" href="${rotaUrl(e)}" target="_blank" rel="noopener">
-        ${ico('<path d="M3 12h18M17 8l4 4-4 4"/>')}
+        ${ico('<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/>')}
         Rota
       </a>
       <a class="pop-btn" href="${mapsUrl(e)}" target="_blank" rel="noopener">
         ${ico('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>')}
-        Abrir no Maps
+        Ver no Maps
       </a>
     </div>
   </div>`;
