@@ -668,13 +668,16 @@ svg { display: block; }
 .pop-row a.v { color: var(--c-primary); font-weight: 600; }
 .pop-row a.v:hover { text-decoration: underline; }
 
+.pop-actions { display: flex; gap: 8px; margin-top: 13px; }
 .pop-btn {
   display: flex; align-items: center; justify-content: center; gap: 7px;
-  margin-top: 13px; padding: 10px; border-radius: var(--r-pill);
+  flex: 1; padding: 10px; border-radius: var(--r-pill);
   background: var(--c-primary); color: #fff;
   font-family: var(--f-head); font-size: 12.5px; font-weight: 600;
   transition: var(--t-fast);
 }
+.pop-btn-rota { background: #2d8c50; }
+.pop-btn-rota:hover { background: #226b3d; }
 .pop-btn:hover { background: var(--c-deep); }
 .pop-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2.2; }
 .area-tip { background: rgba(38,16,48,.9) !important; border: none !important; color: #fff !important; font-family: var(--f-head); font-size: 11px; font-weight: 600; box-shadow: none !important; }
@@ -1180,6 +1183,15 @@ function fotoDe(id) {
   for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
   return FOTOS[h % FOTOS.length];
 }
+// URL de direções (Google Maps Directions) usando coordenadas reais do estabelecimento
+function rotaUrl(e) {
+  return `https://www.google.com/maps/dir/?api=1&destination=${e.lat},${e.lon}`;
+}
+// URL de visualização no Maps: usa o link original quando disponível, senão fallback por coordenada
+function mapsUrl(e) {
+  if (e.link) return e.link;
+  return `https://www.google.com/maps/search/?api=1&query=${e.lat},${e.lon}`;
+}
 const esc = s => (s ?? '').toString().replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
 
 function haversine(a, b, c, d) {
@@ -1190,10 +1202,19 @@ function haversine(a, b, c, d) {
 }
 
 /* ══ Filtros ══ */
+// Bounding box de Belém (inclui Outeiro, Icoaraci, Mosqueiro não entra por já ter sido removido da base)
+const BELEM_BOUNDS = { latMin: -1.55, latMax: -0.95, lonMin: -48.85, lonMax: -48.0 };
+function coordValida(e) {
+  if (!e.lat || !e.lon) return false;
+  if (e.lat < BELEM_BOUNDS.latMin || e.lat > BELEM_BOUNDS.latMax) return false;
+  if (e.lon < BELEM_BOUNDS.lonMin || e.lon > BELEM_BOUNDS.lonMax) return false;
+  return true;
+}
+
 function applyFilters() {
   const f = S.filters, toks = tokens(f.query);
   let out = S.data.estabelecimentos.filter(e => {
-    if (!e.lat || !e.lon) return false;
+    if (!coordValida(e)) return false;
     if (f.tipo !== 'todos' && e.tipo !== f.tipo) return false;
     if (f.area !== 'todos' && e.bairro !== f.area) return false;
     if (f.minRating > 0 && !(e.rating >= f.minRating)) return false;
@@ -1481,10 +1502,16 @@ function popupHtml(e) {
       ? `<div class="pop-rating"><span class="star">★</span><b>${dec(e.rating)}</b><span>· ${nf(e.reviews)} ${e.reviews === 1 ? 'avaliação' : 'avaliações'}</span></div>`
       : `<div class="pop-sem">Sem avaliação registrada</div>`}
     <div class="pop-rows">${linhas.join('')}</div>
-    <a class="pop-btn" href="${esc(e.link)}" target="_blank" rel="noopener">
-      ${ico('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>')}
-      Abrir no Google Maps
-    </a>
+    <div class="pop-actions">
+      <a class="pop-btn pop-btn-rota" href="${rotaUrl(e)}" target="_blank" rel="noopener">
+        ${ico('<path d="M3 12h18M17 8l4 4-4 4"/>')}
+        Rota
+      </a>
+      <a class="pop-btn" href="${mapsUrl(e)}" target="_blank" rel="noopener">
+        ${ico('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>')}
+        Abrir no Maps
+      </a>
+    </div>
   </div>`;
 }
 
@@ -1525,9 +1552,9 @@ function renderSelCard(e) {
       <div class="sel-row">${ico('<circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/>')}<div><span class="k">Pontos próximos:</span> <span class="v">${n500} em 500 m · ${n1k} em 1 km</span></div></div>
     </div>
     <div class="sel-actions">
-      <a class="btn btn-green" href="${esc(e.link)}" target="_blank" rel="noopener">Ver rota</a>
+      <a class="btn btn-green" href="${rotaUrl(e)}" target="_blank" rel="noopener">Ver rota</a>
       <button class="btn btn-outline" onclick="closeSel()">Fechar</button>
-      <a class="btn btn-primary btn-wide" href="${esc(e.link)}" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      <a class="btn btn-primary btn-wide" href="${mapsUrl(e)}" target="_blank" rel="noopener">Abrir no Google Maps</a>
     </div>`;
   el.classList.add('open');
   el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -1552,12 +1579,13 @@ function renderList(list) {
     const cat = e.categoria && e.categoria !== 'Não informado' ? e.categoria : '';
     const termo = (e.termos || '').split('|')[0].trim();
     const [arq, credito] = fotoDe(e.place_id);
+    const fotoSrc = e.foto
+      ? `<img class="est-photo" src="${esc(e.foto)}" loading="lazy" alt="${esc(e.nome)}" onerror="this.src='assets/fotos/${arq}';this.title='Imagem ilustrativa · ${credito}'">`
+      : `<img class="est-photo" src="assets/fotos/${arq}" loading="lazy" alt="Foto ilustrativa de açaí — não é imagem deste estabelecimento" title="Imagem ilustrativa · ${esc(credito)}">`;
     return `
     <article class="est-card" data-id="${esc(e.place_id)}" onclick="selectById('${esc(e.place_id)}',false)">
       <div class="est-top">
-        <img class="est-photo" src="assets/fotos/${arq}" loading="lazy"
-             alt="Foto ilustrativa de açaí — não é imagem deste estabelecimento"
-             title="Imagem ilustrativa · ${esc(credito)}">
+        ${fotoSrc}
         <div class="est-body">
           <div class="est-name-row">
             <h3 class="est-name">${esc(e.nome)}</h3>
@@ -1579,8 +1607,8 @@ function renderList(list) {
       <div class="est-addr">${esc(e.endereco || 'Endereço não disponível')}</div>
       <div class="est-actions">
         <button class="btn btn-outline" onclick="event.stopPropagation();goDetail('${esc(e.place_id)}')">Ver detalhes</button>
-        <a class="btn btn-primary" href="${esc(e.link)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
-          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        <a class="btn btn-primary" href="${rotaUrl(e)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">
+          <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M17 8l4 4-4 4"/></svg>
           Ver rota
         </a>
       </div>
