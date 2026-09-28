@@ -1,11 +1,11 @@
 window.ACAI_DATA = {
   "kpis": {
-    "total_estabelecimentos": 779,
+    "total_estabelecimentos": 769,
     "total_ocorrencias": 1818,
     "total_consultas": 60,
-    "total_areas": 56,
+    "total_areas": 48,
     "avg_rating": 4.58,
-    "total_reviews": 153192,
+    "total_reviews": 153117,
     "rodada": 2,
     "data_coleta": "Setembro de 2026"
   },
@@ -5289,25 +5289,6 @@ window.ACAI_DATA = {
       "reviews": 0,
       "ocorrencias": 3,
       "link": "https://www.google.com/maps/place/A%C3%87A%C3%8D+NATURAL/data=!4m7!3m6!1s0x92a4f589402f4c61:0x46d84625c7a86691!8m2!3d-1.3865693!4d-48.3826221!16s%2Fg%2F11y_k2j4rz!19sChIJYUwvQIn1pJIRkWaoxyVG2EY?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
-      "termos": "açaí na tigela",
-      "data_coleta": "2026-09-23"
-    },
-    {
-      "place_id": "ChIJ18tJMWZrpJIRXP4jkyNywq0",
-      "nome": "Açaí do Neves - Açaiteria",
-      "categoria": "Açaíteria / Sorveteria",
-      "tipo": "Especializado em açaí",
-      "endereco": "Ao lado igreja católica sra Fátima - Av. Camilo Salgado, 164 - Aeroporto, Belém - PA, 66913-320",
-      "bairro": "Aeroporto",
-      "cidade": "Belém",
-      "lat": -1.143064,
-      "lon": -48.456531,
-      "telefone": "11911302471",
-      "website": "https://wa.me/message/RXY632WHSWDJH1",
-      "rating": 5.0,
-      "reviews": 25,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+do+Neves+-+A%C3%A7aiteria/data=!4m7!3m6!1s0x92a46b663149cbd7:0xadc272239323fe5c!8m2!3d-1.1430639!4d-48.4565314!16s%2Fg%2F11n9b7v0tx!19sChIJ18tJMWZrpJIRXP4jkyNywq0?authuser=0&hl=en&g_ep=EgoyMDI2MDkyMS4wIJJjKgBIAVAD&rclk=1",
       "termos": "açaí na tigela",
       "data_coleta": "2026-09-23"
     },
@@ -12394,139 +12375,6 @@ window.ACAI_DATA = {
       "data_coleta": "2026-09-25"
     },
     {
-      "place_id": "ChIJ528_FgAVpJIRE7CRSMaffYs",
-      "nome": "Sol e Mar - Açaiteria",
-      "categoria": "Sorveteria",
-      "tipo": "Especializado em açaí",
-      "endereco": "Sol e Mar - Açaiteria - Av. Beira Mar - Chapéu Virado, Belém - PA, 66910-150",
-      "bairro": "Chapéu Virado",
-      "cidade": "Belém",
-      "lat": -1.130047,
-      "lon": -48.452889,
-      "telefone": "",
-      "website": "",
-      "rating": 5.0,
-      "reviews": 2,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/Sol+e+Mar+-+A%C3%A7aiteria/@-1.130047,-48.452889,17z/data=!4m6!3m5!1s0x92a41500163f6fe7:0x8b7d9fc64891b013!8m2!3d-1.1300473!4d-48.4528888!16s%2Fg%2F11nq2ytdhs?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJAQWZcGcVpJIR3edNEe_Mg7w",
-      "nome": "Açaí do Dodó",
-      "categoria": "Restaurante",
-      "tipo": "Açaí + Outro segmento",
-      "endereco": "Açaí do Dodó - R. Artur Pires Teixeira - Porto Arthur, Belém - PA, 66918-540",
-      "bairro": "Porto Arthur",
-      "cidade": "Belém",
-      "lat": -1.129553,
-      "lon": -48.447557,
-      "telefone": "(91) 99831-3176",
-      "website": "",
-      "rating": 4.8,
-      "reviews": 20,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+do+Dod%C3%B3/@-1.129553,-48.447557,17z/data=!4m6!3m5!1s0x92a4156770990501:0xbc83ccef114de7dd!8m2!3d-1.129553!4d-48.447557!16s%2Fg%2F11gyb6cd9n?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJH-QzbqUVpJIRO09omPBXp9g",
-      "nome": "Açai do martinho 2",
-      "categoria": "Restaurante",
-      "tipo": "Açaí + Outro segmento",
-      "endereco": "Açai do martinho 2 - R. Variante - Murubira, Belém - PA, 66913-670",
-      "bairro": "Murubira",
-      "cidade": "Belém",
-      "lat": -1.128038,
-      "lon": -48.445234,
-      "telefone": "(91) 98010-7239",
-      "website": "",
-      "rating": 5.0,
-      "reviews": 6,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7ai+do+martinho+2/@-1.128038,-48.445234,17z/data=!4m6!3m5!1s0x92a415a56e33e41f:0xd8a757f098684f3b!8m2!3d-1.1280381!4d-48.4452341!16s%2Fg%2F11j2c4yhl1?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJH6bYy9GNpJIRd4wIpiri2ag",
-      "nome": "Açaiteria Pai D`égua",
-      "categoria": "Sorveteria",
-      "tipo": "Especializado em açaí",
-      "endereco": "Açaiteria Pai D`égua - Av. 16 de Novembro - Mangueiras, Belém - PA, 66913-430",
-      "bairro": "Mangueiras",
-      "cidade": "Belém",
-      "lat": -1.144378,
-      "lon": -48.462326,
-      "telefone": "(91) 98612-3637",
-      "website": "",
-      "rating": 4.9,
-      "reviews": 7,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7aiteria+Pai+D%60%C3%A9gua/data=!4m7!3m6!1s0x92a48dd1cbd8a61f:0xa8d9e22aa6088c77!8m2!3d-1.1443775!4d-48.4623256!16s%2Fg%2F11r_4k4ncq!19sChIJH6bYy9GNpJIRd4wIpiri2ag?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkyMy4wIJJjKgBIAVAD&rclk=1",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJLwrW56MVpJIRYfhykTIwa1A",
-      "nome": "AÇAI DO MARTINHO",
-      "categoria": "Restaurante",
-      "tipo": "Açaí + Outro segmento",
-      "endereco": "AÇAI DO MARTINHO - Av. 16 de Novembro, 12 - São João do Outeiro (Outeiro, Belém - PA, 66923-120",
-      "bairro": "São João do Outeiro (Outeiro",
-      "cidade": "Belém",
-      "lat": -1.133196,
-      "lon": -48.435518,
-      "telefone": "(91) 99199-5296",
-      "website": "",
-      "rating": 4.7,
-      "reviews": 7,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%87AI+DO+MARTINHO/data=!4m7!3m6!1s0x92a415a3e7d60a2f:0x506b30329172f861!8m2!3d-1.1331963!4d-48.435518!16s%2Fg%2F11hdyn7v4n!19sChIJLwrW56MVpJIRYfhykTIwa1A?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkyMy4wIJJjKgBIAVAD&rclk=1",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJOdvAyLprpJIRoO9_E3vdMok",
-      "nome": "Açaíteria Mosqueiro Ilhaçaí",
-      "categoria": "Sorveteria",
-      "tipo": "Especializado em açaí",
-      "endereco": "Açaíteria Mosqueiro Ilhaçaí - Tv. Carlos Bentes - Vila, Belém - PA, 66914-050",
-      "bairro": "Vila",
-      "cidade": "Belém",
-      "lat": -1.164775,
-      "lon": -48.472277,
-      "telefone": "(91) 98644-3487",
-      "website": "https://matafoomi.com.br/acaiteriailhacai",
-      "rating": 5.0,
-      "reviews": 1,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%ADteria+Mosqueiro+Ilha%C3%A7a%C3%AD/@-1.164775,-48.472277,17z/data=!4m6!3m5!1s0x92a46bbac8c0db39:0x8932dd7b137fefa0!8m2!3d-1.1647746!4d-48.472277!16s%2Fg%2F11ln2p14b0?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJb1O-ej0VpJIRzQrxXovEWP4",
-      "nome": "açai especial da sandra",
-      "categoria": "Restaurante",
-      "tipo": "Açaí + Outro segmento",
-      "endereco": "açai especial da sandra - R. Variante, n36 - Porto Arthur, Belém - PA, 66913-670",
-      "bairro": "Porto Arthur",
-      "cidade": "Belém",
-      "lat": -1.128669,
-      "lon": -48.446714,
-      "telefone": "(91) 98349-8390",
-      "website": "",
-      "rating": 4.8,
-      "reviews": 5,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/a%C3%A7ai+especial+da+sandra/@-1.128669,-48.446714,17z/data=!4m6!3m5!1s0x92a4153d7abe536f:0xfe58c48b5ef10acd!8m2!3d-1.1286694!4d-48.4467136!16s%2Fg%2F11fmb3kb28?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
       "place_id": "ChIJd00zcnlcpJIRVhCh4XKoyOU",
       "nome": "Expresso açai artesanal",
       "categoria": "Fabricação de alimentos",
@@ -12542,44 +12390,6 @@ window.ACAI_DATA = {
       "reviews": 18,
       "ocorrencias": 1,
       "link": "https://www.google.com/maps/place/Expresso+a%C3%A7ai+artesanal/@-1.28634,-48.321993,17z/data=!4m6!3m5!1s0x92a45c7972334d77:0xe5c8a872e1a11056!8m2!3d-1.2863401!4d-48.3219927!16s%2Fg%2F11g8vmmjyj?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJh1bwHQAVpJIRb5k3Ke6-Cis",
-      "nome": "Açaiteria Ponto Frio",
-      "categoria": "Sorveteria",
-      "tipo": "Especializado em açaí",
-      "endereco": "Açaiteria Ponto Frio - Rod. Eng. Augusto Meira Filho - Carananduba, Belém - PA, 66923-120",
-      "bairro": "Carananduba",
-      "cidade": "Belém",
-      "lat": -1.103352,
-      "lon": -48.401205,
-      "telefone": "",
-      "website": "",
-      "rating": 0.0,
-      "reviews": 0,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7aiteria+Ponto+Frio/@-1.103352,-48.401205,17z/data=!4m6!3m5!1s0x92a415001df05687:0x2b0abeee2937996f!8m2!3d-1.1033517!4d-48.401205!16s%2Fg%2F11zh1jqqk_?hl=pt&entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D",
-      "termos": "açaí",
-      "data_coleta": "2026-09-25"
-    },
-    {
-      "place_id": "ChIJhxIl-fgVpJIRgCfmHnpIfbY",
-      "nome": "Açaí point dos amigos",
-      "categoria": "Estacionamento",
-      "tipo": "Especializado em açaí",
-      "endereco": "Açaí point dos amigos - Carananduba, Belém - PA",
-      "bairro": "Carananduba",
-      "cidade": "Belém",
-      "lat": -1.101434,
-      "lon": -48.412982,
-      "telefone": "(91) 98082-2322",
-      "website": "",
-      "rating": 5.0,
-      "reviews": 2,
-      "ocorrencias": 1,
-      "link": "https://www.google.com/maps/place/A%C3%A7a%C3%AD+point+dos+amigos/data=!4m7!3m6!1s0x92a415f8f9251287:0xb67d487a1ee62780!8m2!3d-1.1014336!4d-48.4129819!16s%2Fg%2F11sb_kzsgh!19sChIJhxIl-fgVpJIRgCfmHnpIfbY?authuser=0&hl=pt-BR&g_ep=EgoyMDI2MDkyMy4wIJJjKgBIAVAD&rclk=1",
       "termos": "açaí",
       "data_coleta": "2026-09-25"
     },
@@ -14914,14 +14724,6 @@ window.ACAI_DATA = {
       "total": 2
     },
     {
-      "bairro": "Porto Arthur",
-      "total": 2
-    },
-    {
-      "bairro": "Carananduba",
-      "total": 2
-    },
-    {
       "bairro": "São João do Outeiro",
       "total": 2
     },
@@ -14931,10 +14733,6 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Tocantins",
-      "total": 1
-    },
-    {
-      "bairro": "Aeroporto",
       "total": 1
     },
     {
@@ -14979,26 +14777,6 @@ window.ACAI_DATA = {
     },
     {
       "bairro": "Fátima",
-      "total": 1
-    },
-    {
-      "bairro": "Chapéu Virado",
-      "total": 1
-    },
-    {
-      "bairro": "Murubira",
-      "total": 1
-    },
-    {
-      "bairro": "Mangueiras",
-      "total": 1
-    },
-    {
-      "bairro": "São João do Outeiro (Outeiro",
-      "total": 1
-    },
-    {
-      "bairro": "Vila",
       "total": 1
     },
     {
