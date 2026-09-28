@@ -2012,7 +2012,8 @@ function drawScatter(list) {
 }
 function drawTermos() {
   const cv = document.getElementById('chart-termos'); if (!cv || !window.Chart) return;
-  const t = S.data.termos;
+  const t = getTermosData();
+  if (!t || !t.length) return;
   const DL = window.ChartDataLabels;
   if (S.charts.termos) S.charts.termos.destroy();
   const barColors = ['#A4D620','#7A3C8C','#9B4EAB','#B87CC4'];
@@ -2108,10 +2109,35 @@ function runSuggest(q) {
     : `<div class="suggest-empty">Nenhum resultado para “${esc(q)}”.</div>`;
   box.classList.add('open');
 }
+function trackSearch(termo) {
+  if (!termo || termo.length < 2) return;
+  try {
+    const key = 'acai_termos';
+    const stored = JSON.parse(localStorage.getItem(key) || '{}');
+    const t = termo.trim().toLowerCase().slice(0,40);
+    stored[t] = (stored[t] || 0) + 1;
+    localStorage.setItem(key, JSON.stringify(stored));
+  } catch(e) {}
+}
+function getTermosData() {
+  // Merge static baseline with localStorage user searches
+  const base = (S.data.termos || []).map(x => ({...x}));
+  try {
+    const stored = JSON.parse(localStorage.getItem('acai_termos') || '{}');
+    const entries = Object.entries(stored).sort((a,b)=>b[1]-a[1]).slice(0,8);
+    entries.forEach(([termo, count]) => {
+      const existing = base.find(x => x.termo.toLowerCase() === termo.toLowerCase());
+      if (existing) existing.resultados += count;
+      else base.push({termo, resultados: count});
+    });
+  } catch(e) {}
+  return base.sort((a,b)=>b.resultados-a.resultados).slice(0,8);
+}
 function pickSuggest(i) {
   const s = sugItems[i]; if (!s) return;
   const inp = document.getElementById('header-search');
   document.getElementById('suggest').classList.remove('open');
+  trackSearch(s.label);
   if (s.kind === 'area') {
     inp.value = ''; S.filters.query = '';
     setFilter('area', s.label);
