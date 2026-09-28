@@ -18,7 +18,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Aeroporto",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ18tJMWZrpJIRXP4jkyNywq0",
@@ -29,7 +30,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Aeroporto",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyZkK5-5rpJIRcgqmbrgF8cA",
@@ -40,7 +42,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Aeroporto",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ89nwTnpppJIRhvBK1xewaVU",
@@ -51,7 +54,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJE1JSC55opJIRJecmV0K71Bc",
@@ -62,7 +66,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJOzQD9cJppJIRscS-q8uucJM",
@@ -73,7 +78,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8euPtPVppJIRlWvfO7lBbsQ",
@@ -84,7 +90,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmZCpMAxnpJIRCTqGhRBNqlo",
@@ -95,7 +102,8 @@ const DASHBOARD_DATA = {
     "reviews": 28,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW2GNdztmpJIRMo5ipD2p26E",
@@ -106,7 +114,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEwG9ZZ5opJIRC0knblm5Nw0",
@@ -117,7 +126,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJi82UiSVppJIRbJZ1qNeLAGk",
@@ -128,7 +138,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJIfqiMp9opJIRVDVcA3dr3bc",
@@ -139,7 +150,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJky09fABppJIRH2ctrCtAAjI",
@@ -150,7 +162,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJOVD5TgBnpJIR8Nlh3EW6410",
@@ -161,7 +174,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Água Boa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-7GNG9RhpJIR_yuMhkHcIlA",
@@ -172,7 +186,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Águas Lindas",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfV2aj8P1pJIR3cGLcur4w_I",
@@ -183,7 +198,8 @@ const DASHBOARD_DATA = {
     "reviews": 11,
     "bairro": "Águas Lindas",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJe36F6OqLpJIRW1LYanwys48",
@@ -194,7 +210,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Águas Lindas",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJox9QhCpnpJIROBvj8qyNb10",
@@ -205,7 +222,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Águas Negras",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJedZEIABnpJIRKQQL8gyWgLM",
@@ -216,7 +234,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Águas Negras",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ_ti5zlnpJIRqFo5UZOzE9A",
@@ -227,7 +246,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Águas Negras",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5T6KY31npJIRtCtXiglKl28",
@@ -238,7 +258,8 @@ const DASHBOARD_DATA = {
     "reviews": 43,
     "bairro": "Águas Negras",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNV2J-SdnpJIRLWoViR-3dVk",
@@ -249,7 +270,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Águas Negras",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJScKYr6VmpJIR0TJKu6vT1E8",
@@ -260,7 +282,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW31UTmxnpJIRd0FmlWDxxbk",
@@ -271,7 +294,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiybEdahmpJIRCRF5ffyg4SQ",
@@ -282,7 +306,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJq3D8Pb5mpJIRXbZ4tap-UoM",
@@ -293,7 +318,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ57k_EKRnpJIRmxBKuPTBsoU",
@@ -304,7 +330,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO3BxHNNnpJIRgtCdPtMjAtw",
@@ -315,7 +342,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhauXIKxmpJIRBscyBLzYhRo",
@@ -326,7 +354,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoRmKoMlnpJIRFEwi-NaHKVc",
@@ -337,7 +366,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7U3UuSFnpJIRhaCeXRHLFiM",
@@ -348,7 +378,8 @@ const DASHBOARD_DATA = {
     "reviews": 49,
     "bairro": "Agulha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJn3jOY6dnpJIRn1PiIkaKpPY",
@@ -359,7 +390,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Agulha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2SOP0CBnpJIRHxKM1LDzU18",
@@ -370,7 +402,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Agulha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJL6pDmV1npJIRon0p1XIg_BY",
@@ -381,7 +414,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Agulha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJOcAAaNhlpJIRpEpw8452NFg",
@@ -392,7 +426,8 @@ const DASHBOARD_DATA = {
     "reviews": 33,
     "bairro": "Agulha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJabeFmzVhpJIRdvQhVfU_GGY",
@@ -403,7 +438,8 @@ const DASHBOARD_DATA = {
     "reviews": 4934,
     "bairro": "Agulha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SNMm0KDwSIgtTW70D0sDINnVxJX5Yb2fJCJq6judRzQoS0gUXGOhcnxjGrp9Hhrkg0HJhTt2F4jKtLQ7XSDewMXL3OXJofaR60Y8twx0M_gmHaCC21G83KHTS0aPP5eU9gS-2OvHRbX2Iv=w600-h400-k-no"
   },
   {
     "place_id": "ChIJx-W9WwBhpJIRpelgZ-6Hb5g",
@@ -414,7 +450,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Ariramba",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxbKDbvSLpJIRSXP_QJtaw4g",
@@ -425,7 +462,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Aurá",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJlbHhGwA9pJIRq4KJ60atzL8",
@@ -436,7 +474,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Baía do Sol",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJS48IGQA9pJIRJXFcAqBP7RI",
@@ -447,7 +486,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Baía do Sol",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM6VbawA9pJIREbxMV8jDIxY",
@@ -458,7 +498,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Baía do Sol",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_SN-USyJpJIROLAPRMNJwPU",
@@ -469,7 +510,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Barreiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzal_5NqLpJIRVBGmME59YtM",
@@ -480,7 +522,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Barreiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ68EhHXuPpJIRVieH1xwFkWg",
@@ -491,7 +534,8 @@ const DASHBOARD_DATA = {
     "reviews": 1006,
     "bairro": "Batista Campos",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkb6LwTkQ5QRvJVRbfOLRCdhoSbHnbP-SysI0VDNavbP4nKoq1AO437wGWRlgQPoD312u1mXT83xORuj5R9hqhuO_lPFqW9I7NIVJM1A3xhiU96fMXyqOYqsSlIxGdSGmRSH5UJ=w600-h400-k-no"
   },
   {
     "place_id": "ChIJA9RCucSPpJIRfDqDg7gIKhY",
@@ -502,7 +546,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Batista Campos",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJRWG2YiiPpJIRnTXUZ426muY",
@@ -513,7 +558,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Batista Campos",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJndL5fVOPpJIRwUqbHGyUeAI",
@@ -524,7 +570,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Batista Campos",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGST-TUGPpJIRrQ4WS9x3nBY",
@@ -535,7 +582,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Batista Campos",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ54gVgomOpJIRfMqzaR6c0NE",
@@ -546,7 +594,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Batista Campos",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVUT5mKuPpJIRAfX_qSECYIw",
@@ -557,7 +606,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Batista Campos",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6xjjho6PpJIRXcQDkzRPT0g",
@@ -568,7 +618,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Batista Campos",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJg7OkAV2LpJIRkGQYfMvQ-pU",
@@ -579,7 +630,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYznOEzeLpJIRpU2T8HeXdLc",
@@ -590,7 +642,8 @@ const DASHBOARD_DATA = {
     "reviews": 24,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2YXIpkaLpJIR_Akq0Nxrkk4",
@@ -601,7 +654,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJk47-kV5hpJIRfxMGQdecn5g",
@@ -612,7 +666,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgWslOzaLpJIRdxqJOw4jHRM",
@@ -623,7 +678,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8znmluKLpJIR-JU_n19tVBI",
@@ -634,7 +690,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJswwgtWSLpJIRB6khUCh5jXE",
@@ -645,7 +702,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJl6qTqpmLpJIRgdgUhgiJJqA",
@@ -656,7 +714,8 @@ const DASHBOARD_DATA = {
     "reviews": 125,
     "bairro": "Benguí",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuXczMQCLpJIRYRjcHjnoZ-o",
@@ -667,7 +726,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Benguí",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5Xk7vk1hpJIRWXl5WWHEqUQ",
@@ -678,7 +738,8 @@ const DASHBOARD_DATA = {
     "reviews": 30,
     "bairro": "Benguí",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJIwKLquphpJIRYwK9uufolGA",
@@ -689,7 +750,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Benguí",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM5YnaneKpJIR8HQ6zMC2o68",
@@ -700,7 +762,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNzjB-keLpJIRkJdAvAP_Zlo",
@@ -711,7 +774,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Benguí",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJL6fqFk1hpJIRpQMSa-9QmoI",
@@ -722,7 +786,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjQHsGwuLpJIRx8WqpHdPMCM",
@@ -733,7 +798,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH8dS98iLpJIRU-RZYsegoIw",
@@ -744,7 +810,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJU8yJluKLpJIR8tGSELux0LA",
@@ -755,7 +822,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ198v3CaLpJIRPQl2NLW5P6Y",
@@ -766,7 +834,8 @@ const DASHBOARD_DATA = {
     "reviews": 19,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzzKTIKphpJIRC1IisdFiZuA",
@@ -777,7 +846,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGREIK5aLpJIRahx4MPuoOpM",
@@ -788,7 +858,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeygJb3KKpJIRq6acHSx3peo",
@@ -799,7 +870,8 @@ const DASHBOARD_DATA = {
     "reviews": 36,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ30NcF3uKpJIRIBCJj_FKkPI",
@@ -810,7 +882,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3fmuQKyLpJIR7FqAe9AuiAo",
@@ -821,7 +894,8 @@ const DASHBOARD_DATA = {
     "reviews": 11,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8d0K0KyLpJIR40Gssuo2NhU",
@@ -832,7 +906,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW_zpq_FhpJIR5Kjzwk859Ak",
@@ -843,7 +918,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJE0sNCg6KpJIRv-fnH3n7L7Y",
@@ -854,7 +930,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN2h54YCLpJIRjjJPrdPOqlw",
@@ -865,7 +942,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9SwursCLpJIRK_-9VmsK15Y",
@@ -876,7 +954,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJORXT0XCKpJIR6npxw4k8NEY",
@@ -887,7 +966,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Benguí",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJF-AmsckUpJIR_PUNeHCr1xY",
@@ -898,7 +978,8 @@ const DASHBOARD_DATA = {
     "reviews": 121,
     "bairro": "Bonfim",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-X1WRgBlpJIRxo2QA97PMOs",
@@ -909,7 +990,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Brasília",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5-UzwoNnpJIR2mPJNlhCISY",
@@ -920,7 +1002,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Brasília",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJP8Un7oOKpJIRFunmqlYYGuM",
@@ -931,7 +1014,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJrfE0SgBhpJIRfY603WVF2Qc",
@@ -942,7 +1026,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKRzc8YaKpJIROXEsdEh8EUk",
@@ -953,7 +1038,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJb50QaSpgpJIRgv8mf3b2WoY",
@@ -964,7 +1050,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN9aTgoKKpJIRleInWqo-p1g",
@@ -975,7 +1062,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHfxw6CJhpJIRpLJ9eIfnvz4",
@@ -986,7 +1074,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ93N-filgpJIRUhr8WGbwMRQ",
@@ -997,7 +1086,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJR1RItvFhpJIRRlvlmwzd1eQ",
@@ -1008,7 +1098,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJB2pTUYCKpJIR7Zv9frD7kTM",
@@ -1019,7 +1110,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-x9qNipgpJIRPyQWwUnXxVY",
@@ -1030,7 +1122,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJx8pDy4phpJIRLkunmLQ8LP0",
@@ -1041,7 +1134,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYauvOACLpJIRYqzRnsUsbtw",
@@ -1052,7 +1146,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw4FIZClgpJIR-MmYUOQM_Uc",
@@ -1063,7 +1158,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFU-ZaipgpJIRzy237xf4wNI",
@@ -1074,7 +1170,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjRwQv8FhpJIRHNmfrhBiVyE",
@@ -1085,7 +1182,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ70SeGABhpJIRPzf7nbhBl0M",
@@ -1096,7 +1194,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvfQBwIeKpJIRG_ocJfTmi24",
@@ -1107,7 +1206,8 @@ const DASHBOARD_DATA = {
     "reviews": 100,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoynSG7uLpJIR2J3j6SmRXec",
@@ -1118,7 +1218,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDTO-OACLpJIRV_k1WjRs8j4",
@@ -1129,7 +1230,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_xW1pe9hpJIRXwXDXeKN82s",
@@ -1140,7 +1242,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSwYGfzJgpJIR8bj-D9zR3pk",
@@ -1151,7 +1254,8 @@ const DASHBOARD_DATA = {
     "reviews": 56,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoz6HeF1hpJIRuBWmqwSlNA4",
@@ -1162,7 +1266,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeXrbO8JhpJIRx18KCd63lwE",
@@ -1173,7 +1278,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJL8gbFclhpJIRYuyJP-fddY0",
@@ -1184,7 +1290,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTeDFLwBhpJIR0IVikN_x7I0",
@@ -1195,7 +1302,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJUZhJCgCLpJIR1HjIBWqVqDc",
@@ -1206,7 +1314,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBXgsOD-LpJIRpctnfFNZtmU",
@@ -1217,7 +1326,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ31sKGo-KpJIRB5pvNAVXKuM",
@@ -1228,7 +1338,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVwRUVs1hpJIRXT94FUYAqhs",
@@ -1239,7 +1350,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1anJ7aFhpJIR8eVd_f90FTU",
@@ -1250,7 +1362,8 @@ const DASHBOARD_DATA = {
     "reviews": 35,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdbdJcJphpJIR0LO-IZe6Oms",
@@ -1261,7 +1374,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX1D3AgBhpJIRISz7K1_9PW0",
@@ -1272,7 +1386,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ87mz3jJgpJIR2ug0hM475_g",
@@ -1283,7 +1398,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJATHliGBhpJIRJo0QgZeYiZY",
@@ -1294,7 +1410,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJpyV5-HNhpJIRELiOCqO6FgY",
@@ -1305,7 +1422,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtcXvUWBhpJIRLFoV-Mzxo_w",
@@ -1316,7 +1434,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN1YVJzVhpJIRCK9vVPxDbI0",
@@ -1327,7 +1446,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5UnOJt2LpJIRbvZqgbgPewM",
@@ -1338,7 +1458,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH18nbiBhpJIR7keysuTzgrE",
@@ -1349,7 +1470,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4bDguoeKpJIRE6xfUkP9EZ0",
@@ -1360,7 +1482,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJi3bZ-FBhpJIRSCP2FeEe3GE",
@@ -1371,7 +1494,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_V46FgCLpJIRFOIi8kP5jos",
@@ -1382,7 +1506,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cabanagem",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwTbtQClgpJIRL5O_14wgaqQ",
@@ -1393,7 +1518,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cabanagem",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJb5UZnKNnpJIRaXmFmPVUO5U",
@@ -1404,7 +1530,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdzPsoPOOpJIRpbNHPUMnYJQ",
@@ -1415,7 +1542,8 @@ const DASHBOARD_DATA = {
     "reviews": 1089,
     "bairro": "Campina",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SBApVxHi7_vAgcYgB5knGiYj1OhwUz_FnAwlqQ5lh15L5YBxwhQ5HredD_emWWvpdEJWw_yiGhBiQm_zIVhqBUiggqnn8AvJaRoqt1hvrGwcX-fltx8CpS7vc0omo3OCCZvDGadQ=w600-h400-k-no"
   },
   {
     "place_id": "ChIJey840HaPpJIRPMAeqsglK_I",
@@ -1426,7 +1554,8 @@ const DASHBOARD_DATA = {
     "reviews": 82,
     "bairro": "Campina",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJr5NrtF6PpJIRTYlcLlXbyLc",
@@ -1437,7 +1566,8 @@ const DASHBOARD_DATA = {
     "reviews": 147,
     "bairro": "Campina",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJD1G3ViuPpJIRlmMD1B1Q_Wo",
@@ -1448,7 +1578,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFQ0EWpWPpJIRdNjtxx65QQE",
@@ -1459,7 +1590,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Campina",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJRbfPlPGOpJIRdhRB9bgHLEw",
@@ -1470,7 +1602,8 @@ const DASHBOARD_DATA = {
     "reviews": 58,
     "bairro": "Campina",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJrT-SwF-OpJIRt3yG5jvJjoU",
@@ -1481,7 +1614,8 @@ const DASHBOARD_DATA = {
     "reviews": 8001,
     "bairro": "Campina",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TqJaDkwxwFAUcmdfeEHAxeV7X7FRo49Ge3vyIlYGpCzi7SjEUV6INvlThjOz2ZWAL-rxhbLEdZ27sEFEZ06JfDFcx2xawaebFo7d79FM-vRcF64vBtcyMijcohp_QHoThkSMN1uw=w600-h400-k-no"
   },
   {
     "place_id": "ChIJNyXMeCKLpJIRrRo5aSRu-7Y",
@@ -1492,7 +1626,8 @@ const DASHBOARD_DATA = {
     "reviews": 55,
     "bairro": "Campina",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNfWTbxGPpJIRtQWX3j6pEaA",
@@ -1503,7 +1638,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJc8zFY-uOpJIRiQx3WQT5NYE",
@@ -1514,7 +1650,8 @@ const DASHBOARD_DATA = {
     "reviews": 1051,
     "bairro": "Campina",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SBNuimELDw20zKmIAUlxxFQj3ahkOe6uC7vdR363MSnYSq70VZBaSeD5L3xfjrCt6QRMRU_TRcTEYJP6Y1nqWiojN-k9ZrJs1NCk-YxPphojU1yfyznPIkz8ZNfx2n0tfNWMLY=w600-h400-k-no"
   },
   {
     "place_id": "ChIJS_VxNQBnpJIRxtUbvdQqKjc",
@@ -1525,7 +1662,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSxDY--RnpJIR0m39w7NYE3s",
@@ -1536,7 +1674,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYZxdWFRnpJIRCz7AHms6xFY",
@@ -1547,7 +1686,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ9gjWr1mpJIRIgxn4X8D4N4",
@@ -1558,7 +1698,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_z9XmiJkpJIRaDWl0FlMkho",
@@ -1569,7 +1710,8 @@ const DASHBOARD_DATA = {
     "reviews": 226,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SvCWeTjsvnqV4Gn5OVd6039qTe2nRee7VRFz1gTux5Zgdovt1FI4PgaxXU2CE4wK858QvGv8mf8q8lWr4gZ54AVscToW6L2mna3aBE4tGMc5t_F1gHVUihQ7Tnb7_CWMpy0A=w600-h400-k-no"
   },
   {
     "place_id": "ChIJmV81oOFnpJIRFlcZrL4_rU0",
@@ -1580,7 +1722,8 @@ const DASHBOARD_DATA = {
     "reviews": 53,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJnxie5LBnpJIR1kHczI2NoXE",
@@ -1591,7 +1734,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJr7caxKRmpJIRX-2eIzx6MX0",
@@ -1602,7 +1746,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJs1ANX0plpJIRj6lqJlSEIa4",
@@ -1613,7 +1758,8 @@ const DASHBOARD_DATA = {
     "reviews": 7103,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TgSfQcIuGgyEZ1HSGSZ4efJOZhc_-tr18KCTJr_41lOqB6KQv9CbOrJVJhDmGd-3M3y8fs1_w8GgzPF-XY8LZrn3Xp7oBVQ4CpDPCn0isgyrygBGHygIMFu-hNTv5WqyacgafCEQ=w600-h400-k-no"
   },
   {
     "place_id": "ChIJtcJhfABnpJIRGvJagwhjVBY",
@@ -1624,7 +1770,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuzHZhQRnpJIRNGcJUO64QR4",
@@ -1635,7 +1782,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyybxlZ1mpJIR1bL2Dr_7r-c",
@@ -1646,7 +1794,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ48jU6JlmpJIRi6XM0fAu_CA",
@@ -1657,7 +1806,8 @@ const DASHBOARD_DATA = {
     "reviews": 75,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4V6AU71mpJIR7i7k8xGN6X8",
@@ -1668,7 +1818,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7Wc9ep1mpJIR_4HvXbSKpoU",
@@ -1679,7 +1830,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8Vi-mQ9npJIR9j85n9Uw_Mg",
@@ -1690,7 +1842,8 @@ const DASHBOARD_DATA = {
     "reviews": 178,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8yU9KbNnpJIRQo66NXPp3og",
@@ -1701,7 +1854,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAUREgdhnpJIRsf0nNdTMiso",
@@ -1712,7 +1866,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAwU5LuYKWA8R_nmdU0PMtvw",
@@ -1723,7 +1878,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAxC9YChlpJIR0gwFEsohUzI",
@@ -1734,7 +1890,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCTGQQABnpJIRHyfLf_BkowA",
@@ -1745,7 +1902,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJD8fYj6lnpJIRO33fcbAHD-8",
@@ -1756,7 +1914,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJF5JsESpnpJIRNW4ukts99YI",
@@ -1767,7 +1926,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHf9_fZFnpJIRxH1nb_JM4PI",
@@ -1778,7 +1938,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHwkcC7hnpJIRQntEWomsT3g",
@@ -1789,7 +1950,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ2DNnOlnpJIRDe6ET44WR_g",
@@ -1800,7 +1962,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ4UuTNRnpJIRXQR5Wv1F-eI",
@@ -1811,7 +1974,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJVuj2NFnpJIRVAs7G7Od2Ms",
@@ -1822,7 +1986,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGVPaQp9mpJIRLPKqwPKFxEs",
@@ -1833,7 +1998,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEy5oApdmpJIRJTQMPy5lIx4",
@@ -1844,7 +2010,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiVasQZ9mpJIRwrG2Bdf2G2Q",
@@ -1855,7 +2022,8 @@ const DASHBOARD_DATA = {
     "reviews": 171,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ0QOxVwBnpJIRbcYuRux8Hak",
@@ -1866,7 +2034,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJeHzRINnpJIRv7xpH0jvt9k",
@@ -1877,7 +2046,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2ekt4vxnpJIRyR-HCuHCIEE",
@@ -1888,7 +2058,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJveTCJQBhpJIR3ysUpJx7WAI",
@@ -1899,7 +2070,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_UH-gfxnpJIRnk4B_JCQGpY",
@@ -1910,7 +2082,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ04hVZ9mpJIRk_WRL83qVpc",
@@ -1921,7 +2094,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJu4TZ_09npJIRSmFbnT9_5kQ",
@@ -1932,7 +2106,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCUfVmBdhpJIRFVNn8rnD6gY",
@@ -1943,7 +2118,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJPUQldoJnpJIRW2S3Ppf6QAk",
@@ -1954,7 +2130,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyYO6imxnpJIRbuwsi19mzJc",
@@ -1965,7 +2142,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNcvIGbdnpJIREu36m2IHmz0",
@@ -1976,7 +2154,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9T_eGGNhpJIRthh7Z-24njE",
@@ -1987,7 +2166,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJL_ek3q9mpJIR5OOUDvsLImo",
@@ -1998,7 +2178,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYdP-MAhhpJIR3WLDyZz8hDM",
@@ -2009,7 +2190,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoxhaDUthpJIRgKN9rxBDado",
@@ -2020,7 +2202,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXbUyZQBhpJIR5Ea8-tNZlo8",
@@ -2031,7 +2214,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXc720MJhpJIRCt8anfbqXSE",
@@ -2042,7 +2226,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_469NwBhpJIRamdk5UYu7Sg",
@@ -2053,7 +2238,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8TQpGgBhpJIRG0j2v8_FSZA",
@@ -2064,7 +2250,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Campina de Icoaraci",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJf6uMOBmNpJIRLgVtHgGevZc",
@@ -2075,7 +2262,8 @@ const DASHBOARD_DATA = {
     "reviews": 45,
     "bairro": "Canudos",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJh1bwHQAVpJIRb5k3Ke6-Cis",
@@ -2086,7 +2274,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Carananduba",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhxIl-fgVpJIRgCfmHnpIfbY",
@@ -2097,7 +2286,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Carananduba",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJf_Z1GQ0VpJIRCYhPzhMYnR4",
@@ -2108,7 +2298,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJne3tTIAVpJIRUD3JwPbFl-Q",
@@ -2119,7 +2310,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5eKLuIQVpJIRQliyd08OGZQ",
@@ -2130,7 +2322,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJMYsd8doVpJIR_jUHL6tJy-s",
@@ -2141,7 +2334,8 @@ const DASHBOARD_DATA = {
     "reviews": 39,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDd-vbdoVpJIRIPljPrKbvY4",
@@ -2152,7 +2346,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJE0-ctUYVpJIR3Fom5UfKFgo",
@@ -2163,7 +2358,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Carananduba",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXxSZtgCLpJIR1W1BsO7_CCE",
@@ -2174,7 +2370,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Castanheira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeeFxtryLpJIRM-FQe-ucdBs",
@@ -2185,7 +2382,8 @@ const DASHBOARD_DATA = {
     "reviews": 928,
     "bairro": "Castanheira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnlXs6FL_E2vpG11aE7z3t-yekhy1EZ_ppW7ZXciWF_Fcy1i8b81C2ja05-9Czrg5XBvJWt1FLvPSx0rQ39rqImqdnW908-FnyRsb2LxGRgBh-ot-9PXZxxO4cXa8zea8GCtRyX=w600-h400-k-no"
   },
   {
     "place_id": "ChIJpRNKywlhpJIR1xYLQAz9rdA",
@@ -2196,7 +2394,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Castanheira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqU_0Av6KpJIR575v5PhVD4c",
@@ -2207,7 +2406,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Castanheira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJffez-2GLpJIRZPM8P2nAP30",
@@ -2218,7 +2418,8 @@ const DASHBOARD_DATA = {
     "reviews": 19,
     "bairro": "Castanheira",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwcfwDP6KpJIRu0Gjw5PMJFE",
@@ -2229,7 +2430,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Castanheira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHzc80W2LpJIRSgof6YrafLU",
@@ -2240,7 +2442,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Castanheira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ528_FgAVpJIRE7CRSMaffYs",
@@ -2251,7 +2454,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Chapéu Virado",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_xfXB5UVpJIRKt2RYwILwqw",
@@ -2262,7 +2466,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Chapéu Virado",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyw6RaMgUpJIRMziFeRWuYuQ",
@@ -2273,7 +2478,8 @@ const DASHBOARD_DATA = {
     "reviews": 4855,
     "bairro": "Chapéu Virado",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QjvXFdNibpdG2Hgx1B27bAh6Iqeu5JYXj_Hb9rtiOO2UI5SpvNk7Totc8df_ps-sDgZISuHV3kagDaI7_YRQJ58rmABW8Lf5SBDIrHml2N3oKt5PxxZR4EBpyhkRAwOZhzgYGN=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ5WO4FdUVpJIRo0FBsHCZtZA",
@@ -2284,7 +2490,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Chapéu Virado",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJRXhJ5O9rpJIRh21LRqgi37Y",
@@ -2295,7 +2502,8 @@ const DASHBOARD_DATA = {
     "reviews": 73,
     "bairro": "Chapéu Virado",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJv95KmsxhpJIRJO6xYsAJ-cw",
@@ -2306,7 +2514,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cidade Velha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBwuxluyOpJIRL26q03NpAtY",
@@ -2317,7 +2526,8 @@ const DASHBOARD_DATA = {
     "reviews": 2200,
     "bairro": "Cidade Velha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk6Dyu8CAPEKyFA5GxoLG8pUyblTeNZKiAUYYUK8ASEG48tvvceDXU5vM8LcSpDTpHgdPbTfUH_j_-jnoVty9uUr6Bw2qr9kvMUFS39bKLKgi74SYtZo7SNAE-ZSMMCUued9Rnn=w600-h400-k-no"
   },
   {
     "place_id": "ChIJxXdDNQCPpJIR6txUzAjMLpM",
@@ -2328,7 +2538,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Cidade Velha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuQRq7l6OpJIREsc17eGIvgc",
@@ -2339,7 +2550,8 @@ const DASHBOARD_DATA = {
     "reviews": 82,
     "bairro": "Cidade Velha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJc4C3cgCPpJIRD7ZNVwEVadQ",
@@ -2350,7 +2562,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cidade Velha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJv6malD2PpJIRiYduxyQQBWI",
@@ -2361,7 +2574,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Cidade Velha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJT7PxV0OOpJIR5OqVOvmWknM",
@@ -2372,7 +2586,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Cidade Velha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTSIKQnaOpJIR5ZvI9w-EQi4",
@@ -2383,7 +2598,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Condor",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJh0XkK96NpJIRs6vRvie7WVw",
@@ -2394,7 +2610,8 @@ const DASHBOARD_DATA = {
     "reviews": 138,
     "bairro": "Condor",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvxHvrjKNpJIRLg5pt_4ttys",
@@ -2405,7 +2622,8 @@ const DASHBOARD_DATA = {
     "reviews": 29,
     "bairro": "Condor",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4SVspu-PpJIRp1DegHDiaTI",
@@ -2416,7 +2634,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Condor",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4Zz6kwZhpJIRRVL2wp2FILI",
@@ -2427,7 +2646,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJsRflTwBhpJIRF1LYLiaFrq8",
@@ -2438,7 +2658,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW2dBX3FhpJIRHMYBZuT0cGM",
@@ -2449,7 +2670,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_1TyQF5hpJIRzHbINeYLhnU",
@@ -2460,7 +2682,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcW1MH7FhpJIRgm5uH2C8pF0",
@@ -2471,7 +2694,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhwp0HABhpJIR6C9c2X0XyC0",
@@ -2482,7 +2706,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmw8kgeJhpJIRY6glfFSiX7s",
@@ -2493,7 +2718,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt7ERd99hpJIR509A8YuTXoE",
@@ -2504,7 +2730,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvdMkfgBhpJIRbVwt38xGmzg",
@@ -2515,7 +2742,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw3S992phpJIRsFH-sE7IDcc",
@@ -2526,7 +2754,8 @@ const DASHBOARD_DATA = {
     "reviews": 108,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ56v-2RNhpJIR_qSjiX-IBYU",
@@ -2537,7 +2766,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH78HZK5hpJIReHo3ghEtEQE",
@@ -2548,7 +2778,8 @@ const DASHBOARD_DATA = {
     "reviews": 177,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJxQKvHNhpJIRawtyDwGgco4",
@@ -2559,7 +2790,8 @@ const DASHBOARD_DATA = {
     "reviews": 119,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKW_1kthhpJIRLxv9REcBwgQ",
@@ -2570,7 +2802,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNYmUA5JhpJIRS4JQmvneecY",
@@ -2581,7 +2814,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJPzQsOLhhpJIRV_0oTjPXwAs",
@@ -2592,7 +2826,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSWx8NgBhpJIRqGZiFdfgKWI",
@@ -2603,7 +2838,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Coqueiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ7aHxoBgpJIRD8o1cMo8g_g",
@@ -2614,7 +2850,8 @@ const DASHBOARD_DATA = {
     "reviews": 5313,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TPAV9zX55kkNBYX2Y9OBhPsnYPRjnXWYOgUwMy0upTk1i_6Th-sT4VttMqj3YDTsEC6zLM6PZh3nzrQKMF_cmci9CdCTn-c9D2uaIDEyFYhG7UdwkrB0PbsSCQTpYscNk3o-1j=w600-h400-k-no"
   },
   {
     "place_id": "ChIJCQQFD3NhpJIR0SWb1IkpuHs",
@@ -2625,7 +2862,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXxN_wy1hpJIRsSpwOTRZZJM",
@@ -2636,7 +2874,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgQujpU1gpJIRT1F9wsdN0wo",
@@ -2647,7 +2886,8 @@ const DASHBOARD_DATA = {
     "reviews": 138,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgZ5LErVhpJIRPHimD_F_Wy0",
@@ -2658,7 +2898,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJydLewF9hpJIRQIonn0-q654",
@@ -2669,7 +2910,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJK26t5IJhpJIReiHhtpvPrBQ",
@@ -2680,7 +2922,8 @@ const DASHBOARD_DATA = {
     "reviews": 133,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdXM79gdhpJIRAv1iXWk8tYg",
@@ -2691,7 +2934,8 @@ const DASHBOARD_DATA = {
     "reviews": 49,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkfAqoZdhpJIRIGf9vYZSLKE",
@@ -2702,7 +2946,8 @@ const DASHBOARD_DATA = {
     "reviews": 58,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3a2vDhphpJIRMmdM1GKqT4k",
@@ -2713,7 +2958,8 @@ const DASHBOARD_DATA = {
     "reviews": 273,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkHJ7qrkyZjIzeypNL4Gd23mz_L3P3BRw3o50pDDt8EAy6w4iGkYWMITCIbr9Qlf-SepH3k6bLmWNPe-oj2A9Gf_70uDFIocFMDqxE6OkMh8TiU93f7fyNw6m5XxbXTTIxn6sIspA=w600-h400-k-no"
   },
   {
     "place_id": "ChIJzTgSuVxhpJIRQbpgu9NYcf0",
@@ -2724,7 +2970,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJT_v6_NhpJIRb8AKLkEn2XI",
@@ -2735,7 +2982,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSx4Hj5JhpJIRUk6GZuJ-qAk",
@@ -2746,7 +2994,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJWYoIj-FgpJIRaxzC7NM_Xpw",
@@ -2757,7 +3006,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJOfOcYgBhpJIRMIzw0tYKj8M",
@@ -2768,7 +3018,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX6vKnk9hpJIRDnAdGhj4--c",
@@ -2779,7 +3030,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxUUYFxphpJIRp88R7zHS3b0",
@@ -2790,7 +3042,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJQRq7SwBhpJIRB3ah95Il-dQ",
@@ -2801,7 +3054,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeTCkFhxhpJIRE0FcnnSNfJg",
@@ -2812,7 +3066,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ89v8Hhi9Q2cRdcLxBCrRlMU",
@@ -2823,7 +3078,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ36rhdl5hpJIR4KgY-LHuEUo",
@@ -2834,7 +3090,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8fHnwz5hpJIRFRcYvBm-YrY",
@@ -2845,7 +3102,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-ddzVZVhpJIRK6pSZSxJU2Q",
@@ -2856,7 +3114,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO6MCeABhpJIRuEjT8XZn19Q",
@@ -2867,7 +3126,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9XyoECxhpJIRrdbm318oTMY",
@@ -2878,7 +3138,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7_of4x1hpJIRL3YiqaU3c9Q",
@@ -2889,7 +3150,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJG8S_3M5hpJIRN9YNtydslbU",
@@ -2900,7 +3162,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC7UJgRFhpJIRe6jltkVD4gs",
@@ -2911,7 +3174,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9b1jp11hpJIRkGPzo3_9aA8",
@@ -2922,7 +3186,8 @@ const DASHBOARD_DATA = {
     "reviews": 35,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY629w85hpJIRe7yrji_Z6kg",
@@ -2933,7 +3198,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqWC0ncphpJIRONBu3ngiPoc",
@@ -2944,7 +3210,8 @@ const DASHBOARD_DATA = {
     "reviews": 61,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDclwLQBhpJIR3zrczOM6r-0",
@@ -2955,7 +3222,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJsdMOfACLpJIRnxXwwvbo5vg",
@@ -2966,7 +3234,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSTX_HztgpJIR00_ztg9UYTw",
@@ -2977,7 +3246,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5d5DKABhpJIRH-FGWWDAmLI",
@@ -2988,7 +3258,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJR65hpTJhpJIRg8pPJhZzckY",
@@ -2999,7 +3270,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbb63fV1hpJIR9xPeFO1kp84",
@@ -3010,7 +3282,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX-6EH0xhpJIRTTjpmTXaFEQ",
@@ -3021,7 +3294,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJWwYNFRxhpJIRRiyxm0ADZ38",
@@ -3032,7 +3306,8 @@ const DASHBOARD_DATA = {
     "reviews": 58,
     "bairro": "Coqueiro",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJx4iiLuCLpJIRnkXUGe0mT3U",
@@ -3043,7 +3318,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Coqueiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC7LnNX5hpJIRQ4CSrFvo1hg",
@@ -3054,7 +3330,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Coqueiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW1xA_SuMpJIR4PzPXVbOwqQ",
@@ -3065,7 +3342,8 @@ const DASHBOARD_DATA = {
     "reviews": 48,
     "bairro": "Cremação",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy0qNFQCNpJIRw6lAmROE7jU",
@@ -3076,7 +3354,8 @@ const DASHBOARD_DATA = {
     "reviews": 110,
     "bairro": "Cremação",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2X7kWfKPpJIRoWHdOm7uXjk",
@@ -3087,7 +3366,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cremação",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJS0rUzYGOpJIRWr88JSfFzFs",
@@ -3098,7 +3378,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Cremação",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6XBWtWmNpJIRNAJPZhllCrU",
@@ -3109,7 +3390,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Cremação",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbVl2L8-PpJIRzf-r29ne2bY",
@@ -3120,7 +3402,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cremação",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC99BQHyNpJIRwQRhe22UflE",
@@ -3131,7 +3414,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cremação",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY-HECwBlpJIRjJez12XSoas",
@@ -3142,7 +3426,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ104_tplpJIR0lqv8MRFfGo",
@@ -3153,7 +3438,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJlR6OCrJlpJIRSecEgwx2gjQ",
@@ -3164,7 +3450,8 @@ const DASHBOARD_DATA = {
     "reviews": 82,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm3RVcjZlpJIR5y042RJ73eg",
@@ -3175,7 +3462,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqZLpzBhkpJIRbmBzxR5C_Ts",
@@ -3186,7 +3474,8 @@ const DASHBOARD_DATA = {
     "reviews": 4935,
     "bairro": "Cruzeiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QG0lwN9r1mUMiYkH1pEZiRZXW8WNzprh5k6eMhOQyOmr3S8J6ea6jPScIRWFSUZ_wE1K3XlNxGS2c1n-YlTilawDIaeAHxQ7OG9w5fcclSsVecI1BDJUTl4PlIX0D0wdddNxLpkvYXzXEu=w600-h400-k-no"
   },
   {
     "place_id": "ChIJseDzZSJkpJIRxlgLgPO_81c",
@@ -3197,7 +3486,8 @@ const DASHBOARD_DATA = {
     "reviews": 1147,
     "bairro": "Cruzeiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkh83hBK70xj1YeAd7TEy0z3YIQAQrQnhs-UU9lzOmsO18AlquhZ39JYAQiDZ6mnU8wVcY-iUzvMvS0waiTdIW6IXfi_I7i2iecRy_8-TdB805ou9dgTHEF0DsjcFQp44o6UnZFCg=w600-h400-k-no"
   },
   {
     "place_id": "ChIJu1UGoZ9mpJIRWWx1KMhDG4w",
@@ -3208,7 +3498,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvwGxUx9kpJIRhQK5xeTy4aU",
@@ -3219,7 +3510,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1Xwh7hJlpJIRYgwofWEKlQg",
@@ -3230,7 +3522,8 @@ const DASHBOARD_DATA = {
     "reviews": 805,
     "bairro": "Cruzeiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QfsbHTBwkW8MNQB9GEMGuVT0kJsV2-eRUOwB_BAdnRh8shMNJvR18Mnw6BUtMC-H9jxwN0my9-Og_QfWFzg9F3KDY2EBfg5_6Y7sWzjacbwbAyTQBB_2RKpiNQxNXZE88HBX8=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ5Xp0ebJnpJIRspwqLq87Ry0",
@@ -3241,7 +3534,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7eV3KQBlpJIRv7-Bh2b1YjA",
@@ -3252,7 +3546,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9-swNgBlpJIRZk_QQkpLFVw",
@@ -3263,7 +3558,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJB_Ga6J9mpJIRwH9KCshZvKY",
@@ -3274,7 +3570,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEW5hvzxkpJIRyoAdDXSGSTA",
@@ -3285,7 +3582,8 @@ const DASHBOARD_DATA = {
     "reviews": 259,
     "bairro": "Cruzeiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm4_Bwigj3JzonM4zH1c5qOfr20LKTIpLf_iTu83hrpkW7UQrfBvfP4Rd8qq7FHJDjv3l2TxoM44TIUwlk72qG8ABIR0Zx5BG_BkEVdk9hzR_0aSp-fKD4MaiT2NYkHxr0EUByfrg=w600-h400-k-no"
   },
   {
     "place_id": "ChIJOVLpFCBkpJIRdZz8MPg8ngU",
@@ -3296,7 +3594,8 @@ const DASHBOARD_DATA = {
     "reviews": 3100,
     "bairro": "Cruzeiro",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmPUrFQqnL47W2yE8GU7zdyHEn0B6iAxTy3QclzBk6IdOmUOCyAFeglRB6HKpQkF86A8762nzQDH8MNK8ARc15L2XEM0Avd9hM2nBvy-NXVGOsrfBlTdAwa-0l6VnQTpdF6JLjccQ=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ28ns_J1mpJIRXI8qYNplQVU",
@@ -3307,7 +3606,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo6bWtwxlpJIR_6GJbcEHkaI",
@@ -3318,7 +3618,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqaTF6x9kpJIR6rKC6Zw2xiQ",
@@ -3329,7 +3630,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjcLCyLVlpJIRRxCWXIoHqG4",
@@ -3340,7 +3642,8 @@ const DASHBOARD_DATA = {
     "reviews": 46,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTfZna6RlpJIR5V1VEBgbmpg",
@@ -3351,7 +3654,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBf7ldoplpJIRxZnSY9bleX0",
@@ -3362,7 +3666,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4anBOABlpJIRopLeS86NFDs",
@@ -3373,7 +3678,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6ZcWxRhkpJIRT6NJFwpkISQ",
@@ -3384,7 +3690,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ7A_XPFlpJIR6rEoPqf-0KI",
@@ -3395,7 +3702,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjSHNPgBlpJIRGvcS5ulkTDM",
@@ -3406,7 +3714,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtd56IqZnpJIRYxVtMcRLucI",
@@ -3417,7 +3726,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNWKaFBhlpJIRCBe7hdndsrU",
@@ -3428,7 +3738,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJpyONjo9lpJIRymQQAKRhZJ4",
@@ -3439,7 +3750,8 @@ const DASHBOARD_DATA = {
     "reviews": 176,
     "bairro": "Cruzeiro",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm1SU2IWLpJIRQbHlg9GcYPg",
@@ -3450,7 +3762,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Curió-Utinga",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJD74MaxCNpJIRoHNlX70rawk",
@@ -3461,7 +3774,8 @@ const DASHBOARD_DATA = {
     "reviews": 446,
     "bairro": "Curió-Utinga",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHKSd_KQGahlmLT0yGoaZ8nerrvvGuJj6l_f2hMOb67eINCuy1ehDhEIoh91WGY3Yc5X7ImrDXfyP6gpSM1Uhs257s-c3CwYimMSbMKrSc64MmlIObjZP0aVNHHVhWDPNoDjGX4g=w600-h400-k-no"
   },
   {
     "place_id": "ChIJqdgN6PePpJIRIweuJTyIS0s",
@@ -3472,7 +3786,8 @@ const DASHBOARD_DATA = {
     "reviews": 78,
     "bairro": "Farol",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJreYtf8oUpJIR6taK4St808I",
@@ -3483,7 +3798,8 @@ const DASHBOARD_DATA = {
     "reviews": 213,
     "bairro": "Farol",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJr4yWZQCPpJIRQiiG80zsV-s",
@@ -3494,7 +3810,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Fátima",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdR4s0meNpJIRP5KmOqvDv5k",
@@ -3505,7 +3822,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Fátima",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxa-_NxyNpJIR5FqivmasvmQ",
@@ -3516,7 +3834,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Guamá",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3w4UaJGNpJIRgaktUT-vFKM",
@@ -3527,7 +3846,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Guamá",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCdj5HAeNpJIRWH-cJj0soiA",
@@ -3538,7 +3858,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Guamá",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJIYLbC32NpJIR_NbBryeWsqw",
@@ -3549,7 +3870,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Guamá",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqQfO7QSNpJIReH4H4vONo3g",
@@ -3560,7 +3882,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Guamá",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ80YjX86NpJIRYhYlVlqxSeU",
@@ -3571,7 +3894,8 @@ const DASHBOARD_DATA = {
     "reviews": 568,
     "bairro": "Guamá",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmrAJQLbXkzk4dkr0JkoeyWa2WoCh4g5WU8J00zjPtpaYEbElXCozY94sK2QvVPCBNSoI3znOavdTyWUZSCq4EyOyPKsR-oHo9DVfOiVHUdTJ4durQdq8oK1NFJHf7eqnERRFz8=w600-h400-k-no"
   },
   {
     "place_id": "ChIJW0RauCyNpJIRP-tVRtDxK8s",
@@ -3582,7 +3906,8 @@ const DASHBOARD_DATA = {
     "reviews": 27,
     "bairro": "Guamá",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSW4aVsqNpJIRZv4Eb3ak880",
@@ -3593,7 +3918,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Guamá",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFY68lxWLpJIRQxE7RlcJ1pU",
@@ -3604,7 +3930,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Guanabara",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw4EFRbmLpJIRny50LZTOVN8",
@@ -3615,7 +3942,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Guanabara",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEyH7HCyJpJIRzgYvaXuqh0E",
@@ -3626,7 +3954,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Itaiteua",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1zDuRABnpJIRSk-gwUeTjGc",
@@ -3637,7 +3966,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Itaiteua",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJUVJzayWPpJIRwGAjKB7qsOA",
@@ -3648,7 +3978,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Jurunas",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZz6Ed0GOpJIR0yS7Ux98fZ8",
@@ -3659,7 +3990,8 @@ const DASHBOARD_DATA = {
     "reviews": 22,
     "bairro": "Jurunas",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_foSdL2PpJIR9yvgfQiAmOQ",
@@ -3670,7 +4002,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Jurunas",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ34KI_UyPpJIRFa8rLtMmw60",
@@ -3681,7 +4014,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Jurunas",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4dAdYQePpJIRdBqnFAKy5VA",
@@ -3692,7 +4026,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Jurunas",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDV71eACPpJIRMxKQJhaSu4Q",
@@ -3703,7 +4038,8 @@ const DASHBOARD_DATA = {
     "reviews": 24,
     "bairro": "Jurunas",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC7P6XHePpJIRcpld6E5Vnjc",
@@ -3714,7 +4050,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Jurunas",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbbqqHGiOpJIReBOulXYY2u8",
@@ -3725,7 +4062,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Jurunas",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqVBVSiuMpJIRUo32YzWDHks",
@@ -3736,7 +4074,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Jurunas",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5StXgoqOpJIRN5uUsOve_PM",
@@ -3747,7 +4086,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Jurunas",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX7xCBX2KpJIRBCSMfFzbp0o",
@@ -3758,7 +4098,8 @@ const DASHBOARD_DATA = {
     "reviews": 983,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklGQBYafm_3crC35ilOTtJJrsrKO8c9W_qgdlk7OAcr-MmjTJJrEaN3nd8Q5it6-V0BPHSmM5V9RMwCm_ElqbkgHuIs6VuO-IfziIU2xI_abQV8Wuf8Y9hhY14VDbaXvWNbGm4=w600-h400-k-no"
   },
   {
     "place_id": "ChIJc_SomGyKpJIRRY3N2CCIrXM",
@@ -3769,7 +4110,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJddfCKw6LpJIRaPYwOuLAUcc",
@@ -3780,7 +4122,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJu9YNfgCLpJIRJjmvHWvy5cw",
@@ -3791,7 +4134,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJx8gFKoWLpJIRRJ_CXbbnmXE",
@@ -3802,7 +4146,8 @@ const DASHBOARD_DATA = {
     "reviews": 24607,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QXTlungjNU1vO4f7J2N9w2qKbpWzu9n1WRQvCQPEe9VzzLhF8r88GimRWscKIQcDmCiabuFLY3OGrbEY5q-SqNBU0H-ex8tXN2NrluzITZUUs8i7BAiMoTYpPra3Pj-BrY0swq=w600-h400-k-no"
   },
   {
     "place_id": "ChIJAVxzlmyKpJIRMZ3SxrAqs6U",
@@ -3813,7 +4158,8 @@ const DASHBOARD_DATA = {
     "reviews": 317,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QQV5RbQOxOwQz_9KFfKpDeY9bQ4abx8Ppslt5PZZXA2hDlOEwyt7Zk4W0aV5CyJ-p8TAfJ6aHW8QEXvOphOXP3tlomxbDF5Wy_WcHl3DmapX8WEl_w83tqbB3V8A85OWrFrzo=w600-h400-k-no"
   },
   {
     "place_id": "ChIJGXVQlk2LpJIREXCAWDfO2Ww",
@@ -3824,7 +4170,8 @@ const DASHBOARD_DATA = {
     "reviews": 200,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGe008gSLpJIRmeAA9syuBsE",
@@ -3835,7 +4182,8 @@ const DASHBOARD_DATA = {
     "reviews": 521,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnbwvAGp37mV_Tab5b6WUoiQo24PZaHC5TtOxTOsTVNZVLWwwo5JgD3w2wkCXa5FVsKFvukgVYCGQkbuyOqVkt4qFAs_KybFLFf_F2iuGCj1FqxzCLKHpBGOwQYElowkKkF04E7=w600-h400-k-no"
   },
   {
     "place_id": "ChIJKVNvE0GLpJIRzNoQMFOm5Xk",
@@ -3846,7 +4194,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Mangueirão",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo15sbwCLpJIR4mwfhScKYSw",
@@ -3857,7 +4206,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTQA6GACLpJIR4JP9Q2NhO78",
@@ -3868,7 +4218,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhVAn-6OLpJIRMAnD45ku4pY",
@@ -3879,7 +4230,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBQ7gN-SLpJIRBTDvcjTZOCA",
@@ -3890,7 +4242,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVVEsUQCLpJIR_SpDJDUFMHA",
@@ -3901,7 +4254,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNbcaNHeLpJIRHrMSbaVnEq0",
@@ -3912,7 +4266,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvctQs2CLpJIRVg78FhtnzTY",
@@ -3923,7 +4278,8 @@ const DASHBOARD_DATA = {
     "reviews": 28,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJl-R-_iuLpJIRoulDItG0opM",
@@ -3934,7 +4290,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAZJ8I-2LpJIRzt5H1xYKvYc",
@@ -3945,7 +4302,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2af6C5yLpJIRd3ySa-8uql0",
@@ -3956,7 +4314,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY6JarISLpJIRFIadzxg_ibQ",
@@ -3967,7 +4326,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ02F-InGLpJIRIN71DNvVrtA",
@@ -3978,7 +4338,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuQcznyiLpJIR9NgORiD_GKk",
@@ -3989,7 +4350,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJLTO85tmLpJIR1TrzrNtd9b0",
@@ -4000,7 +4362,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJld7_SlqLpJIRXsZNGPTJpeQ",
@@ -4011,7 +4374,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM9qIx0CLpJIRLT9XlVL8c7k",
@@ -4022,7 +4386,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJPeXQdACLpJIRWfVeOZmYZmQ",
@@ -4033,7 +4398,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM_Vq2kGLpJIRuBT8sTVvU8A",
@@ -4044,7 +4410,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJp2R_BIqKpJIREnxx95qfs1Q",
@@ -4055,7 +4422,8 @@ const DASHBOARD_DATA = {
     "reviews": 52,
     "bairro": "Mangueirão",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNZJn2oiKpJIRhyhBV13DyYY",
@@ -4066,7 +4434,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_7cILWSLpJIRoePmCVSPC_Y",
@@ -4077,7 +4446,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJB6StXLaLpJIRt_OqMoQNZh4",
@@ -4088,7 +4458,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJg19BKHyLpJIRuptQPvzCqbw",
@@ -4099,7 +4470,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfTxKZgCLpJIRGHmklT2xaTA",
@@ -4110,7 +4482,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Mangueirão",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH6bYy9GNpJIRd4wIpiri2ag",
@@ -4121,7 +4494,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Mangueiras",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfWUD70FnpJIREk4FOkRmi5k",
@@ -4132,7 +4506,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo3wWnF9npJIR4EgAqolxg7Y",
@@ -4143,7 +4518,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJv5UNuSxnpJIRj6Xuh4tNTiU",
@@ -4154,7 +4530,8 @@ const DASHBOARD_DATA = {
     "reviews": 844,
     "bairro": "Maracacuera",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmNSkuOqO6ObTb1jL8bmWKiuHwjEQYBMX7bIscA_bxTvGVmvfPGiBhNsz25Bro8kGfjVQGFpUv-haz_VrOMd6lxJka3Os4PqNyjmkqM0Fl2kU67SpX-AxSkN9hOxhi6qGw6X4NrvjinjnY_=w600-h400-k-no"
   },
   {
     "place_id": "ChIJx7z0dO5npJIR8bH6pFTEN74",
@@ -4165,7 +4542,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3YRBOwBnpJIRB8Hj15SXU2U",
@@ -4176,7 +4554,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3zxKwb5mpJIRvjhhbhHOnIY",
@@ -4187,7 +4566,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7xYDIL5mpJIR-18XHdXmhaI",
@@ -4198,7 +4578,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Maracacuera",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO1CPQpRmpJIRhSuXTYXNZ-E",
@@ -4209,7 +4590,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJf43qrfJmpJIRSSLF43zUUZY",
@@ -4220,7 +4602,8 @@ const DASHBOARD_DATA = {
     "reviews": 27,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJObczrIxmpJIRPZNIDxetZsY",
@@ -4231,7 +4614,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJedoaAwBnpJIRzjnT_L0fa8A",
@@ -4242,7 +4626,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ599eTVdnpJIR2s4Qvut-1sM",
@@ -4253,7 +4638,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6y-eLqVmpJIRtQ3tFnLrj14",
@@ -4264,7 +4650,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBVBQj5lmpJIRw2cHOYaqRUA",
@@ -4275,7 +4662,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracacuera",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNzem-O1rpJIRxSF2sjaQIg0",
@@ -4286,7 +4674,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Maracajá",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwRfL9HRrpJIRn5CZf-tz9JI",
@@ -4297,7 +4686,8 @@ const DASHBOARD_DATA = {
     "reviews": 130,
     "bairro": "Maracajá",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbeosQH6JpJIRl2O-G0Rmcw8",
@@ -4308,7 +4698,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Maracangalha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJecG4j3-JpJIRGvfCncApB8s",
@@ -4319,7 +4710,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Maracangalha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhT0jkGaJpJIRWtHUjpVel8Y",
@@ -4330,7 +4722,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Maracangalha",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHaH34dWLpJIRdLi6UnJ-bIo",
@@ -4341,7 +4734,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracangalha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJIYoW_n-JpJIR31bCmkOSMcg",
@@ -4352,7 +4746,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Maracangalha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ34jyAWKJpJIRANaJaSyneaQ",
@@ -4363,7 +4758,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Maracangalha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJMbaBWQCJpJIRz5QOTeXRgRs",
@@ -4374,7 +4770,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Maracangalha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ86dai_aLpJIRCZOsgeHg1no",
@@ -4385,7 +4782,8 @@ const DASHBOARD_DATA = {
     "reviews": 49,
     "bairro": "Maracangalha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtYXp7oGJpJIRDEoVLanH9kc",
@@ -4396,7 +4794,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Maracangalha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxXNsg-uJpJIRkOLjfdkJFaQ",
@@ -4407,7 +4806,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Maracangalha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ29We6ASJpJIRKDE7IkXDXKc",
@@ -4418,7 +4818,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Maracangalha",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJPx2zq-EXpJIRXDX9Gt13xkg",
@@ -4429,7 +4830,8 @@ const DASHBOARD_DATA = {
     "reviews": 888,
     "bairro": "Marahú",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHXqaFXIpZqLcufoYYfW6Fed4ePTrky9dVRjF2unvPb_CTXxgM0sQqj_1issHFQXoK0OWtb2Hx6BlL34Vdd79waKCz9QfFCbJ6zlfNGcHz-2eN402CEF-vZjUXNgBa3fxzkO1blg=w600-h400-k-no"
   },
   {
     "place_id": "ChIJf4YfFw8XpJIRZw2ardKMylc",
@@ -4440,7 +4842,8 @@ const DASHBOARD_DATA = {
     "reviews": 95,
     "bairro": "Marahú",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY5BxIa-LpJIRf4lGB-uRRpM",
@@ -4451,7 +4854,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJb90yLgCLpJIRg3JZwTEes28",
@@ -4462,7 +4866,8 @@ const DASHBOARD_DATA = {
     "reviews": 89,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcUQ4006KpJIRBuBooeokMaw",
@@ -4473,7 +4878,8 @@ const DASHBOARD_DATA = {
     "reviews": 36,
     "bairro": "Marambaia",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJd2WzTGSLpJIRHgRzClXU-mY",
@@ -4484,7 +4890,8 @@ const DASHBOARD_DATA = {
     "reviews": 95,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdQdE6rSLpJIRfn2t549vsGU",
@@ -4495,7 +4902,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJn0ct1KuLpJIRUEmSYzumc3Y",
@@ -4506,7 +4914,8 @@ const DASHBOARD_DATA = {
     "reviews": 184,
     "bairro": "Marambaia",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvVIdrStgpJIR9tRTvcHoFlE",
@@ -4517,7 +4926,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwTxTq_-KpJIRqh3ziKzkylE",
@@ -4528,7 +4938,8 @@ const DASHBOARD_DATA = {
     "reviews": 41,
     "bairro": "Marambaia",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw_SzZgCLpJIRLUTTtdEKoaQ",
@@ -4539,7 +4950,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyZ9wTmGLpJIROdqd2v-z-AQ",
@@ -4550,7 +4962,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJz8EfEWiLpJIRMTM-cCn4Sf8",
@@ -4561,7 +4974,8 @@ const DASHBOARD_DATA = {
     "reviews": 1889,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Se6DDLS6KDL_c6mbO-_HXYZk8FTvmY824_ZkkLwJZTCTc4HFC3fWy3Qh3HEKxQx8kKEkuDKgJLX5p-kHVWZRGewj9fnmOdBnCPT5nkz4d_9r21w589UbiTV30gNorBvtl95rEB=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ21NDv--LpJIRd3sq5a1HrPQ",
@@ -4572,7 +4986,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Marambaia",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKezBIwGLpJIRhePzZgP8BF0",
@@ -4583,7 +4998,8 @@ const DASHBOARD_DATA = {
     "reviews": 24,
     "bairro": "Marambaia",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy00CKf-KpJIR5r6sAcD79XI",
@@ -4594,7 +5010,8 @@ const DASHBOARD_DATA = {
     "reviews": 45,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoZw5yQWLpJIRKaRO9pBJcJ0",
@@ -4605,7 +5022,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Marambaia",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJlyY3D7WLpJIRq1L7QmTq19o",
@@ -4616,7 +5034,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJnzpsNq-LpJIRkClHr3225BA",
@@ -4627,7 +5046,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5Vozs7uLpJIRvGXVlS9YgTs",
@@ -4638,7 +5058,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhRr1bWqLpJIROjS60aSxQC8",
@@ -4649,7 +5070,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ0RnR4kmLpJIRceK-y9leDNI",
@@ -4660,7 +5082,8 @@ const DASHBOARD_DATA = {
     "reviews": 30,
     "bairro": "Marambaia",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ04wUm_mLpJIR768CGAQzTIg",
@@ -4671,7 +5094,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Marambaia",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX9a6UwBhpJIRSOeBrfuRa4E",
@@ -4682,7 +5106,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Marambaia",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuaCxCQCLpJIRU6Q1KJgbneo",
@@ -4693,7 +5118,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Marambaia",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJj8DTUTqLpJIRyIm_fDiMv-E",
@@ -4704,7 +5130,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Marambaia",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJG0Tm2ImLpJIR8kUL30o9B7Y",
@@ -4715,7 +5142,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Marambaia",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYRRBdbaLpJIRa5vn4Jmmzec",
@@ -4726,7 +5154,8 @@ const DASHBOARD_DATA = {
     "reviews": 6343,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ScR_fDAwg0wqyPX7s7TzDgGwzeL79Bg86olu_tJk7KvQZat8a-gE24V6J_cYeYy4ZfcZu8EQr2W5KGoHd7q5xXRu_HrZXx0TceOmpuDrA0YdySR3aUKDPX6Zgfw7hfA7v9lY5JVMkGS9Gq=w600-h400-k-no"
   },
   {
     "place_id": "ChIJZ5cXPwCNpJIRH__wJrDEuiI",
@@ -4737,7 +5166,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_V3jcwqMpJIRw6cLxpfATqs",
@@ -4748,7 +5178,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Marco",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJaZ58ucSNpJIRswiuWlClZqE",
@@ -4759,7 +5190,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Marco",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgTqjW66NpJIRDQpqgeZgU60",
@@ -4770,7 +5202,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Montese",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiQPkJXeMpJIRuKIQI_Sgaxk",
@@ -4781,7 +5214,8 @@ const DASHBOARD_DATA = {
     "reviews": 66,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJieYQTYqNpJIRxtnqorTbvA8",
@@ -4792,7 +5226,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJsajgVviNpJIR9njBgkFy2Uo",
@@ -4803,7 +5238,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ67sTWT2MpJIRpl0EfCRPWls",
@@ -4814,7 +5250,8 @@ const DASHBOARD_DATA = {
     "reviews": 53,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJIWwK-HaMpJIRETXK-bDJt4M",
@@ -4825,7 +5262,8 @@ const DASHBOARD_DATA = {
     "reviews": 75,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAejkYACNpJIR0iy7Jb-nuRE",
@@ -4836,7 +5274,8 @@ const DASHBOARD_DATA = {
     "reviews": 1265,
     "bairro": "Marco",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9ThO8VeUugnn_4zOusqqdm2QWe_l9IhYXT7VdUTAymz5B8ArhPjL__gqrNY2tuRDlsrcO7Tq8ladW3HMN9gR-6Mh1BlP71LZUt4J2FDfYf2iGc9nFahO2_D3xzC6mBAmctx51qhCx2jJy8=w600-h400-k-no"
   },
   {
     "place_id": "ChIJRZLW9NiNpJIRl6tHeBu7cL0",
@@ -4847,7 +5286,8 @@ const DASHBOARD_DATA = {
     "reviews": 22,
     "bairro": "Marco",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9Qa3MZ2NpJIRKVtoCJhCHlo",
@@ -4858,7 +5298,8 @@ const DASHBOARD_DATA = {
     "reviews": 61,
     "bairro": "Marco",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtfCvALiLpJIRAAmgTzgg9dg",
@@ -4869,7 +5310,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Marco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiyU04o6NpJIRl9J5MBMnp_4",
@@ -4880,7 +5322,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Montese",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJlziFvUyMpJIRBI4nAViEjII",
@@ -4891,7 +5334,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Montese",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJx7MlkWNpJIRFIHmW0N9AKk",
@@ -4902,7 +5346,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Montese",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH-QzbqUVpJIRO09omPBXp9g",
@@ -4913,7 +5358,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Murubira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVUR9tVYVpJIRmGvhLXMPVsU",
@@ -4924,7 +5370,8 @@ const DASHBOARD_DATA = {
     "reviews": 139,
     "bairro": "Murubira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9V2ZIzEVpJIR1UCywQyAr6E",
@@ -4935,7 +5382,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Murubira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJu_6uVnyPpJIRyadrA4VOSxg",
@@ -4946,7 +5394,8 @@ const DASHBOARD_DATA = {
     "reviews": 19,
     "bairro": "Nazaré",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw_vZZ5qOpJIR5l6idQucjTU",
@@ -4957,7 +5406,8 @@ const DASHBOARD_DATA = {
     "reviews": 276,
     "bairro": "Nazaré",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Q7WTpXtUELW0niTO0izkX190PZd5UbSUMQkEVCg8zyD3VFTk5vaAhefI1GZeYuVViCldEQG6NNFtE5_EW8dwbEglNnNmsfxiqgcBreuZDoOL4_36OpmtitPnNRM99Aue3LOb2EFTan4uE=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ_YBbBgCPpJIR0eaTNIN26N4",
@@ -4968,7 +5418,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Nazaré",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC36ZY4SOpJIRh3oHmx24Jpc",
@@ -4979,7 +5430,8 @@ const DASHBOARD_DATA = {
     "reviews": 24,
     "bairro": "Nazaré",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJq68j79OPpJIRXIuH7dz0OJ0",
@@ -4990,7 +5442,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Nazaré",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdSBUu4WOpJIRrvsPGL1B_34",
@@ -5001,7 +5454,8 @@ const DASHBOARD_DATA = {
     "reviews": 116,
     "bairro": "Nazaré",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJWfg0i05hpJIRV5l4KRc7kY4",
@@ -5012,7 +5466,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Paracuri",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXyuBh_1npJIRZhS1kj8o6XA",
@@ -5023,7 +5478,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Paracuri",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJi06Fq61npJIR4nPT9vJeWc0",
@@ -5034,7 +5490,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Paracuri",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJnfhsaRdnpJIRySmzydfhmEw",
@@ -5045,7 +5502,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Paracuri",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_W2MewBkpJIRjK3qj6KD73I",
@@ -5056,7 +5514,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Paracuri",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJUZ2BgSZjpJIRMux5Y-1gu80",
@@ -5067,7 +5526,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Paracuri",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_-PakXNjpJIRUvy4g6_szdQ",
@@ -5078,7 +5538,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Paracuri",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo3OANQBnpJIRJ0KJbFK-8PM",
@@ -5089,7 +5550,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Paracuri",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJP70hDQBnpJIR5CA6gFmGUhQ",
@@ -5100,7 +5562,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Paracuri",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfeeiAyljpJIRgRDmjmoIqOU",
@@ -5111,7 +5574,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Paracuri",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJQ4RtGlxhpJIRU8sHAdSoRPs",
@@ -5122,7 +5586,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_8R5vexhpJIRos9w44FOdLw",
@@ -5133,7 +5598,8 @@ const DASHBOARD_DATA = {
     "reviews": 19,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8fbXfABhpJIRKoMlBSpGhE8",
@@ -5144,7 +5610,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw_GkgSxhpJIRqhVmzZ5dnZw",
@@ -5155,7 +5622,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJu7_X4u9hpJIRYejHzS0xwe0",
@@ -5166,7 +5634,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9VkClUphpJIReiG1EK1i_40",
@@ -5177,7 +5646,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgwk1iu1npJIRz9RBSbO9viM",
@@ -5188,7 +5658,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtyKAHO9hpJIR0h6vhEyEA3Y",
@@ -5199,7 +5670,8 @@ const DASHBOARD_DATA = {
     "reviews": 176,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJg6TgBABhpJIRlb1z1br7Yj4",
@@ -5210,7 +5682,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM2OgSQBhpJIRygsKEJvtyI4",
@@ -5221,7 +5694,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ6lH2h9hpJIRYLHZO4FrnyM",
@@ -5232,7 +5706,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_WS3OQBhpJIR472NcYnximE",
@@ -5243,7 +5718,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW_VIQKZhpJIRRrmK6-kK3nQ",
@@ -5254,7 +5730,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7T2j2b9npJIRE0nR62Klhvg",
@@ -5265,7 +5742,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo62yz7RhpJIRHm4q2bWTMv4",
@@ -5276,7 +5754,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZ4amYHxhpJIRl4aWnM5O18Q",
@@ -5287,7 +5766,8 @@ const DASHBOARD_DATA = {
     "reviews": 100,
     "bairro": "Parque Guajará",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJj4nFZMthpJIRdFD3lDS51pg",
@@ -5298,7 +5778,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1cji6oJhpJIRhSnR8TQzk-E",
@@ -5309,7 +5790,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-T6u6NZhpJIRzH3CsbMDc0Y",
@@ -5320,7 +5802,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfdwmLhRhpJIR9V5ki9tT4yY",
@@ -5331,7 +5814,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJg3hDm0xhpJIRgebUUs9mp9g",
@@ -5342,7 +5826,8 @@ const DASHBOARD_DATA = {
     "reviews": 79,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX-zhvIlnpJIRhyzuDNiCDms",
@@ -5353,7 +5838,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzaf2_sVhpJIREdkygswB6Zo",
@@ -5364,7 +5850,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Guajará",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8xdHwZlhpJIR-teUYmTXZWs",
@@ -5375,7 +5862,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Parque Guajará",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcymp0WlhpJIR2we0yWKLld0",
@@ -5386,7 +5874,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8zrh2n5hpJIRsOGKoucm9Xs",
@@ -5397,7 +5886,8 @@ const DASHBOARD_DATA = {
     "reviews": 130,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5VmvBfhhpJIRv5WycZiqio8",
@@ -5408,7 +5898,8 @@ const DASHBOARD_DATA = {
     "reviews": 349,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlYrWYxgNsv13GMtuvzYuSE9Y8fej6zdnxkT68LtpXy9mx5_zn7NoYkv079ys_yQfxBtn08Ysvdroz6EdUVF4-CASMKq1bqGW2ToISOZRYosfOfDqvD9w2ZKCfMT7FbO6WtnFHz=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ7eiBH7hhpJIRKI5UCGh5mf8",
@@ -5419,7 +5910,8 @@ const DASHBOARD_DATA = {
     "reviews": 15,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO4dDdIRhpJIRPfoDBtoq4fU",
@@ -5430,7 +5922,8 @@ const DASHBOARD_DATA = {
     "reviews": 34,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmT-3j5RhpJIRleYsj0a6V68",
@@ -5441,7 +5934,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3TEVUn-KpJIRn_snyoCQlCw",
@@ -5452,7 +5946,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJg-p-RGBhpJIRMc8KrgkP-JY",
@@ -5463,7 +5958,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjStfWwBhpJIRHcx4r1Y7i5k",
@@ -5474,7 +5970,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7TZoJCtgpJIROgiOAcz8cdM",
@@ -5485,7 +5982,8 @@ const DASHBOARD_DATA = {
     "reviews": 31,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtb7gREphpJIRy25St0qsXqs",
@@ -5496,7 +5994,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJafHggdVhpJIR3XJj9Iij7WY",
@@ -5507,7 +6006,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSziAJjhhpJIR9A4m6jScFMM",
@@ -5518,7 +6018,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxVXNschhpJIR09b4iCp1lj4",
@@ -5529,7 +6030,8 @@ const DASHBOARD_DATA = {
     "reviews": 31,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ7UcG9bZhpJIRypiyYbiYH8Q",
@@ -5540,7 +6042,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSecl2m5hpJIRyr1niCAmEX0",
@@ -5551,7 +6054,8 @@ const DASHBOARD_DATA = {
     "reviews": 494,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkrFX4ZV8Q8NQxYEk_tZWFZ5TCswLeFhQQK7ztjTpFWpPUXEj_qdoCRYK01M5lkX_nouQWl3yWf9wSYrNlh9zVauq07ByjR4hH0jbUQuk3IkTs7XSOqDz66_96j_1FmesXRY4554g=w600-h400-k-no"
   },
   {
     "place_id": "ChIJV0nBIZNhpJIRZ6VcwzvcIJU",
@@ -5562,7 +6066,8 @@ const DASHBOARD_DATA = {
     "reviews": 47,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgcZCGjxhpJIRwqbap8laIMg",
@@ -5573,7 +6078,8 @@ const DASHBOARD_DATA = {
     "reviews": 82,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjeZ-ydRhpJIRlRZBV7LZiA0",
@@ -5584,7 +6090,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJl6vmi_KLpJIRES-m5LUs2-A",
@@ -5595,7 +6102,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJl9lYq8JhpJIRt8CVpPhLjvY",
@@ -5606,7 +6114,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm0fBs9dhpJIRTUANRNfFdHI",
@@ -5617,7 +6126,8 @@ const DASHBOARD_DATA = {
     "reviews": 26987,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TtSrzrxbEXFFo5N_PDuu2Y78pv6WiKu4b974xeCD4LtwHGwuNOve-JbGitYzPQ9biR5i4L94Ea38GREWWGyzsFiOOCkvMI-pb1n3Nq3BZ-hkWiSOuJ9UA5Vdr1l-O-rw_hLXPp7MCvyGw=w600-h400-k-no"
   },
   {
     "place_id": "ChIJvblDExhhpJIRb9hRwLa8aiE",
@@ -5628,7 +6138,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJz9rtgAxhpJIRZJNZTMiXWi4",
@@ -5639,7 +6150,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-fYCGyBhpJIRK9_VUoDxYmg",
@@ -5650,7 +6162,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ13VoMLhhpJIRUFhcHcV8swU",
@@ -5661,7 +6174,8 @@ const DASHBOARD_DATA = {
     "reviews": 86,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBSgIbQxhpJIRfCzPGVMPkXA",
@@ -5672,7 +6186,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ59P7xBhpJIRDp5zoMA7i-w",
@@ -5683,7 +6198,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN1BQ_weLpJIRZ4WG3oCQJkw",
@@ -5694,7 +6210,8 @@ const DASHBOARD_DATA = {
     "reviews": 27,
     "bairro": "Parque Verde",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy97lWplhpJIRif3WeYhTLNc",
@@ -5705,7 +6222,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuzYiTl5hpJIRHVjtjpdgwdY",
@@ -5716,7 +6234,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJWwDsA6JhpJIRNEoskplauno",
@@ -5727,7 +6246,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeeNL78dhpJIRHk9WAEyoDmc",
@@ -5738,7 +6258,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzbQj2TNgpJIRXjofU-V24BI",
@@ -5749,7 +6270,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiyiPPABhpJIRCjKvCauFFPE",
@@ -5760,7 +6282,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ32eOSQb5zJQRxtQcpvQZyRw",
@@ -5771,7 +6294,8 @@ const DASHBOARD_DATA = {
     "reviews": 675,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TxjezFib9hGD8Ot85imAT7WjQS1iPqqVNp8fFJnUs604UBlh0wef_8WlhW7ykhTCU3UemwIJwFsMe1D2mbWAxcyL3xUPf_csKvvMk2cxG670aWMtLdpwsYe3kdhuxZtP_m_S99=w600-h400-k-no"
   },
   {
     "place_id": "ChIJD67MEABhpJIReFqxUvhFjzQ",
@@ -5782,7 +6306,8 @@ const DASHBOARD_DATA = {
     "reviews": 62,
     "bairro": "Parque Verde",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXcvR-GOLpJIRSVA4y3XQz4g",
@@ -5793,7 +6318,8 @@ const DASHBOARD_DATA = {
     "reviews": 81,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJex0RXOSLpJIRfRUNGvbIPg8",
@@ -5804,7 +6330,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkxsSnV-NpJIRO99rerOtZOg",
@@ -5815,7 +6342,8 @@ const DASHBOARD_DATA = {
     "reviews": 546,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QyziuXacS2Ux2nDM081cvnyaV9adxY55Hk4Q5oIQ_sgwCbZC2uzB2fVkG6Wbs1MMk-26uGAJs7dOTYhRDJKT4RhqCj5qPd1V6BkI6beVBSkAAKVyf0J1B_fy1djDEflU7HPvh4=w600-h400-k-no"
   },
   {
     "place_id": "ChIJl7F_CE-LpJIRfNxqFNtPRas",
@@ -5826,7 +6354,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo_1aMPSLpJIRqWuFkpMPnDw",
@@ -5837,7 +6366,8 @@ const DASHBOARD_DATA = {
     "reviews": 1627,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SlBwjyuaqKh0Da_iyiMU0VnpKMn1mwlTZtZmg_7KpSwkBaYO_xKLYvve1FFdgZAB_xrFxi-RxqnH-RitzFPysikcb3SzuHcO_zfT2Mv7_4g9GJMsa4vMoumjWiBCdImOAlIHCG=w600-h400-k-no"
   },
   {
     "place_id": "ChIJtQ6UIciLpJIRTcFTgOpusO4",
@@ -5848,7 +6378,8 @@ const DASHBOARD_DATA = {
     "reviews": 30,
     "bairro": "Pedreira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJw6DWw-aLpJIRvUGrgC7gb_g",
@@ -5859,7 +6390,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy9N9W_uLpJIRxEvHXbcUb-k",
@@ -5870,7 +6402,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ78owNQCLpJIR3w85bWhTh6Y",
@@ -5881,7 +6414,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pedreira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFcnbIvyLpJIRswDLtafORcc",
@@ -5892,7 +6426,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Pedreira",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJzKa2e2LpJIRQSRwMl320nE",
@@ -5903,7 +6438,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Pedreira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJK9Yi8ceNpJIRiyoLuqxF2Yg",
@@ -5914,7 +6450,8 @@ const DASHBOARD_DATA = {
     "reviews": 26,
     "bairro": "Pedreira",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqfoHEQqMpJIRvsvPPNoPuc4",
@@ -5925,7 +6462,8 @@ const DASHBOARD_DATA = {
     "reviews": 62,
     "bairro": "Pedreira",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkzq5sxKLpJIRCr-yvL3oY30",
@@ -5936,7 +6474,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Pedreira",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfYleq4mNpJIRL6P7MUrx_QU",
@@ -5947,7 +6486,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pedreira",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJVOgE1WJpJIRXh6NzxbZD38",
@@ -5958,7 +6498,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pedreira",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCyfXffmLpJIRQN2RC-gUY5g",
@@ -5969,7 +6510,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJp9ctB3qNpJIRnjBXxnkiMSM",
@@ -5980,7 +6522,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJG4OsXMKLpJIRVllENiRmquY",
@@ -5991,7 +6534,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmw2XaOaLpJIRlKVWiGjUv6o",
@@ -6002,7 +6546,8 @@ const DASHBOARD_DATA = {
     "reviews": 78,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcVRQvf6LpJIR2QXr_-3TMA8",
@@ -6013,7 +6558,8 @@ const DASHBOARD_DATA = {
     "reviews": 46,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJe0ijmfiLpJIRbmUN-9CXod0",
@@ -6024,7 +6570,8 @@ const DASHBOARD_DATA = {
     "reviews": 116,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ2UfvvCLpJIRX8oQr2i-OwE",
@@ -6035,7 +6582,8 @@ const DASHBOARD_DATA = {
     "reviews": 32,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbbLaTeWLpJIRBKYaq-N1XPw",
@@ -6046,7 +6594,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ0ZmZtuqNpJIRuZyoTwXYc50",
@@ -6057,7 +6606,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAXwfWaGJpJIR3G2sf2m_NAg",
@@ -6068,7 +6618,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJB23qwu2LpJIRDGQOiX_01lE",
@@ -6079,7 +6630,8 @@ const DASHBOARD_DATA = {
     "reviews": 53,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3zWRsPGLpJIROrxHw2UZcFI",
@@ -6090,7 +6642,8 @@ const DASHBOARD_DATA = {
     "reviews": 29,
     "bairro": "Pedreira",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJUxchpARkpJIRj8tjXtCJZxE",
@@ -6101,7 +6654,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Ponta Grossa",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVyhf4CtlpJIReS76Ie-j9qI",
@@ -6112,7 +6666,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Ponta Grossa",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_ZxQTgBnpJIRJXkIArlautY",
@@ -6123,7 +6678,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Maracacuera",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjy0ihIRnpJIRuao0UZK1IA8",
@@ -6134,7 +6690,8 @@ const DASHBOARD_DATA = {
     "reviews": 143,
     "bairro": "Ponta Grossa",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJpWPvsqxlpJIRHhfaXRD1ARA",
@@ -6145,7 +6702,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Ponta Grossa",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJve7EJHxlpJIRENldxJUAZdQ",
@@ -6156,7 +6714,8 @@ const DASHBOARD_DATA = {
     "reviews": 44,
     "bairro": "Ponta Grossa",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9SpPMShlpJIR3lw-izSow1Y",
@@ -6167,7 +6726,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Ponta Grossa",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ8TLo5plpJIRJ3sMpz0BqhI",
@@ -6178,7 +6738,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Ponta Grossa",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJPwIqD6pmpJIR0fBxzhoYd0s",
@@ -6189,7 +6750,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Ponta Grossa",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJe4c13KtmpJIRXWsh3l07dXk",
@@ -6200,7 +6762,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Ponta Grossa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8YedUKVmpJIR916CCZub_Nw",
@@ -6211,7 +6774,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Ponta Grossa",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAQWZcGcVpJIR3edNEe_Mg7w",
@@ -6222,7 +6786,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Porto Arthur",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJb1O-ej0VpJIRzQrxXovEWP4",
@@ -6233,7 +6798,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Porto Arthur",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJa6d-Nt0UpJIR0Kfp5TcBwyY",
@@ -6244,7 +6810,8 @@ const DASHBOARD_DATA = {
     "reviews": 1849,
     "bairro": "Porto Arthur",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9TXupmXCjCLCj0opjfuow-3XGntQ7aXD4r3AoUyZinUKO90x3GcEdqmfpBJxzgdhPEyfwyRJXPGMoQFeel01Ai1HwjKqhWEhigFBDV8F6KpssLINBwhZUpghYHzApHavltRof0=w600-h400-k-no"
   },
   {
     "place_id": "ChIJR0tOMqeNpJIRvo1ZQDinEaA",
@@ -6255,7 +6822,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Praia Grande",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZfJ-foWLpJIRhThHPq5DpC8",
@@ -6266,7 +6834,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt3VwftNhpJIRu2f3EFdbkAs",
@@ -6277,7 +6846,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJWcDxaABhpJIRCzUgxcLh40A",
@@ -6288,7 +6858,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH9RbsjdhpJIRynIPdiriWWc",
@@ -6299,7 +6870,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfWMP3fFhpJIR31nVWqsYMiY",
@@ -6310,7 +6882,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1ZV_LIphpJIR4rGVH9NF0oQ",
@@ -6321,7 +6894,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJR4koWgBhpJIRqPI7r0rlZvY",
@@ -6332,7 +6906,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ03bXfQBhpJIRKtqanIohvmU",
@@ -6343,7 +6918,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJk_ZPF-5hpJIRRc56odzzz_s",
@@ -6354,7 +6930,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ0T7zTwhhpJIRSyNhiODLW7Y",
@@ -6365,7 +6942,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-TBFa_FhpJIRG9f80WZliSI",
@@ -6376,7 +6954,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJV9yHLuaJpJIRSMAUbQd8tEM",
@@ -6387,7 +6966,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJObn0ZPZhpJIRRn0m6lXDRJY",
@@ -6398,7 +6978,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-2kxH-yJpJIRjtFr2MAlgLE",
@@ -6409,7 +6990,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYfw_RMRhpJIRslHY3WsG-VY",
@@ -6420,7 +7002,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfV313SWJpJIRiFKKPL1TiTI",
@@ -6431,7 +7014,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1aM7dRBhpJIRG1_TkUUpj70",
@@ -6442,7 +7026,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCSOb8_JhpJIR0iunPPos7C8",
@@ -6453,7 +7038,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5zsutN2JpJIRXDTusYpRZBs",
@@ -6464,7 +7050,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDS1gzCqJpJIRQW72FXjZ2Qw",
@@ -6475,7 +7062,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJlXmmVgCJpJIRoKP9W5UInFs",
@@ -6486,7 +7074,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_figOABhpJIR-Q0HXopI_TE",
@@ -6497,7 +7086,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHfGZWgCJpJIRWNLdVF9XEec",
@@ -6508,7 +7098,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJl6deeIthpJIRdexDrKxA2qc",
@@ -6519,7 +7110,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJSXLG5cthpJIRmfGEGovFJhs",
@@ -6530,7 +7122,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzTpYVveJpJIRfZuwkYxxMqY",
@@ -6541,7 +7134,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Pratinha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJbzOyjsGJpJIRk8O88ykRV1o",
@@ -6552,7 +7146,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6SJhO21hpJIRcaO7lW0e3kI",
@@ -6563,7 +7158,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNe4kV9BhpJIRKyI1YSUgzkI",
@@ -6574,7 +7170,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ25X81MhhpJIR6guMuGaYtWE",
@@ -6585,7 +7182,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxTxenO1hpJIR7UuTt-P0HNY",
@@ -6596,7 +7194,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM_A2bwBhpJIRS0gkz7GAlgs",
@@ -6607,7 +7206,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJA6QSipJhpJIR1ElKvJJuj_s",
@@ -6618,7 +7218,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJzi8JgBhpJIR1GRYC2bwLzA",
@@ -6629,7 +7230,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTfMm81JhpJIR4sq57ka4LSc",
@@ -6640,7 +7242,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTzMgW4iJpJIRaAIG5f2aCkY",
@@ -6651,7 +7254,8 @@ const DASHBOARD_DATA = {
     "reviews": 15,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXcSOE-VhpJIRp6V7sEWynC0",
@@ -6662,7 +7266,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY2DZfoBhpJIR6FqVywluyZI",
@@ -6673,7 +7278,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_eTr7tdhpJIRu5uPgq3l92g",
@@ -6684,7 +7290,8 @@ const DASHBOARD_DATA = {
     "reviews": 119,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJifGmaothpJIRzBtxAlOEp4o",
@@ -6695,7 +7302,8 @@ const DASHBOARD_DATA = {
     "reviews": 75,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjzhU2VVhpJIRsWXhyP4HxNE",
@@ -6706,7 +7314,8 @@ const DASHBOARD_DATA = {
     "reviews": 71,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJke__T2D1pJIRxLQzHdRluY4",
@@ -6717,7 +7326,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkwX2x_5hpJIRBC1_xgPWYLQ",
@@ -6728,7 +7338,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoz5xMmdhpJIR6vYLlL1UIaM",
@@ -6739,7 +7350,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt4ALcVKJpJIRs5darLKZAXE",
@@ -6750,7 +7362,8 @@ const DASHBOARD_DATA = {
     "reviews": 154,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt_7PoN1hpJIRFyXvQxT3Q0o",
@@ -6761,7 +7374,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuRpvbEVhpJIRToXrAJXLmlw",
@@ -6772,7 +7386,8 @@ const DASHBOARD_DATA = {
     "reviews": 39,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-_SK4_JhpJIRVYO06loDuqk",
@@ -6783,7 +7398,8 @@ const DASHBOARD_DATA = {
     "reviews": 29,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2-LkcQphpJIRfovjbbgo5mI",
@@ -6794,7 +7410,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3Uyfaf9hpJIRT7f_iUF2CNI",
@@ -6805,7 +7422,8 @@ const DASHBOARD_DATA = {
     "reviews": 104,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAd8v4EdhpJIRkZikgXDl4_M",
@@ -6816,7 +7434,8 @@ const DASHBOARD_DATA = {
     "reviews": 50,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJenNX_dhpJIRF5UgzLnGrcI",
@@ -6827,7 +7446,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNbrgRR2JpJIRcimg2F1wDvk",
@@ -6838,7 +7458,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Pratinha",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhwbiWI9hpJIR1IdC8n4vZpE",
@@ -6849,7 +7470,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJpSFtTZ1hpJIRtF4MKQgXwGY",
@@ -6860,7 +7482,8 @@ const DASHBOARD_DATA = {
     "reviews": 24,
     "bairro": "Pratinha",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJA1UDsw5hpJIRIpC_ktgVAVg",
@@ -6871,7 +7494,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJNWx9WgBhpJIRRglDJqfMnk0",
@@ -6882,7 +7506,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY9OKczlhpJIRHWa04yUMV8U",
@@ -6893,7 +7518,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgeBuYgxhpJIRerERIDgDiMg",
@@ -6904,7 +7530,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ7uvAvxhpJIRiefjBrhBbXM",
@@ -6915,7 +7542,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJP0SLDQBhpJIR-cDpSd753k4",
@@ -6926,7 +7554,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJQQ__-_JhpJIRTXhLRmrMHwI",
@@ -6937,7 +7566,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Pratinha",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJYefA8ZeOpJIR10irPNCLs1Y",
@@ -6948,7 +7578,8 @@ const DASHBOARD_DATA = {
     "reviews": 2412,
     "bairro": "Reduto",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Qdvc8Ba8YcQ4QyZ11FmLMnIni1FEWVjZK0G6d7GZ_OLvfzmkDYs22PMLm2XyKDAXXvXTg2PQZVsI9yoCwfIcbbdvG8VRp_b0UYmzskAH79dhimQmTTyJs2RHOF3pDL3OVKU8Y=w600-h400-k-no"
   },
   {
     "place_id": "ChIJaz6WfZGOpJIRKTQ9EZ3pzNw",
@@ -6959,7 +7590,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Reduto",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfws9DJSOpJIRrd4Som1XTfI",
@@ -6970,7 +7602,8 @@ const DASHBOARD_DATA = {
     "reviews": 67,
     "bairro": "Reduto",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJE-74JC-PpJIRxIIQnfwRSYU",
@@ -6981,7 +7614,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Reduto",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm2G1obuOpJIRYhy7gLiakYg",
@@ -6992,7 +7626,8 @@ const DASHBOARD_DATA = {
     "reviews": 898,
     "bairro": "Reduto",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl4U6ttRAEEcGaq75vTT6N-qbbuX2eLR9XaDWlLhJawLJms1bXrs61CleTK9MaRggLE8GtY6PEAKGk_ZxX0YABRhJ7b00FUgf453z_43tymTJrGb7bCR-aEntMSB27nESLfOnE=w600-h400-k-no"
   },
   {
     "place_id": "ChIJIQN0T8OLpJIRQkwFalD50l0",
@@ -7003,7 +7638,8 @@ const DASHBOARD_DATA = {
     "reviews": 86,
     "bairro": "Sacramenta",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJa4AoRsOLpJIRIxuRLpm361g",
@@ -7014,7 +7650,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Sacramenta",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBUYbwKCLpJIR51v68VWc1BI",
@@ -7025,7 +7662,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Sacramenta",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-1_vDQCLpJIRYcItCKQ4Xv8",
@@ -7036,7 +7674,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Sacramenta",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJiRAEadCLpJIRbNnne6I4gC0",
@@ -7047,7 +7686,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Sacramenta",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJX7GHH-KLpJIRvgSZ3dAsDhg",
@@ -7058,7 +7698,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Sacramenta",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ50-y8v-JpJIRLIfL4otRuwM",
@@ -7069,7 +7710,8 @@ const DASHBOARD_DATA = {
     "reviews": 26,
     "bairro": "Sacramenta",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKbDA1KaLpJIRKn5V5wPsNvg",
@@ -7080,7 +7722,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Sacramenta",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJG-q_mXWLpJIRyZ060yDLG8A",
@@ -7091,7 +7734,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Sacramenta",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-TjRY7aLpJIR9cgdVG0VWEo",
@@ -7102,7 +7746,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Sacramenta",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJe92VAseNpJIR7v4LHED5WGY",
@@ -7113,7 +7758,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São Brás",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwZGfvyWMpJIR3qXvHUF6cA4",
@@ -7124,7 +7770,8 @@ const DASHBOARD_DATA = {
     "reviews": 723,
     "bairro": "São Brás",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9Sx3yBfqimHw89_rxFypTXYppoaOuHidsBsRb6vjhRnxcX_qRdo0k5-oHSHPBKglCzNNzJs4DjFWRi0M1KkNFdv2YHC28_RivsHfdK3keKn7NwEN0e7MkZM-uQX7mlCykHweos=w600-h400-k-no"
   },
   {
     "place_id": "ChIJy0zPUsWNpJIRtdKHG61NVzY",
@@ -7135,7 +7782,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São Brás",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyf6z_yuMpJIR7iGmo_b8hEw",
@@ -7146,7 +7794,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "São Brás",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1XXXAwCNpJIRoFufmH2bZIs",
@@ -7157,7 +7806,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Marco",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkQEjShmNpJIR5KiJA9KY9Cg",
@@ -7168,7 +7818,8 @@ const DASHBOARD_DATA = {
     "reviews": 91,
     "bairro": "São Brás",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHaPbrzCMpJIRafOZRGbgy0I",
@@ -7179,7 +7830,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "São Brás",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy4c9qTuMpJIRtFq6FM-O_cg",
@@ -7190,7 +7842,8 @@ const DASHBOARD_DATA = {
     "reviews": 386,
     "bairro": "São Brás",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T4fXME437gpE587A7ivCx_qqmUjCj9YEHed-Hn0eF9guNXb6ZztsAqe69LvtwD2-a_dt44Wjqf38q0UOsXPMVB96pmmj94K9URfE4qBRUVWD45jIjxQ9PphH91DF9mX5zBm1IF=w600-h400-k-no"
   },
   {
     "place_id": "ChIJZaYKvKqNpJIRgtiu5bae6co",
@@ -7201,7 +7854,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "São Brás",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcW__CDKMpJIRZTV8ZAlpIJ0",
@@ -7212,7 +7866,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "São Brás",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJK5wkTyeMpJIRBC5v_53r8fw",
@@ -7223,7 +7878,8 @@ const DASHBOARD_DATA = {
     "reviews": 141,
     "bairro": "São Brás",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ2ycRkG5hpJIRoRnikN2RTXI",
@@ -7234,7 +7890,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "São Clemente",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJu8VdBn5hpJIR9HuOMqferxs",
@@ -7245,7 +7902,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "São Clemente",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFejiQO9hpJIRwma7TbP2034",
@@ -7256,7 +7914,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "São Clemente",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHf8FmJ9mpJIReZd_yqAngsg",
@@ -7267,7 +7926,8 @@ const DASHBOARD_DATA = {
     "reviews": 102,
     "bairro": "São Clemente",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJA7YrBLMVpJIRnw0QGdHUIvI",
@@ -7278,7 +7938,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "São Francisco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH34UPAAVpJIREnp2fCYyZBg",
@@ -7289,7 +7950,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São Francisco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJz5jH4EEVpJIRDQawosHKjJY",
@@ -7300,7 +7962,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "São Francisco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ_ebgeO4VpJIRgwDMtcGCAaA",
@@ -7311,7 +7974,8 @@ const DASHBOARD_DATA = {
     "reviews": 38,
     "bairro": "São Francisco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvT2Y5VxrpJIRtVDiQPYB_fM",
@@ -7322,7 +7986,8 @@ const DASHBOARD_DATA = {
     "reviews": 135,
     "bairro": "São Francisco",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJLwrW56MVpJIRYfhykTIwa1A",
@@ -7333,7 +7998,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "São João do Outeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ10FNBHlnpJIRqGiR1DSsSkU",
@@ -7344,7 +8010,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHTdlLlZnpJIRRREMM0ab0gk",
@@ -7355,7 +8022,8 @@ const DASHBOARD_DATA = {
     "reviews": 22,
     "bairro": "São João do Outeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJLcwvl1BnpJIRqyOprSr-cfs",
@@ -7366,7 +8034,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "São João do Outeiro",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO9A66UtnpJIRiOQpPmpznMM",
@@ -7377,7 +8046,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJffqdLEprpJIR1RFg_qb0RLM",
@@ -7388,7 +8058,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJi3KJfogVpJIRQVGFJSlSYdk",
@@ -7399,7 +8070,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ28_8q99npJIRQ3-ORfs6d_w",
@@ -7410,7 +8082,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVxMVuN1npJIRwDQeYBTe9Hk",
@@ -7421,7 +8094,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwfQ6OK5npJIR26NxeJ14gZU",
@@ -7432,7 +8106,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJv8j9u4lnpJIRfcvDc66TFx0",
@@ -7443,7 +8118,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJkxEfW35ppJIRP_R7M32x1mA",
@@ -7454,7 +8130,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJReKYjupppJIRsRgKxy2gDQE",
@@ -7465,7 +8142,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJj41w8htmpJIRCxgYMghqsfA",
@@ -7476,7 +8154,8 @@ const DASHBOARD_DATA = {
     "reviews": 26,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJn3P78RpmpJIRluElhfoQtTA",
@@ -7487,7 +8166,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ3zZPFgBnpJIRWUE4Ttk0jmE",
@@ -7498,7 +8178,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJszq0OI5npJIRH5e59JhzrNM",
@@ -7509,7 +8190,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM2rZ9R5mpJIRkMdEONBKwM8",
@@ -7520,7 +8202,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ9C6nwRmpJIRsUmf86D8OYE",
@@ -7531,7 +8214,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDSXuNgBppJIRrHh_vVRrekU",
@@ -7542,7 +8226,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJQ1gkhBBmpJIRMR9rjFO010Q",
@@ -7553,7 +8238,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFwtdDqprpJIRqfiR6MNn1y4",
@@ -7564,7 +8250,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "São João do Outeiro",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcSWUer2LpJIRRSfXgDe-SJY",
@@ -7575,7 +8262,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Souza",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy7x6wqCLpJIRuOZn9iHVzf0",
@@ -7586,7 +8274,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Souza",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJM2SI2DGLpJIR5oLi_G2-zVs",
@@ -7597,7 +8286,8 @@ const DASHBOARD_DATA = {
     "reviews": 93,
     "bairro": "Souza",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm76CAK6LpJIRuwB5TAg182g",
@@ -7608,7 +8298,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Souza",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJXy5zIfWLpJIRR6HsUSHIl2M",
@@ -7619,7 +8310,8 @@ const DASHBOARD_DATA = {
     "reviews": 21,
     "bairro": "Souza",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFazU5pmLpJIR7drsaRQtB_A",
@@ -7630,7 +8322,8 @@ const DASHBOARD_DATA = {
     "reviews": 190,
     "bairro": "Souza",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJifYLMwBhpJIRynUiYv2Ny5o",
@@ -7641,7 +8334,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Sucurijuquara",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCdvlQ6BhpJIRyfTzIJAJ_qc",
@@ -7652,7 +8346,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyxthXABhpJIRdse0DVv1zxI",
@@ -7663,7 +8358,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5xoWF7NhpJIRxni_5MHViNw",
@@ -7674,7 +8370,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9_ThcQBhpJIRtYAKGHKo7gU",
@@ -7685,7 +8382,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJeVPBUNZhpJIRf1iXIY95VK8",
@@ -7696,7 +8394,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJh1CN9NRhpJIRh4jbUi2sMEc",
@@ -7707,7 +8406,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJs5J2f0JhpJIRTXd6SlZfYRY",
@@ -7718,7 +8418,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtx70B-VhpJIR0dWlHjs7gFA",
@@ -7729,7 +8430,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvQsi2Y9hpJIRvNZS3CMy_M4",
@@ -7740,7 +8442,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-4T4SwBhpJIRrFZuLK3VfpA",
@@ -7751,7 +8454,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-y1vksdhpJIRi_peQ-gPEl0",
@@ -7762,7 +8466,8 @@ const DASHBOARD_DATA = {
     "reviews": 23,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ0cCAAvlhpJIRxKm8nJh0sjY",
@@ -7773,7 +8478,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ4-TtQpZhpJIRZYUHd3bnnag",
@@ -7784,7 +8490,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8_3ibadhpJIRkvbgvcAUpmM",
@@ -7795,7 +8502,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ9dtjD05hpJIR45ygdQSmyjY",
@@ -7806,7 +8514,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAerTZYdhpJIRBN_Z895DAW8",
@@ -7817,7 +8526,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJBdBaBpBhpJIRPE2cskeSP2M",
@@ -7828,7 +8538,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJC3HBNABjpJIRVTDuXuQVkvg",
@@ -7839,7 +8550,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDRdwiCZhpJIRZZTdWCN5UQ8",
@@ -7850,7 +8562,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJG_pC52JhpJIRcMTRR9dP6Uc",
@@ -7861,7 +8574,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGwDE2uxhpJIRM22oI8RB3HI",
@@ -7872,7 +8586,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJGwdeFmxhpJIRG0kfdKhJ7LY",
@@ -7883,7 +8598,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJVXhWABhpJIRWt-HFXetsqU",
@@ -7894,7 +8610,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJfEfsCFhpJIRszfmYax5Y0g",
@@ -7905,7 +8622,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJLX2Iw-hhpJIRnvI_45RkDf0",
@@ -7916,7 +8634,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tapanã",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN91scoRhpJIRBm_irsmLN3Q",
@@ -7927,7 +8646,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEYt2LgBhpJIRg1zJ4pK_mM4",
@@ -7938,7 +8658,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ80D393thpJIRXf9SLuT0bUw",
@@ -7949,7 +8670,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJT6YylFxhpJIReZrdfWYCqPc",
@@ -7960,7 +8682,8 @@ const DASHBOARD_DATA = {
     "reviews": 68,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ40Hf54NhpJIRYOaxe5pDdqg",
@@ -7971,7 +8694,8 @@ const DASHBOARD_DATA = {
     "reviews": 20,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ8dYqZBxhpJIRZoVKaZqlxlI",
@@ -7982,7 +8706,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvfvweH9hpJIRtFQWFRZmU6I",
@@ -7993,7 +8718,8 @@ const DASHBOARD_DATA = {
     "reviews": 19,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJccIiLZNhpJIRMWqBxYjAOkE",
@@ -8004,7 +8730,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJO_FxbuRhpJIRlMZbf9mZzYo",
@@ -8015,7 +8742,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJq1Pxu2RhpJIRcfFXfOz_EMo",
@@ -8026,7 +8754,8 @@ const DASHBOARD_DATA = {
     "reviews": 17,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJISMpVVNhpJIRnIw9Sog1dK4",
@@ -8037,7 +8766,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ81pQ_J1hpJIRS6phPnLK-ns",
@@ -8048,7 +8778,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmxfE6A5hpJIRUJds-tVTkJA",
@@ -8059,7 +8790,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDWQrB09hpJIRcjIDnsxsBWI",
@@ -8070,7 +8802,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ00VeBl5hpJIRUHpEtwFWxG8",
@@ -8081,7 +8814,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJi_ZEvS1hpJIR-MSia2NQdRk",
@@ -8092,7 +8826,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6W5FcgBhpJIRgmdl_tpiYPo",
@@ -8103,7 +8838,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJHeOXgjdhpJIR-wGiLlSjPTQ",
@@ -8114,7 +8850,8 @@ const DASHBOARD_DATA = {
     "reviews": 10,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJW0KUVo1hpJIRe--1rLtDfZI",
@@ -8125,7 +8862,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvaZ9pWlhpJIRlI8EsqKNf9M",
@@ -8136,7 +8874,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJA1EEphFhpJIRmsA1Z2tH8oc",
@@ -8147,7 +8886,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfXd6OR9hpJIRd_pMnj9bYCQ",
@@ -8158,7 +8898,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJTVQnGiNhpJIRRxmdPHHtoKY",
@@ -8169,7 +8910,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ-XhjkAphpJIRWfB5czh_CqE",
@@ -8180,7 +8922,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJAZYb5mRhpJIRuKPkPPmnNGU",
@@ -8191,7 +8934,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDwBBeKdhpJIR054CPWsu9EE",
@@ -8202,7 +8946,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJT1bgGABhpJIRATB8guNq0Cg",
@@ -8213,7 +8958,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5fSs399hpJIRiOSjfdcWtD8",
@@ -8224,7 +8970,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfR5RL2RhpJIRr4fLLSpMGb0",
@@ -8235,7 +8982,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJrSrqqZ9npJIR64hYvY2ChpQ",
@@ -8246,7 +8994,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJqfzHhR9hpJIRkVeGQ9MAikc",
@@ -8257,7 +9006,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tapanã",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm35xXdphpJIRKBkPr1tJWIM",
@@ -8268,7 +9018,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfdVEQr5hpJIRnFD6uhS4fOM",
@@ -8279,7 +9030,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tapanã",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmytWwLRhpJIRnlD8L2oyM28",
@@ -8290,7 +9042,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tapanã",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJawBx9ephpJIRYt_TTfq0zNw",
@@ -8301,7 +9054,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Tapanã",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjbaznGyPpJIROo0uFE8_-j0",
@@ -8312,7 +9066,8 @@ const DASHBOARD_DATA = {
     "reviews": 27,
     "bairro": "Telégrafo",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ6xC_5P-JpJIRyTB40s33o4g",
@@ -8323,7 +9078,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Telégrafo",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJ-_44aCJpJIRkKDv9g-AXSs",
@@ -8334,7 +9090,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Telégrafo",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJK0TWz8iPpJIRXrhGtT001Rc",
@@ -8345,7 +9102,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Telégrafo",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJVei_HoOJpJIRpx-Nc4L-ins",
@@ -8356,7 +9114,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Telégrafo",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJhVy6pHFhpJIRO7bSuTOUW6w",
@@ -8367,7 +9126,8 @@ const DASHBOARD_DATA = {
     "reviews": 42,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJoaamO8hhpJIRso21ab0-FKc",
@@ -8378,7 +9138,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Tenoné",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxbBTLCdhpJIR7Om7u5Gp7wI",
@@ -8389,7 +9150,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJdRzeHNlgpJIRURw5g0ST1m4",
@@ -8400,7 +9162,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tenoné",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt6gSO9lgpJIR94IPdQTixww",
@@ -8411,7 +9174,8 @@ const DASHBOARD_DATA = {
     "reviews": 105,
     "bairro": "Tenoné",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJDYARphlhpJIRXcBkdDFA7BM",
@@ -8422,7 +9186,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJEd3H4jNhpJIRs_S0nNBxfKQ",
@@ -8433,7 +9198,8 @@ const DASHBOARD_DATA = {
     "reviews": 4155,
     "bairro": "Tenoné",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QwI0JqkrgNEKjftC6PmG9GDBJj0gFwojKjG3hvoFoJ_8IWJ1Hp5prtVEz7FkILZK113iZ2JwfAkUpXPVnFFs5bi_kCRXs084eY-IZeAiJTfC1zbZn6VD3A74A9DwuLjRuyh6Q6LGqzoH_O=w600-h400-k-no"
   },
   {
     "place_id": "ChIJ30DorVhhpJIR1bmz0pjpFyk",
@@ -8444,7 +9210,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1Yxt_oNhpJIR1VbMIieP2tE",
@@ -8455,7 +9222,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJy1Uh61NhpJIR9SOk-HXrD8w",
@@ -8466,7 +9234,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJCUbnFyRhpJIR7eKv9HhV46Q",
@@ -8477,7 +9246,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJac1FZABhpJIRD390LvFrrPw",
@@ -8488,7 +9258,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5328OKphpJIRaPfMkDVnadk",
@@ -8499,7 +9270,8 @@ const DASHBOARD_DATA = {
     "reviews": 31,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKXWcTB5hpJIRHXLPHLZmQ_c",
@@ -8510,7 +9282,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJuf9SDCRhpJIRjbhFU77dGg0",
@@ -8521,7 +9294,8 @@ const DASHBOARD_DATA = {
     "reviews": 4,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJfYKqaSBhpJIRqfL4Zpyb6B8",
@@ -8532,7 +9306,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJD5XbqMdhpJIRC6_JG_8slb8",
@@ -8543,7 +9318,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJj6GncnJhpJIRQoIDhMNX1h4",
@@ -8554,7 +9330,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJY88QsdVhpJIR6PFKNPjQquA",
@@ -8565,7 +9342,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN47LwGKLpJIRaZxHyxHQEGg",
@@ -8576,7 +9354,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJjUDmJCVhpJIR_R8bCANF0O0",
@@ -8587,7 +9366,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Tenoné",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJyWhhXWZhpJIRbvw9brwolFU",
@@ -8598,7 +9378,8 @@ const DASHBOARD_DATA = {
     "reviews": 125,
     "bairro": "Tenoné",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJZblcyKeOpJIRFJ3h_g2Fpao",
@@ -8609,7 +9390,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJky4Hup2OpJIRDM2GPHbUjBc",
@@ -8620,7 +9402,8 @@ const DASHBOARD_DATA = {
     "reviews": 2812,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlclgkMLc8ICU2x5aC9XNVwQcTjEkVHEsRy6abPC80gYTA005_6Au-qzozjuXEMmor0Xe6pNGrKzm1VHLHDmtN55bCG4yQ85mlg4K7X7FJEA1bXtf3nzO6gZDidpWRTMI2UxW0=w600-h400-k-no"
   },
   {
     "place_id": "ChIJn2TOBYyPpJIRWffJNWJNYx4",
@@ -8631,7 +9414,8 @@ const DASHBOARD_DATA = {
     "reviews": 12313,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SI1do94K9523IqpwL0Pf68Lt-371Efbk_bQVkpLAnBreFH6LZ2Th5oegV4thP2JkxcffuH7c0SaPQNU9abXS346rPbOkBoB-OhXXFk5jupeKOQmUIEogn2CN-pOfVyPS7zaR7Tx7OtEAU=w600-h400-k-no"
   },
   {
     "place_id": "ChIJq6ij16OOpJIRvzx_VvEQzr4",
@@ -8642,7 +9426,8 @@ const DASHBOARD_DATA = {
     "reviews": 3988,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RJRd-shE2N222tfamR5pEWzLauuYYDJwRrCD5v-AGclTxFbaELMwi4bDHaIkimTG2S3GwBliGt9ApgmPALHwpXJUieq8_AokusR1j8_cmFTeiQgvb4Tgn6J55rDr_KP0NYDrp8=w600-h400-k-no"
   },
   {
     "place_id": "ChIJw6DtK7COpJIRo-OdJxLg-J8",
@@ -8653,7 +9438,8 @@ const DASHBOARD_DATA = {
     "reviews": 6,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJxwecvXOPpJIRxqybGC_9fck",
@@ -8664,7 +9450,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Umarizal",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJH5Dzb2eNpJIRFsFJbZoUcbw",
@@ -8675,7 +9462,8 @@ const DASHBOARD_DATA = {
     "reviews": 18,
     "bairro": "Umarizal",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJJRQ5ySGMpJIRQmR0B2OEzeU",
@@ -8686,7 +9474,8 @@ const DASHBOARD_DATA = {
     "reviews": 5,
     "bairro": "Umarizal",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKxJ0H72OpJIRJ4fM02BMxXA",
@@ -8697,7 +9486,8 @@ const DASHBOARD_DATA = {
     "reviews": 1677,
     "bairro": "Umarizal",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9REbjVfOmJKehWlVKHZVOw76RoT6hesPf4eGaBeEIu2fl5PzuS8jfkgB_pX8VggDDaNaAU3rKQobOJ96pqRPDNZVVeltCZMy2_Yu9EXhrljRnw-A-69xgtm37XVYM4WBYPyuxI=w600-h400-k-no"
   },
   {
     "place_id": "ChIJAYGWXmWPpJIRQBwZrup9TPY",
@@ -8708,7 +9498,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJN4fFVPWPpJIRNB3Iyb8rbBI",
@@ -8719,7 +9510,8 @@ const DASHBOARD_DATA = {
     "reviews": 3374,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SN6atrcYrIgdGwgVIZtHaGnvw9f7vSwM-0DPalcVP5zohlBc1cxTKKyIPPib16-eFxPx49Za4Y5ZWOl4G07epicmAU7rDiEtbftVTA9YWdubwSnpVIfThgStk8wg-gRo0gOn0Q=w600-h400-k-no"
   },
   {
     "place_id": "ChIJNTU9S6COpJIRLPcl0h5vQn8",
@@ -8730,7 +9522,8 @@ const DASHBOARD_DATA = {
     "reviews": 218,
     "bairro": "Umarizal",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RXlELTXxrDXiOFObeLlKF2tKUZYSrLH-JPhe8mMOn1We5d6TaRcLdBZeNmWxo_LRBMBZVEM6QtqYSyoWTiYzE0g6dcipd-6LXLxc_dRxiDE4Mln_RXsk7b5Fp-S5BzNT9Z23De=w600-h400-k-no"
   },
   {
     "place_id": "ChIJC5MiWaiOpJIRPO2NznHioUQ",
@@ -8741,7 +9534,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJq_ElGkKPpJIRNNr9i8g711A",
@@ -8752,7 +9546,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJmc2aUTKNpJIRxAqaOB3DzBI",
@@ -8763,7 +9558,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJv2FVnKWOpJIRW1YK1Wl9Pbs",
@@ -8774,7 +9570,8 @@ const DASHBOARD_DATA = {
     "reviews": 88,
     "bairro": "Umarizal",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJsbsZxXGPpJIR5e3PVG9FTRI",
@@ -8785,7 +9582,8 @@ const DASHBOARD_DATA = {
     "reviews": 3883,
     "bairro": "Umarizal",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RvET7oP-NIB3oqqnyDvJxZdy4Ly7GJ7mZKIyYmwx3FUJr4SnQJkpbRla7V7rVJZCGfHBimla3Wpf9Vap0vla-oaBJcxuF57oxp9Ky-KYPriR9SNN4Ad-jI7htKqoP3bdKVBcBw=w600-h400-k-no"
   },
   {
     "place_id": "ChIJVxUJOACPpJIRG8uRk20eTIE",
@@ -8796,7 +9594,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Umarizal",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJcUxevcFhpJIRLW5_GxctBe0",
@@ -8807,7 +9606,8 @@ const DASHBOARD_DATA = {
     "reviews": 8,
     "bairro": "Una",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ5WuNADFhpJIRBgXMH2oNxFY",
@@ -8818,7 +9618,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Una",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJo2HuM2GLpJIRhIVDzjPxwMk",
@@ -8829,7 +9630,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Una",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJh9Uqv-aLpJIR3FXk7R6EU6I",
@@ -8840,7 +9642,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Una",
     "rodadas": "r1|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJm3wB7rqLpJIR8iiBc84ix78",
@@ -8851,7 +9654,8 @@ const DASHBOARD_DATA = {
     "reviews": 7,
     "bairro": "Val-de-Cans",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJsUSZweKLpJIRAr51BlL611Q",
@@ -8862,7 +9666,8 @@ const DASHBOARD_DATA = {
     "reviews": 13,
     "bairro": "Val-de-Cans",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJtz4CJv2LpJIRScWxwfIuT_M",
@@ -8873,7 +9678,8 @@ const DASHBOARD_DATA = {
     "reviews": 14,
     "bairro": "Val-de-Cans",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJzf_PyA6LpJIRCfdTkVTldcQ",
@@ -8884,7 +9690,8 @@ const DASHBOARD_DATA = {
     "reviews": 95,
     "bairro": "Val-de-Cans",
     "rodadas": "r2",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJKwsqTgCLpJIR0cId6_29Ulc",
@@ -8895,7 +9702,8 @@ const DASHBOARD_DATA = {
     "reviews": 90,
     "bairro": "Val-de-Cans",
     "rodadas": "r1",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJOdvAyLprpJIRoO9_E3vdMok",
@@ -8906,7 +9714,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Vila",
     "rodadas": "r2|r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ__ZattZrpJIR8veRbiSSEq8",
@@ -8917,7 +9726,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJFWQI3SRrpJIRNaWQhRt_iUg",
@@ -8928,7 +9738,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJb-YBqSJrpJIR5XQJJ2hrj0g",
@@ -8939,7 +9750,8 @@ const DASHBOARD_DATA = {
     "reviews": 9,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJMyC0TwBrpJIROxrDPLcv7Uc",
@@ -8950,7 +9762,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJ1dpSXndrpJIRA9aH5R40SRI",
@@ -8961,7 +9774,8 @@ const DASHBOARD_DATA = {
     "reviews": 31,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJwaMLCvlrpJIRl8p8v3MUCFM",
@@ -8972,7 +9786,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJj97p41NrpJIR7Gk48TKSE6A",
@@ -8983,7 +9798,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJvR1NbwBrpJIRC4Ag6X8I69U",
@@ -8994,7 +9810,8 @@ const DASHBOARD_DATA = {
     "reviews": 0,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJgzBxTmZrpJIR0KPlF-t-jbg",
@@ -9005,7 +9822,8 @@ const DASHBOARD_DATA = {
     "reviews": 124,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJt5M_QHlrpJIRjNogjZ3SR_w",
@@ -9016,7 +9834,8 @@ const DASHBOARD_DATA = {
     "reviews": 532,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmbMMQ2JgL4be2j_MIEdtYt7kYNepgfXswzShaUddCS-dEp0k_bVVxaIHuGrgG74LR_bW3v4ZF1ACfoL_kPGaLLZmVM2gHWTgQ-fqOSEljjJDF_3zf17GxtLNYoFbZ57Be-zBqnLA=w600-h400-k-no"
   },
   {
     "place_id": "ChIJKQPagWVrpJIR_hWsZ3W6wMg",
@@ -9027,7 +9846,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": null
   },
   {
     "place_id": "ChIJs0I0aHlrpJIRGBvutyuuUbI",
@@ -9038,7 +9858,8 @@ const DASHBOARD_DATA = {
     "reviews": 3026,
     "bairro": "Vila",
     "rodadas": "r3",
-    "r4": false
+    "r4": false,
+    "foto": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnW_ZnsUSs_jo0KAKKT0UC3Zy_fawtrBi0VZwz9t491J8BCuOlhz5u7PGlya4D-KYFjVAKL0GGuWBB38SLjJRYjZmX1P59dM8syXkoVsL-3V_1k2xiu_-FCEi8knNO_OPF-VWvcfA=w600-h400-k-no"
   },
   {
     "place_id": "0x92a48df04738f40d:0xc8ac83d7705757db",
@@ -9049,7 +9870,8 @@ const DASHBOARD_DATA = {
     "reviews": 12,
     "bairro": "Canudos",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48dff8f038885:0x311e89f12b75b1b8",
@@ -9060,7 +9882,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Canudos",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48c46c0d022ef:0x5e9ec7cfd9723e9b",
@@ -9071,7 +9894,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Canudos",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48db69ad5f793:0xd945fa937f67509f",
@@ -9082,7 +9906,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Canudos",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48e5e2e756c57:0x1611a34b3997139f",
@@ -9093,7 +9918,8 @@ const DASHBOARD_DATA = {
     "reviews": 26,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48f4e62788a6b:0x1eaf49adad6541b6",
@@ -9104,7 +9930,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48f36c5c9acf7:0x57d06aa4c4a266ff",
@@ -9115,7 +9942,8 @@ const DASHBOARD_DATA = {
     "reviews": 2,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48fb54c9e8e8d:0xe56a5336ee37a927",
@@ -9126,7 +9954,8 @@ const DASHBOARD_DATA = {
     "reviews": 16,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48e86bff02247:0x5777adeb72424560",
@@ -9137,7 +9966,8 @@ const DASHBOARD_DATA = {
     "reviews": 3,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48fa413e46049:0x3d39819324c8522",
@@ -9148,7 +9978,8 @@ const DASHBOARD_DATA = {
     "reviews": 1,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   },
   {
     "place_id": "0x92a48f7b2087117d:0xa2048686095807c5",
@@ -9159,7 +9990,8 @@ const DASHBOARD_DATA = {
     "reviews": 25,
     "bairro": "Cidade Velha",
     "rodadas": "r4",
-    "r4": true
+    "r4": true,
+    "foto": null
   }
 ],
 };
