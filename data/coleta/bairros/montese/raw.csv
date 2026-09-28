@@ -1,1 +1,13 @@
 place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3,r4
+0x92a48c502de1367b:0x27f069ce346c44bb,ACAI DA HORA,-1.4531033,-48.4481866,,,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48c0a1107faa9:0xceb90fda3ccfcbbe,Fã de Açaí,-1.4290935,-48.4621221,4.7,62,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48bbcb671e179:0x1b749ceb7b50e133,Assaí Atacadista,-1.4093998,-48.437507,4.5,930,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48c5064d008d5:0xe9757ca97e5d0aee,Açaí,-1.4518967,-48.4466637,5.0,3,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a46080c687b667:0xf8833cca7035ca0f,Assaí Atacadista 2,-1.3588765,-48.4294942,4.3,,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48f421a25f1ab:0x50d73bc88bfdda34,Ô Açaí Belém,-1.440297,-48.488947,4.7,13,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48d32aeef11bf:0x2bb72dfeb7690e2e,Açaí pai degua,-1.4676797,-48.4753872,4.9,29,,Montese,DENTRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48d218d5314b3:0x44de8d014c396710,Açaí Empório Chique,-1.4479775,-48.4760284,4.8,11,,Montese,VIZINHO,Montese,r4,False,False,False,False,False,False,True
+0x92a48e5fc0923fad:0x858ec93be6867cb7,Restaurante Point do Açaí Casarão,-1.4487425,-48.4984606,4.7,,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48f5eb46b93af:0xb7c8db552e5c894d,Point do Açaí Belle Époque Bar,-1.4487425,-48.4984606,4.6,148,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True
+0x92a48c3ba93d87cb:0xc8fd8ecf14ba5ab4,AçaíBonD,-1.4494696,-48.4647001,4.4,386,,Montese,FORA_BAIRRO,Montese,r4,False,False,False,False,False,False,True

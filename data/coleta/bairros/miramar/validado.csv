@@ -1,1 +1,3 @@
 place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3,r4
+0x92a48d0060e4e801:0x11b9a7bf25bb2cd2,Restaurante Ver O Açaí Marco,-1.4332325,-48.4605242,4.9,,,Miramar,DENTRO,821,centroide_idx,r4,False,False,False,False,False,False,True

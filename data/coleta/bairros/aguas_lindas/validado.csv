@@ -2,3 +2,5 @@ place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,st
 ChIJ-7GNG9RhpJIR_yuMhkHcIlA,Alameda Açaí - Parque Verde,-1.368506,-48.442979,0.0,0,"Belém - PA, 66635-195",Águas Lindas,DENTRO,362,centroide,r1,True,False,False,False,False,False
 ChIJfV2aj8P1pJIR3cGLcur4w_I,AÇAÍ OLIVEIRA (Águas lindas Olga Benário),-1.406602,-48.393061,5.0,11,"AÇAÍ OLIVEIRA (Águas lindas Olga Benário) - R. Frei Tito, 4 - Águas Lindas, Belém - PA, 66690-340",Águas Lindas,DENTRO,-1,endereco,r1,True,False,False,False,False,False
 ChIJe36F6OqLpJIRW1LYanwys48,Açaí do sabarito,-1.373309,-48.449536,0.0,0,"Açaí do sabarito - R. Betânia - da Benfica, Belém - PA, 66630-140",Águas Lindas,DENTRO,542,centroide,r1|r3,True,False,False,False,False,True
+0x92a461c8b1cd55c5:0x3e96752a88f8d6d3,Açaí Salmo 23,-1.3597813,-48.4480799,4.6,31,,Águas Lindas,DENTRO,1199,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a461847443873b:0xf5e12ada0603fa3d,Sou Açaí Parque Verde,-1.3604032,-48.4505385,2.6,34,,Águas Lindas,DENTRO,1225,centroide_idx,r4,False,False,False,False,False,False,True

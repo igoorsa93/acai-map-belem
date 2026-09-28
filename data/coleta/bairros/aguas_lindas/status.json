@@ -2,7 +2,12 @@
   "bairro": "Águas Lindas",
   "slug": "aguas_lindas",
   "estado": "validado",
-  "total_raw": 0,
-  "total_validado": 3,
-  "ultima_atualizacao": "2026-09-27T22:22:17.866365+00:00"
+  "total_raw": 5,
+  "total_validado": 5,
+  "ultima_atualizacao": "2026-09-27T22:22:17.866365+00:00",
+  "r4_coletado": true,
+  "r4_novos_raw": 5,
+  "r4_novos_dentro": 2,
+  "r4_dups_evitados": 0,
+  "r4_timestamp": "2026-09-28T13:16:37.996328+00:00"
 }

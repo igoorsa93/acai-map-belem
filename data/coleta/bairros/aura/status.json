@@ -2,7 +2,12 @@
   "bairro": "Aurá",
   "slug": "aura",
   "estado": "validado",
-  "total_raw": 0,
-  "total_validado": 1,
-  "ultima_atualizacao": "2026-09-27T22:22:17.866504+00:00"
+  "total_raw": 5,
+  "total_validado": 4,
+  "ultima_atualizacao": "2026-09-27T22:22:17.866504+00:00",
+  "r4_coletado": true,
+  "r4_novos_raw": 5,
+  "r4_novos_dentro": 3,
+  "r4_dups_evitados": 0,
+  "r4_timestamp": "2026-09-28T13:17:09.807013+00:00"
 }

@@ -2,3 +2,4 @@ place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,st
 ChIJiyU04o6NpJIRl9J5MBMnp_4,Rei do açai,-1.459034,-48.453137,,1,"Rei do açai - R. São Domingos, 26b - Terra Firme, Belém - PA, 66077-650",Montese,DENTRO,-1,endereco,r3,False,False,False,False,False,True
 ChIJlziFvUyMpJIRBI4nAViEjII,Açai lider,-1.458244,-48.452894,,9,"Açai lider - R. São Domingos, 17 - Terra Firme, Belém - PA, 66077-650",Montese,DENTRO,-1,endereco,r3,False,False,False,False,False,True
 ChIJJx7MlkWNpJIRFIHmW0N9AKk,Açaí Sabor do Marajó,-1.458668,-48.448855,,2,"Açaí Sabor do Marajó - Av. Celso Malcher, 995 - Montese Ou T Firme, Belém - PA, 66077-000",Montese,DENTRO,-1,endereco,r3,False,False,False,False,False,True
+0x92a48d32aeef11bf:0x2bb72dfeb7690e2e,Açaí pai degua,-1.4676797,-48.4753872,4.9,29,,Montese,DENTRO,940,centroide_idx,r4,False,False,False,False,False,False,True

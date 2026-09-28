@@ -2,7 +2,12 @@
   "bairro": "Cidade Velha",
   "slug": "cidade_velha",
   "estado": "validado",
-  "total_raw": 0,
-  "total_validado": 7,
-  "ultima_atualizacao": "2026-09-27T22:22:17.863069+00:00"
+  "total_raw": 20,
+  "total_validado": 19,
+  "ultima_atualizacao": "2026-09-27T22:22:17.863069+00:00",
+  "r4_coletado": true,
+  "r4_novos_raw": 20,
+  "r4_novos_dentro": 12,
+  "r4_dups_evitados": 0,
+  "r4_timestamp": "2026-09-28T13:10:31.278697+00:00"
 }

@@ -1,2 +1,6 @@
-place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
-ChIJf6uMOBmNpJIRLgVtHgGevZc,EGUA DO AÇAI BELÉM,-1.451628,-48.461303,4.8,45,"EGUA DO AÇAI BELÉM - Tv. Teófilo Condurú, 452 - Canudos, Belém - PA, 66070-530",Canudos,DENTRO,-1,endereco,r1|r3,True,False,False,False,False,True
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3,r4
+0x92a48df04738f40d:0xc8ac83d7705757db,Açaí Pai Degua de Canudos,-1.448536,-48.4528114,4.9,12,,Canudos,DENTRO,632,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48dff8f038885:0x311e89f12b75b1b8,AÇAÍ PAI D ÉGUA CANUDOS,-1.4480844,-48.4605293,4.3,3,,Canudos,DENTRO,509,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48c46c0d022ef:0x5e9ec7cfd9723e9b,Açai Bom Do Canudos,-1.4486928,-48.4551291,5.0,1,,Canudos,DENTRO,424,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48d19388cab7f:0x97bd9e011e6d052e,EGUA DO AÇAI BELÉM,-1.4516282,-48.4613032,4.8,45,,Canudos,DENTRO,412,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48db69ad5f793:0xd945fa937f67509f,Açaí duBom,-1.4552957,-48.4589415,5.0,1,,Canudos,DENTRO,437,centroide_idx,r4,False,False,False,False,False,False,True

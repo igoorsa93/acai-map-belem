@@ -1,1 +1,7 @@
 place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3,r4
+0x92a48d0060e4e801:0x11b9a7bf25bb2cd2,Restaurante Ver O Açaí Marco,-1.4332325,-48.4605242,4.9,,,Miramar,DENTRO,Miramar,r4,False,False,False,False,False,False,True
+0x92a48be668970d9b:0xaabfd4688856a594,Açaí da MAY,-1.4181115,-48.4704446,4.8,78,,Miramar,VIZINHO,Miramar,r4,False,False,False,False,False,False,True
+0x92a48be3d45946dd:0x1ad9830e0bf4f17f,Ki-Açaí,-1.4196264,-48.4756638,4.7,26,,Miramar,VIZINHO,Miramar,r4,False,False,False,False,False,False,True
+0x92a48da598411adf:0xeefe01d1dfb7f9a3,Açaí Raíz da Amazônia,-1.4414533,-48.4701314,5.0,11,,Miramar,VIZINHO,Miramar,r4,False,False,False,False,False,False,True
+0x92a489fff2b24fe7:0x3bb518be2cb872c,Açaí do Léo,-1.4102424,-48.4790228,4.7,26,,Miramar,FORA_BAIRRO,Miramar,r4,False,False,False,False,False,False,True

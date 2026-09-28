@@ -67,9 +67,9 @@
     "nome": "Canudos",
     "slug": "canudos",
     "distrito": "DAGUA",
-    "lat": -1.4638,
-    "lon": -48.507,
-    "raio_m": 700
+    "lat": -1.4516,
+    "lon": -48.4576,
+    "raio_m": 800
   },
   "condor": {
     "nome": "Condor",

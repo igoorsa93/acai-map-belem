@@ -1,1 +1,7 @@
 place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3
+place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_pesquisa,status_geo_orig,bairro_detectado_orig,rodadas,r1,r2,g1,g2,g3,r3,r4
+0x92a461c8b1cd55c5:0x3e96752a88f8d6d3,Açaí Salmo 23,-1.3597813,-48.4480799,4.6,31,,Águas Lindas,DENTRO,Águas Lindas,r4,False,False,False,False,False,False,True
+0x92a461847443873b:0xf5e12ada0603fa3d,Sou Açaí Parque Verde,-1.3604032,-48.4505385,2.6,34,,Águas Lindas,DENTRO,Águas Lindas,r4,False,False,False,False,False,False,True
+0x92a4619dfc505af3:0x7bfaca723e61aa4b,Canto do açaí,-1.3612369,-48.4584369,4.9,12,,Águas Lindas,VIZINHO,Águas Lindas,r4,False,False,False,False,False,False,True
+0x92a4619d4d6d21a5:0x66c01708290c5eb4,AÇAÍ DE CASA,-1.3636556,-48.4670233,4.9,24,,Águas Lindas,VIZINHO,Águas Lindas,r4,False,False,False,False,False,False,True
+0x92a46183e7df41e3:0xa876439a7bb1e660,Açaí Bom Todo,-1.3525664,-48.4663385,4.8,20,,Águas Lindas,FORA_BAIRRO,Águas Lindas,r4,False,False,False,False,False,False,True

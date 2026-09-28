@@ -1,0 +1,89 @@
+# bairros_r3.yaml - Generated from bairros_index.json for R4 compatibility
+distritos:
+  DABEL:
+    bairros:
+      - {nome: "Batista Campos", lat: -1.4439, lon: -48.4789, raio_m: 700}
+      - {nome: "Campina", lat: -1.4542, lon: -48.4972, raio_m: 600}
+      - {nome: "Cidade Velha", lat: -1.4568, lon: -48.504, raio_m: 700}
+      - {nome: "Marco", lat: -1.4272, lon: -48.4722, raio_m: 900}
+      - {nome: "Nazaré", lat: -1.4506, lon: -48.4836, raio_m: 700}
+      - {nome: "Reduto", lat: -1.4479, lon: -48.4951, raio_m: 600}
+      - {nome: "São Brás", lat: -1.4399, lon: -48.4869, raio_m: 800}
+      - {nome: "Umarizal", lat: -1.4424, lon: -48.4919, raio_m: 800}
+  DAGUA:
+    bairros:
+      - {nome: "Canudos", lat: -1.4516, lon: -48.4576, raio_m: 800}
+      - {nome: "Condor", lat: -1.47, lon: -48.512, raio_m: 700}
+      - {nome: "Cremação", lat: -1.4562, lon: -48.511, raio_m: 700}
+      - {nome: "Guamá", lat: -1.469, lon: -48.495, raio_m: 1200}
+      - {nome: "Jurunas", lat: -1.4611, lon: -48.5, raio_m: 700}
+      - {nome: "Montese", lat: -1.464, lon: -48.483, raio_m: 700}
+  DASAC:
+    bairros:
+      - {nome: "Barreiro", lat: -1.4011, lon: -48.4591, raio_m: 800}
+      - {nome: "Fátima", lat: -1.4168, lon: -48.4712, raio_m: 800}
+      - {nome: "Maracangalha", lat: -1.3803, lon: -48.452, raio_m: 900}
+      - {nome: "Miramar", lat: -1.426, lon: -48.462, raio_m: 700}
+      - {nome: "Pedreira", lat: -1.4069, lon: -48.4657, raio_m: 900}
+      - {nome: "Sacramenta", lat: -1.4145, lon: -48.4581, raio_m: 1000}
+      - {nome: "Telégrafo", lat: -1.418, lon: -48.4498, raio_m: 900}
+  DAENT:
+    bairros:
+      - {nome: "Águas Lindas", lat: -1.3703, lon: -48.4453, raio_m: 1200}
+      - {nome: "Aurá", lat: -1.407, lon: -48.4302, raio_m: 1000}
+      - {nome: "Castanheira", lat: -1.3942, lon: -48.4502, raio_m: 900}
+      - {nome: "Curió-Utinga", lat: -1.422, lon: -48.419, raio_m: 1200}
+      - {nome: "Guanabara", lat: -1.3801, lon: -48.4398, raio_m: 900}
+      - {nome: "Mangueirão", lat: -1.382, lon: -48.445, raio_m: 900}
+      - {nome: "Marambaia", lat: -1.368, lon: -48.4351, raio_m: 1000}
+      - {nome: "Souza", lat: -1.402, lon: -48.438, raio_m: 800}
+      - {nome: "Universitário", lat: -1.413, lon: -48.44, raio_m: 900}
+      - {nome: "Val-de-Cans", lat: -1.378, lon: -48.476, raio_m: 1000}
+  DABEN:
+    bairros:
+      - {nome: "Benguí", lat: -1.3789, lon: -48.452, raio_m: 900}
+      - {nome: "Cabanagem", lat: -1.396, lon: -48.42, raio_m: 900}
+      - {nome: "Coqueiro", lat: -1.3329, lon: -48.4472, raio_m: 1200}
+      - {nome: "Parque Verde", lat: -1.41, lon: -48.425, raio_m: 1000}
+      - {nome: "Pratinha", lat: -1.355, lon: -48.465, raio_m: 1100}
+      - {nome: "São Clemente", lat: -1.365, lon: -48.438, raio_m: 1000}
+      - {nome: "Tapanã", lat: -1.345, lon: -48.462, raio_m: 1100}
+      - {nome: "Una", lat: -1.3854, lon: -48.4302, raio_m: 1100}
+  DAICO:
+    bairros:
+      - {nome: "Águas Negras", lat: -1.32, lon: -48.473, raio_m: 1000}
+      - {nome: "Agulha", lat: -1.3048, lon: -48.4791, raio_m: 800}
+      - {nome: "Campina de Icoaraci", lat: -1.294, lon: -48.476, raio_m: 1000}
+      - {nome: "Cruzeiro", lat: -1.298, lon: -48.476, raio_m: 900}
+      - {nome: "Maracacuera", lat: -1.31, lon: -48.468, raio_m: 900}
+      - {nome: "Paracuri", lat: -1.2841, lon: -48.461, raio_m: 1000}
+      - {nome: "Parque Guajará", lat: -1.322, lon: -48.46, raio_m: 1000}
+      - {nome: "Ponta Grossa", lat: -1.276, lon: -48.454, raio_m: 900}
+      - {nome: "Tenoné", lat: -1.3629, lon: -48.4329, raio_m: 1100}
+  DAOUT:
+    bairros:
+      - {nome: "Água Boa", lat: -1.227, lon: -48.511, raio_m: 1000}
+      - {nome: "Brasília", lat: -1.238, lon: -48.495, raio_m: 900}
+      - {nome: "Itaiteua", lat: -1.208, lon: -48.502, raio_m: 900}
+      - {nome: "São João do Outeiro", lat: -1.2181, lon: -48.4861, raio_m: 1000}
+  DAMOS:
+    bairros:
+      - {nome: "Aeroporto", lat: -1.123, lon: -48.473, raio_m: 900}
+      - {nome: "Ariramba", lat: -1.1561, lon: -48.481, raio_m: 800}
+      - {nome: "Baía do Sol", lat: -1.125, lon: -48.4961, raio_m: 800}
+      - {nome: "Bonfim", lat: -1.135, lon: -48.462, raio_m: 800}
+      - {nome: "Carananduba", lat: -1.148, lon: -48.466, raio_m: 800}
+      - {nome: "Caruará", lat: -1.168, lon: -48.459, raio_m: 800}
+      - {nome: "Chapéu Virado", lat: -1.144, lon: -48.456, raio_m: 800}
+      - {nome: "Farol", lat: -1.134, lon: -48.486, raio_m: 700}
+      - {nome: "Mangueiras", lat: -1.173, lon: -48.469, raio_m: 800}
+      - {nome: "Maracajá", lat: -1.162, lon: -48.481, raio_m: 800}
+      - {nome: "Marahú", lat: -1.155, lon: -48.4911, raio_m: 800}
+      - {nome: "Murubira", lat: -1.131, lon: -48.479, raio_m: 700}
+      - {nome: "Natal do Murubira", lat: -1.142, lon: -48.479, raio_m: 700}
+      - {nome: "Paraíso", lat: -1.158, lon: -48.487, raio_m: 800}
+      - {nome: "Porto Arthur", lat: -1.169, lon: -48.478, raio_m: 800}
+      - {nome: "Praia Grande", lat: -1.127, lon: -48.502, raio_m: 800}
+      - {nome: "São Francisco", lat: -1.149, lon: -48.472, raio_m: 700}
+      - {nome: "Sucurijuquara", lat: -1.182, lon: -48.484, raio_m: 900}
+      - {nome: "Vila", lat: -1.138, lon: -48.477, raio_m: 700}

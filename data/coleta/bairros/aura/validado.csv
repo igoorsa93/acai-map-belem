@@ -1,2 +1,5 @@
 place_id,nome,latitude,longitude,rating,review_count,endereco,bairro_validado,status_geo,distancia_m,metodo_validacao,rodadas,r1,r2,g1,g2,g3,r3
 ChIJxbKDbvSLpJIRSXP_QJtaw4g,Açaí no Grau Belém Pará,-1.403022,-48.430459,4.5,6,"Açaí no Grau Belém Pará - Rod. Bernardo Sayão, 1171 - Entroncamento, Ananindeua - PA, 66645-003",Aurá,DENTRO,443,centroide,r1|r3,True,False,False,False,False,True
+0x92a48bf46e83b2c5:0x88c35a9b40ff7349,Açaí no Grau Belém Pará,-1.4030219,-48.4304595,4.0,7,,Aurá,DENTRO,443,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48b00b699145f:0x2108ffeeb0416dd5,Açai da Larinha,-1.4024082,-48.4315161,5.0,18,,Aurá,DENTRO,531,centroide_idx,r4,False,False,False,False,False,False,True
+0x92a48aff29024dcb:0x72f5fbc001acbee6,AÇAÍ D,-1.3966786,-48.4364742,4.9,45,,Aurá,DENTRO,1343,centroide_idx,r4,False,False,False,False,False,False,True

@@ -1,8 +1,11 @@
 {
   "bairro": "Canudos",
-  "slug": "canudos",
   "estado": "validado",
-  "total_raw": 0,
-  "total_validado": 1,
-  "ultima_atualizacao": "2026-09-27T22:22:17.864353+00:00"
+  "total_raw": 5,
+  "total_validado": 5,
+  "r4_coletado": true,
+  "r4_novos_raw": 5,
+  "r4_novos_dentro": 5,
+  "r4_dups_evitados": 0,
+  "r4_timestamp": "2026-09-28T13:14:15.135164+00:00"
 }
